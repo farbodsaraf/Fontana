@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47E545CE23F221FCE19056E2 /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C684C89C7A4E620A07352B /* Pods_Spreadit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
+		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
 		96B1C48F1BE159CA00114C26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48E1BE159CA00114C26 /* ViewController.swift */; };
 		96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4901BE159CA00114C26 /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */; };
 		96B1C4A21BE159CA00114C26 /* SpreaditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4A11BE159CA00114C26 /* SpreaditTests.swift */; };
 		96B1C4AD1BE159CA00114C26 /* SpreaditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4AC1BE159CA00114C26 /* SpreaditUITests.swift */; };
+		96B1C4D41BE167F700114C26 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4D31BE167F700114C26 /* ShareViewController.swift */; };
+		96B1C4DB1BE167F700114C26 /* SpreaditSharer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A8E651AE8C61FCC050D1ECE /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7CCF52002EB2297DCCB564 /* Pods_SpreaditSharer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +37,36 @@
 			remoteGlobalIDString = 96B1C4881BE159CA00114C26;
 			remoteInfo = Spreadit;
 		};
+		96B1C4D91BE167F700114C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96B1C4811BE159CA00114C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96B1C4D01BE167F700114C26;
+			remoteInfo = SpreaditSharer;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		96B1C4CC1BE15A5800114C26 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				96B1C4DB1BE167F700114C26 /* SpreaditSharer.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D7CCF52002EB2297DCCB564 /* Pods_SpreaditSharer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreaditSharer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8FE775BC7584A8CEFB0708 /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
+		68819E97038B7B278926EA83 /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
+		78C684C89C7A4E620A07352B /* Pods_Spreadit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
+		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1C48C1BE159CA00114C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B1C48E1BE159CA00114C26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +80,11 @@
 		96B1C4A81BE159CA00114C26 /* SpreaditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpreaditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1C4AC1BE159CA00114C26 /* SpreaditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreaditUITests.swift; sourceTree = "<group>"; };
 		96B1C4AE1BE159CA00114C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpreaditSharer.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B1C4D31BE167F700114C26 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		96B1C4D81BE167F700114C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E814E1016B53A116DBD0627 /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
+		B5E9C8D7C885EA6B9FEC2E6A /* Pods-SpreaditSharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E545CE23F221FCE19056E2 /* Pods_Spreadit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,16 +110,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96B1C4CE1BE167F700114C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E651AE8C61FCC050D1ECE /* Pods_SpreaditSharer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C75F96705EC16F130306CE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C684C89C7A4E620A07352B /* Pods_Spreadit.framework */,
+				1D7CCF52002EB2297DCCB564 /* Pods_SpreaditSharer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77F901835D15E8D047F01930 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68819E97038B7B278926EA83 /* Pods-Spreadit.debug.xcconfig */,
+				9E814E1016B53A116DBD0627 /* Pods-Spreadit.release.xcconfig */,
+				B5E9C8D7C885EA6B9FEC2E6A /* Pods-SpreaditSharer.debug.xcconfig */,
+				3A8FE775BC7584A8CEFB0708 /* Pods-SpreaditSharer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96A14FAA1BE1DAEB00CC7D4B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */,
+				96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		96B1C4801BE159CA00114C26 = {
 			isa = PBXGroup;
 			children = (
 				96B1C48B1BE159CA00114C26 /* Spreadit */,
 				96B1C4A01BE159CA00114C26 /* SpreaditTests */,
 				96B1C4AB1BE159CA00114C26 /* SpreaditUITests */,
+				96B1C4D21BE167F700114C26 /* SpreaditSharer */,
 				96B1C48A1BE159CA00114C26 /* Products */,
+				77F901835D15E8D047F01930 /* Pods */,
+				3C75F96705EC16F130306CE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +169,7 @@
 				96B1C4891BE159CA00114C26 /* Spreadit.app */,
 				96B1C49D1BE159CA00114C26 /* SpreaditTests.xctest */,
 				96B1C4A81BE159CA00114C26 /* SpreaditUITests.xctest */,
+				96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +205,16 @@
 			path = SpreaditUITests;
 			sourceTree = "<group>";
 		};
+		96B1C4D21BE167F700114C26 /* SpreaditSharer */ = {
+			isa = PBXGroup;
+			children = (
+				96A14FAA1BE1DAEB00CC7D4B /* Classes */,
+				96B1C4D31BE167F700114C26 /* ShareViewController.swift */,
+				96B1C4D81BE167F700114C26 /* Info.plist */,
+			);
+			path = SpreaditSharer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,13 +222,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B1C4B11BE159CA00114C26 /* Build configuration list for PBXNativeTarget "Spreadit" */;
 			buildPhases = (
+				B1C28DED9C3220846DAC2406 /* Check Pods Manifest.lock */,
 				96B1C4851BE159CA00114C26 /* Sources */,
 				96B1C4861BE159CA00114C26 /* Frameworks */,
 				96B1C4871BE159CA00114C26 /* Resources */,
+				96B1C4CC1BE15A5800114C26 /* Embed App Extensions */,
+				F9FE5B6246B5F3A0E852E31D /* Embed Pods Frameworks */,
+				5B84DC790D19557F677F10A0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				96B1C4DA1BE167F700114C26 /* PBXTargetDependency */,
 			);
 			name = Spreadit;
 			productName = Spreadit;
@@ -181,6 +276,25 @@
 			productReference = 96B1C4A81BE159CA00114C26 /* SpreaditUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		96B1C4D01BE167F700114C26 /* SpreaditSharer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B1C4DC1BE167F700114C26 /* Build configuration list for PBXNativeTarget "SpreaditSharer" */;
+			buildPhases = (
+				D01A967166F7C8B887EEB780 /* Check Pods Manifest.lock */,
+				96B1C4CD1BE167F700114C26 /* Sources */,
+				96B1C4CE1BE167F700114C26 /* Frameworks */,
+				96B1C4CF1BE167F700114C26 /* Resources */,
+				A7A458E5FDAA7D5025C5DC94 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpreaditSharer;
+			productName = SpreaditSharer;
+			productReference = 96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +307,7 @@
 				TargetAttributes = {
 					96B1C4881BE159CA00114C26 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7LN5U2P4GE;
 					};
 					96B1C49C1BE159CA00114C26 = {
 						CreatedOnToolsVersion = 7.1;
@@ -201,6 +316,10 @@
 					96B1C4A71BE159CA00114C26 = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 96B1C4881BE159CA00114C26;
+					};
+					96B1C4D01BE167F700114C26 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7LN5U2P4GE;
 					};
 				};
 			};
@@ -220,6 +339,7 @@
 				96B1C4881BE159CA00114C26 /* Spreadit */,
 				96B1C49C1BE159CA00114C26 /* SpreaditTests */,
 				96B1C4A71BE159CA00114C26 /* SpreaditUITests */,
+				96B1C4D01BE167F700114C26 /* SpreaditSharer */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +369,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96B1C4CF1BE167F700114C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B84DC790D19557F677F10A0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A458E5FDAA7D5025C5DC94 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C28DED9C3220846DAC2406 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D01A967166F7C8B887EEB780 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FE5B6246B5F3A0E852E31D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96B1C4851BE159CA00114C26 /* Sources */ = {
@@ -277,6 +482,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96B1C4CD1BE167F700114C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B1C4D41BE167F700114C26 /* ShareViewController.swift in Sources */,
+				96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */,
+				96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +504,11 @@
 			isa = PBXTargetDependency;
 			target = 96B1C4881BE159CA00114C26 /* Spreadit */;
 			targetProxy = 96B1C4A91BE159CA00114C26 /* PBXContainerItemProxy */;
+		};
+		96B1C4DA1BE167F700114C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96B1C4D01BE167F700114C26 /* SpreaditSharer */;
+			targetProxy = 96B1C4D91BE167F700114C26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -397,9 +617,13 @@
 		};
 		96B1C4B21BE159CA00114C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68819E97038B7B278926EA83 /* Pods-Spreadit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Spreadit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,9 +632,13 @@
 		};
 		96B1C4B31BE159CA00114C26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E814E1016B53A116DBD0627 /* Pods-Spreadit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Spreadit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,6 +693,38 @@
 			};
 			name = Release;
 		};
+		96B1C4DD1BE167F700114C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5E9C8D7C885EA6B9FEC2E6A /* Pods-SpreaditSharer.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SpreaditSharer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit.SpreaditSharer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		96B1C4DE1BE167F700114C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A8FE775BC7584A8CEFB0708 /* Pods-SpreaditSharer.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SpreaditSharer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit.SpreaditSharer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +744,7 @@
 				96B1C4B31BE159CA00114C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96B1C4B41BE159CA00114C26 /* Build configuration list for PBXNativeTarget "SpreaditTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +753,7 @@
 				96B1C4B61BE159CA00114C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96B1C4B71BE159CA00114C26 /* Build configuration list for PBXNativeTarget "SpreaditUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +762,16 @@
 				96B1C4B91BE159CA00114C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B1C4DC1BE167F700114C26 /* Build configuration list for PBXNativeTarget "SpreaditSharer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B1C4DD1BE167F700114C26 /* Debug */,
+				96B1C4DE1BE167F700114C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,40 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Spreadit.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>SpreaditSharer.xcscheme</key>
+		<key>Pods-Spreadit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SpreaditSharer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>96B1C4881BE159CA00114C26</key>
+		<key>1C27F161598D7C83EC13C67C3ECEE863</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96B1C49C1BE159CA00114C26</key>
+		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96B1C4A71BE159CA00114C26</key>
+		<key>BCEC70E42222A4AE0501387EA766A727</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96B1C4BD1BE15A5700114C26</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>96B1C4D01BE167F700114C26</key>
+		<key>D44A9CB838B1522304D05B78D4D5582D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
