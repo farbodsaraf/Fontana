@@ -10,4 +10,10 @@
 
 @interface FNTItem : NSObject
 
+@property (nonatomic, strong, readonly) NSURL *link;
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, strong, readonly) NSURL *thumbnailURL;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

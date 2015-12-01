@@ -1,0 +1,6 @@
+framework module BIND {
+  umbrella header "BIND-umbrella.h"
+
+  export *
+  module * { export * }
+}

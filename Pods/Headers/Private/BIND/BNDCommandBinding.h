@@ -1,0 +1,1 @@
+../../../BIND/BIND/Classes/BNDCommandBinding.h

@@ -1,0 +1,114 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Alamofire-Swift.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Alamofire-umbrella.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Intermediates/Pods.build/Debug-iphonesimulator/Alamofire.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Pods_Spreadit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Spreadit-umbrella.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_Spreadit-Swift.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Pods_Spreadit.framework/Headers/Pods_Spreadit-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Pods_Spreadit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-Spreadit.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Pods_SpreaditSharer.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-SpreaditSharer-umbrella.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_SpreaditSharer-Swift.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Pods_SpreaditSharer.framework/Headers/Pods_SpreaditSharer-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/Pods_SpreaditSharer.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SpreaditSharer.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "SwiftyJSON-Swift.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "SwiftyJSON-umbrella.h",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/DerivedData/Spreadit/Build/Intermediates/Pods.build/Debug-iphonesimulator/SwiftyJSON.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

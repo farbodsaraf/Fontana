@@ -1,0 +1,7 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "1ff44d867f8184e3d32f9e49d4219e3a"
+build_time: [502104281, 42367000]
+inputs:
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/SpreaditSharer/ShareViewController.swift": [499495433, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/SpreaditSharer/Classes/ItunesPlainTextToSpotifyURLTransformer.swift": [499495708, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/SpreaditSharer/Classes/ShareTransformer.swift": [499413910, 0]

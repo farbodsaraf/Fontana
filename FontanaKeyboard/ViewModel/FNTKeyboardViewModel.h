@@ -8,6 +8,9 @@
 
 #import <BIND/BIND.h>
 
-@interface FNTKeyboardViewModel : BNDViewModel
+@interface FNTKeyboardViewModel : BNDViewModel <BNDDataController>
+
+- (void)updateWithContext:(NSString *)contextString
+        viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler;
 
 @end

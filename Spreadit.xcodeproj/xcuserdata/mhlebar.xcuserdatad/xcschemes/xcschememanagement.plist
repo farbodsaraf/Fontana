@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FontanaKeyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Spreadit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>96B1C4D01BE167F700114C26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96F99F611C0AEEA7005D6364</key>
 		<dict>
 			<key>primary</key>
 			<true/>

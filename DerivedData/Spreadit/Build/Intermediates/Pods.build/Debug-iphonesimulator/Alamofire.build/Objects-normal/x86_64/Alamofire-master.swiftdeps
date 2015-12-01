@@ -1,0 +1,18 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "a091e8e1a6e6dc7ea0766ae18df65a7f"
+build_time: [502104276, 401238000]
+inputs:
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Validation.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/MultipartFormData.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/ServerTrustPolicy.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Stream.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Upload.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Response.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/ResponseSerialization.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Alamofire.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Result.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Manager.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/ParameterEncoding.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Request.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Error.swift": [499412833, 0]
+  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/Alamofire/Source/Download.swift": [499412833, 0]

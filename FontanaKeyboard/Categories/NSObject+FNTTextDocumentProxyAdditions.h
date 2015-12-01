@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSObject (FNTTextDocumentProxyAdditions)
+@interface NSObject (UITextDocumentProxyAdditions)
+
+- (void)fnt_readText:(void(^)(NSString *textBeforeCursor, NSString *textAfterCursor))returnBlock;
 
 @end

@@ -10,4 +10,21 @@
 
 @implementation FNTItem
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        _link = [NSURL URLWithString:dictionary[@"link"]];
+        _title = [dictionary[@"title"] copy];
+        _thumbnailURL = [self thumbnailURLForItem:dictionary];
+    }
+    return self;
+}
+
+- (NSURL *)thumbnailURLForItem:(NSDictionary *)item {
+    NSDictionary *pagemap = item[@"pagemap"];
+    NSDictionary *thumb = [pagemap[@"cse_thumbnail"] firstObject];
+    NSString *thumbUrlString = thumb[@"src"];
+    return thumbUrlString ? [NSURL URLWithString:thumbUrlString] : nil;
+}
+
 @end

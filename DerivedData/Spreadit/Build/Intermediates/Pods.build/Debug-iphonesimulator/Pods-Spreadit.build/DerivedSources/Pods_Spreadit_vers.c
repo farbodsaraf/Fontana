@@ -1,0 +1,1 @@
+ const unsigned char Pods_SpreaditVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_Spreadit  PROJECT:Pods-1" "\n"; const double Pods_SpreaditVersionNumber __attribute__ ((used)) = (double)1.;

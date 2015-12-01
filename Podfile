@@ -21,3 +21,7 @@ target 'SpreaditSharer' do
     pod 'SwiftyJSON'
 end
 
+target 'FontanaKeyboard' do
+    pod 'AsyncImageView'
+    pod 'BIND'
+end
