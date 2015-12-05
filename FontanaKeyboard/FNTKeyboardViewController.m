@@ -8,7 +8,6 @@
 
 #import "FNTKeyboardViewController.h"
 #import "FNTItem.h"
-#import "NSObject+FNTTextDocumentProxyAdditions.h"
 #import "FNTKeyboardViewModel.h"
 #import "FNTKeyboardItemCellModel.h"
 
@@ -116,14 +115,11 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 - (void)linkify {
-    NSObject *proxy = self.textDocumentProxy;
-    [proxy fnt_readText:^(NSString *stringBeforeCursor, NSString *stringAfterCursor){
-        [self.keyboardViewModel updateWithContext:stringBeforeCursor
-                                viewModelsHandler:^(NSArray *viewModels, NSError *error) {
-                                    [self.collectionView reloadData];
-                                    self.collectionView.hidden = NO;
-                                }];
-    }];
+    [self.keyboardViewModel updateWithContext:self.textDocumentProxy
+                            viewModelsHandler:^(NSArray *viewModels, NSError *error) {
+                                [self.collectionView reloadData];
+                                self.collectionView.hidden = NO;
+                            }];
 }
 
 - (FNTKeyboardViewModel *)keyboardViewModel {

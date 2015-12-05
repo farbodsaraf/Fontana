@@ -8,9 +8,18 @@
 
 #import <BIND/BIND.h>
 
+@class FNTKeyboardItemCellModel;
+@class FNTContextItem;
 @interface FNTKeyboardViewModel : BNDViewModel <BNDDataController>
 
-- (void)updateWithContext:(NSString *)contextString
+@property (nonatomic, readonly) NSObject <UITextDocumentProxy> *documentProxy;
+@property (nonatomic, strong, readonly) FNTContextItem *currentContextItem;
+
+- (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler;
+
+- (void)apply:(FNTKeyboardItemCellModel *)model;
+
+//- (void)nextContextItem;
 
 @end

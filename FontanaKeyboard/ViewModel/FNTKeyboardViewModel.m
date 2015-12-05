@@ -10,43 +10,39 @@
 #import "FNTItem.h"
 #import "FNTKeyboardItemCellModel.h"
 #import "FNTGoogleSearchQuery.h"
+#import "FNTContextParser.h"
+#import "NSObject+FNTTextDocumentProxyAdditions.h"
 
 @interface FNTKeyboardViewModel ()
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) BNDViewModelsBlock viewModelsHandler;
 @property (nonatomic, strong) FNTGoogleSearchQuery *currentQuery;
+@property (nonatomic, strong) NSArray *contextItems;
+@property (nonatomic, strong) FNTContextItem *currentContextItem;
 @end
 
 @implementation FNTKeyboardViewModel
 
-- (void)updateWithContext:(NSString *)contextString
+- (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler {
-    [self findLinks:contextString];
+    _documentProxy = documentProxy;
+    
+    [self findLinksInDocument:_documentProxy];
     self.viewModelsHandler = viewModelsHandler;
 }
 
-static NSString * const kLinkSeparator = @":";
+- (void)findLinksInDocument:(NSObject <UITextDocumentProxy> *)documentProxy {
+    __weak typeof(self) weakSelf = self;
+    [self.documentProxy fnt_readText:^(NSString *textBeforeCursor, NSString *textAfterCursor) {
+        NSString *allText = [textBeforeCursor stringByAppendingString:textAfterCursor];
+        [weakSelf handleText:allText];
+    }];
+}
 
-- (void)findLinks:(NSString *)string {
-    NSMutableString *linkString = [NSMutableString new];
-    
-    BOOL readLink = NO;
-    for (NSUInteger pointer = 0; pointer < string.length; pointer++) {
-        NSString *substring = [string substringWithRange:NSMakeRange(pointer, 1)];
-        
-        if ([substring isEqualToString:kLinkSeparator]) {
-            readLink = !readLink;
-            continue;
-        }
-        
-        if (readLink) {
-            [linkString appendString:substring];
-        }
-    }
-    
-    NSLog(@"%@", linkString);
-    
-    [self performQuery:linkString];
+- (void)handleText:(NSString *)text {
+    self.contextItems = [FNTContextParser parseContext:text];
+    self.currentContextItem = [self.contextItems firstObject];
+    [self performQuery:self.currentContextItem.query];
 }
 
 - (void)performQuery:(NSString *)queryString {
@@ -67,6 +63,14 @@ static NSString * const kLinkSeparator = @":";
     }
     
     self.viewModelsHandler(self.children, nil);
+}
+
+- (void)apply:(FNTKeyboardItemCellModel *)model {
+    
+}
+
+- (void)nextContextItem {
+    
 }
 
 @end

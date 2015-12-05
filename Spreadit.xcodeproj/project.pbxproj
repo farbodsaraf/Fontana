@@ -10,7 +10,14 @@
 		2E5A5446163E9219CCEDAA9C /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		653B60EE78D3C6266EA0DA6A /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
-		965310F51C135133005CB906 /* FNTMockGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F41C135133005CB906 /* FNTMockGoogleSearchQuery.m */; };
+		965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F71C1354E2005CB906 /* FNTContextParser.m */; };
+		965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310FA1C1355B8005CB906 /* FNTContextParserTest.m */; };
+		965310FC1C1355CA005CB906 /* FNTContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F71C1354E2005CB906 /* FNTContextParser.m */; };
+		965311001C1368C9005CB906 /* FNTKeyboardViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310FF1C1368C9005CB906 /* FNTKeyboardViewModelTest.m */; };
+		965311011C1368D7005CB906 /* FNTKeyboardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468D1C0E279600051149 /* FNTKeyboardViewModel.m */; };
+		965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
+		965311031C1368E6005CB906 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
+		965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
@@ -18,7 +25,6 @@
 		96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4901BE159CA00114C26 /* Main.storyboard */; };
 		96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4931BE159CA00114C26 /* Assets.xcassets */; };
 		96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */; };
-		96B1C4A21BE159CA00114C26 /* SpreaditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4A11BE159CA00114C26 /* SpreaditTests.swift */; };
 		96B1C4AD1BE159CA00114C26 /* SpreaditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4AC1BE159CA00114C26 /* SpreaditUITests.swift */; };
 		96B1C4D41BE167F700114C26 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4D31BE167F700114C26 /* ShareViewController.swift */; };
 		96B1C4DB1BE167F700114C26 /* SpreaditSharer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -89,8 +95,11 @@
 		7D230677FF9C01214B2A0356 /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
 		965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleSearchQuery.h; path = Controller/FNTGoogleSearchQuery.h; sourceTree = "<group>"; };
 		965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleSearchQuery.m; path = Controller/FNTGoogleSearchQuery.m; sourceTree = "<group>"; };
-		965310F31C135133005CB906 /* FNTMockGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTMockGoogleSearchQuery.h; path = Test/FNTMockGoogleSearchQuery.h; sourceTree = "<group>"; };
-		965310F41C135133005CB906 /* FNTMockGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTMockGoogleSearchQuery.m; path = Test/FNTMockGoogleSearchQuery.m; sourceTree = "<group>"; };
+		965310F61C1354E2005CB906 /* FNTContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTContextParser.h; path = Controller/FNTContextParser.h; sourceTree = "<group>"; };
+		965310F71C1354E2005CB906 /* FNTContextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTContextParser.m; path = Controller/FNTContextParser.m; sourceTree = "<group>"; };
+		965310F91C1355B8005CB906 /* SpreaditTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpreaditTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		965310FA1C1355B8005CB906 /* FNTContextParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTContextParserTest.m; sourceTree = "<group>"; };
+		965310FF1C1368C9005CB906 /* FNTKeyboardViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardViewModelTest.m; path = ViewModel/FNTKeyboardViewModelTest.m; sourceTree = "<group>"; };
 		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +110,6 @@
 		96B1C4961BE159CA00114C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96B1C4981BE159CA00114C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B1C49D1BE159CA00114C26 /* SpreaditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpreaditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96B1C4A11BE159CA00114C26 /* SpreaditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreaditTests.swift; sourceTree = "<group>"; };
 		96B1C4A31BE159CA00114C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B1C4A81BE159CA00114C26 /* SpreaditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpreaditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1C4AC1BE159CA00114C26 /* SpreaditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreaditUITests.swift; sourceTree = "<group>"; };
@@ -185,10 +193,28 @@
 		965310EF1C134EE0005CB906 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				965310F61C1354E2005CB906 /* FNTContextParser.h */,
+				965310F71C1354E2005CB906 /* FNTContextParser.m */,
 				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
 				965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		965310FD1C1355D2005CB906 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				965310FA1C1355B8005CB906 /* FNTContextParserTest.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		965310FE1C136898005CB906 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				965310FF1C1368C9005CB906 /* FNTKeyboardViewModelTest.m */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		96A14FAA1BE1DAEB00CC7D4B /* Classes */ = {
@@ -242,8 +268,10 @@
 		96B1C4A01BE159CA00114C26 /* SpreaditTests */ = {
 			isa = PBXGroup;
 			children = (
-				96B1C4A11BE159CA00114C26 /* SpreaditTests.swift */,
+				965310FE1C136898005CB906 /* ViewModel */,
+				965310FD1C1355D2005CB906 /* Controllers */,
 				96B1C4A31BE159CA00114C26 /* Info.plist */,
+				965310F91C1355B8005CB906 /* SpreaditTests-Bridging-Header.h */,
 			);
 			path = SpreaditTests;
 			sourceTree = "<group>";
@@ -279,8 +307,6 @@
 		96C446971C1335C800051149 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				965310F31C135133005CB906 /* FNTMockGoogleSearchQuery.h */,
-				965310F41C135133005CB906 /* FNTMockGoogleSearchQuery.m */,
 				96C446981C1335F100051149 /* tux.jpg */,
 			);
 			name = Test;
@@ -664,7 +690,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B1C4A21BE159CA00114C26 /* SpreaditTests.swift in Sources */,
+				965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */,
+				965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */,
+				965310FC1C1355CA005CB906 /* FNTContextParser.m in Sources */,
+				965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */,
+				965311011C1368D7005CB906 /* FNTKeyboardViewModel.m in Sources */,
+				965311001C1368C9005CB906 /* FNTKeyboardViewModelTest.m in Sources */,
+				965311031C1368E6005CB906 /* FNTItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,8 +722,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965310F51C135133005CB906 /* FNTMockGoogleSearchQuery.m in Sources */,
 				965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */,
+				965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
@@ -863,10 +895,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SpreaditTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squid.SpreaditTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpreaditTests/SpreaditTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spreadit.app/Spreadit";
 			};
 			name = Debug;
@@ -875,10 +910,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SpreaditTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squid.SpreaditTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpreaditTests/SpreaditTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spreadit.app/Spreadit";
 			};
 			name = Release;

@@ -43,13 +43,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "96B1C49C1BE159CA00114C26"
+               BuildableName = "SpreaditTests.xctest"
+               BlueprintName = "SpreaditTests"
+               ReferencedContainer = "container:Spreadit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "96F99F611C0AEEA7005D6364"
-            BuildableName = "FontanaKeyboard.appex"
-            BlueprintName = "FontanaKeyboard"
+            BlueprintIdentifier = "96B1C4881BE159CA00114C26"
+            BuildableName = "Spreadit.app"
+            BlueprintName = "Spreadit"
             ReferencedContainer = "container:Spreadit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,8 +77,12 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "1"
+         BundleIdentifier = "com.squid.Spreadit"
+         RemotePath = "/Users/mhlebar/Library/Developer/CoreSimulator/Devices/09DF2F8F-D5CC-47A7-8EF3-5CEC623F5FC6/data/Containers/Bundle/Application/7804FE54-A203-4BFA-BD55-2235C8525B25/Spreadit.app">
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96B1C4881BE159CA00114C26"
@@ -76,7 +90,7 @@
             BlueprintName = "Spreadit"
             ReferencedContainer = "container:Spreadit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
