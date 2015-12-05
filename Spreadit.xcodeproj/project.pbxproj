@@ -22,6 +22,10 @@
 		96B1C4DB1BE167F700114C26 /* SpreaditSharer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */; };
 		96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468D1C0E279600051149 /* FNTKeyboardViewModel.m */; };
+		96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446901C0EB63C00051149 /* FNTKeyboardItemCell.m */; };
+		96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */; };
+		96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
+		96C446991C1335F100051149 /* tux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96C446981C1335F100051149 /* tux.jpg */; };
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -103,6 +107,12 @@
 		96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FNTTextDocumentProxyAdditions.m"; path = "Categories/NSObject+FNTTextDocumentProxyAdditions.m"; sourceTree = "<group>"; };
 		96C4468C1C0E279600051149 /* FNTKeyboardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTKeyboardViewModel.h; path = ViewModel/FNTKeyboardViewModel.h; sourceTree = "<group>"; };
 		96C4468D1C0E279600051149 /* FNTKeyboardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardViewModel.m; path = ViewModel/FNTKeyboardViewModel.m; sourceTree = "<group>"; };
+		96C4468F1C0EB63C00051149 /* FNTKeyboardItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTKeyboardItemCell.h; path = View/FNTKeyboardItemCell.h; sourceTree = "<group>"; };
+		96C446901C0EB63C00051149 /* FNTKeyboardItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardItemCell.m; path = View/FNTKeyboardItemCell.m; sourceTree = "<group>"; };
+		96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FNTKeyboardItemCell.xib; path = View/FNTKeyboardItemCell.xib; sourceTree = "<group>"; };
+		96C446941C0EBA4700051149 /* FNTKeyboardItemCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTKeyboardItemCellModel.h; path = ViewModel/FNTKeyboardItemCellModel.h; sourceTree = "<group>"; };
+		96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardItemCellModel.m; path = ViewModel/FNTKeyboardItemCellModel.m; sourceTree = "<group>"; };
+		96C446981C1335F100051149 /* tux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tux.jpg; path = Test/tux.jpg; sourceTree = "<group>"; };
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
 		96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FontanaKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +261,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		96C446971C1335C800051149 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				96C446981C1335F100051149 /* tux.jpg */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
 		96DB7FE81C0E11DC0073C330 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +283,9 @@
 			children = (
 				96F99F641C0AEEA7005D6364 /* FNTKeyboardViewController.h */,
 				96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */,
+				96C4468F1C0EB63C00051149 /* FNTKeyboardItemCell.h */,
+				96C446901C0EB63C00051149 /* FNTKeyboardItemCell.m */,
+				96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -274,6 +295,8 @@
 			children = (
 				96C4468C1C0E279600051149 /* FNTKeyboardViewModel.h */,
 				96C4468D1C0E279600051149 /* FNTKeyboardViewModel.m */,
+				96C446941C0EBA4700051149 /* FNTKeyboardItemCellModel.h */,
+				96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +304,7 @@
 		96F99F631C0AEEA7005D6364 /* FontanaKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				96C446971C1335C800051149 /* Test */,
 				96C446881C0E182B00051149 /* Categories */,
 				96DB7FEA1C0E11EB0073C330 /* ViewModel */,
 				96DB7FE91C0E11E40073C330 /* View */,
@@ -493,6 +517,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */,
+				96C446991C1335F100051149 /* tux.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +674,9 @@
 			files = (
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
+				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
 				96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */,
+				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
 				96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

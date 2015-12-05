@@ -8,11 +8,13 @@
 
 #import "FNTKeyboardViewModel.h"
 #import "FNTItem.h"
+#import "FNTKeyboardItemCellModel.h"
 
 NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsearch/v1?key=AIzaSyAy5gxcPstj94UatXV_8bgUL_rZjgcjt7Y&cx=017888679784784333058:un3lzj234sa&q=%@&start=1";
 
 @interface FNTKeyboardViewModel ()
 @property (nonatomic, strong) NSArray *results;
+@property (nonatomic, copy) BNDViewModelsBlock viewModelsHandler;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -20,6 +22,7 @@ NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsear
 - (void)updateWithContext:(NSString *)contextString
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler {
     [self findLinks:contextString];
+    self.viewModelsHandler = viewModelsHandler;
 }
 
 static NSString * const kLinkSeparator = @":";
@@ -60,11 +63,76 @@ static NSString * const kLinkSeparator = @":";
                                if (data) {
                                    [self handleData:data];
                                }
+                               else {
+#ifdef DEBUG
+                                   [self handleData:self.mockItems];
+#else
+                                   self.viewModelsHandler(nil, connectionError);
+#endif
+                               }
                            }];
 }
 
 - (void)handleData:(id)data {
     self.results = [self serializeData:data];
+    for (FNTItem *item in self.results) {
+        FNTKeyboardItemCellModel *cellModel = [FNTKeyboardItemCellModel viewModelWithModel:item];
+        [self addChild:cellModel];
+    }
+    
+    self.viewModelsHandler(self.children, nil);
+}
+
+- (NSDictionary *)mockDictionaryWithLink:(NSString *)link
+                                   title:(NSString *)title
+                                thumbURL:(NSString *)thumbURL {
+    return @{
+             @"link" : link,
+             @"title" : title,
+             @"pagemap" :
+                 @{
+                     @"cse_thumbnail" : @[
+                             @{
+                                 @"src" : thumbURL
+                                 }
+                             ]
+                     }
+             };
+}
+
+- (NSData *)mockItems {
+    NSString *thumbURL = [[NSBundle mainBundle] pathForResource:@"tux" ofType:@"jpg"];
+    
+    NSURL *url = [NSURL fileURLWithPath:thumbURL];
+    thumbURL = url.absoluteString;
+    
+    NSDictionary *mockDictionary = @{
+                                     @"items" : @[
+                                             [self mockDictionaryWithLink:@"http://www.google.com"
+                                                                    title:@"Mean Streets"
+                                                                 thumbURL:thumbURL]
+                                             ,
+                                             [self mockDictionaryWithLink:@"http://www.imdb.com"
+                                                                    title:@"Mean Streets"
+                                                                 thumbURL:thumbURL]
+                                             ,
+                                             [self mockDictionaryWithLink:@"http://www.yahoo.com"
+                                                                    title:@"Mean Streets"
+                                                                 thumbURL:thumbURL]
+                                             ,
+                                             [self mockDictionaryWithLink:@"http://www.geeks.com"
+                                                                    title:@"Mean Streets"
+                                                                 thumbURL:thumbURL]
+                                             ,
+                                             [self mockDictionaryWithLink:@"http://www.yippkiyeeah.com"
+                                                                    title:@"Mean Streets"
+                                                                 thumbURL:thumbURL]
+                                             ]
+                                     };
+    
+    return [NSJSONSerialization dataWithJSONObject:mockDictionary
+                                           options:0
+                                             error:nil];
 }
 
 - (NSArray *)serializeData:(id)data {
