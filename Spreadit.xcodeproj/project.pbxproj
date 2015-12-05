@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E5A5446163E9219CCEDAA9C /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		653B60EE78D3C6266EA0DA6A /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
+		965310F51C135133005CB906 /* FNTMockGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F41C135133005CB906 /* FNTMockGoogleSearchQuery.m */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
@@ -85,6 +87,10 @@
 		758CFD34E942B974044F8E45 /* Pods-FontanaKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		789AA992A8BF19109D938472 /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
 		7D230677FF9C01214B2A0356 /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
+		965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleSearchQuery.h; path = Controller/FNTGoogleSearchQuery.h; sourceTree = "<group>"; };
+		965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleSearchQuery.m; path = Controller/FNTGoogleSearchQuery.m; sourceTree = "<group>"; };
+		965310F31C135133005CB906 /* FNTMockGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTMockGoogleSearchQuery.h; path = Test/FNTMockGoogleSearchQuery.h; sourceTree = "<group>"; };
+		965310F41C135133005CB906 /* FNTMockGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTMockGoogleSearchQuery.m; path = Test/FNTMockGoogleSearchQuery.m; sourceTree = "<group>"; };
 		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +182,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		965310EF1C134EE0005CB906 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
+				965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		96A14FAA1BE1DAEB00CC7D4B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +279,8 @@
 		96C446971C1335C800051149 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				965310F31C135133005CB906 /* FNTMockGoogleSearchQuery.h */,
+				965310F41C135133005CB906 /* FNTMockGoogleSearchQuery.m */,
 				96C446981C1335F100051149 /* tux.jpg */,
 			);
 			name = Test;
@@ -305,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				96C446971C1335C800051149 /* Test */,
+				965310EF1C134EE0005CB906 /* Controllers */,
 				96C446881C0E182B00051149 /* Categories */,
 				96DB7FEA1C0E11EB0073C330 /* ViewModel */,
 				96DB7FE91C0E11E40073C330 /* View */,
@@ -672,6 +690,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965310F51C135133005CB906 /* FNTMockGoogleSearchQuery.m in Sources */,
+				965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,

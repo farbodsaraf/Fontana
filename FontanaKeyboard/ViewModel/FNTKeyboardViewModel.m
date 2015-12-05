@@ -9,12 +9,12 @@
 #import "FNTKeyboardViewModel.h"
 #import "FNTItem.h"
 #import "FNTKeyboardItemCellModel.h"
-
-NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsearch/v1?key=AIzaSyAy5gxcPstj94UatXV_8bgUL_rZjgcjt7Y&cx=017888679784784333058:un3lzj234sa&q=%@&start=1";
+#import "FNTGoogleSearchQuery.h"
 
 @interface FNTKeyboardViewModel ()
-@property (nonatomic, strong) NSArray *results;
+@property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) BNDViewModelsBlock viewModelsHandler;
+@property (nonatomic, strong) FNTGoogleSearchQuery *currentQuery;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -46,106 +46,27 @@ static NSString * const kLinkSeparator = @":";
     
     NSLog(@"%@", linkString);
     
-    [self searchForLinks:linkString];
+    [self performQuery:linkString];
 }
 
-- (void)searchForLinks:(NSString *)linkString {
-    NSString *urlString = [NSString stringWithFormat:kFNTGoogleSearchString, linkString];
-    urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse * _Nullable response,
-                                               NSData * _Nullable data,
-                                               NSError * _Nullable connectionError) {
-                               if (data) {
-                                   [self handleData:data];
-                               }
-                               else {
-#ifdef DEBUG
-                                   [self handleData:self.mockItems];
-#else
-                                   self.viewModelsHandler(nil, connectionError);
-#endif
-                               }
-                           }];
+- (void)performQuery:(NSString *)queryString {
+    __weak typeof(self) weakSelf = self;
+    self.currentQuery = [FNTGoogleSearchQuery queryWithSearchTerm:queryString
+                                                       itemsBlock:^(NSArray *items, NSError *error) {
+                                                           if (!error) {
+                                                               [weakSelf handleItems:items];
+                                                           }
+                                                       }];
 }
 
-- (void)handleData:(id)data {
-    self.results = [self serializeData:data];
-    for (FNTItem *item in self.results) {
+- (void)handleItems:(NSArray *)items {
+    self.items = items;
+    for (FNTItem *item in items) {
         FNTKeyboardItemCellModel *cellModel = [FNTKeyboardItemCellModel viewModelWithModel:item];
         [self addChild:cellModel];
     }
     
     self.viewModelsHandler(self.children, nil);
-}
-
-- (NSDictionary *)mockDictionaryWithLink:(NSString *)link
-                                   title:(NSString *)title
-                                thumbURL:(NSString *)thumbURL {
-    return @{
-             @"link" : link,
-             @"title" : title,
-             @"pagemap" :
-                 @{
-                     @"cse_thumbnail" : @[
-                             @{
-                                 @"src" : thumbURL
-                                 }
-                             ]
-                     }
-             };
-}
-
-- (NSData *)mockItems {
-    NSString *thumbURL = [[NSBundle mainBundle] pathForResource:@"tux" ofType:@"jpg"];
-    
-    NSURL *url = [NSURL fileURLWithPath:thumbURL];
-    thumbURL = url.absoluteString;
-    
-    NSDictionary *mockDictionary = @{
-                                     @"items" : @[
-                                             [self mockDictionaryWithLink:@"http://www.google.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.imdb.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.yahoo.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.geeks.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.yippkiyeeah.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ]
-                                     };
-    
-    return [NSJSONSerialization dataWithJSONObject:mockDictionary
-                                           options:0
-                                             error:nil];
-}
-
-- (NSArray *)serializeData:(id)data {
-    id JSON = [NSJSONSerialization JSONObjectWithData:data
-                                              options:0
-                                                error:nil];
-    NSArray *items = JSON[@"items"];
-    NSMutableArray *serializedItems = [NSMutableArray new];
-    for (NSDictionary *item in items) {
-        FNTItem *serializedItem = [[FNTItem alloc] initWithDictionary:item];
-        [serializedItems addObject:serializedItem];
-    }
-    return serializedItems.copy;
 }
 
 @end
