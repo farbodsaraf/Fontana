@@ -46,6 +46,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Coe-aq-Ieu" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" constant="8" id="B9B-cA-jpk"/>
                 <constraint firstItem="gIf-me-JEu" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" constant="8" id="CCT-Te-1PQ"/>

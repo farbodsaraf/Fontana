@@ -15,7 +15,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 @interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
-@property (nonatomic, strong) UIButton *fontanaButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @end
@@ -33,71 +32,38 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     self.viewModel = [FNTKeyboardViewModel new];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.fontanaButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    
-    [self.fontanaButton setTitle:NSLocalizedString(@"LINKIFY", @"Linkify button")
-                        forState:UIControlStateNormal];
-    [self.fontanaButton sizeToFit];
-    self.fontanaButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.fontanaButton addTarget:self
-                           action:@selector(linkify)
-                 forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:self.fontanaButton];
-    
-    NSLayoutConstraint *centerXConstraint = [NSLayoutConstraint constraintWithItem:self.fontanaButton
-                                                                         attribute:NSLayoutAttributeCenterX
-                                                                         relatedBy:NSLayoutRelationEqual
-                                                                            toItem:self.view
-                                                                         attribute:NSLayoutAttributeCenterX
-                                                                        multiplier:1.0
-                                                                          constant:0.0];
-    
-    NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:self.fontanaButton
-                                                                         attribute:NSLayoutAttributeCenterY
-                                                                         relatedBy:NSLayoutRelationEqual
-                                                                            toItem:self.view
-                                                                         attribute:NSLayoutAttributeCenterY
-                                                                        multiplier:1.0
-                                                                          constant:0.0];
-    
-    [self.view addConstraints:@[centerXConstraint, centerYConstraint]];
-    
     [self.view addSubview:self.collectionView];
-    self.collectionView.hidden = NO;
-
-    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_collectionView);
-    NSString *horizontalFormat = @"|-[_collectionView]-|";
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:horizontalFormat
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewsDictionary]];
-    
-    NSString *verticalFormat = @"V:|-[_collectionView]-|";
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:verticalFormat
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewsDictionary]];
-    
-    // Perform custom UI setup here
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"🌐", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-    [self.nextKeyboardButton sizeToFit];
-    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.nextKeyboardButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    
     [self.view addSubview:self.nextKeyboardButton];
+    [self.view addSubview:self.activityIndicator];
+}
+
+- (void)viewDidLayoutSubviews {
+    self.collectionView.frame = self.view.frame;
+    self.activityIndicator.center = self.view.center;
     
-    NSLayoutConstraint *nextKeyboardButtonLeftSideConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *nextKeyboardButtonBottomConstraint = [NSLayoutConstraint constraintWithItem:self.nextKeyboardButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
-    [self.view addConstraints:@[nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint]];
+    CGRect frame = self.nextKeyboardButton.frame;
+    frame.origin.y = self.view.frame.size.height - frame.size.height;
+    self.nextKeyboardButton.frame = frame;
+}
+
+- (UIActivityIndicatorView *)activityIndicator {
+    if (!_activityIndicator) {
+        _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    }
+    return _activityIndicator;
+}
+
+- (UIButton *)nextKeyboardButton {
+    if (!_nextKeyboardButton) {
+        _nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        
+        [_nextKeyboardButton setTitle:NSLocalizedString(@"🌐", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+        [_nextKeyboardButton sizeToFit];
+        [_nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+        
+        _nextKeyboardButton.titleLabel.font = [UIFont systemFontOfSize:16];
+    }
+    return _nextKeyboardButton;
 }
 
 - (UICollectionView *)collectionView {
@@ -118,10 +84,11 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 - (void)linkify {
+    [self.activityIndicator startAnimating];
     [self.keyboardViewModel updateWithContext:self.textDocumentProxy
                             viewModelsHandler:^(NSArray *viewModels, NSError *error) {
                                 [self.collectionView reloadData];
-                                self.collectionView.hidden = NO;
+                                [self.activityIndicator stopAnimating];
                             }];
 }
 
@@ -153,9 +120,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     NSString *text = [self.textDocumentProxy documentContextBeforeInput];
     NSLog(@"%@", text);
-    
-    self.collectionView.hidden = YES;
-    self.fontanaButton.hidden = NO;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
