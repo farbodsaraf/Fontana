@@ -17,6 +17,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
 @property (nonatomic, strong) UIButton *fontanaButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation FNTKeyboardViewController
@@ -84,11 +85,13 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     // Perform custom UI setup here
     self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+    [self.nextKeyboardButton setTitle:NSLocalizedString(@"🌐", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
     [self.nextKeyboardButton sizeToFit];
     self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.nextKeyboardButton.titleLabel.font = [UIFont systemFontOfSize:16];
     
     [self.view addSubview:self.nextKeyboardButton];
     

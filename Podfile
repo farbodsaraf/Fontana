@@ -6,6 +6,7 @@ use_frameworks!
 target 'Spreadit' do
 	pod 'Alamofire', '~> 3.0'
     pod 'SwiftyJSON'
+    pod 'BIND'
 end
 
 target 'SpreaditTests' do
@@ -22,6 +23,5 @@ target 'SpreaditSharer' do
 end
 
 target 'FontanaKeyboard' do
-    pod 'AsyncImageView'
     pod 'BIND'
 end

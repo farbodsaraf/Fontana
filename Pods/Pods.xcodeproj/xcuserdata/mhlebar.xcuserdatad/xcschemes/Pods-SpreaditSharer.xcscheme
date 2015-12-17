@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FE318E8E01EAC4CDBA56207"
+               BlueprintIdentifier = "A8EFEEE15990CADEEC5A36CD"
                BuildableName = "Pods_SpreaditSharer.framework"
                BlueprintName = "Pods-SpreaditSharer"
                ReferencedContainer = "container:Pods.xcodeproj">

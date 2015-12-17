@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "804CDBF2C76DFFE7519B459F"
+               BlueprintIdentifier = "1843F07F38E3E0AA473DE1C6"
                BuildableName = "Pods_FontanaKeyboard.framework"
                BlueprintName = "Pods-FontanaKeyboard"
                ReferencedContainer = "container:Pods.xcodeproj">

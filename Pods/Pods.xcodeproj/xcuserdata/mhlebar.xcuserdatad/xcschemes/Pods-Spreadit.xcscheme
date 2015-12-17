@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35CBA1AE4B42C17D07165C90"
+               BlueprintIdentifier = "C46449932119F4915F7E80FA"
                BuildableName = "Pods_Spreadit.framework"
                BlueprintName = "Pods-Spreadit"
                ReferencedContainer = "container:Pods.xcodeproj">

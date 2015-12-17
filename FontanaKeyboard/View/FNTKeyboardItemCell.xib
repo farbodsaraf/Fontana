@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-58-wKt">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-58-wKt">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <animations/>
                         <constraints>
@@ -23,21 +23,21 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":imdb:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-me-JEu" userLabel="Source Label">
-                        <rect key="frame" x="8" y="8" width="25" height="10"/>
+                        <rect key="frame" x="8" y="8" width="30.5" height="12"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="10" id="3Sp-5k-2An"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="SJe-dY-CHU"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7q-05-hLJ" userLabel="Story Label">
-                        <rect key="frame" x="100" y="0.0" width="220" height="100"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-aq-Ieu" userLabel="Story Label">
+                        <rect key="frame" x="108" y="8" width="204" height="14.5"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -47,22 +47,21 @@
             </view>
             <animations/>
             <constraints>
+                <constraint firstItem="Coe-aq-Ieu" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" constant="8" id="B9B-cA-jpk"/>
                 <constraint firstItem="gIf-me-JEu" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" constant="8" id="CCT-Te-1PQ"/>
-                <constraint firstAttribute="trailing" secondItem="d7q-05-hLJ" secondAttribute="trailing" id="EN1-CJ-p1e"/>
-                <constraint firstItem="d7q-05-hLJ" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" id="MoJ-c0-PP4"/>
+                <constraint firstAttribute="trailing" secondItem="Coe-aq-Ieu" secondAttribute="trailing" constant="8" id="LhP-tf-eFs"/>
                 <constraint firstItem="UhX-58-wKt" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" id="QKS-iT-m0K"/>
                 <constraint firstItem="gIf-me-JEu" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" constant="8" id="ah9-de-bSo"/>
-                <constraint firstItem="d7q-05-hLJ" firstAttribute="leading" secondItem="UhX-58-wKt" secondAttribute="trailing" id="b6d-oL-4iw"/>
                 <constraint firstItem="UhX-58-wKt" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" id="fQw-zI-w6g"/>
-                <constraint firstAttribute="bottom" secondItem="d7q-05-hLJ" secondAttribute="bottom" id="gAS-8N-lkI"/>
+                <constraint firstItem="Coe-aq-Ieu" firstAttribute="leading" secondItem="UhX-58-wKt" secondAttribute="trailing" constant="8" id="kj7-4p-6c3"/>
             </constraints>
             <size key="customSize" width="320" height="100"/>
             <connections>
                 <outlet property="imageView" destination="UhX-58-wKt" id="xDS-UF-cty"/>
-                <outlet property="sourceLabel" destination="gIf-me-JEu" id="sZE-8q-UWd"/>
-                <outlet property="storyLabel" destination="d7q-05-hLJ" id="TkI-N2-zPB"/>
+                <outlet property="sourceLabel" destination="gIf-me-JEu" id="JQW-I0-XYy"/>
+                <outlet property="storyLabel" destination="Coe-aq-Ieu" id="hbG-Lf-WPB"/>
             </connections>
-            <point key="canvasLocation" x="421" y="56"/>
+            <point key="canvasLocation" x="109" y="-169"/>
         </collectionViewCell>
     </objects>
 </document>

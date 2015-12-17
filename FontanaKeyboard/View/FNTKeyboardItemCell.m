@@ -21,7 +21,12 @@ BINDINGS(FNTKeyboardItemCellModel,
          [BINDViewModel(image, ~>, imageView.image) observe:^(id observable, id value, NSDictionary *observationInfo) {
     [self setNeedsLayout];
 }],
-         BINDViewModel(text, ~>, storyLabel.text),
+         BINDViewModel(attributedText, ~>, storyLabel.attributedText),
+         BINDViewModel(source, ~>, sourceLabel.text),
          nil)
+
+- (void)viewDidUpdateViewModel:(id<BNDViewModel>)viewModel {
+        
+}
 
 @end

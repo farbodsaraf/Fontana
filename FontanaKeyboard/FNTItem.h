@@ -13,6 +13,8 @@
 @property (nonatomic, strong, readonly) NSURL *link;
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, strong, readonly) NSURL *thumbnailURL;
+@property (nonatomic, strong, readonly) NSString *source;
+@property (nonatomic, strong, readonly) NSString *snippet;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

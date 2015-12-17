@@ -52,13 +52,11 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework 'Pods-FontanaKeyboard/AsyncImageView.framework'
   install_framework 'Pods-FontanaKeyboard/BIND.framework'
   install_framework 'Pods-FontanaKeyboard/NODE_.framework'
   install_framework 'Pods-FontanaKeyboard/libextobjc.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework 'Pods-FontanaKeyboard/AsyncImageView.framework'
   install_framework 'Pods-FontanaKeyboard/BIND.framework'
   install_framework 'Pods-FontanaKeyboard/NODE_.framework'
   install_framework 'Pods-FontanaKeyboard/libextobjc.framework'

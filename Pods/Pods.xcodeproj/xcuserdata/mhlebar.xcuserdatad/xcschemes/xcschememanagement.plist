@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AsyncImageView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>BIND.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C27F161598D7C83EC13C67C3ECEE863</key>
+		<key>071A5CA724B62B503C64F762E77A0998</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7B9356EA0B1A0236C6746C9B495FC4C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>7F2461A9D9724998746452861A76414F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>921FBF18F1E021DEB626BC82A3BB2BD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD0FE3431590850077DADB8A57EA27CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,27 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CCBFD609CF7520A1F4A75AF64C27B4A6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CD8020CD20B31F012EDB8C21991AA95E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE0A761A58605F7D9497372DD37EBB55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1361FAA297EF44364DCE5904A522D62</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FAEC7247DDF4E513BB4FFAA3560A4571</key>
+		<key>DF61E5F8B683833E9292D7CB4399AF57</key>
 		<dict>
 			<key>primary</key>
 			<true/>

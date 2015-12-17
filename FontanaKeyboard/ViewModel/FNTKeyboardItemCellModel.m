@@ -11,15 +11,24 @@
 
 @interface FNTKeyboardItemCellModel ()
 @property (nonatomic, copy) UIImage *image;
+@property (nonatomic, copy) NSAttributedString *attributedText;
 @end
 
 @implementation FNTKeyboardItemCellModel
 BINDINGS(FNTItem,
-         BINDModel(title, ~>, text),
          BINDModel(link, ~>, url),
          BINDModel(thumbnailURL, ~>, thumbnailURL),
+         BINDModel(source, ~>, source),
          nil
          )
+
+- (instancetype)initWithModel:(FNTItem *)model {
+    self = [super initWithModel:model];
+    if (self) {
+        _text = [NSString stringWithFormat:@"%@", model.title];
+    }
+    return self;
+}
 
 - (void)setThumbnailURL:(NSURL *)thumbnailURL {
     _thumbnailURL = thumbnailURL;
@@ -41,6 +50,29 @@ BINDINGS(FNTItem,
                                    }
                                }
                            }];
+}
+
+- (NSAttributedString *)attributedText {
+    if (!_attributedText) {
+        FNTItem *item = self.model;
+        NSString *link = item.link.absoluteString;
+        NSString *string = [NSString stringWithFormat:@"%@\n%@", item.title, link];
+        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
+        
+        [attrString beginEditing];
+        [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12]
+                           range:NSMakeRange(0, string.length)];
+        
+        NSRange linkRange = [string rangeOfString:link];
+        [attrString addAttribute:NSLinkAttributeName
+                           value:link
+                           range:linkRange];
+        
+        [attrString endEditing];
+        
+        _attributedText = attrString.copy;
+    }
+    return _attributedText;
 }
 
 @end
