@@ -9,6 +9,7 @@
 #import "FNTKeyboardItemCell.h"
 #import "FNTKeyboardItemCellModel.h"
 #import <BIND/BNDURLToImageTransformer.h>
+#import "FNTSourceToColorTransformer.h"
 
 @interface FNTKeyboardItemCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -23,6 +24,7 @@ BINDINGS(FNTKeyboardItemCellModel,
 }],
          BINDViewModel(attributedText, ~>, storyLabel.attributedText),
          BINDViewModel(source, ~>, sourceLabel.text),
+         BINDT(object, source, ~>, self, backgroundColor, FNTSourceToColorTransformer),
          nil)
 
 - (void)viewDidUpdateViewModel:(id<BNDViewModel>)viewModel {

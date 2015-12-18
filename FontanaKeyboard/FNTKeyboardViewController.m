@@ -71,7 +71,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     self.finishTutorialButton.center = self.view.center;
     frame = self.finishTutorialButton.frame;
-    frame.origin.y = self.view.frame.size.height - frame.size.height;
+    frame.origin.y = self.view.frame.size.height - frame.size.height - 5;
     self.finishTutorialButton.frame = frame;
 }
 
@@ -95,8 +95,12 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
+        flowLayout.minimumInteritemSpacing = 0;
+        flowLayout.minimumLineSpacing = 0;
+        
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
-                                             collectionViewLayout:[UICollectionViewFlowLayout new]];
+                                             collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.translatesAutoresizingMaskIntoConstraints = NO;

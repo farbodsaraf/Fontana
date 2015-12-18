@@ -89,6 +89,7 @@ NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsear
     return @{
              @"link" : link,
              @"title" : title,
+             @"displayLink" : link,
              @"pagemap" :
                  @{
                      @"cse_thumbnail" : @[
@@ -108,7 +109,7 @@ NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsear
     
     NSDictionary *mockDictionary = @{
                                      @"items" : @[
-                                             [self mockDictionaryWithLink:@"http://www.google.com"
+                                             [self mockDictionaryWithLink:@"http://www.spotify.com"
                                                                     title:@"Mean Streets"
                                                                  thumbURL:thumbURL]
                                              ,
