@@ -13,6 +13,9 @@ typedef NS_ENUM(BOOL, FNTSearchDirection) {
     FNTSearchDirectionAfter
 };
 
+static int kFNTMaxTriesOnEmptyHit = 100;
+static NSTimeInterval kFNTSleepInterval = 0.001;
+
 @interface NSArray (FNTReverse)
 
 @end
@@ -29,8 +32,6 @@ typedef NS_ENUM(BOOL, FNTSearchDirection) {
 }
 
 @end
-
-#define DELAY_LENGTH 0.001
 
 @implementation NSObject (UITextDocumentProxyAdditions)
 
@@ -56,8 +57,9 @@ typedef NS_ENUM(BOOL, FNTSearchDirection) {
 
 -(void)readStringsBeforeCursor:(NSString **)beforeString afterCursor:(NSString **) afterString{
     *beforeString = [self fnt_findStringInDirection:FNTSearchDirectionBefore];
-    *afterString = [self fnt_findStringInDirection:FNTSearchDirectionAfter];
     [self fnt_adjustCursor:(*beforeString).length];
+    *afterString = [self fnt_findStringInDirection:FNTSearchDirectionAfter];
+    [self fnt_adjustCursor:-(*afterString).length];
 }
 
 - (NSString *)fnt_findStringInDirection:(FNTSearchDirection)searchDirection {
@@ -69,7 +71,7 @@ typedef NS_ENUM(BOOL, FNTSearchDirection) {
     
     NSMutableArray* beforeArray = [NSMutableArray arrayWithCapacity:10];
     
-    [NSThread sleepForTimeInterval:DELAY_LENGTH];
+    [self fnt_sleep];
     NSString* before = [proxy performSelector:proxySelector];
     
     //Sometimes, when the string is \n then the length evaluates as 0 which breaks the loop
@@ -77,7 +79,7 @@ typedef NS_ENUM(BOOL, FNTSearchDirection) {
     while (before) {
         unsigned long beforeLength = [before length];
         if (beforeLength <= 0) {
-            if (tryNext < 10) {
+            if (tryNext < kFNTMaxTriesOnEmptyHit) {
                 ++tryNext;
             }
             else {
@@ -103,9 +105,12 @@ typedef NS_ENUM(BOOL, FNTSearchDirection) {
 }
 
 - (void)fnt_adjustCursor:(NSInteger)offset {
-    [NSThread sleepForTimeInterval:DELAY_LENGTH];
     [(id <UITextDocumentProxy>)self adjustTextPositionByCharacterOffset:offset];
-    [NSThread sleepForTimeInterval:DELAY_LENGTH];
+    [self fnt_sleep];
+}
+
+- (void)fnt_sleep {
+    [NSThread sleepForTimeInterval:kFNTSleepInterval];
 }
 
 @end
