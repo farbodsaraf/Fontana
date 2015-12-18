@@ -18,6 +18,7 @@
 		965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
 		965311031C1368E6005CB906 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
+		966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
@@ -100,6 +101,8 @@
 		965310F91C1355B8005CB906 /* SpreaditTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpreaditTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		965310FA1C1355B8005CB906 /* FNTContextParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTContextParserTest.m; sourceTree = "<group>"; };
 		965310FF1C1368C9005CB906 /* FNTKeyboardViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardViewModelTest.m; path = ViewModel/FNTKeyboardViewModelTest.m; sourceTree = "<group>"; };
+		966D57AC1C22D5EC00F14B5F /* FNTUsageTutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTUsageTutorialView.h; path = View/FNTUsageTutorialView.h; sourceTree = "<group>"; };
+		966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTUsageTutorialView.m; path = View/FNTUsageTutorialView.m; sourceTree = "<group>"; };
 		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +332,8 @@
 				96C4468F1C0EB63C00051149 /* FNTKeyboardItemCell.h */,
 				96C446901C0EB63C00051149 /* FNTKeyboardItemCell.m */,
 				96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */,
+				966D57AC1C22D5EC00F14B5F /* FNTUsageTutorialView.h */,
+				966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -728,6 +733,7 @@
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
 				96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */,
+				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
 				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
 				96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */,
 			);

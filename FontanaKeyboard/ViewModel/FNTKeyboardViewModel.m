@@ -46,11 +46,21 @@
 }
 
 - (void)performQuery:(NSString *)queryString {
+    if (!queryString) {
+        NSError *error = [NSError errorWithDomain:@"com.fontana.keyboard"
+                                             code:404
+                                         userInfo:nil];
+        [self handleError:error];
+    }
+    
     __weak typeof(self) weakSelf = self;
     self.currentQuery = [FNTGoogleSearchQuery queryWithSearchTerm:queryString
                                                        itemsBlock:^(NSArray *items, NSError *error) {
                                                            if (!error) {
                                                                [weakSelf handleItems:items];
+                                                           }
+                                                           else {
+                                                               [weakSelf handleError:error];
                                                            }
                                                        }];
 }
@@ -63,6 +73,10 @@
     }
     
     self.viewModelsHandler(self.children, nil);
+}
+
+- (void)handleError:(NSError *)error {
+    self.viewModelsHandler(nil, error);
 }
 
 - (void)apply:(FNTKeyboardItemCellModel *)model {

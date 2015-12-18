@@ -8,6 +8,11 @@
 
 #import "NSObject+FNTTextDocumentProxyAdditions.h"
 
+typedef NS_ENUM(BOOL, FNTSearchDirection) {
+    FNTSearchDirectionBefore = 0,
+    FNTSearchDirectionAfter
+};
+
 @interface NSArray (FNTReverse)
 
 @end
@@ -50,41 +55,41 @@
 }
 
 -(void)readStringsBeforeCursor:(NSString **)beforeString afterCursor:(NSString **) afterString{
+    *beforeString = [self fnt_findStringInDirection:FNTSearchDirectionBefore];
+    *afterString = [self fnt_findStringInDirection:FNTSearchDirectionAfter];
+    [self fnt_adjustCursor:(*beforeString).length];
+}
+
+- (NSString *)fnt_findStringInDirection:(FNTSearchDirection)searchDirection {
     id<UITextDocumentProxy> proxy = (id <UITextDocumentProxy>) self;
-    NSString* before = [proxy documentContextBeforeInput];
-    NSString* after = [proxy documentContextAfterInput];
     
-    NSMutableArray* afterArray = [NSMutableArray arrayWithCapacity:10];
+    SEL proxySelector = searchDirection == FNTSearchDirectionBefore ? @selector(documentContextBeforeInput) : @selector(documentContextAfterInput);
     
-    while (after) {
-        unsigned long afterLength = [after length];
-        if(afterLength <= 0){
-            break;
-        }
-        [afterArray addObject:after];
-        [self fnt_adjustCursor:afterLength];
-        after = [proxy documentContextAfterInput];
-    }
+    int direction = searchDirection == FNTSearchDirectionBefore ? -1 : 1;
     
     NSMutableArray* beforeArray = [NSMutableArray arrayWithCapacity:10];
     
     [NSThread sleepForTimeInterval:DELAY_LENGTH];
-    before = [proxy documentContextBeforeInput];
+    NSString* before = [proxy performSelector:proxySelector];
     
+    //Sometimes, when the string is \n then the length evaluates as 0 which breaks the loop
+    NSUInteger tryNext = 0;
     while (before) {
         unsigned long beforeLength = [before length];
         if (beforeLength <= 0) {
-            break;
+            if (tryNext < 10) {
+                ++tryNext;
+            }
+            else {
+                break;
+            }
         }
         [beforeArray addObject:before];
-        [self fnt_adjustCursor:-beforeLength];
-        before = [proxy documentContextBeforeInput];
+        [self fnt_adjustCursor:direction * beforeLength];
+        before = [proxy performSelector:proxySelector];
     }
     
-    *beforeString = [self fnt_concatenateStringFromArray:beforeArray reverse:YES];
-    *afterString = [self fnt_concatenateStringFromArray:afterArray reverse:NO];
-    
-    [self fnt_adjustCursor:(*beforeString).length];
+    return [self fnt_concatenateStringFromArray:beforeArray reverse:!searchDirection];
 }
 
 - (NSString*)fnt_concatenateStringFromArray:(NSArray *)array

@@ -10,13 +10,16 @@
 #import "FNTItem.h"
 #import "FNTKeyboardViewModel.h"
 #import "FNTKeyboardItemCellModel.h"
+#import "FNTUsageTutorialView.h"
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController) 
 
-@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
+@property (nonatomic, strong) UIButton *finishTutorialButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
 @end
 
 @implementation FNTKeyboardViewController
@@ -37,13 +40,39 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view addSubview:self.activityIndicator];
 }
 
+- (FNTUsageTutorialView *)tutorialView {
+    if (!_tutorialView) {
+        _tutorialView = [FNTUsageTutorialView new];
+        _tutorialView.delegate = self;
+        [_tutorialView start];
+    }
+    return _tutorialView;
+}
+
+- (UIButton *)finishTutorialButton {
+    if (!_finishTutorialButton) {
+        _finishTutorialButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_finishTutorialButton setTitle:NSLocalizedString(@"OK", @"Title for 'Finish Tutorial' button") forState:UIControlStateNormal];
+        [_finishTutorialButton sizeToFit];
+        [_finishTutorialButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+        _finishTutorialButton.titleLabel.font = [UIFont systemFontOfSize:16];
+    }
+    return _finishTutorialButton;
+}
+
 - (void)viewDidLayoutSubviews {
     self.collectionView.frame = self.view.frame;
     self.activityIndicator.center = self.view.center;
+    self.tutorialView.frame = self.view.frame;
     
     CGRect frame = self.nextKeyboardButton.frame;
     frame.origin.y = self.view.frame.size.height - frame.size.height;
     self.nextKeyboardButton.frame = frame;
+    
+    self.finishTutorialButton.center = self.view.center;
+    frame = self.finishTutorialButton.frame;
+    frame.origin.y = self.view.frame.size.height - frame.size.height;
+    self.finishTutorialButton.frame = frame;
 }
 
 - (UIActivityIndicatorView *)activityIndicator {
@@ -56,11 +85,9 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (UIButton *)nextKeyboardButton {
     if (!_nextKeyboardButton) {
         _nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        
         [_nextKeyboardButton setTitle:NSLocalizedString(@"🌐", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
         [_nextKeyboardButton sizeToFit];
         [_nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-        
         _nextKeyboardButton.titleLabel.font = [UIFont systemFontOfSize:16];
     }
     return _nextKeyboardButton;
@@ -87,9 +114,20 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.activityIndicator startAnimating];
     [self.keyboardViewModel updateWithContext:self.textDocumentProxy
                             viewModelsHandler:^(NSArray *viewModels, NSError *error) {
-                                [self.collectionView reloadData];
-                                [self.activityIndicator stopAnimating];
+                                if (!error) {
+                                    [self.collectionView reloadData];
+                                    [self.activityIndicator stopAnimating];
+                                }
+                                else {
+                                    [self displayNoResults];
+                                }
                             }];
+}
+
+- (void)displayNoResults {
+    [self.view addSubview:self.tutorialView];
+    [self.view addSubview:self.finishTutorialButton];
+    self.finishTutorialButton.alpha = 0;
 }
 
 - (FNTKeyboardViewModel *)keyboardViewModel {
@@ -157,6 +195,15 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.textDocumentProxy insertText:text];
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - FNTUsageTutorialViewDelegate
+
+- (void)tutorialViewDidFinish:(FNTUsageTutorialView *)tutorialView {
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         self.finishTutorialButton.alpha = 1;
+                     }];
 }
 
 @end
