@@ -60,12 +60,15 @@ BINDINGS(FNTItem,
         NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
         
         [attrString beginEditing];
-        [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12]
+        [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12]
                            range:NSMakeRange(0, string.length)];
         
         NSRange linkRange = [string rangeOfString:link];
         [attrString addAttribute:NSLinkAttributeName
                            value:link
+                           range:linkRange];
+        
+        [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10]
                            range:linkRange];
         
         [attrString endEditing];

@@ -103,7 +103,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
                                              collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.translatesAutoresizingMaskIntoConstraints = NO;
         _collectionView.backgroundColor = [UIColor whiteColor];
     }
     return _collectionView;
@@ -183,7 +182,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.collectionView.frame.size.width, 100);
+    return CGSizeMake(self.collectionView.frame.size.width, 80);
 }
 
 - (void)registerNib:(NSString *)cellName {

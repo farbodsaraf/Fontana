@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E5A5446163E9219CCEDAA9C /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		653B60EE78D3C6266EA0DA6A /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2E5A5446163E9219CCEDAA9C /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */; };
+		653B60EE78D3C6266EA0DA6A /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */; };
 		965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
 		965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F71C1354E2005CB906 /* FNTContextParser.m */; };
 		965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310FA1C1355B8005CB906 /* FNTContextParserTest.m */; };
@@ -29,7 +29,6 @@
 		96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */; };
 		96B1C4AD1BE159CA00114C26 /* SpreaditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4AC1BE159CA00114C26 /* SpreaditUITests.swift */; };
 		96B1C4D41BE167F700114C26 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C4D31BE167F700114C26 /* ShareViewController.swift */; };
-		96B1C4DB1BE167F700114C26 /* SpreaditSharer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96B1C4D11BE167F700114C26 /* SpreaditSharer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */; };
 		96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468D1C0E279600051149 /* FNTKeyboardViewModel.m */; };
 		96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446901C0EB63C00051149 /* FNTKeyboardItemCell.m */; };
@@ -39,7 +38,7 @@
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +56,6 @@
 			remoteGlobalIDString = 96B1C4881BE159CA00114C26;
 			remoteInfo = Spreadit;
 		};
-		96B1C4D91BE167F700114C26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96B1C4811BE159CA00114C26 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 96B1C4D01BE167F700114C26;
-			remoteInfo = SpreaditSharer;
-		};
 		96F99F681C0AEEA7005D6364 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 96B1C4811BE159CA00114C26 /* Project object */;
@@ -80,7 +72,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				96B1C4DB1BE167F700114C26 /* SpreaditSharer.appex in Embed App Extensions */,
 				96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -407,7 +398,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				96B1C4DA1BE167F700114C26 /* PBXTargetDependency */,
 				96F99F691C0AEEA7005D6364 /* PBXTargetDependency */,
 			);
 			name = Spreadit;
@@ -460,6 +450,7 @@
 				96B1C4CE1BE167F700114C26 /* Frameworks */,
 				96B1C4CF1BE167F700114C26 /* Resources */,
 				C279F0116D5488DA234186E8 /* Copy Pods Resources */,
+				EEC2CCAA62D5CB70FF0933FE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -479,6 +470,7 @@
 				96F99F5F1C0AEEA7005D6364 /* Frameworks */,
 				96F99F601C0AEEA7005D6364 /* Resources */,
 				C7E4DA2CD3E0993FDABB8BAA /* Copy Pods Resources */,
+				BB0B01B97B0D802683BC32AE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -647,6 +639,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB0B01B97B0D802683BC32AE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C279F0116D5488DA234186E8 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -690,6 +697,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC2CCAA62D5CB70FF0933FE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -765,11 +787,6 @@
 			isa = PBXTargetDependency;
 			target = 96B1C4881BE159CA00114C26 /* Spreadit */;
 			targetProxy = 96B1C4A91BE159CA00114C26 /* PBXContainerItemProxy */;
-		};
-		96B1C4DA1BE167F700114C26 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 96B1C4D01BE167F700114C26 /* SpreaditSharer */;
-			targetProxy = 96B1C4D91BE167F700114C26 /* PBXContainerItemProxy */;
 		};
 		96F99F691C0AEEA7005D6364 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -887,12 +904,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Spreadit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "36f1d925-36ac-43a8-b531-6fea6173943e";
 			};
 			name = Debug;
 		};
@@ -901,13 +918,13 @@
 			baseConfigurationReference = 789AA992A8BF19109D938472 /* Pods-Spreadit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = Spreadit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a938b9d1-4924-4d1a-bc2e-906493556398";
 			};
 			name = Release;
 		};
@@ -1002,8 +1019,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit.FontanaKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1013,11 +1031,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CE4CDCCC38AEEE6031D9BD1 /* Pods-FontanaKeyboard.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit.FontanaKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "01427d52-dc67-4d9f-9dd1-16a0c7bcccef";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

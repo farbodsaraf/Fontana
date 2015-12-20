@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xa4-HS-LYd">
-                        <rect key="frame" x="4" y="0.0" width="316" height="99"/>
+                        <rect key="frame" x="1" y="0.0" width="319" height="99"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-58-wKt">
                                 <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-aq-Ieu" userLabel="Story Label">
-                                <rect key="frame" x="107" y="8" width="201" height="14.5"/>
+                                <rect key="frame" x="107" y="8" width="204" height="14.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -69,12 +69,13 @@
             <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="xa4-HS-LYd" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" id="Afa-he-Vb0"/>
-                <constraint firstItem="xa4-HS-LYd" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" constant="4" id="Ht9-E2-2r9"/>
+                <constraint firstItem="xa4-HS-LYd" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" constant="1" id="Ht9-E2-2r9"/>
                 <constraint firstAttribute="trailing" secondItem="xa4-HS-LYd" secondAttribute="trailing" id="MWp-uo-TSn"/>
                 <constraint firstAttribute="bottom" secondItem="xa4-HS-LYd" secondAttribute="bottom" constant="1" id="q4z-HB-9O9"/>
             </constraints>
             <size key="customSize" width="320" height="100"/>
             <connections>
+                <outlet property="containerView" destination="xa4-HS-LYd" id="GXI-OW-Gm5"/>
                 <outlet property="imageView" destination="UhX-58-wKt" id="xDS-UF-cty"/>
                 <outlet property="sourceLabel" destination="gIf-me-JEu" id="JQW-I0-XYy"/>
                 <outlet property="storyLabel" destination="Coe-aq-Ieu" id="hbG-Lf-WPB"/>
