@@ -54,6 +54,23 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view setNeedsUpdateConstraints];
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    
+    CGSize itemSize = self.view.frame.size;
+    itemSize.width = self.isPortrait ? itemSize.width : itemSize.width / 2;
+    itemSize.height = 80;
+    flowLayout.itemSize = itemSize;
+    
+    [flowLayout invalidateLayout]; //force the elements to get laid out again with the new size
+}
+
+- (BOOL)isPortrait {
+    CGSize boundsSize = [[UIScreen mainScreen] bounds].size;
+    return self.view.frame.size.width == fminf(boundsSize.width, boundsSize.height);
+}
+
 - (FNTUsageTutorialView *)tutorialView {
     if (!_tutorialView) {
         _tutorialView = [FNTUsageTutorialView new];
@@ -97,7 +114,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.minimumLineSpacing = 0;
-        flowLayout.itemSize = CGSizeMake(320, 80);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
                                              collectionViewLayout:flowLayout];
@@ -180,6 +196,10 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     cell.viewModel = self.keyboardViewModel.children[indexPath.row];
     return cell;
 }
+
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return CGSizeMake(self.view.frame.size.width, 80);
+//}
 
 - (void)registerNib:(NSString *)cellName {
     UINib *nib = [UINib nibWithNibName:cellName bundle:NSBundle.mainBundle];
