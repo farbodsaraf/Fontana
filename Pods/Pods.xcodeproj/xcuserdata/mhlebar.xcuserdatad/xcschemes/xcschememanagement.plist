@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NODE_.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,12 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EEDA657F18E724447688B860031FDA9</key>
+		<key>822CAA39A78517FAA2F00F9ED4E9B83B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9D9DCC6DE9DE167F9330C970F240B6F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9A83F63385AA43314397B8DD375464B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

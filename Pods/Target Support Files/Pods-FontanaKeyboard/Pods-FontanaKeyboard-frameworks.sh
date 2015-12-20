@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FontanaKeyboard/BIND.framework"
   install_framework "Pods-FontanaKeyboard/NODE_.framework"
   install_framework "Pods-FontanaKeyboard/libextobjc.framework"
+  install_framework "Pods-FontanaKeyboard/Masonry.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FontanaKeyboard/BIND.framework"
   install_framework "Pods-FontanaKeyboard/NODE_.framework"
   install_framework "Pods-FontanaKeyboard/libextobjc.framework"
+  install_framework "Pods-FontanaKeyboard/Masonry.framework"
 fi

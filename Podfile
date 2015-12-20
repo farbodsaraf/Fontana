@@ -24,4 +24,5 @@ end
 
 target 'FontanaKeyboard' do
     pod 'BIND'
+    pod 'Masonry'
 end
