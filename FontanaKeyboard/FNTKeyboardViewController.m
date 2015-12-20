@@ -11,6 +11,7 @@
 #import "FNTKeyboardViewModel.h"
 #import "FNTKeyboardItemCellModel.h"
 #import "FNTUsageTutorialView.h"
+#import <Masonry/Masonry.h>
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController) 
 
@@ -28,6 +29,17 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [super updateViewConstraints];
     
     // Add custom view sizing constraints here
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsZero);
+    }];
+    
+    [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+    }];
+    
+    [self.nextKeyboardButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.offset(0);
+    }];
 }
 
 - (void)viewDidLoad {
@@ -38,6 +50,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.nextKeyboardButton];
     [self.view addSubview:self.activityIndicator];
+    
+    [self.view setNeedsUpdateConstraints];
 }
 
 - (FNTUsageTutorialView *)tutorialView {
@@ -58,21 +72,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         _finishTutorialButton.titleLabel.font = [UIFont systemFontOfSize:16];
     }
     return _finishTutorialButton;
-}
-
-- (void)viewDidLayoutSubviews {
-    self.collectionView.frame = self.view.frame;
-    self.activityIndicator.center = self.view.center;
-    self.tutorialView.frame = self.view.frame;
-    
-    CGRect frame = self.nextKeyboardButton.frame;
-    frame.origin.y = self.view.frame.size.height - frame.size.height;
-    self.nextKeyboardButton.frame = frame;
-    
-    self.finishTutorialButton.center = self.view.center;
-    frame = self.finishTutorialButton.frame;
-    frame.origin.y = self.view.frame.size.height - frame.size.height - 5;
-    self.finishTutorialButton.frame = frame;
 }
 
 - (UIActivityIndicatorView *)activityIndicator {
@@ -98,6 +97,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.minimumLineSpacing = 0;
+        flowLayout.itemSize = CGSizeMake(320, 80);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
                                              collectionViewLayout:flowLayout];
@@ -179,10 +179,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     cell.viewModel = self.keyboardViewModel.children[indexPath.row];
     return cell;
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.collectionView.frame.size.width, 80);
 }
 
 - (void)registerNib:(NSString *)cellName {
