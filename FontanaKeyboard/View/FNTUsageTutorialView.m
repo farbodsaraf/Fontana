@@ -7,24 +7,39 @@
 //
 
 #import "FNTUsageTutorialView.h"
+#import <Masonry/Masonry.h>
 
 @interface FNTUsageTutorialView ()
 @property (nonatomic) NSUInteger currentIndex;
 @property (nonatomic, strong) NSTimer *renderTimer;
 @property (nonatomic, strong) NSString *usageString;
+@property (nonatomic, strong) UILabel *label;
 @end
 
 @implementation FNTUsageTutorialView
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-        self.textAlignment = NSTextAlignmentCenter;
-        self.numberOfLines = 0;
+        [self addSubview:self.label];
     }
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.label.frame = self.frame;
+}
+
+- (UILabel *)label {
+    if (!_label) {
+        _label = [UILabel new];
+        _label.textAlignment = NSTextAlignmentCenter;
+        _label.numberOfLines = 0;
+        [_label setTranslatesAutoresizingMaskIntoConstraints:YES];
+    }
+    return _label;
 }
 
 - (void)start {
@@ -52,7 +67,7 @@
         return;
     }
     
-    self.text = [usageString substringToIndex:self.currentIndex];
+    self.label.text = [usageString substringToIndex:self.currentIndex];
 }
 
 - (NSString *)usageString {

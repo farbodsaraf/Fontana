@@ -15,7 +15,7 @@
 
 @end
 
-@interface FNTUsageTutorialView : UILabel
+@interface FNTUsageTutorialView : UIView
 @property (nonatomic, weak) id <FNTUsageTutorialViewDelegate> delegate;
 
 - (void)start;

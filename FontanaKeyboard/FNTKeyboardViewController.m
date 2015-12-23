@@ -28,18 +28,30 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (void)updateViewConstraints {
     [super updateViewConstraints];
     
-    // Add custom view sizing constraints here
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsZero);
-    }];
-    
-    [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-    }];
-    
-    [self.nextKeyboardButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.offset(0);
-    }];
+    if (_collectionView.superview) {
+        [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
+        
+        [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.view);
+        }];
+        
+        [self.nextKeyboardButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.offset(0);
+        }];
+    }
+
+    if (_tutorialView.superview) {
+        [self.tutorialView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
+        
+        [self.finishTutorialButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.view);
+            make.bottom.offset(0);
+        }];
+    }
 }
 
 - (void)viewDidLoad {
@@ -50,6 +62,18 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.nextKeyboardButton];
     [self.view addSubview:self.activityIndicator];
+    
+    [self.view setNeedsUpdateConstraints];
+}
+
+- (void)displayNoResults {
+    [self.collectionView removeFromSuperview];
+    [self.nextKeyboardButton removeFromSuperview];
+    [self.activityIndicator removeFromSuperview];
+    
+    [self.view addSubview:self.tutorialView];
+    [self.view addSubview:self.finishTutorialButton];
+    self.finishTutorialButton.alpha = 0;
     
     [self.view setNeedsUpdateConstraints];
 }
@@ -143,12 +167,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
                             }];
 }
 
-- (void)displayNoResults {
-    [self.view addSubview:self.tutorialView];
-    [self.view addSubview:self.finishTutorialButton];
-    self.finishTutorialButton.alpha = 0;
-}
-
 - (FNTKeyboardViewModel *)keyboardViewModel {
     return (FNTKeyboardViewModel*)self.viewModel;
 }
@@ -160,30 +178,10 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     NSLog(@"MEMORY WARNING!!!");
 }
 
-- (void)textWillChange:(id<UITextInput>)textInput {
-    // The app is about to change the document's contents. Perform any preparation here.
-}
-
-- (void)textDidChange:(id<UITextInput>)textInput {
-    // The app has just changed the document's contents, the document context has been updated.
-    
-    UIColor *textColor = nil;
-    if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
-        textColor = [UIColor whiteColor];
-    } else {
-        textColor = [UIColor blackColor];
-    }
-    [self.nextKeyboardButton setTitleColor:textColor forState:UIControlStateNormal];
-    
-    NSString *text = [self.textDocumentProxy documentContextBeforeInput];
-    NSLog(@"%@", text);
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.keyboardViewModel.children.count;
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *nibName = @"FNTKeyboardItemCell";
     [self registerNib:nibName];
@@ -196,10 +194,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     cell.viewModel = self.keyboardViewModel.children[indexPath.row];
     return cell;
 }
-
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return CGSizeMake(self.view.frame.size.width, 80);
-//}
 
 - (void)registerNib:(NSString *)cellName {
     UINib *nib = [UINib nibWithNibName:cellName bundle:NSBundle.mainBundle];
