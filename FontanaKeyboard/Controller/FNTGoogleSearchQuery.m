@@ -8,6 +8,8 @@
 
 #import "FNTGoogleSearchQuery.h"
 #import "FNTItem.h"
+#import "FNTMockFactory.h"
+#import "FNTItemParser.h"
 
 NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsearch/v1?key=AIzaSyAy5gxcPstj94UatXV_8bgUL_rZjgcjt7Y&cx=017888679784784333058:un3lzj234sa&q=%@&start=1";
 
@@ -46,94 +48,28 @@ NSString *const kFNTGoogleSearchString = @"https://www.googleapis.com/customsear
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    __weak typeof(self) weakSelf = self;
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse * _Nullable response,
                                                NSData * _Nullable data,
                                                NSError * _Nullable connectionError) {
                                if (data) {
-                                   [self handleData:data];
+                                   [weakSelf handleData:data];
                                }
                                else {
 #ifdef DEBUG
-                                   [self handleData:self.mockItems];
+                                   [weakSelf handleData:FNTMockFactory.mockItems];
 #else
-                                   self.itemsBlock(nil, connectionError);
+                                   weakSelf.itemsBlock(nil, connectionError);
 #endif
                                }
                            }];
 }
 
 - (void)handleData:(NSData *)data {
-    NSArray *items = [self serializeData:data];
+    NSArray *items = [FNTItemParser parseData:data error:nil];
     self.itemsBlock(items, nil);
-}
-
-- (NSArray *)serializeData:(id)data {
-    id JSON = [NSJSONSerialization JSONObjectWithData:data
-                                              options:0
-                                                error:nil];
-    NSArray *items = JSON[@"items"];
-    NSMutableArray *serializedItems = [NSMutableArray new];
-    for (NSDictionary *item in items) {
-        FNTItem *serializedItem = [[FNTItem alloc] initWithDictionary:item];
-        [serializedItems addObject:serializedItem];
-    }
-    return serializedItems.copy;
-}
-
-
-- (NSDictionary *)mockDictionaryWithLink:(NSString *)link
-                                   title:(NSString *)title
-                                thumbURL:(NSString *)thumbURL {
-    return @{
-             @"link" : link,
-             @"title" : title,
-             @"displayLink" : link,
-             @"pagemap" :
-                 @{
-                     @"cse_thumbnail" : @[
-                             @{
-                                 @"src" : thumbURL
-                                 }
-                             ]
-                     }
-             };
-}
-
-- (NSData *)mockItems {
-    NSString *thumbURL = [[NSBundle mainBundle] pathForResource:@"tux" ofType:@"jpg"];
-    
-    NSURL *url = [NSURL fileURLWithPath:thumbURL];
-    thumbURL = url.absoluteString;
-    
-    NSDictionary *mockDictionary = @{
-                                     @"items" : @[
-                                             [self mockDictionaryWithLink:@"http://www.spotify.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.imdb.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.yahoo.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.geeks.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ,
-                                             [self mockDictionaryWithLink:@"http://www.yippkiyeeah.com"
-                                                                    title:@"Mean Streets"
-                                                                 thumbURL:thumbURL]
-                                             ]
-                                     };
-    
-    return [NSJSONSerialization dataWithJSONObject:mockDictionary
-                                           options:0
-                                             error:nil];
 }
 
 @end

@@ -16,8 +16,20 @@
 		965311001C1368C9005CB906 /* FNTKeyboardViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310FF1C1368C9005CB906 /* FNTKeyboardViewModelTest.m */; };
 		965311011C1368D7005CB906 /* FNTKeyboardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468D1C0E279600051149 /* FNTKeyboardViewModel.m */; };
 		965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
-		965311031C1368E6005CB906 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
+		9658F4C11C2A9FA2002B3595 /* FNTKeyboardItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446901C0EB63C00051149 /* FNTKeyboardItemCell.m */; };
+		9658F4C21C2A9FA7002B3595 /* FNTKeyboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */; };
+		9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
+		9658F4C41C2AA1EC002B3595 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
+		9658F4C51C2AA1FD002B3595 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
+		9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
+		9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */; };
+		9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */; };
+		9658F4CB1C2AA3C4002B3595 /* tux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96C446981C1335F100051149 /* tux.jpg */; };
+		9658F4CF1C2AB1F1002B3595 /* FNTItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */; };
+		9658F4D01C2AB1F1002B3595 /* FNTItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */; };
+		9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
+		9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
 		966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
@@ -93,6 +105,15 @@
 		965310F91C1355B8005CB906 /* SpreaditTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpreaditTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		965310FA1C1355B8005CB906 /* FNTContextParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTContextParserTest.m; sourceTree = "<group>"; };
 		965310FF1C1368C9005CB906 /* FNTKeyboardViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardViewModelTest.m; path = ViewModel/FNTKeyboardViewModelTest.m; sourceTree = "<group>"; };
+		9658F4C71C2AA38E002B3595 /* FNTMockFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTMockFactory.h; path = Test/FNTMockFactory.h; sourceTree = "<group>"; };
+		9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTMockFactory.m; path = Test/FNTMockFactory.m; sourceTree = "<group>"; };
+		9658F4CC1C2AA5D2002B3595 /* Spreadit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spreadit-Bridging-Header.h"; sourceTree = "<group>"; };
+		9658F4CD1C2AB1F1002B3595 /* FNTItemParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItemParser.h; sourceTree = "<group>"; };
+		9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItemParser.m; sourceTree = "<group>"; };
+		9658F4D11C2AD6FF002B3595 /* FNTHistoryStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTHistoryStack.h; path = Controller/FNTHistoryStack.h; sourceTree = "<group>"; };
+		9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTHistoryStack.m; path = Controller/FNTHistoryStack.m; sourceTree = "<group>"; };
+		9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Spreadit.entitlements; sourceTree = "<group>"; };
+		9658F4D61C2ADABB002B3595 /* FontanaKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FontanaKeyboard.entitlements; sourceTree = "<group>"; };
 		966D57AC1C22D5EC00F14B5F /* FNTUsageTutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTUsageTutorialView.h; path = View/FNTUsageTutorialView.h; sourceTree = "<group>"; };
 		966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTUsageTutorialView.m; path = View/FNTUsageTutorialView.m; sourceTree = "<group>"; };
 		966D57B01C2400EF00F14B5F /* FNTSourceToColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSourceToColorTransformer.h; path = Transformers/FNTSourceToColorTransformer.h; sourceTree = "<group>"; };
@@ -190,6 +211,8 @@
 		965310EF1C134EE0005CB906 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9658F4D11C2AD6FF002B3595 /* FNTHistoryStack.h */,
+				9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */,
 				965310F61C1354E2005CB906 /* FNTContextParser.h */,
 				965310F71C1354E2005CB906 /* FNTContextParser.m */,
 				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
@@ -261,12 +284,14 @@
 		96B1C48B1BE159CA00114C26 /* Spreadit */ = {
 			isa = PBXGroup;
 			children = (
+				9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */,
 				96B1C48C1BE159CA00114C26 /* AppDelegate.swift */,
 				96B1C48E1BE159CA00114C26 /* ViewController.swift */,
 				96B1C4901BE159CA00114C26 /* Main.storyboard */,
 				96B1C4931BE159CA00114C26 /* Assets.xcassets */,
 				96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */,
 				96B1C4981BE159CA00114C26 /* Info.plist */,
+				9658F4CC1C2AA5D2002B3595 /* Spreadit-Bridging-Header.h */,
 			);
 			path = Spreadit;
 			sourceTree = "<group>";
@@ -314,6 +339,8 @@
 			isa = PBXGroup;
 			children = (
 				96C446981C1335F100051149 /* tux.jpg */,
+				9658F4C71C2AA38E002B3595 /* FNTMockFactory.h */,
+				9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -323,6 +350,8 @@
 			children = (
 				96DB7FEB1C0E12110073C330 /* FNTItem.h */,
 				96DB7FEC1C0E12110073C330 /* FNTItem.m */,
+				9658F4CD1C2AB1F1002B3595 /* FNTItemParser.h */,
+				9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -355,6 +384,7 @@
 		96F99F631C0AEEA7005D6364 /* FontanaKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9658F4D61C2ADABB002B3595 /* FontanaKeyboard.entitlements */,
 				96C446971C1335C800051149 /* Test */,
 				965310EF1C134EE0005CB906 /* Controllers */,
 				96C446881C0E182B00051149 /* Categories */,
@@ -494,6 +524,11 @@
 					96B1C4881BE159CA00114C26 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 7LN5U2P4GE;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					96B1C49C1BE159CA00114C26 = {
 						CreatedOnToolsVersion = 7.1;
@@ -510,6 +545,11 @@
 					96F99F611C0AEEA7005D6364 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 7LN5U2P4GE;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -540,8 +580,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9658F4C21C2A9FA7002B3595 /* FNTKeyboardItemCell.xib in Resources */,
 				96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */,
 				96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */,
+				9658F4CB1C2AA3C4002B3595 /* tux.jpg in Resources */,
 				96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,8 +763,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9658F4C11C2A9FA2002B3595 /* FNTKeyboardItemCell.m in Sources */,
 				96B1C48F1BE159CA00114C26 /* ViewController.swift in Sources */,
+				9658F4C51C2AA1FD002B3595 /* FNTKeyboardItemCellModel.m in Sources */,
+				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
+				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
+				9658F4CF1C2AB1F1002B3595 /* FNTItemParser.m in Sources */,
+				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
+				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,11 +781,11 @@
 			files = (
 				965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */,
+				9658F4C41C2AA1EC002B3595 /* FNTItem.m in Sources */,
 				965310FC1C1355CA005CB906 /* FNTContextParser.m in Sources */,
 				965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */,
 				965311011C1368D7005CB906 /* FNTKeyboardViewModel.m in Sources */,
 				965311001C1368C9005CB906 /* FNTKeyboardViewModelTest.m in Sources */,
-				965311031C1368E6005CB906 /* FNTItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,12 +814,15 @@
 				965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
+				9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
 				966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */,
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
 				96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */,
+				9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
 				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
+				9658F4D01C2AB1F1002B3595 /* FNTItemParser.m in Sources */,
 				96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,13 +955,17 @@
 			baseConfigurationReference = 7D230677FF9C01214B2A0356 /* Pods-Spreadit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/FontanaKeyboard\"/**";
 				INFOPLIST_FILE = Spreadit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36f1d925-36ac-43a8-b531-6fea6173943e";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -918,13 +974,17 @@
 			baseConfigurationReference = 789AA992A8BF19109D938472 /* Pods-Spreadit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/FontanaKeyboard\"/**";
 				INFOPLIST_FILE = Spreadit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a938b9d1-4924-4d1a-bc2e-906493556398";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1017,12 +1077,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 758CFD34E942B974044F8E45 /* Pods-FontanaKeyboard.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1031,13 +1094,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CE4CDCCC38AEEE6031D9BD1 /* Pods-FontanaKeyboard.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01427d52-dc67-4d9f-9dd1-16a0c7bcccef";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

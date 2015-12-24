@@ -28,8 +28,9 @@ BINDINGS(FNTKeyboardItemCellModel,
          BINDT(object, source, ~>, self, backgroundColor, FNTSourceToColorTransformer),
          nil)
 
-- (void)viewDidUpdateViewModel:(id<BNDViewModel>)viewModel {
-        
+-(void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    [self setNeedsDisplay];
 }
 
 @end

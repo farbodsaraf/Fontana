@@ -12,8 +12,12 @@
 #import "FNTKeyboardItemCellModel.h"
 #import "FNTUsageTutorialView.h"
 #import <Masonry/Masonry.h>
+#import "FNTHistoryStack.h"
 
-BND_VIEW_IMPLEMENTATION(FNTInputViewController) 
+static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
+static NSString *const kFNTKeyboardItemCell = @"FNTKeyboardItemCell";
+
+BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 @interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
@@ -21,9 +25,18 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
+@property (nonatomic, strong) FNTHistoryStack *historyStack;
 @end
 
 @implementation FNTKeyboardViewController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _historyStack = [FNTHistoryStack stackForGroup:kFNTAppGroup];
+    }
+    return self;
+}
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
@@ -144,6 +157,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
+        [self registerNib:kFNTKeyboardItemCell];
     }
     return _collectionView;
 }
@@ -183,14 +197,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *nibName = @"FNTKeyboardItemCell";
-    [self registerNib:nibName];
-    BNDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:nibName
-                                                                           forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] firstObject];
-    }
-    
+    BNDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kFNTKeyboardItemCell
+                                                                            forIndexPath:indexPath];
     cell.viewModel = self.keyboardViewModel.children[indexPath.row];
     return cell;
 }
@@ -208,6 +216,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.textDocumentProxy insertText:text];
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    [self.historyStack pushItem:item];
 }
 
 #pragma mark - FNTUsageTutorialViewDelegate

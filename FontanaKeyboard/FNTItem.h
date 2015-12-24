@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FNTItem : NSObject
+@interface FNTItem : NSObject <NSCoding>
 
+@property (nonatomic, copy, readonly) NSDictionary *dictionary;
 @property (nonatomic, strong, readonly) NSURL *link;
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, strong, readonly) NSURL *thumbnailURL;

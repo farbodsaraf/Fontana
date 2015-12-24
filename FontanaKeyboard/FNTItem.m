@@ -8,11 +8,14 @@
 
 #import "FNTItem.h"
 
+NSString *const kFNTItemDictionary = @"kFNTItemDictionary";
+
 @implementation FNTItem
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
+        _dictionary = dictionary.copy;
         _link = [NSURL URLWithString:dictionary[@"link"]];
         _title = [dictionary[@"title"] copy];
         _thumbnailURL = [self thumbnailURLForItem:dictionary];
@@ -20,6 +23,15 @@
         _snippet = dictionary[@"snippet"];
     }
     return self;
+}
+
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder {
+    NSDictionary *dictionary = [decoder decodeObjectForKey:kFNTItemDictionary];
+    return [self initWithDictionary:dictionary];
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.dictionary forKey:kFNTItemDictionary];
 }
 
 - (NSURL *)thumbnailURLForItem:(NSDictionary *)item {
