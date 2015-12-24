@@ -30,9 +30,11 @@ BINDINGS(FNTItem,
     return self;
 }
 
-- (void)setThumbnailURL:(NSURL *)thumbnailURL {
-    _thumbnailURL = thumbnailURL;
-    [self downloadImageWithURL:_thumbnailURL];
+- (UIImage *)image {
+    if (!_image) {
+        [self downloadImageWithURL:_thumbnailURL];
+    }
+    return _image;
 }
 
 - (void)downloadImageWithURL:(NSURL *)url {
