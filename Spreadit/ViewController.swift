@@ -8,6 +8,7 @@
 
 import UIKit
 import BIND
+import TSMessages
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -25,6 +26,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         
         self.collectionView.reloadData()
+        self.navigationItem.title = "History"
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,9 +48,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let viewModel = self.viewModels().objectAtIndex(indexPath.item) as! FNTKeyboardItemCellModel;
-        UIPasteboard.generalPasteboard().URL = viewModel.url;
-        
+        copyURLToPasteboard(viewModel.url)
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+    }
+    
+    func copyURLToPasteboard(url : NSURL) {
+        UIPasteboard.generalPasteboard().URL = url;
+        TSMessage.showNotificationInViewController(self.navigationController,
+            title: "Link copied to clipboard.",
+            subtitle: nil,
+            image: nil,
+            type: .Success,
+            duration: 1.0,
+            callback: nil,
+            buttonTitle: nil,
+            buttonCallback: nil,
+            atPosition: .NavBarOverlay,
+            canBeDismissedByUser: false)
     }
     
     func registerNib(cellName : String) {

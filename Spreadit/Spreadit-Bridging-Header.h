@@ -13,7 +13,6 @@
 #import "FNTItem.h"
 #import "FNTMockFactory.h"
 #import "FNTItemParser.h"
-#import <BIND/BIND.h>
 #import "FNTHistoryStack.h"
 
 #endif /* Spreadit_Bridging_Header_h */

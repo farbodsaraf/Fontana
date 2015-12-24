@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TSMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +62,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>054A602D5A52C1CBA44987BC4A0FF8FC</key>
+		<key>008BE5AB23D84DFA65C8BC403C4152F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +73,11 @@
 			<true/>
 		</dict>
 		<key>0DF57C2565AA73506F661B00B828AF7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0FB7AC442011C44B9DAE214744D17D2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D9DCC6DE9DE167F9330C970F240B6F0</key>
+		<key>A9A83F63385AA43314397B8DD375464B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9A83F63385AA43314397B8DD375464B</key>
+		<key>C408D4E183A88B763793C217A66A1950</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2404555C7664B589AA23D26A53D263A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

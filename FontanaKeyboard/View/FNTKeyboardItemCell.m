@@ -28,6 +28,15 @@ BINDINGS(FNTKeyboardItemCellModel,
          BINDT(object, source, ~>, self, backgroundColor, FNTSourceToColorTransformer),
          nil)
 
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIView* selectedBGView = [[UIView alloc] initWithFrame:self.bounds];
+    selectedBGView.backgroundColor = [UIColor redColor];
+    self.selectedBackgroundView = selectedBGView;
+}
+
 -(void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
     [self setNeedsDisplay];

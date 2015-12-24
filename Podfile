@@ -7,6 +7,7 @@ target 'Spreadit' do
 	pod 'Alamofire', '~> 3.0'
     pod 'SwiftyJSON'
     pod 'BIND'
+    pod 'TSMessages'
 end
 
 target 'SpreaditTests' do

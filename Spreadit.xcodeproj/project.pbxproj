@@ -30,6 +30,7 @@
 		9658F4D01C2AB1F1002B3595 /* FNTItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */; };
 		9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
 		9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
+		9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */; };
 		966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
@@ -114,6 +115,7 @@
 		9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTHistoryStack.m; path = Controller/FNTHistoryStack.m; sourceTree = "<group>"; };
 		9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Spreadit.entitlements; sourceTree = "<group>"; };
 		9658F4D61C2ADABB002B3595 /* FontanaKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FontanaKeyboard.entitlements; sourceTree = "<group>"; };
+		9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TSMessagesDefaultDesign.json; path = Pods/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		966D57AC1C22D5EC00F14B5F /* FNTUsageTutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTUsageTutorialView.h; path = View/FNTUsageTutorialView.h; sourceTree = "<group>"; };
 		966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTUsageTutorialView.m; path = View/FNTUsageTutorialView.m; sourceTree = "<group>"; };
 		966D57B01C2400EF00F14B5F /* FNTSourceToColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSourceToColorTransformer.h; path = Transformers/FNTSourceToColorTransformer.h; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		96B1C4801BE159CA00114C26 = {
 			isa = PBXGroup;
 			children = (
+				9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */,
 				96B1C48B1BE159CA00114C26 /* Spreadit */,
 				96B1C4A01BE159CA00114C26 /* SpreaditTests */,
 				96B1C4AB1BE159CA00114C26 /* SpreaditUITests */,
@@ -585,6 +588,7 @@
 				96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */,
 				9658F4CB1C2AA3C4002B3595 /* tux.jpg in Resources */,
 				96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */,
+				9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
