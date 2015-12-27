@@ -962,7 +962,10 @@
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/FontanaKeyboard\"/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FontanaKeyboard\"/**",
+				);
 				INFOPLIST_FILE = Spreadit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -981,13 +984,16 @@
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/FontanaKeyboard\"/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FontanaKeyboard\"/**",
+				);
 				INFOPLIST_FILE = Spreadit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8a4db4e8-daf6-4f38-b317-8eff915c8a9a";
 				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
 			};
 			name = Release;
@@ -1106,7 +1112,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2af7fc22-d383-49e3-b14b-9fa225fa356c";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

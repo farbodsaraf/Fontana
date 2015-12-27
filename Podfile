@@ -8,6 +8,7 @@ target 'Spreadit' do
     pod 'SwiftyJSON'
     pod 'BIND'
     pod 'TSMessages'
+    pod 'HockeySDK'
 end
 
 target 'SpreaditTests' do
@@ -26,4 +27,5 @@ end
 target 'FontanaKeyboard' do
     pod 'BIND'
     pod 'Masonry'
+    pod 'HockeySDK'
 end

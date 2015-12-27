@@ -13,6 +13,7 @@
 #import "FNTUsageTutorialView.h"
 #import <Masonry/Masonry.h>
 #import "FNTHistoryStack.h"
+@import HockeySDK;
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 static NSString *const kFNTKeyboardItemCell = @"FNTKeyboardItemCell";
@@ -34,8 +35,14 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     self = [super init];
     if (self) {
         _historyStack = [FNTHistoryStack stackForGroup:kFNTAppGroup];
+        [self runHockeyApp];
     }
     return self;
+}
+
+- (void)runHockeyApp {
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"c2b76f87dd7f42b3b774ede94ce73636"];
+    [[BITHockeyManager sharedHockeyManager] startManager];
 }
 
 - (void)updateViewConstraints {
