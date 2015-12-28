@@ -35,7 +35,7 @@ BINDINGS(FNTKeyboardItemCellModel,
     selectedView.backgroundColor = [UIColor colorWithRed:47./255
                                                    green:143./255
                                                     blue:140./255
-                                                   alpha:0.3];
+                                                   alpha:1.0];
     self.selectedBackgroundView = selectedView;
     self.separatorHeightConstraint.constant = 0.5f;
 }

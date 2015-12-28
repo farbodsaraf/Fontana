@@ -23,8 +23,14 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self addSubview:self.label];
+        [self addStopGestureRecognizer];
     }
     return self;
+}
+
+- (void)addStopGestureRecognizer {
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stopAndRenderText)];
+    [self addGestureRecognizer:recognizer];
 }
 
 - (void)layoutSubviews {
@@ -56,6 +62,11 @@
     self.renderTimer = nil;
     
     [self.delegate tutorialViewDidFinish:self];
+}
+
+- (void)stopAndRenderText {
+    [self stop];
+    self.label.text = self.usageString;
 }
 
 - (void)renderNext {

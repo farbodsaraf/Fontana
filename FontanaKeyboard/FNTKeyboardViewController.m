@@ -13,20 +13,22 @@
 #import "FNTUsageTutorialView.h"
 #import <Masonry/Masonry.h>
 #import "FNTHistoryStack.h"
+#import "FNTKeyboardToolbar.h"
 @import HockeySDK;
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 static NSString *const kFNTKeyboardItemCell = @"FNTKeyboardItemCell";
+static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
-@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate>
-@property (nonatomic, strong) UIButton *nextKeyboardButton;
+@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate>
 @property (nonatomic, strong) UIButton *finishTutorialButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
 @property (nonatomic, strong) FNTHistoryStack *historyStack;
+@property (nonatomic, strong) FNTKeyboardToolbar *toolbar;
 @end
 
 @implementation FNTKeyboardViewController
@@ -49,16 +51,22 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [super updateViewConstraints];
     
     if (_collectionView.superview) {
+        [self.toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.view);
+            make.left.equalTo(self.view);
+            make.right.equalTo(self.view);
+            make.height.equalTo(@34);
+        }];
+        
         [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+            make.top.equalTo(self.view);
+            make.left.equalTo(self.view);
+            make.right.equalTo(self.view);
+            make.bottom.equalTo(self.toolbar);
         }];
         
         [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.view);
-        }];
-        
-        [self.nextKeyboardButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.offset(0);
         }];
     }
 
@@ -80,15 +88,14 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     self.viewModel = [FNTKeyboardViewModel new];
     
     [self.view addSubview:self.collectionView];
-    [self.view addSubview:self.nextKeyboardButton];
     [self.view addSubview:self.activityIndicator];
+    [self.view addSubview:self.toolbar];
     
     [self.view setNeedsUpdateConstraints];
 }
 
 - (void)displayNoResults {
     [self.collectionView removeFromSuperview];
-    [self.nextKeyboardButton removeFromSuperview];
     [self.activityIndicator removeFromSuperview];
     
     [self.view addSubview:self.tutorialView];
@@ -124,6 +131,14 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     return _tutorialView;
 }
 
+- (FNTKeyboardToolbar *)toolbar {
+    if (!_toolbar) {
+        _toolbar = [[[NSBundle mainBundle] loadNibNamed:@"FNTKeyboardToolbar" owner:self options:nil] objectAtIndex:0];
+        _toolbar.delegate = self;
+    }
+    return _toolbar;
+}
+
 - (UIButton *)finishTutorialButton {
     if (!_finishTutorialButton) {
         _finishTutorialButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -142,17 +157,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     return _activityIndicator;
 }
 
-- (UIButton *)nextKeyboardButton {
-    if (!_nextKeyboardButton) {
-        _nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_nextKeyboardButton setTitle:NSLocalizedString(@"🌐", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-        [_nextKeyboardButton sizeToFit];
-        [_nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-        _nextKeyboardButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    }
-    return _nextKeyboardButton;
-}
-
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
@@ -165,6 +169,9 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
         [self registerNib:kFNTKeyboardItemCell];
+        [_collectionView registerClass:UICollectionReusableView.class
+            forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                   withReuseIdentifier:FNTKeyboardViewFooter];
     }
     return _collectionView;
 }
@@ -210,6 +217,22 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
+        UICollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                            withReuseIdentifier:FNTKeyboardViewFooter
+                                                                   forIndexPath:indexPath];
+        footer.backgroundColor = UIColor.clearColor;
+        return footer;
+    }
+    return nil;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionView.collectionViewLayout;
+    return CGSizeMake(flowLayout.itemSize.width, 34);
+}
+
 - (void)registerNib:(NSString *)cellName {
     UINib *nib = [UINib nibWithNibName:cellName bundle:NSBundle.mainBundle];
     [self.collectionView registerNib:nib
@@ -234,6 +257,12 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
                      animations:^{
                          self.finishTutorialButton.alpha = 1;
                      }];
+}
+
+#pragma mark - FNTKeyboardToolbarDelegate
+
+- (void)toolbarDidSelectNextKeyboard:(id)toolbar {
+    [self advanceToNextInputMode];
 }
 
 @end

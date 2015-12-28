@@ -36,6 +36,9 @@
 		9658F4E01C315328002B3595 /* icon_iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */; };
 		9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */; };
 		9658F4E41C317748002B3595 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4E31C317748002B3595 /* TutorialViewController.swift */; };
+		9658F4EB1C31A56F002B3595 /* FNTKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */; };
+		9658F4ED1C31A5A8002B3595 /* FNTKeyboardToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */; };
+		9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4EE1C31B6FF002B3595 /* globe@3x.png */; };
 		966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
@@ -124,6 +127,10 @@
 		9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_iphone@3x.png"; path = "Resources/icon_iphone@3x.png"; sourceTree = SOURCE_ROOT; };
 		9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSUserDefaults+CustomKeyboard.swift"; path = "Extensions/NSUserDefaults+CustomKeyboard.swift"; sourceTree = "<group>"; };
 		9658F4E31C317748002B3595 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = View/TutorialViewController.swift; sourceTree = "<group>"; };
+		9658F4E91C31A56F002B3595 /* FNTKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTKeyboardToolbar.h; path = View/FNTKeyboardToolbar.h; sourceTree = "<group>"; };
+		9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardToolbar.m; path = View/FNTKeyboardToolbar.m; sourceTree = "<group>"; };
+		9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FNTKeyboardToolbar.xib; path = View/FNTKeyboardToolbar.xib; sourceTree = "<group>"; };
+		9658F4EE1C31B6FF002B3595 /* globe@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "globe@3x.png"; path = "Resources/globe@3x.png"; sourceTree = SOURCE_ROOT; };
 		966D57AC1C22D5EC00F14B5F /* FNTUsageTutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTUsageTutorialView.h; path = View/FNTUsageTutorialView.h; sourceTree = "<group>"; };
 		966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTUsageTutorialView.m; path = View/FNTUsageTutorialView.m; sourceTree = "<group>"; };
 		966D57B01C2400EF00F14B5F /* FNTSourceToColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSourceToColorTransformer.h; path = Transformers/FNTSourceToColorTransformer.h; sourceTree = "<group>"; };
@@ -250,6 +257,7 @@
 		9658F4DA1C3152E4002B3595 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9658F4EE1C31B6FF002B3595 /* globe@3x.png */,
 				9658F4DB1C3152F8002B3595 /* icon_iphone@2x.png */,
 				9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */,
 			);
@@ -420,6 +428,9 @@
 				96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */,
 				966D57AC1C22D5EC00F14B5F /* FNTUsageTutorialView.h */,
 				966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */,
+				9658F4E91C31A56F002B3595 /* FNTKeyboardToolbar.h */,
+				9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */,
+				9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -672,7 +683,9 @@
 			files = (
 				9658F4DD1C3152F8002B3595 /* icon_iphone@2x.png in Resources */,
 				96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */,
+				9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */,
 				9658F4DE1C3152F8002B3595 /* icon_iphone@3x.png in Resources */,
+				9658F4ED1C31A5A8002B3595 /* FNTKeyboardToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +889,7 @@
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
 				9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
+				9658F4EB1C31A56F002B3595 /* FNTKeyboardToolbar.m in Sources */,
 				966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */,
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
 				96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */,
