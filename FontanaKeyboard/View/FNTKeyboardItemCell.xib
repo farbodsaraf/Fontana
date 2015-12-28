@@ -16,49 +16,46 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xa4-HS-LYd">
-                        <rect key="frame" x="1" y="0.0" width="319" height="99"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-58-wKt">
-                                <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-58-wKt">
+                                <rect key="frame" x="4" y="4" width="91" height="91"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UhX-58-wKt" secondAttribute="height" multiplier="1:1" id="hP1-PO-iUx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":imdb:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-me-JEu" userLabel="Source Label">
-                                <rect key="frame" x="8" y="8" width="30.5" height="12"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="SJe-dY-CHU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-aq-Ieu" userLabel="Story Label">
-                                <rect key="frame" x="107" y="8" width="204" height="14.5"/>
+                                <rect key="frame" x="103" y="8" width="209" height="14.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":imdb:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-me-JEu" userLabel="Source Label">
+                                <rect key="frame" x="281.5" y="79" width="30.5" height="12"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="NBh-gA-2v8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gIf-me-JEu" firstAttribute="leading" secondItem="xa4-HS-LYd" secondAttribute="leading" constant="8" id="4bY-nZ-BLN"/>
-                            <constraint firstItem="gIf-me-JEu" firstAttribute="top" secondItem="xa4-HS-LYd" secondAttribute="top" constant="8" id="9Zp-rA-QNi"/>
+                            <constraint firstAttribute="bottom" secondItem="gIf-me-JEu" secondAttribute="bottom" constant="8" id="B7b-Ua-xi0"/>
                             <constraint firstItem="Coe-aq-Ieu" firstAttribute="top" secondItem="xa4-HS-LYd" secondAttribute="top" constant="8" id="E7E-cl-7Av"/>
-                            <constraint firstAttribute="bottom" secondItem="UhX-58-wKt" secondAttribute="bottom" id="FGZ-nx-85d"/>
-                            <constraint firstAttribute="bottom" secondItem="UhX-58-wKt" secondAttribute="bottom" id="Gn7-C9-Hcb"/>
-                            <constraint firstItem="UhX-58-wKt" firstAttribute="top" secondItem="xa4-HS-LYd" secondAttribute="top" id="JVH-vT-VFu"/>
+                            <constraint firstAttribute="bottom" secondItem="UhX-58-wKt" secondAttribute="bottom" constant="4" id="FGZ-nx-85d"/>
+                            <constraint firstItem="UhX-58-wKt" firstAttribute="top" secondItem="xa4-HS-LYd" secondAttribute="top" constant="4" id="JVH-vT-VFu"/>
                             <constraint firstAttribute="trailing" secondItem="Coe-aq-Ieu" secondAttribute="trailing" constant="8" id="NVL-G5-R3e"/>
-                            <constraint firstItem="UhX-58-wKt" firstAttribute="top" secondItem="xa4-HS-LYd" secondAttribute="top" id="OH7-TR-ieF"/>
-                            <constraint firstItem="UhX-58-wKt" firstAttribute="leading" secondItem="xa4-HS-LYd" secondAttribute="leading" id="gHp-Z4-y6U"/>
+                            <constraint firstAttribute="trailing" secondItem="gIf-me-JEu" secondAttribute="trailing" constant="8" id="UNc-Cr-I4t"/>
+                            <constraint firstItem="UhX-58-wKt" firstAttribute="leading" secondItem="xa4-HS-LYd" secondAttribute="leading" constant="4" id="gHp-Z4-y6U"/>
                             <constraint firstItem="Coe-aq-Ieu" firstAttribute="leading" secondItem="UhX-58-wKt" secondAttribute="trailing" constant="8" id="lBo-iY-LzS"/>
-                            <constraint firstItem="UhX-58-wKt" firstAttribute="leading" secondItem="xa4-HS-LYd" secondAttribute="leading" id="w0r-8e-Y6h"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,7 +66,7 @@
             <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="xa4-HS-LYd" firstAttribute="top" secondItem="EC6-dk-irk" secondAttribute="top" id="Afa-he-Vb0"/>
-                <constraint firstItem="xa4-HS-LYd" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" constant="1" id="Ht9-E2-2r9"/>
+                <constraint firstItem="xa4-HS-LYd" firstAttribute="leading" secondItem="EC6-dk-irk" secondAttribute="leading" id="Ht9-E2-2r9"/>
                 <constraint firstAttribute="trailing" secondItem="xa4-HS-LYd" secondAttribute="trailing" id="MWp-uo-TSn"/>
                 <constraint firstAttribute="bottom" secondItem="xa4-HS-LYd" secondAttribute="bottom" constant="1" id="q4z-HB-9O9"/>
             </constraints>
@@ -83,4 +80,7 @@
             <point key="canvasLocation" x="-285" y="-79"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icon_iphone.png" width="60" height="60"/>
+    </resources>
 </document>

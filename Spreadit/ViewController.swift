@@ -19,19 +19,44 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     required init(coder aDecoder: NSCoder) {
         historyStack = FNTHistoryStack(forGroup: "group.com.fontanakey.app")
         super.init(coder: aDecoder)!
+    
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadData", name: UIApplicationWillEnterForegroundNotification, object: nil)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.collectionView.reloadData()
+        reloadData()
         self.navigationItem.title = "History"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func reloadData() {
+//        let keyboardBundleID = "com.fontanakey.app.keyboard"
+//        print("Keyboard is enabled \(NSUserDefaults.isKeyboardEnabled(keyboardBundleID)) \nfull access is allowed \(NSUserDefaults.isFullAccessAllowed(keyboardBundleID))")
+//
+//        if NSUserDefaults.isKeyboardEnabled(keyboardBundleID) {
+//            self.collectionView.reloadData()
+//        }
+//        else {
+//            self.showTutorial()
+//        }
+        
+        self.collectionView.reloadData()
+
+    }
+    
+    func showTutorial() {
+        self.performSegueWithIdentifier("PresentTutorial", sender: self)
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -77,7 +102,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func textViewDidChange(textView: UITextView) {
-        self.collectionView.reloadData()
+        reloadData()
     }
     
     override func viewWillLayoutSubviews() {

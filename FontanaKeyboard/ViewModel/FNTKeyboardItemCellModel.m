@@ -51,6 +51,9 @@ BINDINGS(FNTItem,
                                        self.image = image;
                                    }
                                }
+                               else {
+                                   self.image = [UIImage imageNamed:@"icon_iphone"];
+                               }
                            }];
 }
 

@@ -33,7 +33,10 @@ BINDINGS(FNTKeyboardItemCellModel,
     [super awakeFromNib];
     
     UIView* selectedBGView = [[UIView alloc] initWithFrame:self.bounds];
-    selectedBGView.backgroundColor = [UIColor redColor];
+    selectedBGView.backgroundColor = [UIColor colorWithRed:47./255
+                                                     green:143./255
+                                                      blue:140./255
+                                                     alpha:1.0];
     self.selectedBackgroundView = selectedBGView;
 }
 
