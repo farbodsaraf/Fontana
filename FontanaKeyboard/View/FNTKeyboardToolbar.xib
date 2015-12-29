@@ -19,10 +19,10 @@
                     </connections>
                 </barButtonItem>
             </items>
-            <point key="canvasLocation" x="-145" y="-397"/>
+            <point key="canvasLocation" x="-286" y="-440"/>
         </toolbar>
     </objects>
     <resources>
-        <image name="globe.png" width="20" height="20"/>
+        <image name="globe.png" width="22" height="22"/>
     </resources>
 </document>

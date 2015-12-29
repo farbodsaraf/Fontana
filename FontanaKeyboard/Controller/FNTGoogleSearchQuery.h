@@ -7,14 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FNTItemSearchQuery.h"
 
-typedef void (^FNTItemResultBlock)(NSArray *, NSError *);
-
-@interface FNTGoogleSearchQuery : NSObject
-@property (nonatomic, copy, readonly) FNTItemResultBlock itemsBlock;
-@property (nonatomic, copy, readonly) NSString *searchTerm;
-
-+ (instancetype)queryWithSearchTerm:(NSString *)searchTerm
-                         itemsBlock:(FNTItemResultBlock)itemsBlock;
+@interface FNTGoogleSearchQuery : FNTItemSearchQuery
 
 @end

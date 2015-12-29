@@ -65,7 +65,7 @@
                                                        }];
 }
 
-- (void)handleItems:(NSArray *)items {
+- (void)handleItems:(NSArray *)items{
     self.items = items;
     for (FNTItem *item in items) {
         FNTKeyboardItemCellModel *cellModel = [FNTKeyboardItemCellModel viewModelWithModel:item];

@@ -25,8 +25,8 @@
 		9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
 		9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */; };
 		9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */; };
-		9658F4CF1C2AB1F1002B3595 /* FNTItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */; };
-		9658F4D01C2AB1F1002B3595 /* FNTItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */; };
+		9658F4CF1C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTGoogleItemParser.m */; };
+		9658F4D01C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTGoogleItemParser.m */; };
 		9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
 		9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
 		9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */; };
@@ -56,6 +56,7 @@
 		96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */; };
 		96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
+		96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */; };
@@ -116,8 +117,8 @@
 		9658F4C71C2AA38E002B3595 /* FNTMockFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTMockFactory.h; path = Test/FNTMockFactory.h; sourceTree = "<group>"; };
 		9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTMockFactory.m; path = Test/FNTMockFactory.m; sourceTree = "<group>"; };
 		9658F4CC1C2AA5D2002B3595 /* Spreadit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spreadit-Bridging-Header.h"; sourceTree = "<group>"; };
-		9658F4CD1C2AB1F1002B3595 /* FNTItemParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItemParser.h; sourceTree = "<group>"; };
-		9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItemParser.m; sourceTree = "<group>"; };
+		9658F4CD1C2AB1F1002B3595 /* FNTGoogleItemParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTGoogleItemParser.h; sourceTree = "<group>"; };
+		9658F4CE1C2AB1F1002B3595 /* FNTGoogleItemParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTGoogleItemParser.m; sourceTree = "<group>"; };
 		9658F4D11C2AD6FF002B3595 /* FNTHistoryStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTHistoryStack.h; path = Controller/FNTHistoryStack.h; sourceTree = "<group>"; };
 		9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTHistoryStack.m; path = Controller/FNTHistoryStack.m; sourceTree = "<group>"; };
 		9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Spreadit.entitlements; sourceTree = "<group>"; };
@@ -164,6 +165,10 @@
 		96C446981C1335F100051149 /* tux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tux.jpg; path = Test/tux.jpg; sourceTree = "<group>"; };
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
+		96F04ABA1C31DC03002BBE67 /* FNTSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSearchQuery.h; path = Controller/FNTSearchQuery.h; sourceTree = "<group>"; };
+		96F04ABB1C31DC85002BBE67 /* FNTItemSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTItemSearchQuery.h; path = Controller/FNTItemSearchQuery.h; sourceTree = "<group>"; };
+		96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemSearchQuery.m; path = Controller/FNTItemSearchQuery.m; sourceTree = "<group>"; };
+		96F04AC01C31DECD002BBE67 /* FNTItemParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTItemParser.h; path = Controller/FNTItemParser.h; sourceTree = "<group>"; };
 		96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FontanaKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F99F641C0AEEA7005D6364 /* FNTKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNTKeyboardViewController.h; sourceTree = "<group>"; };
 		96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNTKeyboardViewController.m; sourceTree = "<group>"; };
@@ -228,12 +233,12 @@
 		965310EF1C134EE0005CB906 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96F04ABF1C31DE62002BBE67 /* Parser */,
+				96F04ABE1C31DC8A002BBE67 /* Search */,
 				9658F4D11C2AD6FF002B3595 /* FNTHistoryStack.h */,
 				9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */,
 				965310F61C1354E2005CB906 /* FNTContextParser.h */,
 				965310F71C1354E2005CB906 /* FNTContextParser.m */,
-				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
-				965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -412,8 +417,6 @@
 			children = (
 				96DB7FEB1C0E12110073C330 /* FNTItem.h */,
 				96DB7FEC1C0E12110073C330 /* FNTItem.m */,
-				9658F4CD1C2AB1F1002B3595 /* FNTItemParser.h */,
-				9658F4CE1C2AB1F1002B3595 /* FNTItemParser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -444,6 +447,28 @@
 				96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		96F04ABE1C31DC8A002BBE67 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				96F04ABA1C31DC03002BBE67 /* FNTSearchQuery.h */,
+				96F04ABB1C31DC85002BBE67 /* FNTItemSearchQuery.h */,
+				96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */,
+				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
+				965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		96F04ABF1C31DE62002BBE67 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				96F04AC01C31DECD002BBE67 /* FNTItemParser.h */,
+				9658F4CD1C2AB1F1002B3595 /* FNTGoogleItemParser.h */,
+				9658F4CE1C2AB1F1002B3595 /* FNTGoogleItemParser.m */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 		96F99F631C0AEEA7005D6364 /* FontanaKeyboard */ = {
@@ -840,7 +865,7 @@
 				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
-				9658F4CF1C2AB1F1002B3595 /* FNTItemParser.m in Sources */,
+				9658F4CF1C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
 				9658F4E41C317748002B3595 /* TutorialViewController.swift in Sources */,
@@ -896,7 +921,8 @@
 				9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
 				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
-				9658F4D01C2AB1F1002B3595 /* FNTItemParser.m in Sources */,
+				96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */,
+				9658F4D01C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
 				96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

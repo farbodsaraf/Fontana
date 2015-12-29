@@ -12,7 +12,7 @@
 #import "FNTKeyboardItemCellModel.h"
 #import "FNTItem.h"
 #import "FNTMockFactory.h"
-#import "FNTItemParser.h"
+#import "FNTGoogleItemParser.h"
 #import "FNTHistoryStack.h"
 
 #endif /* Spreadit_Bridging_Header_h */
