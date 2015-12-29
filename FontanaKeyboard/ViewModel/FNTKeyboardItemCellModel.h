@@ -13,6 +13,7 @@
 @property (nonatomic, copy, readonly) NSAttributedString *attributedText;
 @property (nonatomic, copy, readonly) NSURL *url;
 @property (nonatomic, copy, readonly) NSURL *thumbnailURL;
-@property (nonatomic, copy, readonly) UIImage *image;
+@property (nonatomic, strong, readonly) UIImage *image;
+@property (nonatomic, strong, readonly) UIImage *faviconImage;
 @property (nonatomic, copy, readonly) NSString *source;
 @end

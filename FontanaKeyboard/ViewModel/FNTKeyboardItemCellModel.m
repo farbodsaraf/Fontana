@@ -8,10 +8,19 @@
 
 #import "FNTKeyboardItemCellModel.h"
 #import "FNTItem.h"
+#import "NSURL+FNTBaseURL.h"
+
+typedef void(^FNTImageBlock)(UIImage *);
+
+static NSString *const kFNTKeyboardItemCell = @"FNTKeyboardItemCell";
+static NSString *const kFNTKeyboardItemPlainCell = @"FNTKeyboardItemPlainCell";
 
 @interface FNTKeyboardItemCellModel ()
-@property (nonatomic, copy) UIImage *image;
+@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImage *faviconImage;
 @property (nonatomic, copy) NSAttributedString *attributedText;
+@property (nonatomic, copy) NSURL *faviconURL;
+
 @end
 
 @implementation FNTKeyboardItemCellModel
@@ -31,13 +40,30 @@ BINDINGS(FNTItem,
 }
 
 - (UIImage *)image {
+    if (!self.thumbnailURL) {
+        return nil;
+    }
+    
     if (!_image) {
-        [self downloadImageWithURL:_thumbnailURL];
+        __weak typeof(self) weakSelf = self;
+        [self downloadImageWithURL:self.thumbnailURL imageBlock:^(UIImage *image) {
+            weakSelf.image = image ?: [UIImage imageNamed:@"icon_iphone"];
+        }];
     }
     return _image;
 }
 
-- (void)downloadImageWithURL:(NSURL *)url {
+- (UIImage *)faviconImage {
+    if (!_faviconImage) {
+        __weak typeof(self) weakSelf = self;
+        [self downloadImageWithURL:self.faviconURL imageBlock:^(UIImage *image) {
+            weakSelf.faviconImage = image ?: [UIImage imageNamed:@"icon_iphone"];
+        }];
+    }
+    return _faviconImage;
+}
+
+- (void)downloadImageWithURL:(NSURL *)url imageBlock:(FNTImageBlock)imageBlock {
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [NSURLConnection sendAsynchronousRequest:request
@@ -45,21 +71,22 @@ BINDINGS(FNTItem,
                            completionHandler:^(NSURLResponse * _Nullable response,
                                                NSData * _Nullable data,
                                                NSError * _Nullable connectionError) {
+                               UIImage *image = nil;
                                if (data) {
-                                   UIImage *image = [UIImage imageWithData:data];
-                                   if (image) {
-                                       self.image = image;
-                                   }
+                                   image = [UIImage imageWithData:data];
                                }
-                               else {
-                                   self.image = [UIImage imageNamed:@"icon_iphone"];
-                               }
+                               imageBlock(image);
                            }];
 }
 
 - (NSAttributedString *)attributedText {
     if (!_attributedText) {
         FNTItem *item = self.model;
+        
+        if (!item.link || !item.title) {
+            return nil;
+        }
+        
         NSString *link = item.link.absoluteString;
         NSString *string = [NSString stringWithFormat:@"%@\n%@", item.title, link];
         NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
@@ -81,6 +108,18 @@ BINDINGS(FNTItem,
         _attributedText = attrString.copy;
     }
     return _attributedText;
+}
+
+- (NSString *)identifier {
+    return self.thumbnailURL ? kFNTKeyboardItemCell : kFNTKeyboardItemPlainCell;
+}
+
+- (NSURL *)faviconURL {
+    if (!_faviconURL) {
+        FNTItem *item = self.model;
+        _faviconURL = [item.link fnt_urlByAddingPath:@"favicon.ico"];
+    }
+    return _faviconURL;
 }
 
 @end

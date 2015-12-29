@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Spreadit/NODE_.framework"
   install_framework "Pods-Spreadit/SwiftyJSON.framework"
   install_framework "Pods-Spreadit/TSMessages.framework"
+  install_framework "Pods-Spreadit/TTTAttributedLabel.framework"
   install_framework "Pods-Spreadit/libextobjc.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -99,5 +100,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Spreadit/NODE_.framework"
   install_framework "Pods-Spreadit/SwiftyJSON.framework"
   install_framework "Pods-Spreadit/TSMessages.framework"
+  install_framework "Pods-Spreadit/TTTAttributedLabel.framework"
   install_framework "Pods-Spreadit/libextobjc.framework"
 fi

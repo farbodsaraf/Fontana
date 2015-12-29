@@ -42,11 +42,12 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
-  - Masonry (0.6.3)
+  - Masonry (0.6.4)
   - NODE_ (0.1.1)
   - SwiftyJSON (2.3.2)
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
+  - TTTAttributedLabel (1.13.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - Masonry
   - SwiftyJSON
   - TSMessages
+  - TTTAttributedLabel
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
@@ -62,9 +64,10 @@ SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   NODE_: 4595c1cfadbf1f1d06566c32c1c7deb387a0822f
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
 
 COCOAPODS: 0.39.0

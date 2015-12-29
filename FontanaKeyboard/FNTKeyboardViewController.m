@@ -9,7 +9,6 @@
 #import "FNTKeyboardViewController.h"
 #import "FNTItem.h"
 #import "FNTKeyboardViewModel.h"
-#import "FNTKeyboardItemCellModel.h"
 #import "FNTUsageTutorialView.h"
 #import <Masonry/Masonry.h>
 #import "FNTHistoryStack.h"
@@ -17,7 +16,6 @@
 @import HockeySDK;
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
-static NSString *const kFNTKeyboardItemCell = @"FNTKeyboardItemCell";
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
@@ -29,6 +27,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
 @property (nonatomic, strong) FNTHistoryStack *historyStack;
 @property (nonatomic, strong) FNTKeyboardToolbar *toolbar;
+@property (nonatomic, strong) UIView *separator;
 @end
 
 @implementation FNTKeyboardViewController
@@ -51,6 +50,13 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [super updateViewConstraints];
     
     if (_collectionView.superview) {
+        [self.separator mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view);
+            make.left.equalTo(self.view);
+            make.right.equalTo(self.view);
+            make.height.equalTo(@(0.5));
+        }];
+        
         [self.toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.view);
             make.left.equalTo(self.view);
@@ -90,6 +96,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.activityIndicator];
     [self.view addSubview:self.toolbar];
+    [self.view addSubview:self.separator];
     
     [self.view setNeedsUpdateConstraints];
 }
@@ -111,7 +118,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     CGSize itemSize = self.view.frame.size;
     itemSize.width = self.isPortrait ? itemSize.width : itemSize.width / 2;
-    itemSize.height = 80;
+    itemSize.height = 66;
     flowLayout.itemSize = itemSize;
     
     [flowLayout invalidateLayout]; //force the elements to get laid out again with the new size
@@ -120,6 +127,17 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (BOOL)isPortrait {
     CGSize boundsSize = [[UIScreen mainScreen] bounds].size;
     return self.view.frame.size.width == fminf(boundsSize.width, boundsSize.height);
+}
+
+- (UIView *)separator {
+    if (!_separator) {
+        _separator = [UIView new];
+        _separator.backgroundColor = [UIColor colorWithRed:47./255
+                                                     green:143./255
+                                                      blue:140./255
+                                                     alpha:1.0];
+    }
+    return _separator;
 }
 
 - (FNTUsageTutorialView *)tutorialView {
@@ -168,7 +186,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
-        [self registerNib:kFNTKeyboardItemCell];
         [_collectionView registerClass:UICollectionReusableView.class
             forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                    withReuseIdentifier:FNTKeyboardViewFooter];
@@ -211,9 +228,11 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    BNDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kFNTKeyboardItemCell
+    BNDViewModel *viewModel = self.keyboardViewModel.children[indexPath.row];
+    [self registerNib:viewModel.identifier];
+    BNDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:viewModel.identifier
                                                                             forIndexPath:indexPath];
-    cell.viewModel = self.keyboardViewModel.children[indexPath.row];
+    cell.viewModel = viewModel;
     return cell;
 }
 
@@ -240,7 +259,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    FNTKeyboardItemCellModel *itemModel = self.keyboardViewModel.children[indexPath.row];
+    BNDViewModel *itemModel = self.keyboardViewModel.children[indexPath.row];
     FNTItem *item = itemModel.model;
     NSString *text = [NSString stringWithFormat:@"\n%@", item.link.absoluteString];
     [self.textDocumentProxy insertText:text];

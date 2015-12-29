@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TTTAttributedLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0DAD9A14483A07B8F6CF842DEDE92B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0DF57C2565AA73506F661B00B828AF7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A6299DACB842329A13B62D48BA6698E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64B3FCEC0EB7CA0A7CEAD7CEDD2683F2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>78D7C16860EDE00694EF44EE034439A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6D4D9A67EBF1ECD579BC95971BAE7B3</key>
+		<key>A745DA5528C62DC4DEF2B1A22C39B167</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,22 +117,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B4047EF9008763F42167DE83E34F40FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C408D4E183A88B763793C217A66A1950</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBE1A634A6F898137521C4D78A3310CD</key>
+		<key>C99D9454487EABC6E8F8F16718764384</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E34A0F60C15834043417DBEFCECC6687</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EEF3011E05F8D158C669259644B5F57E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

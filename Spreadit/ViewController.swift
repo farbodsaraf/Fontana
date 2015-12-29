@@ -61,7 +61,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let nibName = "FNTKeyboardItemCell"
+        let nibName = "FNTKeyboardItemPlainCell"
         registerNib(nibName)
         
         let cell : BNDCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(nibName, forIndexPath: indexPath) as! BNDCollectionViewCell

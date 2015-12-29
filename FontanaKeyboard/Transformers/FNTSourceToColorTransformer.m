@@ -8,17 +8,28 @@
 
 #import "FNTSourceToColorTransformer.h"
 #import <UIKit/UIKit.h>
+#import "UIColor+FNTGenerator.h"
+
+@interface FNTSourceToColorTransformer ()
+@property (nonatomic, strong) NSMutableDictionary *sourceDictionary;
+@end
 
 @implementation FNTSourceToColorTransformer
 
 - (UIColor *)transformedValue:(NSString *)source {
-    if ([source isEqualToString:@":imdb:"]) {
-        return [UIColor yellowColor];
+    UIColor *color = self.sourceDictionary[source];
+    if (!color) {
+        color = [UIColor fnt_generateColor:source];
+        self.sourceDictionary[source] = color;
     }
-    else if ([source isEqualToString:@":spotify:"]) {
-        return [UIColor greenColor];
+    return color;
+}
+
+- (NSMutableDictionary *)sourceDictionary {
+    if (!_sourceDictionary) {
+        _sourceDictionary = [NSMutableDictionary new];
     }
-    return [UIColor grayColor];
+    return _sourceDictionary;
 }
 
 @end

@@ -43,7 +43,7 @@
     NSString *urlString = [NSString stringWithFormat:self.searchURLFormat, linkString];
     urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
     NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [self requestWithURL:url];
     
     __weak typeof(self) weakSelf = self;
     [NSURLConnection sendAsynchronousRequest:request
@@ -62,6 +62,10 @@
 #endif
                                }
                            }];
+}
+
+- (NSURLRequest *)requestWithURL:(NSURL *)url {
+    return [NSURLRequest requestWithURL:url];
 }
 
 - (void)handleData:(NSData *)data {

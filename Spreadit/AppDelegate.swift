@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        NSSetUncaughtExceptionHandler { (exception : NSException) -> Void in
+            print(exception.callStackSymbols)
+        }
+        
         BITHockeyManager.sharedHockeyManager().configureWithIdentifier("9bc7ee209ec3404dba1ec07b94cca99e");
         BITHockeyManager.sharedHockeyManager().startManager();
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation();

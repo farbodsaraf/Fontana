@@ -7,22 +7,19 @@
 //
 
 #import "FNTGoogleItemParser.h"
-#import "FNTItem.h"
+#import "FNTGoogleItem.h"
 
 @implementation FNTGoogleItemParser
 
 + (NSArray *)parseData:(NSData *)data error:(NSError **)error {
     id JSON = [NSJSONSerialization JSONObjectWithData:data
                                               options:0
-                                                error:nil];
-    NSString *dataString = [[NSString alloc] initWithData:data
-                                                 encoding:NSISOLatin1StringEncoding];
-    
+                                                error:nil];    
     NSMutableArray *serializedItems = [NSMutableArray new];
     NSArray *items = JSON[@"items"];
     if (items) {
         for (NSDictionary *item in items) {
-            FNTItem *serializedItem = [[FNTItem alloc] initWithDictionary:item];
+            FNTItem *serializedItem = [[FNTGoogleItem alloc] initWithDictionary:item];
             [serializedItems addObject:serializedItem];
         }
     }

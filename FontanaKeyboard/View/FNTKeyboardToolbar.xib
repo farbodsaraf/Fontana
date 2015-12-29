@@ -13,7 +13,7 @@
             <animations/>
             <items>
                 <barButtonItem image="globe.png" style="plain" id="s7a-nm-2bP">
-                    <color key="tintColor" red="0.0" green="0.51483780145645142" blue="0.50828260183334351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.0" green="0.51372549019607838" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <action selector="onNextKeyboardButton:" destination="DpQ-Og-F0w" id="XDx-os-bAh"/>
                     </connections>

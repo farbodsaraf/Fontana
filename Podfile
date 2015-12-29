@@ -9,6 +9,7 @@ target 'Spreadit' do
     pod 'BIND'
     pod 'TSMessages'
     pod 'HockeySDK'
+    pod 'TTTAttributedLabel'
 end
 
 target 'SpreaditTests' do
@@ -28,4 +29,5 @@ target 'FontanaKeyboard' do
     pod 'BIND'
     pod 'Masonry'
     pod 'HockeySDK'
+    pod 'TTTAttributedLabel'
 end

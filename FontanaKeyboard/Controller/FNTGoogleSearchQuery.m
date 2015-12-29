@@ -7,8 +7,6 @@
 //
 
 #import "FNTGoogleSearchQuery.h"
-#import "FNTItem.h"
-#import "FNTMockFactory.h"
 #import "FNTGoogleItemParser.h"
 #import <UIKit/UIKit.h>
 

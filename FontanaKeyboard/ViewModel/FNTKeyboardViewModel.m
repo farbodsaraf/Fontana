@@ -12,11 +12,12 @@
 #import "FNTGoogleSearchQuery.h"
 #import "FNTContextParser.h"
 #import "NSObject+FNTTextDocumentProxyAdditions.h"
+#import "FNTBINGSearchQuery.h"
 
 @interface FNTKeyboardViewModel ()
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) BNDViewModelsBlock viewModelsHandler;
-@property (nonatomic, strong) FNTGoogleSearchQuery *currentQuery;
+@property (nonatomic, strong) id <FNTSearchQuery> currentQuery;
 @property (nonatomic, strong) NSArray *contextItems;
 @property (nonatomic, strong) FNTContextItem *currentContextItem;
 @end
@@ -51,10 +52,11 @@
                                              code:404
                                          userInfo:nil];
         [self handleError:error];
+        return;
     }
     
     __weak typeof(self) weakSelf = self;
-    self.currentQuery = [FNTGoogleSearchQuery queryWithSearchTerm:queryString
+    self.currentQuery = [FNTBINGSearchQuery queryWithSearchTerm:queryString
                                                        itemsBlock:^(NSArray *items, NSError *error) {
                                                            if (!error) {
                                                                [weakSelf handleItems:items];

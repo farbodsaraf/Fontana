@@ -10,10 +10,13 @@
 #import "FNTKeyboardItemCellModel.h"
 #import <BIND/BNDURLToImageTransformer.h>
 #import "FNTSourceToColorTransformer.h"
+#import <TTTAttributedLabel/TTTAttributedLabel.h>
+#import "UIColor+FNTGenerator.h"
 
 @interface FNTKeyboardItemCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *storyLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *faviconView;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *storyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *separatorHeightConstraint;
 @end
@@ -23,7 +26,10 @@ BINDINGS(FNTKeyboardItemCellModel,
          [BINDViewModel(image, ~>, imageView.image) observe:^(id observable, id value, NSDictionary *observationInfo) {
     [self setNeedsLayout];
 }],
-         BINDViewModel(attributedText, ~>, storyLabel.attributedText),
+         [BINDViewModel(faviconImage, ~>, faviconView.image) observe:^(id observable, id value, NSDictionary *observationInfo) {
+    [self setNeedsLayout];
+}],
+         BINDViewModel(attributedText, ~>, storyLabel.text),
          BINDViewModel(source, ~>, sourceLabel.text),
          nil)
 
@@ -32,12 +38,16 @@ BINDINGS(FNTKeyboardItemCellModel,
     [super awakeFromNib];
     
     UIView* selectedView = [[UIView alloc] initWithFrame:self.bounds];
-    selectedView.backgroundColor = [UIColor colorWithRed:47./255
-                                                   green:143./255
-                                                    blue:140./255
-                                                   alpha:1.0];
+    selectedView.backgroundColor = [UIColor fnt_lightTeal];
+    
     self.selectedBackgroundView = selectedView;
     self.separatorHeightConstraint.constant = 0.5f;
+    
+    self.storyLabel.linkAttributes = @{
+                                       NSForegroundColorAttributeName: [UIColor fnt_teal],
+                                       NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
+                                       };
+    self.sourceLabel.textColor = [UIColor fnt_tealLowerAlpha];
 }
 
 -(void)setHighlighted:(BOOL)highlighted {
