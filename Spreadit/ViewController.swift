@@ -10,7 +10,7 @@ import UIKit
 import BIND
 import TSMessages
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -64,10 +64,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let nibName = "FNTKeyboardItemPlainCell"
         registerNib(nibName)
         
-        let cell : BNDCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(nibName, forIndexPath: indexPath) as! BNDCollectionViewCell
+        let cell : FNTKeyboardItemCell = collectionView.dequeueReusableCellWithReuseIdentifier(nibName, forIndexPath: indexPath) as! FNTKeyboardItemCell
 
         cell.viewModel = viewModels().objectAtIndex(indexPath.item) as! FNTKeyboardItemCellModel
-        
+        cell.delegate = self
         return cell;
     }
     
@@ -138,6 +138,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         return viewModels.copy() as! NSArray
+    }
+    
+    func cell(cell: FNTKeyboardItemCell!, didTapOnURL url: NSURL!) {
+        UIApplication.sharedApplication().openURL(url)
     }
 }
 

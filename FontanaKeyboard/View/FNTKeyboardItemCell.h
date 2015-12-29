@@ -8,6 +8,11 @@
 
 #import <BIND/BIND.h>
 
-@interface FNTKeyboardItemCell : BNDCollectionViewCell
+@class FNTKeyboardItemCell;
+@protocol FNTKeyboardItemCellDelegate <NSObject>
+- (void)cell:(FNTKeyboardItemCell *)cell didTapOnURL:(NSURL *)url;
+@end
 
+@interface FNTKeyboardItemCell : BNDCollectionViewCell
+@property (nonatomic, weak) id <FNTKeyboardItemCellDelegate> delegate;
 @end

@@ -14,13 +14,14 @@
 #import "FNTHistoryStack.h"
 #import "FNTKeyboardToolbar.h"
 @import HockeySDK;
+#import "FNTKeyboardItemCell.h"
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
-@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate>
+@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate, FNTKeyboardItemCellDelegate>
 @property (nonatomic, strong) UIButton *finishTutorialButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
@@ -230,9 +231,10 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BNDViewModel *viewModel = self.keyboardViewModel.children[indexPath.row];
     [self registerNib:viewModel.identifier];
-    BNDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:viewModel.identifier
+    FNTKeyboardItemCell *cell = (FNTKeyboardItemCell *)[collectionView dequeueReusableCellWithReuseIdentifier:viewModel.identifier
                                                                             forIndexPath:indexPath];
     cell.viewModel = viewModel;
+    cell.delegate = self;
     return cell;
 }
 
@@ -281,6 +283,19 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 #pragma mark - FNTKeyboardToolbarDelegate
 
 - (void)toolbarDidSelectNextKeyboard:(id)toolbar {
+    [self advanceToNextInputMode];
+}
+
+#pragma mark - FNTKeyboardItemCellDelegate
+
+- (void)cell:(FNTKeyboardItemCell *)cell didTapOnURL:(NSURL *)url {
+    UIResponder* responder = self;
+    while ((responder = [responder nextResponder]) != nil) {
+        if([responder respondsToSelector:@selector(openURL:)] == YES) {
+            [responder performSelector:@selector(openURL:)
+                            withObject:url];
+        }
+    }
     [self advanceToNextInputMode];
 }
 

@@ -13,7 +13,7 @@
 #import <TTTAttributedLabel/TTTAttributedLabel.h>
 #import "UIColor+FNTGenerator.h"
 
-@interface FNTKeyboardItemCell ()
+@interface FNTKeyboardItemCell () <TTTAttributedLabelDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *faviconView;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *storyLabel;
@@ -47,12 +47,18 @@ BINDINGS(FNTKeyboardItemCellModel,
                                        NSForegroundColorAttributeName: [UIColor fnt_teal],
                                        NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
                                        };
+    self.storyLabel.delegate = self;
+
     self.sourceLabel.textColor = [UIColor fnt_tealLowerAlpha];
 }
 
--(void)setHighlighted:(BOOL)highlighted {
+- (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
     [self setNeedsDisplay];
+}
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    [self.delegate cell:self didTapOnURL:url];
 }
 
 @end

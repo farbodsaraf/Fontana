@@ -14,5 +14,6 @@
 #import "FNTMockFactory.h"
 #import "FNTGoogleItemParser.h"
 #import "FNTHistoryStack.h"
+#import "FNTKeyboardItemCell.h"
 
 #endif /* Spreadit_Bridging_Header_h */
