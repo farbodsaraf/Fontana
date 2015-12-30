@@ -10,19 +10,6 @@
 #import "FNTGoogleScraperItemParser.h"
 #import <UIKit/UIKit.h>
 
-@implementation FNTURLProtocol
-
-+ (BOOL)canInitWithRequest:(NSURLRequest *)request {
-    NSLog(@"REQUEST %@", request.URL);
-    return NO;
-}
-
-+ (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request {
-    return request;
-}
-
-@end
-
 @interface FNTGoogleScraperSearchQuery () <UIWebViewDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate>
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) NSURLSession *session;
@@ -73,13 +60,6 @@ willPerformHTTPRedirection:(NSHTTPURLResponse *)redirectResponse
  completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler {
     NSURLRequest *newRequest = request;
     completionHandler(newRequest);
-}
-
-- (void)printData:(NSData *)data forURL:(NSURL *)url{
-    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
-    if ([dataString containsString:@"itemscope"]) {
-//        NSLog(@"REQUEST AND DATA %@\n\n%@\n\n#################", url, dataString);
-    }
 }
 
 @end

@@ -11,7 +11,3 @@
 @interface FNTGoogleScraperSearchQuery : FNTItemSearchQuery
 
 @end
-
-@interface FNTURLProtocol : NSURLProtocol
-
-@end
