@@ -11,6 +11,8 @@
 @protocol FNTKeyboardToolbarDelegate <NSObject, UIToolbarDelegate>
 @required
 - (void)toolbarDidSelectNextKeyboard:(id)toolbar;
+- (void)toolbarDidUndo:(id)toolbar;
+
 @end
 
 @interface FNTKeyboardToolbar : UIToolbar

@@ -267,8 +267,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.textDocumentProxy insertText:text];
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    
     [self.historyStack pushItem:item];
+    
 }
 
 #pragma mark - FNTUsageTutorialViewDelegate
@@ -284,6 +284,10 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 - (void)toolbarDidSelectNextKeyboard:(id)toolbar {
     [self advanceToNextInputMode];
+}
+
+- (void)toolbarDidUndo:(id)toolbar {
+    [self.keyboardViewModel undo];
 }
 
 #pragma mark - FNTKeyboardItemCellDelegate

@@ -15,4 +15,8 @@
     [self.delegate toolbarDidSelectNextKeyboard:sender];
 }
 
+- (IBAction)onUndo:(id)sender {
+    [self.delegate toolbarDidUndo:sender];
+}
+
 @end

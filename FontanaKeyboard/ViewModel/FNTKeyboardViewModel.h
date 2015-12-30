@@ -19,7 +19,7 @@
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler;
 
 - (void)apply:(FNTKeyboardItemCellModel *)model;
-
+- (void)undo;
 //- (void)nextContextItem;
 
 @end
