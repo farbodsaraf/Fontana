@@ -39,7 +39,8 @@
 }
 
 - (void)searchForLinks:(NSString *)linkString {
-    NSString *urlString = [NSString stringWithFormat:self.searchURLFormat, linkString];
+    NSString *urlEncodedQuery = [linkString stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+    NSString *urlString = [NSString stringWithFormat:self.searchURLFormat, urlEncodedQuery];
     NSURL *url = [NSURL URLWithString:urlString];
     [self startTaskWithURL:url];
 }
