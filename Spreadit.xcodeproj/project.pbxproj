@@ -70,6 +70,9 @@
 		96F04AD71C32D719002BBE67 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 96F04AD61C32D719002BBE67 /* favicon.ico */; };
 		96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AD91C32D9FD002BBE67 /* NSURL+FNTBaseURL.m */; };
 		96F04ADB1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AD91C32D9FD002BBE67 /* NSURL+FNTBaseURL.m */; };
+		96F04ADE1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */; };
+		96F04AE01C344AE1002BBE67 /* FNTItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */; };
+		96F04AE11C344AE5002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */; };
@@ -196,6 +199,8 @@
 		96F04AD61C32D719002BBE67 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = favicon.ico; path = Resources/favicon.ico; sourceTree = SOURCE_ROOT; };
 		96F04AD81C32D9FD002BBE67 /* NSURL+FNTBaseURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+FNTBaseURL.h"; path = "Categories/NSURL+FNTBaseURL.h"; sourceTree = "<group>"; };
 		96F04AD91C32D9FD002BBE67 /* NSURL+FNTBaseURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+FNTBaseURL.m"; path = "Categories/NSURL+FNTBaseURL.m"; sourceTree = "<group>"; };
+		96F04ADC1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleScraperSearchQuery.h; path = Controller/FNTGoogleScraperSearchQuery.h; sourceTree = "<group>"; };
+		96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleScraperSearchQuery.m; path = Controller/FNTGoogleScraperSearchQuery.m; sourceTree = "<group>"; };
 		96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FontanaKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F99F641C0AEEA7005D6364 /* FNTKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNTKeyboardViewController.h; sourceTree = "<group>"; };
 		96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNTKeyboardViewController.m; sourceTree = "<group>"; };
@@ -496,6 +501,8 @@
 				96F04AC21C329D77002BBE67 /* FNTBINGSearchQuery.m */,
 				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
 				965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */,
+				96F04ADC1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.h */,
+				96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -905,12 +912,14 @@
 			files = (
 				9658F4C11C2A9FA2002B3595 /* FNTKeyboardItemCell.m in Sources */,
 				96B1C48F1BE159CA00114C26 /* ViewController.swift in Sources */,
+				96F04AE01C344AE1002BBE67 /* FNTItemSearchQuery.m in Sources */,
 				9658F4C51C2AA1FD002B3595 /* FNTKeyboardItemCellModel.m in Sources */,
 				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
 				96F04AD41C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				9658F4CF1C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
+				96F04AE11C344AE5002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */,
 				96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
@@ -974,6 +983,7 @@
 				9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
 				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
+				96F04ADE1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */,
 				96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */,
 				9658F4D01C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
 				96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */,

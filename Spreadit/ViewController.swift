@@ -41,18 +41,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func reloadData() {
-//        let keyboardBundleID = "com.fontanakey.app.keyboard"
-//        print("Keyboard is enabled \(NSUserDefaults.isKeyboardEnabled(keyboardBundleID)) \nfull access is allowed \(NSUserDefaults.isFullAccessAllowed(keyboardBundleID))")
-//
-//        if NSUserDefaults.isKeyboardEnabled(keyboardBundleID) {
-//            self.collectionView.reloadData()
-//        }
-//        else {
-//            self.showTutorial()
-//        }
-        
         self.collectionView.reloadData()
-
     }
     
     func showTutorial() {
@@ -98,7 +87,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModels().count
+        return 0//self.viewModels().count
     }
     
     func textViewDidChange(textView: UITextView) {

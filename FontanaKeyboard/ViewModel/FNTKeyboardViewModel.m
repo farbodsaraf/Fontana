@@ -13,6 +13,7 @@
 #import "FNTContextParser.h"
 #import "NSObject+FNTTextDocumentProxyAdditions.h"
 #import "FNTBINGSearchQuery.h"
+#import "FNTGoogleScraperSearchQuery.h"
 
 @interface FNTKeyboardViewModel ()
 @property (nonatomic, strong) NSArray *items;
@@ -56,7 +57,7 @@
     }
     
     __weak typeof(self) weakSelf = self;
-    self.currentQuery = [FNTBINGSearchQuery queryWithSearchTerm:queryString
+    self.currentQuery = [FNTGoogleScraperSearchQuery queryWithSearchTerm:queryString
                                                        itemsBlock:^(NSArray *items, NSError *error) {
                                                            if (!error) {
                                                                [weakSelf handleItems:items];
