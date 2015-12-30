@@ -22,7 +22,7 @@
 
 - (void)loadWithDictionary:(NSDictionary *)dictionary {
     self.link = [NSURL URLWithString:dictionary[@"link"]];
-    self.title = [dictionary[@"title"] copy];
+    self.title = dictionary[@"title"];
     self.thumbnailURL = [self thumbnailURLForItem:dictionary];
     self.source = [self sourceFromDisplayLink:dictionary[@"displayLink"]];
     self.snippet = dictionary[@"snippet"];

@@ -7,6 +7,7 @@
 //
 
 #import "FNTGoogleScraperSearchQuery.h"
+#import "FNTGoogleScraperItemParser.h"
 #import <UIKit/UIKit.h>
 
 @implementation FNTURLProtocol
@@ -30,41 +31,38 @@
 @implementation FNTGoogleScraperSearchQuery
 
 - (NSString *)searchURLFormat {
-//    return @"https://www.google.hr/search?q=%@&cad=h";//@"https://www.google.com/?gws_rd=ssl#q=%@";
     return @"https://www.google.com/search?q=%@";
+}
+
+- (Class)parserClass {
+    return FNTGoogleScraperItemParser.class;
 }
 
 - (void)searchForLinks:(NSString *)linkString {
     NSString *urlString = [NSString stringWithFormat:self.searchURLFormat, linkString];
     NSURL *url = [NSURL URLWithString:urlString];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    self.session = [NSURLSession sessionWithConfiguration:configuration
+    [self startTaskWithURL:url];
+}
+
+- (NSURLSession *)session {
+    if (!_session) {
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _session = [NSURLSession sessionWithConfiguration:configuration
                                                  delegate:self
                                             delegateQueue:[NSOperationQueue mainQueue]];
-
-    [self startTaskWithURL:url];
-//    [self startWebViewWithURL:url];
+    }
+    return _session;
 }
 
 - (void)startTaskWithURL:(NSURL *)url {
+    __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *task = [self.session dataTaskWithURL:url
                                              completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                 [self printData:data forURL:response.URL];
+                                                 if (data) {
+                                                     [weakSelf handleData:data];
+                                                 }
                                              }];
     [task resume];
-    
-//    NSURLSessionDownloadTask *task = [self.session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        NSData *data = [NSData dataWithContentsOfURL:url];
-//        [self printData:data forURL:response.URL];
-//    }];
-//    [task resume];
-}
-
-- (void)startWebViewWithURL:(NSURL *)url {
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-    [self.webView loadRequest:request];
-    self.webView.delegate = self;
 }
 
 - (void)URLSession:(NSURLSession *)session
@@ -74,28 +72,6 @@ willPerformHTTPRedirection:(NSHTTPURLResponse *)redirectResponse
  completionHandler:(void (^)(NSURLRequest * __nullable))completionHandler {
     NSURLRequest *newRequest = request;
     completionHandler(newRequest);
-}
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    
-    return YES;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSCachedURLResponse* response = [[NSURLCache sharedURLCache]
-                                     cachedResponseForRequest:[webView request]];
-    NSData* data = [response data];
-    
-    
-    self.webView = nil;
 }
 
 - (void)printData:(NSData *)data forURL:(NSURL *)url{

@@ -64,6 +64,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>hpple.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,17 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0DAD9A14483A07B8F6CF842DEDE92B52</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0DF57C2565AA73506F661B00B828AF7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A6299DACB842329A13B62D48BA6698E</key>
+		<key>3747761DF84223F09B6D32DC3911D6E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -128,6 +128,16 @@
 			<true/>
 		</dict>
 		<key>C99D9454487EABC6E8F8F16718764384</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D635F027F0A6FD04B98B790907265430</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFE8D9FAFC6ECABFC2BE01ED18EEC64F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
