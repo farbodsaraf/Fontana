@@ -14,12 +14,12 @@
 
 @property (nonatomic, readonly) NSObject <UITextDocumentProxy> *documentProxy;
 @property (nonatomic, strong, readonly) FNTContextItem *currentContextItem;
+@property (nonatomic, strong) Class queryClass;
 
 - (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler;
 
 - (void)apply:(FNTKeyboardItemCellModel *)model;
 - (void)undo;
-//- (void)nextContextItem;
 
 @end

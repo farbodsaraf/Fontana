@@ -25,6 +25,15 @@
 
 @implementation FNTKeyboardViewModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _queryClass = FNTGoogleScraperSearchQuery.class;
+    }
+    return self;
+}
+
 - (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler {
     _documentProxy = documentProxy;
@@ -57,15 +66,15 @@
     }
     
     __weak typeof(self) weakSelf = self;
-    self.currentQuery = [FNTGoogleScraperSearchQuery queryWithSearchTerm:queryString
-                                                       itemsBlock:^(NSArray *items, NSError *error) {
-                                                           if (!error) {
-                                                               [weakSelf handleItems:items];
-                                                           }
-                                                           else {
-                                                               [weakSelf handleError:error];
-                                                           }
-                                                       }];
+    self.currentQuery = [self.queryClass queryWithSearchTerm:queryString
+                                                  itemsBlock:^(NSArray *items, NSError *error) {
+                                                      if (!error) {
+                                                          [weakSelf handleItems:items];
+                                                      }
+                                                      else {
+                                                          [weakSelf handleError:error];
+                                                      }
+                                                  }];
 }
 
 - (void)handleItems:(NSArray *)items{
@@ -86,7 +95,7 @@
     
 }
 
-- (void)nextContextItem {
+- (void)undo {
     
 }
 

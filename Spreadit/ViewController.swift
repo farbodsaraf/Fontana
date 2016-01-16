@@ -87,7 +87,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0//self.viewModels().count
+        return self.viewModels().count
     }
     
     func textViewDidChange(textView: UITextView) {

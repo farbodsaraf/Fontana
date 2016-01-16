@@ -73,6 +73,13 @@
 		96F04ADE1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */; };
 		96F04AE01C344AE1002BBE67 /* FNTItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */; };
 		96F04AE41C3459EC002BBE67 /* FNTGoogleScraperItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AE31C3459EC002BBE67 /* FNTGoogleScraperItemParser.m */; };
+		96F04AEF1C354E7E002BBE67 /* FNTMockItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AEE1C354E7E002BBE67 /* FNTMockItemSearchQuery.m */; };
+		96F04AF01C354F23002BBE67 /* FNTGoogleItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTGoogleItemParser.m */; };
+		96F04AF11C354F2E002BBE67 /* FNTMockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */; };
+		96F04AF41C354FB1002BBE67 /* FNTFakeKeyboardProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AF31C354FB1002BBE67 /* FNTFakeKeyboardProxy.m */; };
+		96F04AF51C3551ED002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */; };
+		96F04AF61C35520A002BBE67 /* FNTGoogleScraperItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AE31C3459EC002BBE67 /* FNTGoogleScraperItemParser.m */; };
+		96F04AF71C35527F002BBE67 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */; };
@@ -203,6 +210,10 @@
 		96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleScraperSearchQuery.m; path = Controller/FNTGoogleScraperSearchQuery.m; sourceTree = "<group>"; };
 		96F04AE21C3459EC002BBE67 /* FNTGoogleScraperItemParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleScraperItemParser.h; path = Controller/FNTGoogleScraperItemParser.h; sourceTree = "<group>"; };
 		96F04AE31C3459EC002BBE67 /* FNTGoogleScraperItemParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleScraperItemParser.m; path = Controller/FNTGoogleScraperItemParser.m; sourceTree = "<group>"; };
+		96F04AED1C354E7E002BBE67 /* FNTMockItemSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTMockItemSearchQuery.h; path = Test/FNTMockItemSearchQuery.h; sourceTree = "<group>"; };
+		96F04AEE1C354E7E002BBE67 /* FNTMockItemSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTMockItemSearchQuery.m; path = Test/FNTMockItemSearchQuery.m; sourceTree = "<group>"; };
+		96F04AF21C354FB1002BBE67 /* FNTFakeKeyboardProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTFakeKeyboardProxy.h; path = Test/FNTFakeKeyboardProxy.h; sourceTree = "<group>"; };
+		96F04AF31C354FB1002BBE67 /* FNTFakeKeyboardProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTFakeKeyboardProxy.m; path = Test/FNTFakeKeyboardProxy.m; sourceTree = "<group>"; };
 		96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FontanaKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F99F641C0AEEA7005D6364 /* FNTKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNTKeyboardViewController.h; sourceTree = "<group>"; };
 		96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNTKeyboardViewController.m; sourceTree = "<group>"; };
@@ -401,6 +412,7 @@
 		96B1C4A01BE159CA00114C26 /* SpreaditTests */ = {
 			isa = PBXGroup;
 			children = (
+				96F04AEC1C354E55002BBE67 /* Test */,
 				965310FE1C136898005CB906 /* ViewModel */,
 				965310FD1C1355D2005CB906 /* Controllers */,
 				96B1C4A31BE159CA00114C26 /* Info.plist */,
@@ -521,6 +533,17 @@
 				96F04AE31C3459EC002BBE67 /* FNTGoogleScraperItemParser.m */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		96F04AEC1C354E55002BBE67 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				96F04AED1C354E7E002BBE67 /* FNTMockItemSearchQuery.h */,
+				96F04AEE1C354E7E002BBE67 /* FNTMockItemSearchQuery.m */,
+				96F04AF21C354FB1002BBE67 /* FNTFakeKeyboardProxy.h */,
+				96F04AF31C354FB1002BBE67 /* FNTFakeKeyboardProxy.m */,
+			);
+			name = Test;
 			sourceTree = "<group>";
 		};
 		96F99F631C0AEEA7005D6364 /* FontanaKeyboard */ = {
@@ -937,11 +960,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F04AF61C35520A002BBE67 /* FNTGoogleScraperItemParser.m in Sources */,
 				965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */,
 				9658F4C41C2AA1EC002B3595 /* FNTItem.m in Sources */,
 				965310FC1C1355CA005CB906 /* FNTContextParser.m in Sources */,
+				96F04AF01C354F23002BBE67 /* FNTGoogleItemParser.m in Sources */,
 				965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */,
+				96F04AF41C354FB1002BBE67 /* FNTFakeKeyboardProxy.m in Sources */,
+				96F04AF51C3551ED002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */,
+				96F04AF11C354F2E002BBE67 /* FNTMockFactory.m in Sources */,
+				96F04AEF1C354E7E002BBE67 /* FNTMockItemSearchQuery.m in Sources */,
+				96F04AF71C35527F002BBE67 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
 				965311011C1368D7005CB906 /* FNTKeyboardViewModel.m in Sources */,
 				965311001C1368C9005CB906 /* FNTKeyboardViewModelTest.m in Sources */,
 			);

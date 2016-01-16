@@ -7,41 +7,45 @@
 //
 
 #import <XCTest/XCTest.h>
-
-@interface FNTFakeKeyboardProxy : NSObject
-    
-@end
-
-@implementation FNTFakeKeyboardProxy
-
-@end
+#import "FNTKeyboardViewModel.h"
+#import "FNTFakeKeyboardProxy.h"
 
 @interface FNTKeyboardViewModelTest : XCTestCase
-
+@property (nonatomic, strong) FNTKeyboardViewModel *viewModel;
+@property (nonatomic, strong) NSArray *viewModels;
+@property (nonatomic, strong) NSError *error;
+@property (nonatomic, strong) FNTFakeKeyboardProxy *keyboardProxy;
 @end
 
 @implementation FNTKeyboardViewModelTest
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    self.viewModel = [FNTKeyboardViewModel new];
+    self.keyboardProxy = [FNTFakeKeyboardProxy new];
+
+    __weak typeof(self) weakSelf = self;
+    [self.viewModel updateWithContext:self.keyboardProxy
+                    viewModelsHandler:^(NSArray *viewModels, NSError *error) {
+        weakSelf.viewModels = viewModels;
+        weakSelf.error = error;
+    }];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.viewModel = nil;
+    self.keyboardProxy = nil;
+    self.viewModels = nil;
+    self.error = nil;
+    
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+//- (void)testDoesntReturnsViewModelsIfProxyIsEmpty {
+//    XCTAssertNil(self.viewModels, @"There should be no view models");
+//    XCTAssertNotNil(self.error, @"There should be an error thrown");
+//    XCTestExpectation *expectation = [[XCTestExpectation alloc] expectationWithDescription:@""];
+//}
 
 @end

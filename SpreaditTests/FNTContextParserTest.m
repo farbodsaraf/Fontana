@@ -27,7 +27,7 @@
     FNTContextItem *item = items[0];
     XCTAssertTrue([item.query isEqualToString:@"mean streets"], @"Parses the correct query");
     XCTAssertTrue(item.range.location == 0, @"Parses the correct location");
-    XCTAssertTrue(item.range.length == 13, @"Parses the correct length");
+    XCTAssertTrue(item.range.length == 13, @"Parses the correct length");    
 }
 
 - (void)testStringWithOnePotentialResultReturnsOneItemWithPaddedStringInFront {
