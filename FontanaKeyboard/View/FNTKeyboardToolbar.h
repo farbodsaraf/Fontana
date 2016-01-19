@@ -17,4 +17,5 @@
 
 @interface FNTKeyboardToolbar : UIToolbar
 @property (nonatomic, weak) id <FNTKeyboardToolbarDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *undoBarButtonItem;
 @end

@@ -113,4 +113,14 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
     [NSThread sleepForTimeInterval:kFNTSleepInterval];
 }
 
+- (void)fnt_deleteText:(NSString *)text {
+    id <UITextDocumentProxy> proxy = (id <UITextDocumentProxy>)self;
+    
+    NSUInteger letters = text.length;
+    while (letters) {
+        [proxy deleteBackward];
+        letters--;
+    }
+}
+
 @end

@@ -25,6 +25,7 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 @property (nonatomic, strong) NSArray *contextItems;
 @property (nonatomic, strong) FNTContextItem *currentContextItem;
 @property (nonatomic, strong) FNTHistoryStack *historyStack;
+@property (nonatomic, strong) NSMutableArray *undoStack;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -102,10 +103,35 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
     NSString *text = [NSString stringWithFormat:@"\n%@", item.link.absoluteString];
     [self.documentProxy insertText:text];    
     [self.historyStack pushItem:item];
+    [self.undoStack insertObject:text atIndex:0];
+    [self raiseUndoStackDidChange];
+}
+
+- (NSMutableArray *)undoStack {
+    if (!_undoStack) {
+        _undoStack = [NSMutableArray new];
+    }
+    return _undoStack;
+}
+
+- (BOOL)isUndoEnabled {
+    return self.undoStack.count > 0;
 }
 
 - (void)undo {
+    if (self.undoStack.count == 0) {
+        return;
+    }
     
+    NSString *undoText = [self.undoStack firstObject];
+    [self.documentProxy fnt_deleteText:undoText];
+    [self.undoStack removeObjectAtIndex:0];
+    [self raiseUndoStackDidChange];
+}
+
+- (void)raiseUndoStackDidChange {
+    [self willChangeValueForKey:@"undoEnabled"];
+    [self didChangeValueForKey:@"undoEnabled"];
 }
 
 @end

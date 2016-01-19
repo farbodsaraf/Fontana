@@ -14,6 +14,7 @@
 #import <Masonry/Masonry.h>
 #import "FNTKeyboardToolbar.h"
 #import "FNTKeyboardItemCell.h"
+#import "BIND.h"
 
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 

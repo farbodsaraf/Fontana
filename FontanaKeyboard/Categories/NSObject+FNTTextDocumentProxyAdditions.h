@@ -12,5 +12,6 @@
 @interface NSObject (UITextDocumentProxyAdditions)
 
 - (void)fnt_readText:(void(^)(NSString *textBeforeCursor, NSString *textAfterCursor))returnBlock;
+- (void)fnt_deleteText:(NSString *)text;
 
 @end

@@ -26,6 +26,9 @@
                 </barButtonItem>
                 <barButtonItem style="plain" systemItem="fixedSpace" id="xUD-jq-gcL"/>
             </items>
+            <connections>
+                <outlet property="undoBarButtonItem" destination="8Xf-NL-Dfh" id="GeB-TM-w2i"/>
+            </connections>
             <point key="canvasLocation" x="-437" y="-449"/>
         </toolbar>
     </objects>
