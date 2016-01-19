@@ -14,6 +14,9 @@
 #import "NSObject+FNTTextDocumentProxyAdditions.h"
 #import "FNTBINGSearchQuery.h"
 #import "FNTGoogleScraperSearchQuery.h"
+#import "FNTHistoryStack.h"
+
+static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 
 @interface FNTKeyboardViewModel ()
 @property (nonatomic, strong) NSArray *items;
@@ -21,6 +24,7 @@
 @property (nonatomic, strong) id <FNTSearchQuery> currentQuery;
 @property (nonatomic, strong) NSArray *contextItems;
 @property (nonatomic, strong) FNTContextItem *currentContextItem;
+@property (nonatomic, strong) FNTHistoryStack *historyStack;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -30,6 +34,7 @@
     self = [super init];
     if (self) {
         _queryClass = FNTGoogleScraperSearchQuery.class;
+        _historyStack = [FNTHistoryStack stackForGroup:kFNTAppGroup];
     }
     return self;
 }
@@ -92,7 +97,11 @@
 }
 
 - (void)apply:(FNTKeyboardItemCellModel *)model {
-    
+    BNDViewModel *itemModel = model;
+    FNTItem *item = itemModel.model;
+    NSString *text = [NSString stringWithFormat:@"\n%@", item.link.absoluteString];
+    [self.documentProxy insertText:text];    
+    [self.historyStack pushItem:item];
 }
 
 - (void)undo {

@@ -6,17 +6,15 @@
 //  Copyright © 2015 Marko Hlebar. All rights reserved.
 //
 
+@import HockeySDK;
+
 #import "FNTKeyboardViewController.h"
-#import "FNTItem.h"
 #import "FNTKeyboardViewModel.h"
 #import "FNTUsageTutorialView.h"
 #import <Masonry/Masonry.h>
-#import "FNTHistoryStack.h"
 #import "FNTKeyboardToolbar.h"
-@import HockeySDK;
 #import "FNTKeyboardItemCell.h"
 
-static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
@@ -26,7 +24,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
-@property (nonatomic, strong) FNTHistoryStack *historyStack;
 @property (nonatomic, strong) FNTKeyboardToolbar *toolbar;
 @property (nonatomic, strong) UIView *separator;
 @end
@@ -36,7 +33,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _historyStack = [FNTHistoryStack stackForGroup:kFNTAppGroup];
         [self runHockeyApp];
     }
     return self;
@@ -261,14 +257,9 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    BNDViewModel *itemModel = self.keyboardViewModel.children[indexPath.row];
-    FNTItem *item = itemModel.model;
-    NSString *text = [NSString stringWithFormat:@"\n%@", item.link.absoluteString];
-    [self.textDocumentProxy insertText:text];
-    
+    FNTKeyboardItemCellModel *itemModel = self.keyboardViewModel.children[indexPath.row];
+    [self.keyboardViewModel apply:itemModel];
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self.historyStack pushItem:item];
-    
 }
 
 #pragma mark - FNTUsageTutorialViewDelegate
