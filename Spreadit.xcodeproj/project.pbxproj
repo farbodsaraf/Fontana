@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E5A5446163E9219CCEDAA9C /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */; };
-		653B60EE78D3C6266EA0DA6A /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */; };
+		0E883153A196CE943FCB874E /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B07DB78DFC776A12307FA42 /* Pods_Spreadit.framework */; };
+		164F904B62555E5FD4CAC0F1 /* Pods_SpreaditUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE81B059EE4A9C9C9A50788B /* Pods_SpreaditUITests.framework */; };
 		965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
 		965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F71C1354E2005CB906 /* FNTContextParser.m */; };
 		965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310FA1C1355B8005CB906 /* FNTContextParserTest.m */; };
@@ -82,7 +82,9 @@
 		96F04AF71C35527F002BBE67 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */; };
+		A2102C3C96C82C12E57FBC49 /* Pods_SpreaditTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB522E4BFD10789F72912390 /* Pods_SpreaditTests.framework */; };
+		D62A92CF15F1B9AB479CFFF1 /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9ED424775D8572003DFAA2A /* Pods_FontanaKeyboard.framework */; };
+		F99C9878AD0E3F3ABA80D85D /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56DE248DC432DAA9AB6EC1A /* Pods_SpreaditSharer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,12 +126,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreaditSharer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FontanaKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		758CFD34E942B974044F8E45 /* Pods-FontanaKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
-		789AA992A8BF19109D938472 /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
-		7D230677FF9C01214B2A0356 /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
+		19EF98146A30B00C915E3AB7 /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
+		2C3B3FE0986E65402D66B092 /* Pods-SpreaditTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditTests/Pods-SpreaditTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54C7ABA5EE6A98D5D0AEEF73 /* Pods-SpreaditUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditUITests/Pods-SpreaditUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F606F2E94011AA7670EAC04 /* Pods-FontanaKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		68F4C89A128E8CCC61949813 /* Pods-SpreaditTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditTests/Pods-SpreaditTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B07DB78DFC776A12307FA42 /* Pods_Spreadit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA99EC9A9D36F774A25C3EB /* Pods-FontanaKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		8515B27A0AEB0E5984DF3934 /* Pods-SpreaditSharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.debug.xcconfig"; sourceTree = "<group>"; };
 		965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleSearchQuery.h; path = Controller/FNTGoogleSearchQuery.h; sourceTree = "<group>"; };
 		965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleSearchQuery.m; path = Controller/FNTGoogleSearchQuery.m; sourceTree = "<group>"; };
 		965310F61C1354E2005CB906 /* FNTContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTContextParser.h; path = Controller/FNTContextParser.h; sourceTree = "<group>"; };
@@ -218,9 +222,13 @@
 		96F99F641C0AEEA7005D6364 /* FNTKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNTKeyboardViewController.h; sourceTree = "<group>"; };
 		96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNTKeyboardViewController.m; sourceTree = "<group>"; };
 		96F99F671C0AEEA7005D6364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CE4CDCCC38AEEE6031D9BD1 /* Pods-FontanaKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.release.xcconfig"; sourceTree = "<group>"; };
-		B1B73734EC6C32099E60AF3E /* Pods-SpreaditSharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.debug.xcconfig"; sourceTree = "<group>"; };
-		C8907E947238AC39CE362288 /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
+		B234FC5042648FF69F0664C5 /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
+		B9ED424775D8572003DFAA2A /* Pods_FontanaKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FontanaKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE81B059EE4A9C9C9A50788B /* Pods_SpreaditUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreaditUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56DE248DC432DAA9AB6EC1A /* Pods_SpreaditSharer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreaditSharer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB522E4BFD10789F72912390 /* Pods_SpreaditTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreaditTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34F2D5F74861DA172927415 /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
+		E7927E689E1580C8E5B633B0 /* Pods-SpreaditUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditUITests/Pods-SpreaditUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5A5446163E9219CCEDAA9C /* Pods_Spreadit.framework in Frameworks */,
+				0E883153A196CE943FCB874E /* Pods_Spreadit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2102C3C96C82C12E57FBC49 /* Pods_SpreaditTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164F904B62555E5FD4CAC0F1 /* Pods_SpreaditUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F31164EB3D3790390B40555D /* Pods_SpreaditSharer.framework in Frameworks */,
+				F99C9878AD0E3F3ABA80D85D /* Pods_SpreaditSharer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,21 +268,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				653B60EE78D3C6266EA0DA6A /* Pods_FontanaKeyboard.framework in Frameworks */,
+				D62A92CF15F1B9AB479CFFF1 /* Pods_FontanaKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BC1D3DCC996C4D70B52C7E9 /* Frameworks */ = {
+		5DD31000881E2548CDBFC631 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A1A4C75F6DF3A85A80D7C7C /* Pods_Spreadit.framework */,
-				491C79EF6D14ECFED4BA4B2B /* Pods_SpreaditSharer.framework */,
-				55777BE96EFFA84658971C8E /* Pods_FontanaKeyboard.framework */,
+				B9ED424775D8572003DFAA2A /* Pods_FontanaKeyboard.framework */,
+				7B07DB78DFC776A12307FA42 /* Pods_Spreadit.framework */,
+				C56DE248DC432DAA9AB6EC1A /* Pods_SpreaditSharer.framework */,
+				CB522E4BFD10789F72912390 /* Pods_SpreaditTests.framework */,
+				BE81B059EE4A9C9C9A50788B /* Pods_SpreaditUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8623E94D05776677660FFD3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EA99EC9A9D36F774A25C3EB /* Pods-FontanaKeyboard.debug.xcconfig */,
+				5F606F2E94011AA7670EAC04 /* Pods-FontanaKeyboard.release.xcconfig */,
+				B234FC5042648FF69F0664C5 /* Pods-Spreadit.debug.xcconfig */,
+				19EF98146A30B00C915E3AB7 /* Pods-Spreadit.release.xcconfig */,
+				8515B27A0AEB0E5984DF3934 /* Pods-SpreaditSharer.debug.xcconfig */,
+				D34F2D5F74861DA172927415 /* Pods-SpreaditSharer.release.xcconfig */,
+				2C3B3FE0986E65402D66B092 /* Pods-SpreaditTests.debug.xcconfig */,
+				68F4C89A128E8CCC61949813 /* Pods-SpreaditTests.release.xcconfig */,
+				54C7ABA5EE6A98D5D0AEEF73 /* Pods-SpreaditUITests.debug.xcconfig */,
+				E7927E689E1580C8E5B633B0 /* Pods-SpreaditUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		965310EF1C134EE0005CB906 /* Controllers */ = {
@@ -380,8 +409,8 @@
 				96B1C4D21BE167F700114C26 /* SpreaditSharer */,
 				96F99F631C0AEEA7005D6364 /* FontanaKeyboard */,
 				96B1C48A1BE159CA00114C26 /* Products */,
-				AB2F2C5FE29A9E102F7904C1 /* Pods */,
-				2BC1D3DCC996C4D70B52C7E9 /* Frameworks */,
+				8623E94D05776677660FFD3F /* Pods */,
+				5DD31000881E2548CDBFC631 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -563,19 +592,6 @@
 			path = FontanaKeyboard;
 			sourceTree = "<group>";
 		};
-		AB2F2C5FE29A9E102F7904C1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D230677FF9C01214B2A0356 /* Pods-Spreadit.debug.xcconfig */,
-				789AA992A8BF19109D938472 /* Pods-Spreadit.release.xcconfig */,
-				B1B73734EC6C32099E60AF3E /* Pods-SpreaditSharer.debug.xcconfig */,
-				C8907E947238AC39CE362288 /* Pods-SpreaditSharer.release.xcconfig */,
-				758CFD34E942B974044F8E45 /* Pods-FontanaKeyboard.debug.xcconfig */,
-				9CE4CDCCC38AEEE6031D9BD1 /* Pods-FontanaKeyboard.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -583,13 +599,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B1C4B11BE159CA00114C26 /* Build configuration list for PBXNativeTarget "Spreadit" */;
 			buildPhases = (
-				DF6ADAAE1D02668BDAC99E0A /* Check Pods Manifest.lock */,
+				E6407C93AE8CC8CE06096FAE /* Check Pods Manifest.lock */,
 				96B1C4851BE159CA00114C26 /* Sources */,
 				96B1C4861BE159CA00114C26 /* Frameworks */,
 				96B1C4871BE159CA00114C26 /* Resources */,
 				96B1C4CC1BE15A5800114C26 /* Embed App Extensions */,
-				9CB9C535D9A4F5CFB1C0D1C1 /* Embed Pods Frameworks */,
-				7813646D7088E9D6FD96F025 /* Copy Pods Resources */,
+				D6EACB7BF6DEB77843417F49 /* Embed Pods Frameworks */,
+				4D52AE7B3F94C7C43587FE9B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -605,9 +621,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B1C4B41BE159CA00114C26 /* Build configuration list for PBXNativeTarget "SpreaditTests" */;
 			buildPhases = (
+				79B828671803C6E7BE01C823 /* Check Pods Manifest.lock */,
 				96B1C4991BE159CA00114C26 /* Sources */,
 				96B1C49A1BE159CA00114C26 /* Frameworks */,
 				96B1C49B1BE159CA00114C26 /* Resources */,
+				252337BDA057A91F1A5763AB /* Embed Pods Frameworks */,
+				4FEE14AB0B750D5618EDF6CF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,9 +642,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B1C4B71BE159CA00114C26 /* Build configuration list for PBXNativeTarget "SpreaditUITests" */;
 			buildPhases = (
+				B56D7A773AF9463BCC5449A8 /* Check Pods Manifest.lock */,
 				96B1C4A41BE159CA00114C26 /* Sources */,
 				96B1C4A51BE159CA00114C26 /* Frameworks */,
 				96B1C4A61BE159CA00114C26 /* Resources */,
+				4FB3FB5F8B4F2CA0B1C6E3D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -641,12 +662,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96B1C4DC1BE167F700114C26 /* Build configuration list for PBXNativeTarget "SpreaditSharer" */;
 			buildPhases = (
-				5E8C9B45572D84147EB8FCBE /* Check Pods Manifest.lock */,
+				FE9F642B49278F0EB6B9D26F /* Check Pods Manifest.lock */,
 				96B1C4CD1BE167F700114C26 /* Sources */,
 				96B1C4CE1BE167F700114C26 /* Frameworks */,
 				96B1C4CF1BE167F700114C26 /* Resources */,
-				C279F0116D5488DA234186E8 /* Copy Pods Resources */,
-				EEC2CCAA62D5CB70FF0933FE /* Embed Pods Frameworks */,
+				1221A2A2F19CA7658340BF28 /* Embed Pods Frameworks */,
+				4BD63B95B9D0034229687AED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -661,12 +682,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96F99F6D1C0AEEA7005D6364 /* Build configuration list for PBXNativeTarget "FontanaKeyboard" */;
 			buildPhases = (
-				51130802D50996D9CA9BE4F9 /* Check Pods Manifest.lock */,
+				AE5651E015C5993FA681E27D /* Check Pods Manifest.lock */,
 				96F99F5E1C0AEEA7005D6364 /* Sources */,
 				96F99F5F1C0AEEA7005D6364 /* Frameworks */,
 				96F99F601C0AEEA7005D6364 /* Resources */,
-				C7E4DA2CD3E0993FDABB8BAA /* Copy Pods Resources */,
-				BB0B01B97B0D802683BC32AE /* Embed Pods Frameworks */,
+				B77E36E4022021D679663B3C /* Embed Pods Frameworks */,
+				96E8AA2C59EA1CFB645368F9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -795,52 +816,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		51130802D50996D9CA9BE4F9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5E8C9B45572D84147EB8FCBE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7813646D7088E9D6FD96F025 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9CB9C535D9A4F5CFB1C0D1C1 /* Embed Pods Frameworks */ = {
+		1221A2A2F19CA7658340BF28 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -852,10 +828,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BB0B01B97B0D802683BC32AE /* Embed Pods Frameworks */ = {
+		252337BDA057A91F1A5763AB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -867,10 +843,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditTests/Pods-SpreaditTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C279F0116D5488DA234186E8 /* Copy Pods Resources */ = {
+		4BD63B95B9D0034229687AED /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -885,7 +861,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7E4DA2CD3E0993FDABB8BAA /* Copy Pods Resources */ = {
+		4D52AE7B3F94C7C43587FE9B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -897,10 +873,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF6ADAAE1D02668BDAC99E0A /* Check Pods Manifest.lock */ = {
+		4FB3FB5F8B4F2CA0B1C6E3D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditUITests/Pods-SpreaditUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FEE14AB0B750D5618EDF6CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditTests/Pods-SpreaditTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B828671803C6E7BE01C823 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -915,7 +921,52 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EEC2CCAA62D5CB70FF0933FE /* Embed Pods Frameworks */ = {
+		96E8AA2C59EA1CFB645368F9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5651E015C5993FA681E27D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B56D7A773AF9463BCC5449A8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B77E36E4022021D679663B3C /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -927,7 +978,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6EACB7BF6DEB77843417F49 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6407C93AE8CC8CE06096FAE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9F642B49278F0EB6B9D26F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1150,7 +1246,7 @@
 		};
 		96B1C4B21BE159CA00114C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D230677FF9C01214B2A0356 /* Pods-Spreadit.debug.xcconfig */;
+			baseConfigurationReference = B234FC5042648FF69F0664C5 /* Pods-Spreadit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
@@ -1172,12 +1268,12 @@
 		};
 		96B1C4B31BE159CA00114C26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 789AA992A8BF19109D938472 /* Pods-Spreadit.release.xcconfig */;
+			baseConfigurationReference = 19EF98146A30B00C915E3AB7 /* Pods-Spreadit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FontanaKeyboard\"/**",
@@ -1187,13 +1283,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8a4db4e8-daf6-4f38-b317-8eff915c8a9a";
+				PROVISIONING_PROFILE = "4410390e-8421-409e-9c9e-893f0e165a56";
 				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		96B1C4B51BE159CA00114C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3B3FE0986E65402D66B092 /* Pods-SpreaditTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1209,6 +1306,7 @@
 		};
 		96B1C4B61BE159CA00114C26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F4C89A128E8CCC61949813 /* Pods-SpreaditTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1223,6 +1321,7 @@
 		};
 		96B1C4B81BE159CA00114C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54C7ABA5EE6A98D5D0AEEF73 /* Pods-SpreaditUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SpreaditUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1235,6 +1334,7 @@
 		};
 		96B1C4B91BE159CA00114C26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7927E689E1580C8E5B633B0 /* Pods-SpreaditUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SpreaditUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1247,7 +1347,7 @@
 		};
 		96B1C4DD1BE167F700114C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1B73734EC6C32099E60AF3E /* Pods-SpreaditSharer.debug.xcconfig */;
+			baseConfigurationReference = 8515B27A0AEB0E5984DF3934 /* Pods-SpreaditSharer.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1263,7 +1363,7 @@
 		};
 		96B1C4DE1BE167F700114C26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8907E947238AC39CE362288 /* Pods-SpreaditSharer.release.xcconfig */;
+			baseConfigurationReference = D34F2D5F74861DA172927415 /* Pods-SpreaditSharer.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1279,7 +1379,7 @@
 		};
 		96F99F6B1C0AEEA7005D6364 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 758CFD34E942B974044F8E45 /* Pods-FontanaKeyboard.debug.xcconfig */;
+			baseConfigurationReference = 7EA99EC9A9D36F774A25C3EB /* Pods-FontanaKeyboard.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1296,17 +1396,17 @@
 		};
 		96F99F6C1C0AEEA7005D6364 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CE4CDCCC38AEEE6031D9BD1 /* Pods-FontanaKeyboard.release.xcconfig */;
+			baseConfigurationReference = 5F606F2E94011AA7670EAC04 /* Pods-FontanaKeyboard.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2af7fc22-d383-49e3-b14b-9fa225fa356c";
+				PROVISIONING_PROFILE = "1517e635-f44e-4418-a388-db1a920d4a3d";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

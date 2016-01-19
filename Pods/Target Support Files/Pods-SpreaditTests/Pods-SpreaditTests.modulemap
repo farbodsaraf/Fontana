@@ -1,0 +1,6 @@
+framework module Pods_SpreaditTests {
+  umbrella header "Pods-SpreaditTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

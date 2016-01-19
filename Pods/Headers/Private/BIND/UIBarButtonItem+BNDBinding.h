@@ -1,1 +1,0 @@
-../../../BIND/BIND/Categories/iOS/UIBarButtonItem+BNDBinding.h

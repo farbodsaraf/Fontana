@@ -1,1 +1,0 @@
-../../../BIND/BIND/Transformers/BNDURLToImageTransformer.h

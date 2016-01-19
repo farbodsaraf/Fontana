@@ -161,7 +161,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         
         if (!image && [[current valueForKey:@"imageName"] length])
         {
-            image = [self imageWithFileNamed:[current valueForKey:@"imageName"]];
+            image = [UIImage imageNamed:[current valueForKey:@"imageName"]];
         }
         
         if (![TSMessage iOS7StyleEnabled])
@@ -169,7 +169,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             self.alpha = 0.0;
             
             // add background image here
-            UIImage *backgroundImage = [self imageWithFileNamed:[current valueForKey:@"backgroundImageName"]];
+            UIImage *backgroundImage = [UIImage imageNamed:[current valueForKey:@"backgroundImageName"]];
             backgroundImage = [backgroundImage stretchableImageWithLeftCapWidth:0.0 topCapHeight:0.0];
             
             _backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
@@ -255,13 +255,13 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             _button = [UIButton buttonWithType:UIButtonTypeCustom];
             
             
-            UIImage *buttonBackgroundImage = [self imageWithFileNamed:[current valueForKey:@"buttonBackgroundImageName"]];
+            UIImage *buttonBackgroundImage = [UIImage imageNamed:[current valueForKey:@"buttonBackgroundImageName"]];
             
             buttonBackgroundImage = [buttonBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(15.0, 12.0, 15.0, 11.0)];
             
             if (!buttonBackgroundImage)
             {
-                buttonBackgroundImage = [self imageWithFileNamed:[current valueForKey:@"NotificationButtonBackground"]];
+                buttonBackgroundImage = [UIImage imageNamed:[current valueForKey:@"NotificationButtonBackground"]];
                 buttonBackgroundImage = [buttonBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(15.0, 12.0, 15.0, 11.0)];
             }
             
@@ -358,16 +358,6 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
     return self;
 }
 
-- (UIImage *)imageWithFileNamed:(NSString *)fileName
-{
-    UIImage *image = [UIImage imageNamed:fileName];
-    if (!image) {
-        NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
-        NSString *resourcePath = [frameworkBundle pathForResource:fileName ofType:@"png"];
-        image = [UIImage imageWithContentsOfFile:resourcePath];
-    }
-    return image;
-}
 
 - (CGFloat)updateHeightOfMessageView
 {
