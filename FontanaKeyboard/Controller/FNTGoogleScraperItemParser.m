@@ -44,7 +44,7 @@
     }
     NSRange ampRange = [rawElement rangeOfString:@"&amp;sa"];
     NSRange urlRange = NSMakeRange(hrefRange.length, ampRange.location - hrefRange.length);
-    return [rawElement substringWithRange:urlRange];
+    return [[rawElement substringWithRange:urlRange] stringByRemovingPercentEncoding];
 }
 
 + (NSString *)titleFromElement:(TFHppleElement *)element {
@@ -54,7 +54,8 @@
     NSInteger closingBracketEnd = closingBracketRange.location + 1;
     NSRange titleRange = NSMakeRange(closingBracketEnd, closingARange.location - closingBracketEnd);
     NSString *htmlString = [rawElement substringWithRange:titleRange];
-    return [self removeHTLMTagsFromString:htmlString];
+    NSString *noHTMLString = [self removeHTLMTagsFromString:htmlString];
+    return [[NSString alloc] initWithUTF8String:[noHTMLString UTF8String]];
 }
 
 + (NSString *)removeHTLMTagsFromString:(NSString *)string {

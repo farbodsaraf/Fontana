@@ -43,10 +43,16 @@ NSString *const kFNTItemDictionary = @"kFNTItemDictionary";
 }
 
 - (NSString *)sourceFromDisplayLink:(NSString *)displayLink {
+    displayLink = [displayLink stringByReplacingOccurrencesOfString:@"https://" withString:@""];
+    displayLink = [displayLink stringByReplacingOccurrencesOfString:@"http://" withString:@""];
+    
     NSArray *components = [displayLink componentsSeparatedByString:@"."];
     if (components.count >= 2) {
-        return [NSString stringWithFormat:@":%@:", components[1]];
+        NSString *firstComponent = [components firstObject];
+        NSString *source = [firstComponent containsString:@"www"] ? components[1] : firstComponent;
+        return [NSString stringWithFormat:@":%@:", source];
     }
+    
     return @":unknown:";
 }
 
