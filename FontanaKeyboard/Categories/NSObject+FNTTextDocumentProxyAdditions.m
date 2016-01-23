@@ -105,7 +105,15 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
 }
 
 - (void)fnt_adjustCursor:(NSInteger)offset {
-    [(id <UITextDocumentProxy>)self adjustTextPositionByCharacterOffset:offset];
+    @try {
+        [(id <UITextDocumentProxy>)self adjustTextPositionByCharacterOffset:offset];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
     [self fnt_sleep];
 }
 
