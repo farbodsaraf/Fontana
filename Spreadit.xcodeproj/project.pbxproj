@@ -131,6 +131,7 @@
 		4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
 		81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
 		964C9CF81C50BCDA003907E2 /* FNTItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemTest.m; path = Model/FNTItemTest.m; sourceTree = "<group>"; };
+		964C9D011C53B5A0003907E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleSearchQuery.h; path = Controller/FNTGoogleSearchQuery.h; sourceTree = "<group>"; };
 		965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleSearchQuery.m; path = Controller/FNTGoogleSearchQuery.m; sourceTree = "<group>"; };
 		965310F61C1354E2005CB906 /* FNTContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTContextParser.h; path = Controller/FNTContextParser.h; sourceTree = "<group>"; };
@@ -567,6 +568,7 @@
 		DC7A00F6B8328E510BA334D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				964C9D011C53B5A0003907E2 /* libxml2.tbd */,
 				C6FA73C437C53C1575D25F86 /* Pods_FontanaKeyboard.framework */,
 				A2047749ACCED461D72BAB70 /* Pods_Spreadit.framework */,
 				078AFCAA9FBA77A474C5CAC9 /* Pods_SpreaditSharer.framework */,
@@ -1296,6 +1298,11 @@
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HockeySDK\"",
+				);
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1313,6 +1320,11 @@
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HockeySDK\"",
+				);
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

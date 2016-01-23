@@ -45,6 +45,10 @@
     link = @"https://carm.org/who-god";
     source = [self.item sourceFromDisplayLink:link];
     XCTAssert([source isEqualToString:@":carm:"], @"Source should be carm");
+    
+    link = @"https://ja.m.wiktionary.org";
+    source = [self.item sourceFromDisplayLink:link];
+    XCTAssert([source isEqualToString:@":wiktionary:"], @"Source should be wiktionary");
 }
 
 @end

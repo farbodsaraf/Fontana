@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HTMLReader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HexColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,11 +69,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>hpple.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,7 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3747761DF84223F09B6D32DC3911D6E2</key>
+		<key>1395B498D40F3C52CFC408A6F85C6328</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>35AB4E645558A256E1C06F38C71F4836</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,12 +137,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D635F027F0A6FD04B98B790907265430</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DFE8D9FAFC6ECABFC2BE01ED18EEC64F</key>
+		<key>CF5847611C1AE25F56727255FDEFECFB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

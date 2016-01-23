@@ -7,7 +7,7 @@ PODS:
   - HockeySDK (3.8.5):
     - HockeySDK/AllFeaturesLib (= 3.8.5)
   - HockeySDK/AllFeaturesLib (3.8.5)
-  - hpple (0.2.0)
+  - HTMLReader (0.9.3)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -54,7 +54,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.0)
   - BIND
   - HockeySDK
-  - hpple
+  - HTMLReader
   - Masonry
   - SwiftyJSON
   - TSMessages
@@ -65,7 +65,7 @@ SPEC CHECKSUMS:
   BIND: 7bd263ab59374ac3217c5eff4b74c97ddc6fb999
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
-  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  HTMLReader: 01de6ebb3b5f0f9dc4f6f165fdac0a15b3648167
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   NODE_: 4595c1cfadbf1f1d06566c32c1c7deb387a0822f

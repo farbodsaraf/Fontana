@@ -30,5 +30,5 @@ target 'FontanaKeyboard' do
     pod 'Masonry'
     pod 'HockeySDK'
     pod 'TTTAttributedLabel'
-    pod 'hpple'
+    pod 'HTMLReader'
 end

@@ -48,8 +48,7 @@ NSString *const kFNTItemDictionary = @"kFNTItemDictionary";
     
     NSArray *components = [displayLink componentsSeparatedByString:@"."];
     if (components.count >= 2) {
-        NSString *firstComponent = [components firstObject];
-        NSString *source = [firstComponent containsString:@"www"] ? components[1] : firstComponent;
+        NSString *source = components[components.count - 2];
         return [NSString stringWithFormat:@":%@:", source];
     }
     
