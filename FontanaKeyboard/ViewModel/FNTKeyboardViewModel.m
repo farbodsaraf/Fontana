@@ -129,6 +129,10 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
     [self raiseUndoStackDidChange];
 }
 
+- (void)clear {
+    [self.historyStack clear];
+}
+
 - (void)raiseUndoStackDidChange {
     [self willChangeValueForKey:@"undoEnabled"];
     [self didChangeValueForKey:@"undoEnabled"];

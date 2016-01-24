@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		718F76DE8CE24838EF621974 /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2047749ACCED461D72BAB70 /* Pods_Spreadit.framework */; };
 		964C9CF91C50BCDA003907E2 /* FNTItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C9CF81C50BCDA003907E2 /* FNTItemTest.m */; };
+		964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C9D031C54DDC0003907E2 /* VideoViewController.swift */; };
+		964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 964C9D061C54E23D003907E2 /* enabling_keyboard_720.mov */; };
+		964C9D091C54E23D003907E2 /* using_keyboard_720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 964C9D071C54E23D003907E2 /* using_keyboard_720.mov */; };
 		965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */; };
 		965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310F71C1354E2005CB906 /* FNTContextParser.m */; };
 		965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965310FA1C1355B8005CB906 /* FNTContextParserTest.m */; };
@@ -35,7 +38,7 @@
 		9658F4DF1C315328002B3595 /* icon_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4DB1C3152F8002B3595 /* icon_iphone@2x.png */; };
 		9658F4E01C315328002B3595 /* icon_iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */; };
 		9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */; };
-		9658F4E41C317748002B3595 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4E31C317748002B3595 /* TutorialViewController.swift */; };
+		9658F4E41C317748002B3595 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4E31C317748002B3595 /* RootViewController.swift */; };
 		9658F4EB1C31A56F002B3595 /* FNTKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */; };
 		9658F4ED1C31A5A8002B3595 /* FNTKeyboardToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */; };
 		9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4EE1C31B6FF002B3595 /* globe@3x.png */; };
@@ -44,7 +47,7 @@
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
-		96B1C48F1BE159CA00114C26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48E1BE159CA00114C26 /* ViewController.swift */; };
+		96B1C48F1BE159CA00114C26 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48E1BE159CA00114C26 /* HistoryViewController.swift */; };
 		96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4901BE159CA00114C26 /* Main.storyboard */; };
 		96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4931BE159CA00114C26 /* Assets.xcassets */; };
 		96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */; };
@@ -132,6 +135,9 @@
 		81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
 		964C9CF81C50BCDA003907E2 /* FNTItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemTest.m; path = Model/FNTItemTest.m; sourceTree = "<group>"; };
 		964C9D011C53B5A0003907E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		964C9D031C54DDC0003907E2 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = View/VideoViewController.swift; sourceTree = "<group>"; };
+		964C9D061C54E23D003907E2 /* enabling_keyboard_720.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = enabling_keyboard_720.mov; path = Resources/Videos/enabling_keyboard_720.mov; sourceTree = SOURCE_ROOT; };
+		964C9D071C54E23D003907E2 /* using_keyboard_720.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = using_keyboard_720.mov; path = Resources/Videos/using_keyboard_720.mov; sourceTree = SOURCE_ROOT; };
 		965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTGoogleSearchQuery.h; path = Controller/FNTGoogleSearchQuery.h; sourceTree = "<group>"; };
 		965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTGoogleSearchQuery.m; path = Controller/FNTGoogleSearchQuery.m; sourceTree = "<group>"; };
 		965310F61C1354E2005CB906 /* FNTContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTContextParser.h; path = Controller/FNTContextParser.h; sourceTree = "<group>"; };
@@ -152,7 +158,7 @@
 		9658F4DB1C3152F8002B3595 /* icon_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_iphone@2x.png"; path = "Resources/icon_iphone@2x.png"; sourceTree = SOURCE_ROOT; };
 		9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_iphone@3x.png"; path = "Resources/icon_iphone@3x.png"; sourceTree = SOURCE_ROOT; };
 		9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSUserDefaults+CustomKeyboard.swift"; path = "Extensions/NSUserDefaults+CustomKeyboard.swift"; sourceTree = "<group>"; };
-		9658F4E31C317748002B3595 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = View/TutorialViewController.swift; sourceTree = "<group>"; };
+		9658F4E31C317748002B3595 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = View/RootViewController.swift; sourceTree = "<group>"; };
 		9658F4E91C31A56F002B3595 /* FNTKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTKeyboardToolbar.h; path = View/FNTKeyboardToolbar.h; sourceTree = "<group>"; };
 		9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardToolbar.m; path = View/FNTKeyboardToolbar.m; sourceTree = "<group>"; };
 		9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FNTKeyboardToolbar.xib; path = View/FNTKeyboardToolbar.xib; sourceTree = "<group>"; };
@@ -165,7 +171,7 @@
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1C48C1BE159CA00114C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96B1C48E1BE159CA00114C26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96B1C48E1BE159CA00114C26 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		96B1C4911BE159CA00114C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96B1C4931BE159CA00114C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B1C4961BE159CA00114C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -276,6 +282,31 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		964C9D051C54E1F4003907E2 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				964C9D061C54E23D003907E2 /* enabling_keyboard_720.mov */,
+				964C9D071C54E23D003907E2 /* using_keyboard_720.mov */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		964C9D0A1C54E461003907E2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				96B1C48E1BE159CA00114C26 /* HistoryViewController.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		964C9D0B1C552A20003907E2 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9658F4E31C317748002B3595 /* RootViewController.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
 		965310EF1C134EE0005CB906 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,10 +350,11 @@
 		9658F4E51C31774C002B3595 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9658F4E81C317864002B3595 /* Tutorial */,
 				96B1C4901BE159CA00114C26 /* Main.storyboard */,
 				96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */,
-				96B1C48E1BE159CA00114C26 /* ViewController.swift */,
+				964C9D0B1C552A20003907E2 /* Root */,
+				964C9D0A1C54E461003907E2 /* History */,
+				9658F4E81C317864002B3595 /* Tutorial */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -338,6 +370,7 @@
 		9658F4E71C317774002B3595 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				964C9D051C54E1F4003907E2 /* Videos */,
 				96B1C4981BE159CA00114C26 /* Info.plist */,
 				9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */,
 				96B1C4931BE159CA00114C26 /* Assets.xcassets */,
@@ -348,7 +381,7 @@
 		9658F4E81C317864002B3595 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				9658F4E31C317748002B3595 /* TutorialViewController.swift */,
+				964C9D031C54DDC0003907E2 /* VideoViewController.swift */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -765,8 +798,10 @@
 				96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */,
 				96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */,
 				9658F4DF1C315328002B3595 /* icon_iphone@2x.png in Resources */,
+				964C9D091C54E23D003907E2 /* using_keyboard_720.mov in Resources */,
 				9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */,
 				9658F4E01C315328002B3595 /* icon_iphone@3x.png in Resources */,
+				964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,19 +986,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9658F4C11C2A9FA2002B3595 /* FNTKeyboardItemCell.m in Sources */,
-				96B1C48F1BE159CA00114C26 /* ViewController.swift in Sources */,
+				96B1C48F1BE159CA00114C26 /* HistoryViewController.swift in Sources */,
 				96F04AE01C344AE1002BBE67 /* FNTItemSearchQuery.m in Sources */,
 				9658F4C51C2AA1FD002B3595 /* FNTKeyboardItemCellModel.m in Sources */,
 				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
 				96F04AD41C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
+				964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */,
 				9658F4CF1C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
 				96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
 				96F04ACE1C32A7A0002BBE67 /* FNTGoogleItem.m in Sources */,
-				9658F4E41C317748002B3595 /* TutorialViewController.swift in Sources */,
+				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F04ACD1C32A79D002BBE67 /* FNTBINGItem.m in Sources */,
 			);

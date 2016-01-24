@@ -22,5 +22,6 @@
 
 - (void)apply:(FNTKeyboardItemCellModel *)model;
 - (void)undo;
+- (void)clear;
 
 @end

@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8sW-DJ-bNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Om7-5H-No0">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="552-FN-jie">
-            <objects>
-                <navigationController id="8sW-DJ-bNh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ux-4g-kkh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cee-LB-W65"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fdz-HC-DPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-313" y="318"/>
-        </scene>
-        <!--View Controller-->
+        <!--History View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HistoryViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +20,6 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FoO-lT-GOI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1Vv-hC-0rZ">
                                     <size key="itemSize" width="509" height="83"/>
@@ -46,15 +29,13 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="l3F-Pz-hNT">
-                                        <rect key="frame" x="45.5" y="64" width="509" height="83"/>
+                                        <rect key="frame" x="45.5" y="0.0" width="509" height="83"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="509" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -63,7 +44,6 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FoO-lT-GOI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tba-Go-g9d"/>
@@ -75,39 +55,56 @@
                     <navigationItem key="navigationItem" id="33z-5D-UVh"/>
                     <connections>
                         <outlet property="collectionView" destination="FoO-lT-GOI" id="rxT-jA-ROe"/>
-                        <segue destination="Om7-5H-No0" kind="presentation" identifier="PresentTutorial" id="Uph-G1-fon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="318"/>
+            <point key="canvasLocation" x="56" y="1116"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="b7N-rs-sQY">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Om7-5H-No0" customClass="TutorialViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Om7-5H-No0" customClass="RootViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="weN-iL-hZs"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5F-GH-YCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="1042"/>
+            <point key="canvasLocation" x="400" y="318"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="diW-bt-H7W">
+        <!--Video View Controller-->
+        <scene sceneID="m6N-96-ncm">
             <objects>
-                <viewController id="37q-Ph-brK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoViewController" title="Video View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XNZ-ii-Aex" customClass="VideoViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OXx-J5-WOt"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZXU-FO-JfX"/>
+                        <viewControllerLayoutGuide type="top" id="gN0-Yh-M0B"/>
+                        <viewControllerLayoutGuide type="bottom" id="X7k-LG-gNv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rHs-QZ-x9x">
+                    <view key="view" contentMode="scaleToFill" id="RvD-eG-Seo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruv-HT-t66" userLabel="Video Container View">
+                                <rect key="frame" x="165" y="44" width="270" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ruv-HT-t66" secondAttribute="height" multiplier="9:16" id="CR4-Eb-qyq"/>
+                                    <constraint firstAttribute="width" constant="270" id="n3A-55-vbZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ruv-HT-t66" firstAttribute="centerX" secondItem="RvD-eG-Seo" secondAttribute="centerX" id="74D-4p-XAB"/>
+                            <constraint firstItem="ruv-HT-t66" firstAttribute="top" secondItem="gN0-Yh-M0B" secondAttribute="bottom" constant="24" id="Us2-Xe-eWp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoContainerView" destination="ruv-HT-t66" id="F9z-8S-Ev4"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="556-0F-0LD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1d-9T-uxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069" y="1042"/>
+            <point key="canvasLocation" x="790" y="1116"/>
         </scene>
     </scenes>
 </document>
