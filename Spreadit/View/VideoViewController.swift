@@ -20,6 +20,7 @@ class VideoViewController: BNDViewController {
         moviePlayerController.repeatMode = .One
         moviePlayerController.backgroundView.backgroundColor = UIColor.whiteColor()
         moviePlayerController.controlStyle = .None
+        moviePlayerController.view.hidden = true
         
         let movieView = moviePlayerController.view
         movieView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +39,7 @@ class VideoViewController: BNDViewController {
         return moviePlayerController
     }()
     
-    lazy var segmentedControl : UISegmentedControl = {
+    lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: ["Installation", "Usage"])
         segmentedControl.addTarget(self, action: "onSegmentedControl:", forControlEvents: .ValueChanged)
         return segmentedControl
@@ -51,13 +52,29 @@ class VideoViewController: BNDViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .More, tag: 1)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "moviePlayerStateDidChange:",
+            name: MPMovieNaturalSizeAvailableNotification,
+            object: nil)
+    }
+    
+    func moviePlayerStateDidChange(notification: NSNotification) {
+        self.moviePlayerController.view.hidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.titleView = self.segmentedControl
         self.segmentedControl.selectedSegmentIndex = 0
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.onSegmentedControl(self.segmentedControl)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.moviePlayerController.stop()
     }
     
     func onSegmentedControl(control : UISegmentedControl) {
@@ -70,7 +87,7 @@ class VideoViewController: BNDViewController {
         }
     }
     
-    func playVideo(videoURL : NSURL) {
+    func playVideo(videoURL: NSURL) {
         self.moviePlayerController.contentURL = videoURL
         self.moviePlayerController.prepareToPlay()
         self.moviePlayerController.play()
