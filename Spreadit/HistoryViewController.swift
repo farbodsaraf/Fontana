@@ -42,6 +42,19 @@ class HistoryViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.navigationItem.title = "History"
         self.navigationItem.rightBarButtonItem = self.clearButtonItem
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        var itemSize = self.view.frame.size
+        itemSize.width = self.isPortrait() ? itemSize.width : itemSize.width / 2
+        itemSize.height = 66
+        flowLayout.itemSize = itemSize
+        
+        flowLayout.invalidateLayout()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,19 +120,6 @@ class HistoryViewController: UIViewController, UICollectionViewDelegate, UIColle
         reloadData()
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-        let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        
-        var itemSize = self.view.frame.size;
-        itemSize.width = self.isPortrait() ? itemSize.width : itemSize.width / 2
-        itemSize.height = 80
-        flowLayout.itemSize = itemSize
-        
-        flowLayout.invalidateLayout()
-    }
-    
     func isPortrait() -> Bool {
         let boundsSize : CGSize = UIScreen.mainScreen().bounds.size
         return Float(self.view.frame.size.width) == fminf(Float(boundsSize.width), Float(boundsSize.height))
@@ -142,7 +142,7 @@ class HistoryViewController: UIViewController, UICollectionViewDelegate, UIColle
         return viewModels.copy() as! NSArray
     }
     
-    func cell(cell: FNTKeyboardItemCell!, didTapOnURL url: NSURL!) {
+    func sender(sender: AnyObject!, wantsToOpenURL url: NSURL!) {
         UIApplication.sharedApplication().openURL(url)
     }
 }

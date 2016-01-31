@@ -15,10 +15,11 @@
 #import "FNTBINGSearchQuery.h"
 #import "FNTGoogleScraperSearchQuery.h"
 #import "FNTHistoryStack.h"
+#import "FNTPleaseDonateReminder.h"
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 
-@interface FNTKeyboardViewModel ()
+@interface FNTKeyboardViewModel () <FNTPleaseDonateReminderDelegate>
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) BNDViewModelsBlock viewModelsHandler;
 @property (nonatomic, strong) id <FNTSearchQuery> currentQuery;
@@ -26,6 +27,7 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 @property (nonatomic, strong) FNTContextItem *currentContextItem;
 @property (nonatomic, strong) FNTHistoryStack *historyStack;
 @property (nonatomic, strong) NSMutableArray *undoStack;
+@property (nonatomic, strong) FNTPleaseDonateReminder *donateReminder;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -36,6 +38,9 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
     if (self) {
         _queryClass = FNTGoogleScraperSearchQuery.class;
         _historyStack = [FNTHistoryStack stackForGroup:kFNTAppGroup];
+        _donateReminder = [FNTPleaseDonateReminder reminderForGroup:kFNTAppGroup];
+        _donateReminder.delegate = self;
+        _donateEnabled = NO;
     }
     return self;
 }
@@ -81,6 +86,7 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
                                                           [weakSelf handleError:error];
                                                       }
                                                   }];
+    [self.donateReminder bump];
 }
 
 - (void)handleItems:(NSArray *)items{
@@ -136,6 +142,12 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 - (void)raiseUndoStackDidChange {
     [self willChangeValueForKey:@"undoEnabled"];
     [self didChangeValueForKey:@"undoEnabled"];
+}
+
+#pragma mark - FNTPleaseDonateReminderDelegate
+
+- (void)reminderShouldRemindToDonate:(FNTPleaseDonateReminder *)reminder {
+    self.donateEnabled = YES;
 }
 
 @end

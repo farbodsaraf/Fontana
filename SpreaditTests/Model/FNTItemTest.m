@@ -49,6 +49,10 @@
     link = @"https://ja.m.wiktionary.org";
     source = [self.item sourceFromDisplayLink:link];
     XCTAssert([source isEqualToString:@":wiktionary:"], @"Source should be wiktionary");
+    
+    link = @"https://ja.m.wiktionary.akita.jp";
+    source = [self.item sourceFromDisplayLink:link];
+    XCTAssert([source isEqualToString:@":wiktionary:"], @"Source should be wiktionary");
 }
 
 @end

@@ -7,10 +7,10 @@
 //
 
 #import <BIND/BIND.h>
+#import "FNTOpenURLProtocol.h"
 
 @class FNTKeyboardItemCell;
-@protocol FNTKeyboardItemCellDelegate <NSObject>
-- (void)cell:(FNTKeyboardItemCell *)cell didTapOnURL:(NSURL *)url;
+@protocol FNTKeyboardItemCellDelegate <FNTOpenURLProtocol>
 @end
 
 @interface FNTKeyboardItemCell : BNDCollectionViewCell

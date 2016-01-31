@@ -7,6 +7,7 @@
 //
 
 #import "FNTItem.h"
+#import "NSURL+FNTBaseURL.h"
 
 @interface FNTItem ()
 @property (nonatomic, copy) NSDictionary *dictionary;
@@ -43,16 +44,8 @@ NSString *const kFNTItemDictionary = @"kFNTItemDictionary";
 }
 
 - (NSString *)sourceFromDisplayLink:(NSString *)displayLink {
-    displayLink = [displayLink stringByReplacingOccurrencesOfString:@"https://" withString:@""];
-    displayLink = [displayLink stringByReplacingOccurrencesOfString:@"http://" withString:@""];
-    
-    NSArray *components = [displayLink componentsSeparatedByString:@"."];
-    if (components.count >= 2) {
-        NSString *source = components[components.count - 2];
-        return [NSString stringWithFormat:@":%@:", source];
-    }
-    
-    return @":unknown:";
+    NSURL *link = [NSURL URLWithString:displayLink];
+    return [NSString stringWithFormat:@":%@:", link.fnt_domainName];
 }
 
 @end

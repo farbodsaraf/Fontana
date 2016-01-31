@@ -17,10 +17,10 @@
 
 + (NSArray *)parseData:(NSData *)data error:(NSError *__autoreleasing *)error {
     NSString *string = nil;
-    NSStringEncoding encoding = [NSString stringEncodingForData:data
-                                                encodingOptions:nil
-                                                convertedString:&string
-                                            usedLossyConversion:NULL];
+    [NSString stringEncodingForData:data
+                    encodingOptions:nil
+                    convertedString:&string
+                usedLossyConversion:NULL];
     HTMLDocument *document = [HTMLDocument documentWithString:string];
     NSArray *nodes = [document nodesMatchingSelector:@"h3"];
 

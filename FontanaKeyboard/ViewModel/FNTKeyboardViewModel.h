@@ -16,9 +16,7 @@
 @property (nonatomic, strong, readonly) FNTContextItem *currentContextItem;
 @property (nonatomic, strong) Class queryClass;
 @property (nonatomic, getter=isUndoEnabled) BOOL undoEnabled;
-
-- (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
-        viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler;
+@property (nonatomic, getter=isDonateEnabled) BOOL donateEnabled;
 
 - (void)apply:(FNTKeyboardItemCellModel *)model;
 - (void)undo;

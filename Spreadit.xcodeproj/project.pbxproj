@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		718F76DE8CE24838EF621974 /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2047749ACCED461D72BAB70 /* Pods_Spreadit.framework */; };
+		9628829D1C56C32300886F7D /* MHFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628829C1C56C32300886F7D /* MHFileHandle.m */; };
+		9628829E1C56C66E00886F7D /* MHFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628829C1C56C32300886F7D /* MHFileHandle.m */; };
+		962882A41C5741CC00886F7D /* FNTPleaseDonateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A31C5741CC00886F7D /* FNTPleaseDonateView.m */; };
+		962882A61C5742BE00886F7D /* FNTPleaseDonateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */; };
+		962882AA1C574AD600886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
+		962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
 		964C9CF91C50BCDA003907E2 /* FNTItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C9CF81C50BCDA003907E2 /* FNTItemTest.m */; };
 		964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C9D031C54DDC0003907E2 /* VideoViewController.swift */; };
 		964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 964C9D061C54E23D003907E2 /* enabling_keyboard_720.mov */; };
@@ -85,6 +91,8 @@
 		96F04AF71C35527F002BBE67 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */; };
 		96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */; };
 		96F99F6A1C0AEEA7005D6364 /* FontanaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96F99F621C0AEEA7005D6364 /* FontanaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		96FBCCF41C56BE9B007E1C80 /* effective_tld_names.dat in Resources */ = {isa = PBXBuildFile; fileRef = 96FBCCF31C56BE9B007E1C80 /* effective_tld_names.dat */; };
+		96FBCCF51C56C01F007E1C80 /* effective_tld_names.dat in Resources */ = {isa = PBXBuildFile; fileRef = 96FBCCF31C56BE9B007E1C80 /* effective_tld_names.dat */; };
 		AF1462711160A52D4B55096A /* Pods_SpreaditSharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AFCAA9FBA77A474C5CAC9 /* Pods_SpreaditSharer.framework */; };
 		FC7CE113D238722D6C434529 /* Pods_FontanaKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FA73C437C53C1575D25F86 /* Pods_FontanaKeyboard.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +141,14 @@
 		39C65D45C0A236BCF8F30A28 /* Pods-SpreaditSharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.debug.xcconfig"; sourceTree = "<group>"; };
 		4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
 		81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
+		9628829B1C56C32300886F7D /* MHFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFileHandle.h; sourceTree = "<group>"; };
+		9628829C1C56C32300886F7D /* MHFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFileHandle.m; sourceTree = "<group>"; };
+		962882A21C5741CC00886F7D /* FNTPleaseDonateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTPleaseDonateView.h; path = View/FNTPleaseDonateView.h; sourceTree = "<group>"; };
+		962882A31C5741CC00886F7D /* FNTPleaseDonateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTPleaseDonateView.m; path = View/FNTPleaseDonateView.m; sourceTree = "<group>"; };
+		962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FNTPleaseDonateView.xib; path = View/FNTPleaseDonateView.xib; sourceTree = "<group>"; };
+		962882A71C57492100886F7D /* FNTOpenURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FNTOpenURLProtocol.h; path = Protocols/FNTOpenURLProtocol.h; sourceTree = "<group>"; };
+		962882A81C574AD600886F7D /* FNTPleaseDonateReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTPleaseDonateReminder.h; path = Controller/FNTPleaseDonateReminder.h; sourceTree = "<group>"; };
+		962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTPleaseDonateReminder.m; path = Controller/FNTPleaseDonateReminder.m; sourceTree = "<group>"; };
 		964C9CF81C50BCDA003907E2 /* FNTItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemTest.m; path = Model/FNTItemTest.m; sourceTree = "<group>"; };
 		964C9D011C53B5A0003907E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		964C9D031C54DDC0003907E2 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = View/VideoViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +242,7 @@
 		96F99F641C0AEEA7005D6364 /* FNTKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNTKeyboardViewController.h; sourceTree = "<group>"; };
 		96F99F651C0AEEA7005D6364 /* FNTKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FNTKeyboardViewController.m; sourceTree = "<group>"; };
 		96F99F671C0AEEA7005D6364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96FBCCF31C56BE9B007E1C80 /* effective_tld_names.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = effective_tld_names.dat; path = Resources/effective_tld_names.dat; sourceTree = SOURCE_ROOT; };
 		A2047749ACCED461D72BAB70 /* Pods_Spreadit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spreadit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BD0E31C31C11172814516E /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
 		C6FA73C437C53C1575D25F86 /* Pods_FontanaKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FontanaKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +291,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962882991C56C32300886F7D /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				9628829A1C56C32300886F7D /* MHFileHandle */,
+			);
+			path = "Third Party";
+			sourceTree = SOURCE_ROOT;
+		};
+		9628829A1C56C32300886F7D /* MHFileHandle */ = {
+			isa = PBXGroup;
+			children = (
+				9628829B1C56C32300886F7D /* MHFileHandle.h */,
+				9628829C1C56C32300886F7D /* MHFileHandle.m */,
+			);
+			path = MHFileHandle;
+			sourceTree = "<group>";
+		};
 		964C9CF71C50BC8B003907E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +350,8 @@
 				9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */,
 				965310F61C1354E2005CB906 /* FNTContextParser.h */,
 				965310F71C1354E2005CB906 /* FNTContextParser.m */,
+				962882A81C574AD600886F7D /* FNTPleaseDonateReminder.h */,
+				962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,17 +395,18 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		9658F4E61C317763002B3595 /* Extensions */ = {
+		9658F4E61C317763002B3595 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */,
 			);
-			name = Extensions;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		9658F4E71C317774002B3595 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				96FBCCF31C56BE9B007E1C80 /* effective_tld_names.dat */,
 				964C9D051C54E1F4003907E2 /* Videos */,
 				96B1C4981BE159CA00114C26 /* Info.plist */,
 				9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */,
@@ -435,7 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				9658F4E71C317774002B3595 /* Resources */,
-				9658F4E61C317763002B3595 /* Extensions */,
+				9658F4E61C317763002B3595 /* Categories */,
 				9658F4E51C31774C002B3595 /* View */,
 				96B1C48C1BE159CA00114C26 /* AppDelegate.swift */,
 				9658F4CC1C2AA5D2002B3595 /* Spreadit-Bridging-Header.h */,
@@ -525,6 +562,10 @@
 				9658F4E91C31A56F002B3595 /* FNTKeyboardToolbar.h */,
 				9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */,
 				9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */,
+				962882A21C5741CC00886F7D /* FNTPleaseDonateView.h */,
+				962882A31C5741CC00886F7D /* FNTPleaseDonateView.m */,
+				962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */,
+				962882A71C57492100886F7D /* FNTOpenURLProtocol.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -584,6 +625,7 @@
 		96F99F631C0AEEA7005D6364 /* FontanaKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				962882991C56C32300886F7D /* Third Party */,
 				9658F4DA1C3152E4002B3595 /* Resources */,
 				9658F4D61C2ADABB002B3595 /* FontanaKeyboard.entitlements */,
 				96C446971C1335C800051149 /* Test */,
@@ -793,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9658F4C21C2A9FA7002B3595 /* FNTKeyboardItemCell.xib in Resources */,
+				96FBCCF41C56BE9B007E1C80 /* effective_tld_names.dat in Resources */,
 				96F04AD01C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
 				96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */,
 				96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */,
@@ -834,7 +877,9 @@
 				96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */,
 				9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */,
 				96F04AD11C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
+				962882A61C5742BE00886F7D /* FNTPleaseDonateView.xib in Resources */,
 				9658F4DE1C3152F8002B3595 /* icon_iphone@3x.png in Resources */,
+				96FBCCF51C56C01F007E1C80 /* effective_tld_names.dat in Resources */,
 				9658F4ED1C31A5A8002B3595 /* FNTKeyboardToolbar.xib in Resources */,
 				96F04AD71C32D719002BBE67 /* favicon.ico in Resources */,
 			);
@@ -991,6 +1036,7 @@
 				9658F4C51C2AA1FD002B3595 /* FNTKeyboardItemCellModel.m in Sources */,
 				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
+				962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
 				96F04AD41C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */,
@@ -999,6 +1045,7 @@
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
 				96F04ACE1C32A7A0002BBE67 /* FNTGoogleItem.m in Sources */,
+				9628829E1C56C66E00886F7D /* MHFileHandle.m in Sources */,
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F04ACD1C32A79D002BBE67 /* FNTBINGItem.m in Sources */,
@@ -1051,13 +1098,16 @@
 			files = (
 				96F04ACC1C32A4F4002BBE67 /* FNTGoogleItem.m in Sources */,
 				96F04AC61C329EE0002BBE67 /* FNTBINGItemParser.m in Sources */,
+				9628829D1C56C32300886F7D /* MHFileHandle.m in Sources */,
 				965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */,
 				96F04AD51C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
+				962882A41C5741CC00886F7D /* FNTPleaseDonateView.m in Sources */,
 				96F04AC31C329D77002BBE67 /* FNTBINGSearchQuery.m in Sources */,
 				96F04AC91C32A484002BBE67 /* FNTBINGItem.m in Sources */,
 				9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
+				962882AA1C574AD600886F7D /* FNTPleaseDonateReminder.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
 				9658F4EB1C31A56F002B3595 /* FNTKeyboardToolbar.m in Sources */,
 				966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */,

@@ -15,18 +15,21 @@
 #import "FNTKeyboardToolbar.h"
 #import "FNTKeyboardItemCell.h"
 #import "BIND.h"
+#import "FNTPleaseDonateView.h"
 
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
-@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate, FNTKeyboardItemCellDelegate>
+@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate, FNTKeyboardItemCellDelegate, FNTPleaseDonateViewDelegate>
 @property (nonatomic, strong) UIButton *finishTutorialButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
 @property (nonatomic, strong) FNTKeyboardToolbar *toolbar;
+@property (nonatomic, strong) FNTPleaseDonateView *donateView;
 @property (nonatomic, strong) UIView *separator;
+@property (nonatomic, strong) BNDBinding *donateBinding;
 @end
 
 @implementation FNTKeyboardViewController
@@ -73,6 +76,22 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
             make.center.equalTo(self.view);
         }];
     }
+    
+    if (_donateView.superview) {
+        [self.toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.view);
+            make.left.equalTo(self.view);
+            make.right.equalTo(self.view);
+            make.height.equalTo(@34);
+        }];
+        
+        [self.donateView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view);
+            make.left.equalTo(self.view);
+            make.right.equalTo(self.view);
+            make.bottom.equalTo(self.toolbar);
+        }];
+    }
 
     if (_tutorialView.superview) {
         [self.tutorialView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -91,10 +110,30 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     self.viewModel = [FNTKeyboardViewModel new];
     
+    [self loadBindings:(FNTKeyboardViewModel *)self.viewModel];
+    
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.activityIndicator];
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.separator];
+    
+    [self.view setNeedsUpdateConstraints];
+}
+
+- (void)loadBindings:(FNTKeyboardViewModel *)viewModel {
+    __weak typeof(self) weakSelf = self;
+    self.donateBinding = [BINDO(viewModel, donateEnabled) observe:^(id observable, id value, NSDictionary *observationInfo) {
+        if ([value boolValue]) {
+            [weakSelf displayDonate];
+        }
+    }];
+}
+
+- (void)displayDonate {
+    [self.collectionView removeFromSuperview];
+    [self.activityIndicator removeFromSuperview];
+    
+    [self.view addSubview:self.donateView];
     
     [self.view setNeedsUpdateConstraints];
 }
@@ -145,6 +184,14 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         [_tutorialView start];
     }
     return _tutorialView;
+}
+
+- (FNTPleaseDonateView *)donateView {
+    if (!_donateView) {
+        _donateView = [[[NSBundle mainBundle] loadNibNamed:@"FNTPleaseDonateView" owner:self options:nil] objectAtIndex:0];
+        _donateView.delegate = self;
+    }
+    return _donateView;
 }
 
 - (FNTKeyboardToolbar *)toolbar {
@@ -282,9 +329,9 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.keyboardViewModel undo];
 }
 
-#pragma mark - FNTKeyboardItemCellDelegate
+#pragma mark - FNTOpenURLProtocol
 
-- (void)cell:(FNTKeyboardItemCell *)cell didTapOnURL:(NSURL *)url {
+- (void)sender:(id)sender wantsToOpenURL:(NSURL*)url {
     UIResponder* responder = self;
     while ((responder = [responder nextResponder]) != nil) {
         if([responder respondsToSelector:@selector(openURL:)] == YES) {

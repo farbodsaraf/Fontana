@@ -12,4 +12,14 @@
 
 - (NSURL *)fnt_urlByAddingPath:(NSString *)path;
 
+- (NSURL *)fnt_root;
+
+/**
+ *  Returns a domain name by cutting away the domain extension as listed here
+ *  https://publicsuffix.org/list/effective_tld_names.dat
+ *
+ *  @return a domainName.
+ */
+- (NSString *)fnt_domainName;
+
 @end

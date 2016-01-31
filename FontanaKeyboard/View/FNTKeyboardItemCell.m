@@ -58,7 +58,7 @@ BINDINGS(FNTKeyboardItemCellModel,
 }
 
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
-    [self.delegate cell:self didTapOnURL:url];
+    [self.delegate sender:self wantsToOpenURL:url];
 }
 
 @end
