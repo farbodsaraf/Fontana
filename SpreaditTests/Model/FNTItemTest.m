@@ -53,6 +53,10 @@
     link = @"https://ja.m.wiktionary.akita.jp";
     source = [self.item sourceFromDisplayLink:link];
     XCTAssert([source isEqualToString:@":wiktionary:"], @"Source should be wiktionary");
+    
+    link = @"http://www.lyricsmode.com/lyrics/m/melanie/i_dont_eat_animals.html";
+    source = [self.item sourceFromDisplayLink:link];
+    XCTAssert([source isEqualToString:@":lyricsmode:"], @"Source should be lyricsmode");
 }
 
 @end

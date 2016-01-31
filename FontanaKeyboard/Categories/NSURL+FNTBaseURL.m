@@ -64,8 +64,11 @@
     NSMutableArray *possibleExtensions = [NSMutableArray new];
     for (NSString *domainExtension in self.fnt_domainExtensions) {
         NSRange extensionRange = [link rangeOfString:domainExtension];
-        if (extensionRange.location != NSNotFound) {
-            if ((extensionRange.location + extensionRange.length) == link.length) {
+        if (extensionRange.location != NSNotFound &&
+            (extensionRange.location + extensionRange.length) == link.length) {
+            //check if adding a dot still matches?
+            NSString *dotDomainExtension = [NSString stringWithFormat:@".%@", domainExtension];
+            if ([link containsString:dotDomainExtension]) {
                 [possibleExtensions addObject:domainExtension];
             }
         }

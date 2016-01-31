@@ -49,7 +49,9 @@
 }
 
 + (NSString *)urlFromElement:(HTMLElement *)element {
-    HTMLElement *urlElement = [element.children firstObject];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF isKindOfClass:%@", [HTMLElement class]];
+    NSOrderedSet *htmlElements = [element.children filteredOrderedSetUsingPredicate:predicate];
+    HTMLElement *urlElement = [htmlElements firstObject];
     NSString *rawElement = urlElement.attributes[@"href"];
     NSRange hrefRange = [rawElement rangeOfString:@"/url?q="];
     if (hrefRange.location == NSNotFound) {
