@@ -8,7 +8,7 @@
 
 #import "FNTPleaseDonateReminder.h"
 
-static NSUInteger kPleaseDonateModulo = 2;
+static NSUInteger kPleaseDonateModulo = 10;
 static NSString * const kFNTPleaseDonateBumpTimesKey = @"FNTPleaseDonateBumpTimesKey";
 
 @interface FNTPleaseDonateReminder ()

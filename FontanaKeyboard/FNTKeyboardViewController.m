@@ -22,7 +22,6 @@ static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 @interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate, FNTKeyboardItemCellDelegate, FNTPleaseDonateViewDelegate>
-@property (nonatomic, strong) UIButton *finishTutorialButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
@@ -30,6 +29,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 @property (nonatomic, strong) FNTPleaseDonateView *donateView;
 @property (nonatomic, strong) UIView *separator;
 @property (nonatomic, strong) BNDBinding *donateBinding;
+@property (nonatomic, strong) BNDBinding *undoBinding;
 @end
 
 @implementation FNTKeyboardViewController
@@ -50,27 +50,22 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (void)updateViewConstraints {
     [super updateViewConstraints];
     
+    [self.separator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.height.equalTo(@(0.5));
+    }];
+    
+    [self.toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.height.equalTo(@34);
+    }];
+    
     if (_collectionView.superview) {
-        [self.separator mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view);
-            make.left.equalTo(self.view);
-            make.right.equalTo(self.view);
-            make.height.equalTo(@(0.5));
-        }];
-        
-        [self.toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.view);
-            make.left.equalTo(self.view);
-            make.right.equalTo(self.view);
-            make.height.equalTo(@34);
-        }];
-        
-        [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view);
-            make.left.equalTo(self.view);
-            make.right.equalTo(self.view);
-            make.bottom.equalTo(self.toolbar);
-        }];
+        [self constrainViewToToolbar:self.collectionView];
         
         [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.view);
@@ -78,31 +73,21 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     }
     
     if (_donateView.superview) {
-        [self.toolbar mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.view);
-            make.left.equalTo(self.view);
-            make.right.equalTo(self.view);
-            make.height.equalTo(@34);
-        }];
-        
-        [self.donateView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view);
-            make.left.equalTo(self.view);
-            make.right.equalTo(self.view);
-            make.bottom.equalTo(self.toolbar);
-        }];
+        [self constrainViewToToolbar:self.donateView];
     }
 
     if (_tutorialView.superview) {
-        [self.tutorialView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
-        
-        [self.finishTutorialButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.view);
-            make.bottom.offset(0);
-        }];
+        [self constrainViewToToolbar:self.tutorialView];
     }
+}
+
+- (void)constrainViewToToolbar:(UIView *)view {
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.bottom.equalTo(self.toolbar);
+    }];
 }
 
 - (void)viewDidLoad {
@@ -112,12 +97,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     [self loadBindings:(FNTKeyboardViewModel *)self.viewModel];
     
-    [self.view addSubview:self.collectionView];
-    [self.view addSubview:self.activityIndicator];
-    [self.view addSubview:self.toolbar];
-    [self.view addSubview:self.separator];
-    
-    [self.view setNeedsUpdateConstraints];
+    [self displayResultsView];
 }
 
 - (void)loadBindings:(FNTKeyboardViewModel *)viewModel {
@@ -127,24 +107,52 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
             [weakSelf displayDonate];
         }
     }];
+    
+    self.undoBinding = [BINDO(viewModel, undoEnabled) observe:^(id observable, id value, NSDictionary *observationInfo) {
+        self.toolbar.undoBarButtonItem.enabled = [value boolValue];
+    }];
+}
+
+- (void)removeAllSubviews {
+    for (UIView *view in self.view.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    self.collectionView = nil;
+    self.activityIndicator = nil;
+    self.toolbar = nil;
+    self.donateView = nil;
+    self.tutorialView = nil;
+    self.separator = nil;
+}
+
+- (void)displayResultsView {
+    [self removeAllSubviews];
+
+    [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.activityIndicator];
+    [self.view addSubview:self.toolbar];
+    [self.view addSubview:self.separator];
+    
+    [self.view setNeedsUpdateConstraints];
 }
 
 - (void)displayDonate {
-    [self.collectionView removeFromSuperview];
-    [self.activityIndicator removeFromSuperview];
+    [self removeAllSubviews];
     
     [self.view addSubview:self.donateView];
+    [self.view addSubview:self.toolbar];
+    [self.view addSubview:self.separator];
     
     [self.view setNeedsUpdateConstraints];
 }
 
 - (void)displayNoResults {
-    [self.collectionView removeFromSuperview];
-    [self.activityIndicator removeFromSuperview];
+    [self removeAllSubviews];
     
     [self.view addSubview:self.tutorialView];
-    [self.view addSubview:self.finishTutorialButton];
-    self.finishTutorialButton.alpha = 0;
+    [self.view addSubview:self.toolbar];
+    [self.view addSubview:self.separator];
     
     [self.view setNeedsUpdateConstraints];
 }
@@ -202,17 +210,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     return _toolbar;
 }
 
-- (UIButton *)finishTutorialButton {
-    if (!_finishTutorialButton) {
-        _finishTutorialButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_finishTutorialButton setTitle:NSLocalizedString(@"OK", @"Title for 'Finish Tutorial' button") forState:UIControlStateNormal];
-        [_finishTutorialButton sizeToFit];
-        [_finishTutorialButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-        _finishTutorialButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    }
-    return _finishTutorialButton;
-}
-
 - (UIActivityIndicatorView *)activityIndicator {
     if (!_activityIndicator) {
         _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -245,16 +242,22 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 - (void)linkify {
     [self.activityIndicator startAnimating];
+    
+    __weak typeof(self) weakSelf = self;
     [self.keyboardViewModel updateWithContext:self.textDocumentProxy
                             viewModelsHandler:^(NSArray *viewModels, NSError *error) {
-                                if (!error) {
-                                    [self.collectionView reloadData];
-                                    [self.activityIndicator stopAnimating];
-                                }
-                                else {
-                                    [self displayNoResults];
-                                }
+                                [weakSelf handleViewModels:viewModels error:error];
                             }];
+}
+
+- (void)handleViewModels:(NSArray *)viewModels error:(NSError *)error {
+    if (!error) {
+        [self.collectionView reloadData];
+        [self.activityIndicator stopAnimating];
+    }
+    else {
+        [self displayNoResults];
+    }
 }
 
 - (FNTKeyboardViewModel *)keyboardViewModel {
@@ -313,10 +316,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 #pragma mark - FNTUsageTutorialViewDelegate
 
 - (void)tutorialViewDidFinish:(FNTUsageTutorialView *)tutorialView {
-    [UIView animateWithDuration:0.5
-                     animations:^{
-                         self.finishTutorialButton.alpha = 1;
-                     }];
+
 }
 
 #pragma mark - FNTKeyboardToolbarDelegate
