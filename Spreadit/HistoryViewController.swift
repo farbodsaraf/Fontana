@@ -15,6 +15,11 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     var historyStack : FNTHistoryStack;
+    var items : [FNTItem]? {
+        didSet {
+            reloadData()
+        }
+    }
     
     lazy var clearButtonItem : UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "clear")
@@ -25,7 +30,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
 
         super.init(coder: aDecoder)!
     
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadData", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadItems", name: UIApplicationWillEnterForegroundNotification, object: nil)
         
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .History, tag: 0)
     }
@@ -38,9 +43,14 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        reloadData()
         self.navigationItem.title = "History"
         self.navigationItem.rightBarButtonItem = self.clearButtonItem
+        
+        reloadItems()
+    }
+    
+    func reloadItems() {
+        self.items = self.historyStack.allItems as? [FNTItem]
     }
     
     override func viewWillLayoutSubviews() {
@@ -63,7 +73,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func clear() {
         self.historyStack.clear()
-        self.reloadData()
+        self.items = nil
     }
     
     func reloadData() {
@@ -126,7 +136,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     }
     
     func viewModels() -> NSArray {
-        let items = self.historyStack.allItems
+        let items = self.items
         
         guard items != nil else {
             return NSArray()
@@ -134,7 +144,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         
         let viewModels = NSMutableArray()
         
-        for item in items {
+        for item in items! {
             let viewModel = FNTKeyboardItemCellModel(model: item)
             viewModels.addObject(viewModel)
         }
