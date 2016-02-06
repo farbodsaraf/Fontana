@@ -104,7 +104,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1d-9T-uxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="1116"/>
+            <point key="canvasLocation" x="694" y="1116"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="c8I-9I-BcA">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="knI-sk-RXZ" customClass="SettingsViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="X5p-5j-fYc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="knI-sk-RXZ" id="z1N-hU-iGm"/>
+                            <outlet property="delegate" destination="knI-sk-RXZ" id="98r-kJ-sCO"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="X5p-5j-fYc" id="mlm-XW-EUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4u-3W-wTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="1119"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,17 @@
 		962882A61C5742BE00886F7D /* FNTPleaseDonateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */; };
 		962882AA1C574AD600886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
 		962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
+		962882AE1C5E76E400886F7D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882AD1C5E76E400886F7D /* SettingsViewController.swift */; };
+		962882B41C6065E500886F7D /* NavigationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882B31C6065E500886F7D /* NavigationCellModel.swift */; };
+		962882B61C6068D900886F7D /* TableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882B51C6068D900886F7D /* TableRowViewModel.swift */; };
+		962882B91C606B3200886F7D /* NavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882B81C606B3200886F7D /* NavigationCell.swift */; };
+		962882BB1C62870800886F7D /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882BA1C62870800886F7D /* UIView+LoadFromNib.swift */; };
+		962882BD1C628AF600886F7D /* NavigationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962882BC1C628AF600886F7D /* NavigationCell.xib */; };
+		962882BF1C6296CB00886F7D /* UIViewController+LoadFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882BE1C6296CB00886F7D /* UIViewController+LoadFromStoryboard.swift */; };
+		962882C11C63332500886F7D /* DonateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882C01C63332500886F7D /* DonateCell.swift */; };
+		962882C31C63336500886F7D /* DonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962882C21C63336500886F7D /* DonateCell.xib */; };
+		962882C51C63360700886F7D /* DonateCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882C41C63360700886F7D /* DonateCellModel.swift */; };
+		962882C71C663C0200886F7D /* DonationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882C61C663C0200886F7D /* DonationStore.swift */; };
 		964C9CF91C50BCDA003907E2 /* FNTItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C9CF81C50BCDA003907E2 /* FNTItemTest.m */; };
 		964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C9D031C54DDC0003907E2 /* VideoViewController.swift */; };
 		964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */ = {isa = PBXBuildFile; fileRef = 964C9D061C54E23D003907E2 /* enabling_keyboard_720.mov */; };
@@ -50,6 +61,10 @@
 		9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4EE1C31B6FF002B3595 /* globe@3x.png */; };
 		966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
+		9683D1AC1C665FAE001436C8 /* DonationJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AB1C665FAE001436C8 /* DonationJar.swift */; };
+		9683D1AF1C666392001436C8 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AE1C666392001436C8 /* Donation.swift */; };
+		9683D1B01C66733A001436C8 /* DonationJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AB1C665FAE001436C8 /* DonationJar.swift */; };
+		9683D1B11C667348001436C8 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AE1C666392001436C8 /* Donation.swift */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
@@ -149,6 +164,17 @@
 		962882A71C57492100886F7D /* FNTOpenURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FNTOpenURLProtocol.h; path = Protocols/FNTOpenURLProtocol.h; sourceTree = "<group>"; };
 		962882A81C574AD600886F7D /* FNTPleaseDonateReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTPleaseDonateReminder.h; path = Controller/FNTPleaseDonateReminder.h; sourceTree = "<group>"; };
 		962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTPleaseDonateReminder.m; path = Controller/FNTPleaseDonateReminder.m; sourceTree = "<group>"; };
+		962882AD1C5E76E400886F7D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = View/SettingsViewController.swift; sourceTree = "<group>"; };
+		962882B31C6065E500886F7D /* NavigationCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationCellModel.swift; path = ViewModel/NavigationCellModel.swift; sourceTree = "<group>"; };
+		962882B51C6068D900886F7D /* TableRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableRowViewModel.swift; path = ViewModel/TableRowViewModel.swift; sourceTree = "<group>"; };
+		962882B81C606B3200886F7D /* NavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationCell.swift; path = View/Cells/NavigationCell.swift; sourceTree = "<group>"; };
+		962882BA1C62870800886F7D /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+LoadFromNib.swift"; path = "Extensions/UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
+		962882BC1C628AF600886F7D /* NavigationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavigationCell.xib; path = View/Cells/NavigationCell.xib; sourceTree = "<group>"; };
+		962882BE1C6296CB00886F7D /* UIViewController+LoadFromStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+LoadFromStoryboard.swift"; path = "Extensions/UIViewController+LoadFromStoryboard.swift"; sourceTree = "<group>"; };
+		962882C01C63332500886F7D /* DonateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonateCell.swift; path = View/Cells/DonateCell.swift; sourceTree = "<group>"; };
+		962882C21C63336500886F7D /* DonateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DonateCell.xib; path = View/Cells/DonateCell.xib; sourceTree = "<group>"; };
+		962882C41C63360700886F7D /* DonateCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonateCellModel.swift; path = ViewModel/DonateCellModel.swift; sourceTree = "<group>"; };
+		962882C61C663C0200886F7D /* DonationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationStore.swift; path = Controller/DonationStore.swift; sourceTree = "<group>"; };
 		964C9CF81C50BCDA003907E2 /* FNTItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemTest.m; path = Model/FNTItemTest.m; sourceTree = "<group>"; };
 		964C9D011C53B5A0003907E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		964C9D031C54DDC0003907E2 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = View/VideoViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +209,8 @@
 		966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTUsageTutorialView.m; path = View/FNTUsageTutorialView.m; sourceTree = "<group>"; };
 		966D57B01C2400EF00F14B5F /* FNTSourceToColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSourceToColorTransformer.h; path = Transformers/FNTSourceToColorTransformer.h; sourceTree = "<group>"; };
 		966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTSourceToColorTransformer.m; path = Transformers/FNTSourceToColorTransformer.m; sourceTree = "<group>"; };
+		9683D1AB1C665FAE001436C8 /* DonationJar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationJar.swift; path = Controller/DonationJar.swift; sourceTree = "<group>"; };
+		9683D1AE1C666392001436C8 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Donation.swift; path = Controller/Donation.swift; sourceTree = "<group>"; };
 		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +336,43 @@
 			path = MHFileHandle;
 			sourceTree = "<group>";
 		};
+		962882AC1C5E76AB00886F7D /* More */ = {
+			isa = PBXGroup;
+			children = (
+				962882AD1C5E76E400886F7D /* SettingsViewController.swift */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		962882B21C60659700886F7D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				962882B51C6068D900886F7D /* TableRowViewModel.swift */,
+				962882B31C6065E500886F7D /* NavigationCellModel.swift */,
+				962882C41C63360700886F7D /* DonateCellModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		962882B71C606A6F00886F7D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				962882B81C606B3200886F7D /* NavigationCell.swift */,
+				962882BC1C628AF600886F7D /* NavigationCell.xib */,
+				962882C01C63332500886F7D /* DonateCell.swift */,
+				962882C21C63336500886F7D /* DonateCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		962882C81C663C0A00886F7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9683D1AD1C66637A001436C8 /* Donation */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		964C9CF71C50BC8B003907E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,11 +451,13 @@
 		9658F4E51C31774C002B3595 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				962882B71C606A6F00886F7D /* Cells */,
 				96B1C4901BE159CA00114C26 /* Main.storyboard */,
 				96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */,
 				964C9D0B1C552A20003907E2 /* Root */,
 				964C9D0A1C54E461003907E2 /* History */,
 				9658F4E81C317864002B3595 /* Tutorial */,
+				962882AC1C5E76AB00886F7D /* More */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -399,6 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */,
+				962882BA1C62870800886F7D /* UIView+LoadFromNib.swift */,
+				962882BE1C6296CB00886F7D /* UIViewController+LoadFromStoryboard.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -430,6 +499,16 @@
 				966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */,
 			);
 			name = Transformers;
+			sourceTree = "<group>";
+		};
+		9683D1AD1C66637A001436C8 /* Donation */ = {
+			isa = PBXGroup;
+			children = (
+				962882C61C663C0200886F7D /* DonationStore.swift */,
+				9683D1AB1C665FAE001436C8 /* DonationJar.swift */,
+				9683D1AE1C666392001436C8 /* Donation.swift */,
+			);
+			name = Donation;
 			sourceTree = "<group>";
 		};
 		96A14FAA1BE1DAEB00CC7D4B /* Classes */ = {
@@ -471,9 +550,11 @@
 		96B1C48B1BE159CA00114C26 /* Spreadit */ = {
 			isa = PBXGroup;
 			children = (
-				9658F4E71C317774002B3595 /* Resources */,
 				9658F4E61C317763002B3595 /* Categories */,
+				962882C81C663C0A00886F7D /* Controller */,
+				962882B21C60659700886F7D /* ViewModels */,
 				9658F4E51C31774C002B3595 /* View */,
+				9658F4E71C317774002B3595 /* Resources */,
 				96B1C48C1BE159CA00114C26 /* AppDelegate.swift */,
 				9658F4CC1C2AA5D2002B3595 /* Spreadit-Bridging-Header.h */,
 			);
@@ -782,6 +863,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 						};
 					};
 					96B1C49C1BE159CA00114C26 = {
@@ -801,6 +885,9 @@
 						DevelopmentTeam = 7LN5U2P4GE;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 						};
@@ -836,6 +923,7 @@
 			files = (
 				9658F4C21C2A9FA7002B3595 /* FNTKeyboardItemCell.xib in Resources */,
 				96FBCCF41C56BE9B007E1C80 /* effective_tld_names.dat in Resources */,
+				962882C31C63336500886F7D /* DonateCell.xib in Resources */,
 				96F04AD01C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
 				96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */,
 				96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */,
@@ -845,6 +933,7 @@
 				9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */,
 				9658F4E01C315328002B3595 /* icon_iphone@3x.png in Resources */,
 				964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */,
+				962882BD1C628AF600886F7D /* NavigationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,19 +1122,30 @@
 				9658F4C11C2A9FA2002B3595 /* FNTKeyboardItemCell.m in Sources */,
 				96B1C48F1BE159CA00114C26 /* HistoryViewController.swift in Sources */,
 				96F04AE01C344AE1002BBE67 /* FNTItemSearchQuery.m in Sources */,
+				9683D1AF1C666392001436C8 /* Donation.swift in Sources */,
+				962882B41C6065E500886F7D /* NavigationCellModel.swift in Sources */,
+				962882AE1C5E76E400886F7D /* SettingsViewController.swift in Sources */,
 				9658F4C51C2AA1FD002B3595 /* FNTKeyboardItemCellModel.m in Sources */,
 				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
+				9683D1AC1C665FAE001436C8 /* DonationJar.swift in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
 				962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
 				96F04AD41C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */,
+				962882B61C6068D900886F7D /* TableRowViewModel.swift in Sources */,
 				9658F4CF1C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
+				962882C51C63360700886F7D /* DonateCellModel.swift in Sources */,
 				96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
+				962882B91C606B3200886F7D /* NavigationCell.swift in Sources */,
+				962882C11C63332500886F7D /* DonateCell.swift in Sources */,
 				96F04ACE1C32A7A0002BBE67 /* FNTGoogleItem.m in Sources */,
+				962882BF1C6296CB00886F7D /* UIViewController+LoadFromStoryboard.swift in Sources */,
 				9628829E1C56C66E00886F7D /* MHFileHandle.m in Sources */,
+				962882C71C663C0200886F7D /* DonationStore.swift in Sources */,
+				962882BB1C62870800886F7D /* UIView+LoadFromNib.swift in Sources */,
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F04ACD1C32A79D002BBE67 /* FNTBINGItem.m in Sources */,
@@ -1115,7 +1215,9 @@
 				96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */,
 				96F04AE41C3459EC002BBE67 /* FNTGoogleScraperItemParser.m in Sources */,
 				9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
+				9683D1B01C66733A001436C8 /* DonationJar.swift in Sources */,
 				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
+				9683D1B11C667348001436C8 /* Donation.swift in Sources */,
 				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
 				96F04ADE1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */,
 				96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */,
@@ -1185,6 +1287,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1204,6 +1307,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = Spreadit;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1230,6 +1334,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1242,6 +1347,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = Spreadit;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1256,6 +1362,8 @@
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FontanaKeyboard\"/**",
@@ -1278,6 +1386,8 @@
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FontanaKeyboard\"/**",
@@ -1384,6 +1494,8 @@
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1404,8 +1516,10 @@
 			baseConfigurationReference = CDAD438EE54D8DD0C4B67BF0 /* Pods-FontanaKeyboard.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1416,7 +1530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1517e635-f44e-4418-a388-db1a920d4a3d";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

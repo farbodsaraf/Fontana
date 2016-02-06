@@ -8,24 +8,32 @@
 
 import UIKit
 
-class RootViewController: UITabBarController {
+class RootViewController: UITabBarController, UITabBarControllerDelegate {
     
     lazy var pageViewControllers: [UIViewController] = {
         return [
-            self.viewController("HistoryViewController"),
-            self.viewController("VideoViewController"),
+            self.viewController("HistoryViewController")!,
+            self.viewController("SettingsViewController")!,
         ]
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewControllers = self.pageViewControllers
+        self.delegate = self;
     }
     
-    func viewController(identifier :String) -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier(identifier)
-        let navigationController = UINavigationController(rootViewController: viewController)
-        return navigationController
+    internal func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        let navigationController = viewController as! UINavigationController
+        navigationController.popToRootViewControllerAnimated(false)
+    }
+    
+    private func viewController(identifier :String) -> UIViewController? {
+        if let viewController = UIViewController.loadFromStoryboard(identifier) {
+            var navigationController : UINavigationController
+            navigationController = UINavigationController(rootViewController: viewController)
+            return navigationController
+        }
+        return nil
     }
 }

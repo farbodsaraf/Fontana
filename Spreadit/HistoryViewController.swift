@@ -10,7 +10,7 @@ import UIKit
 import BIND
 import TSMessages
 
-class HistoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate {
+class HistoryViewController: BNDViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     

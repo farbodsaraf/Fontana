@@ -7,6 +7,7 @@
 //
 
 #import "FNTPleaseDonateReminder.h"
+#import "Spreadit-Swift.h"
 
 static NSUInteger kPleaseDonateModulo = 10;
 static NSString * const kFNTPleaseDonateBumpTimesKey = @"FNTPleaseDonateBumpTimesKey";
@@ -19,6 +20,9 @@ static NSString * const kFNTPleaseDonateBumpTimesKey = @"FNTPleaseDonateBumpTime
 @implementation FNTPleaseDonateReminder
 
 + (instancetype)reminderForGroup:(NSString *)group {
+    if ([[DonationJar defaultJar] hasDonations]) {
+        return nil;
+    }
     return [[self alloc] initWithGroup:group];
 }
 

@@ -2,6 +2,8 @@
 
 A [WHATWG-compliant HTML parser][whatwg-spec] with [CSS selectors][selectors-level-3] in Objective-C and Foundation. It parses HTML just like a browser.
 
+![Supports iOS, OS X, tvOS, and watchOS](https://img.shields.io/cocoapods/p/HTMLReader.svg)
+
 [selectors-level-3]: http://www.w3.org/TR/css3-selectors/
 [whatwg-spec]: http://whatwg.org/html
 
@@ -39,7 +41,7 @@ NSURLSession *session = [NSURLSession sharedSession];
     }
     HTMLDocument *home = [HTMLDocument documentWithData:data
                                       contentTypeHeader:contentType];
-    HTMLElement *div = [home firstNodeMatchingSelector:@".repository-description"];
+    HTMLElement *div = [home firstNodeMatchingSelector:@".repository-meta-content"];
     NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSLog(@"%@", [div.textContent stringByTrimmingCharactersInSet:whitespace]);
     // => A WHATWG-compliant HTML parser in Objective-C.
@@ -93,7 +95,7 @@ There are C libraries such as [Gumbo][] or [Hubbub][], but you need to shuffle d
 
 ## Does it work?
 
-HTMLReader continually runs [html5lib][html5lib-tests]'s tokenization and tree construction tests, ignoring the tests for `<template>` (which HTMLReader does not implement).
+HTMLReader continually runs [html5lib][html5lib-tests]'s tokenization and tree construction tests, ignoring the tests for `<template>` (which HTMLReader does not implement). Note that you need to check out the `Tests/html5lib` Git submodule in order to actually run these tests.
 
 HTMLReader is continually tested on iOS versions 7.0, 7.1, and 8.1, as well as OS X versions 10.9 and 10.10. It should work on down to iOS 5 and OS X 10.7 but no automated testing is done.
 

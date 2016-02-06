@@ -10,6 +10,7 @@ target 'Spreadit' do
     pod 'TSMessages'
     pod 'HockeySDK'
     pod 'TTTAttributedLabel'
+    pod 'KeychainSwift', '~> 3.0'
 end
 
 target 'SpreaditTests' do

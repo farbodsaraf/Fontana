@@ -7,7 +7,8 @@ PODS:
   - HockeySDK (3.8.5):
     - HockeySDK/AllFeaturesLib (= 3.8.5)
   - HockeySDK/AllFeaturesLib (3.8.5)
-  - HTMLReader (0.9.3)
+  - HTMLReader (0.9.4)
+  - KeychainSwift (3.0.11)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - BIND
   - HockeySDK
   - HTMLReader
+  - KeychainSwift (~> 3.0)
   - Masonry
   - SwiftyJSON
   - TSMessages
@@ -65,7 +67,8 @@ SPEC CHECKSUMS:
   BIND: 7bd263ab59374ac3217c5eff4b74c97ddc6fb999
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
-  HTMLReader: 01de6ebb3b5f0f9dc4f6f165fdac0a15b3648167
+  HTMLReader: 03e9da607f2f9924f9cf4b5e5c4143932004257f
+  KeychainSwift: 0a4214c910423543a42b0f30f25987d46178b6a5
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   NODE_: 4595c1cfadbf1f1d06566c32c1c7deb387a0822f

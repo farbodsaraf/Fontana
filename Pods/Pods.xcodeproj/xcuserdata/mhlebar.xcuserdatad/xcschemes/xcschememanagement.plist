@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KeychainSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,6 +97,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2FEF260CB37CBD37A175FAF3EAE45537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>35AB4E645558A256E1C06F38C71F4836</key>
 		<dict>
 			<key>primary</key>
@@ -102,7 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>42E77C9F9348619E788AA9F3E84961A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C698C648EE4D43C6B8BE0BE1FE91737</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,27 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A745DA5528C62DC4DEF2B1A22C39B167</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A9A83F63385AA43314397B8DD375464B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4047EF9008763F42167DE83E34F40FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C408D4E183A88B763793C217A66A1950</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C99D9454487EABC6E8F8F16718764384</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -143,6 +148,11 @@
 			<true/>
 		</dict>
 		<key>E34A0F60C15834043417DBEFCECC6687</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD3CC0A0C6CB40D159AF3DF6C205A6D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

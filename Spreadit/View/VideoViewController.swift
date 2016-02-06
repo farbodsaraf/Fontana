@@ -51,7 +51,6 @@ class VideoViewController: BNDViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .More, tag: 1)
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "moviePlayerStateDidChange:",

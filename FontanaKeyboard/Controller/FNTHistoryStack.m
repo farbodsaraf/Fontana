@@ -26,14 +26,19 @@ NSString * const kFNTHistoryStackItems = @"kFNTHistoryStackItems";
     self = [super init];
     if (self) {
         _defaults = [[NSUserDefaults alloc] initWithSuiteName:group];
+        _dirty = YES;
     }
     return self;
 }
 
 - (NSArray *)allItems {
-    NSData *archivedData = [self.defaults objectForKey:kFNTHistoryStackItems];
-    NSArray *items = [NSKeyedUnarchiver unarchiveObjectWithData:archivedData];
-    return items ? items : @[];
+    if (self.isDirty) {
+        NSData *archivedData = [self.defaults objectForKey:kFNTHistoryStackItems];
+        NSArray *items = [NSKeyedUnarchiver unarchiveObjectWithData:archivedData];
+        self.currentItems = items ? items : @[];
+        self.dirty = NO;
+    }
+    return self.currentItems;
 }
 
 - (void)pushItem:(id <NSCoding> )item {
@@ -54,6 +59,7 @@ NSString * const kFNTHistoryStackItems = @"kFNTHistoryStackItems";
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:items];
     [self.defaults setObject:data forKey:kFNTHistoryStackItems];
     [self.defaults synchronize];
+    self.dirty = YES;
 }
 
 @end
