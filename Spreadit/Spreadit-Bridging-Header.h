@@ -15,5 +15,6 @@
 #import "FNTGoogleItemParser.h"
 #import "FNTHistoryStack.h"
 #import "FNTKeyboardItemCell.h"
+#import "UIColor+FNTGenerator.h"
 
 #endif /* Spreadit_Bridging_Header_h */

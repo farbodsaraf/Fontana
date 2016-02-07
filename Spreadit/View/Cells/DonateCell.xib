@@ -84,11 +84,11 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="bigDonationButton" destination="CHV-Ig-BHI" id="lBa-n8-Deu"/>
-                <outlet property="mediumDonationButton" destination="FQu-cs-BtE" id="4lS-Pl-wpo"/>
-                <outlet property="smallDonationButton" destination="cv8-cO-Lqq" id="4n5-Uy-asQ"/>
+                <outlet property="hugeDonationButton" destination="CHV-Ig-BHI" id="UQt-qP-M1x"/>
+                <outlet property="mediumDonationButton" destination="FQu-cs-BtE" id="OAJ-AJ-66m"/>
+                <outlet property="smallDonationButton" destination="cv8-cO-Lqq" id="IFO-LK-kXH"/>
             </connections>
-            <point key="canvasLocation" x="168" y="136.5"/>
+            <point key="canvasLocation" x="117" y="-137"/>
         </tableViewCell>
     </objects>
 </document>

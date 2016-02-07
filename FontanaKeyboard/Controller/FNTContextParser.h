@@ -13,6 +13,19 @@
 @property (nonatomic, copy, readonly) NSString *query;
 @end
 
+typedef NS_ENUM(NSUInteger, FNTContextParserOptions) {
+    FNTContextParserOptionsMarkup,
+    FNTContextParserOptionsOptionalMarkup,
+};
+
 @interface FNTContextParser : NSObject
-+ (NSArray *)parseContext:(NSString *)context;
+
+/**
+ *  Max optional words before markup is needed. 
+ *  @default 5
+ */
+@property (nonatomic) NSUInteger maxOptionalWordsCount;
+@property (nonatomic, readonly) FNTContextParserOptions options;
++ (instancetype)parserWithOptions:(FNTContextParserOptions)options;
+- (NSArray *)parseContext:(NSString *)context;
 @end

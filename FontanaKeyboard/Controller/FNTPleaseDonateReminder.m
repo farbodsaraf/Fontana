@@ -9,7 +9,7 @@
 #import "FNTPleaseDonateReminder.h"
 #import "Spreadit-Swift.h"
 
-static NSUInteger kPleaseDonateModulo = 10;
+static NSUInteger kPleaseDonateModulo = 5;
 static NSString * const kFNTPleaseDonateBumpTimesKey = @"FNTPleaseDonateBumpTimesKey";
 
 @interface FNTPleaseDonateReminder ()
@@ -31,7 +31,6 @@ static NSString * const kFNTPleaseDonateBumpTimesKey = @"FNTPleaseDonateBumpTime
     if (self) {
         _defaults = [[NSUserDefaults alloc] initWithSuiteName:group];
         _bumpTimes = [[_defaults objectForKey:kFNTPleaseDonateBumpTimesKey] unsignedIntegerValue];
-
     }
     return self;
 }

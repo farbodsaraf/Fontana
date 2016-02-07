@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(exception.callStackSymbols)
         }
         
+        UINavigationBar.appearance().tintColor = UIColor.fnt_teal()
+        UITabBar.appearance().tintColor = UIColor.fnt_teal()
+        
         BITHockeyManager.sharedHockeyManager().configureWithIdentifier("9bc7ee209ec3404dba1ec07b94cca99e");
         BITHockeyManager.sharedHockeyManager().startManager();
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation();

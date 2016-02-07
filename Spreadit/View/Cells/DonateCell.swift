@@ -13,9 +13,15 @@ class DonateCell: BNDTableViewCell {
     
     @IBOutlet weak var smallDonationButton: UIButton!
     @IBOutlet weak var mediumDonationButton: UIButton!
-    @IBOutlet weak var bigDonationButton: UIButton!
+    @IBOutlet weak var hugeDonationButton: UIButton!
     
-    
+    override func awakeFromNib() {
+        let color = UIColor.fnt_teal()
+        smallDonationButton.setTitleColor(color, forState: .Normal)
+        mediumDonationButton.setTitleColor(color, forState: .Normal)
+        hugeDonationButton.setTitleColor(color, forState: .Normal)
+    }
+
     @IBAction func onSmallDonation(sender: UIButton) {
         donateCellModel().donate(.Coffee)
     }
@@ -28,7 +34,7 @@ class DonateCell: BNDTableViewCell {
         donateCellModel().donate(.Lunch)
     }
     
-    func donateCellModel() -> DonateCellModel {
+    internal func donateCellModel() -> DonateCellModel {
         return self.viewModel as! DonateCellModel
     }
 }

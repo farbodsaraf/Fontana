@@ -15,8 +15,8 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: .More, tag: 1)
-        self.navigationItem.title = "More"
+        self.tabBarItem = UITabBarItem(tabBarSystemItem:.More, tag: 1)
+        self.navigationItem.title = "Settings"
     }
     
     override func viewDidLoad() {
@@ -42,6 +42,7 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         return [
             DonateCellModel(model: "Donate"),
             NavigationCellModel(model: "How do I use this app?"),
+            SettingCellModel(title: "Optional Markup", setting: Settings.OptionalMarkup),
         ]
     }
     

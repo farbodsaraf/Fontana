@@ -65,6 +65,11 @@
 		9683D1AF1C666392001436C8 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AE1C666392001436C8 /* Donation.swift */; };
 		9683D1B01C66733A001436C8 /* DonationJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AB1C665FAE001436C8 /* DonationJar.swift */; };
 		9683D1B11C667348001436C8 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AE1C666392001436C8 /* Donation.swift */; };
+		9683D1B41C67300F001436C8 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1B31C67300F001436C8 /* SettingsStore.swift */; };
+		9683D1B51C67300F001436C8 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1B31C67300F001436C8 /* SettingsStore.swift */; };
+		9683D1B71C673D77001436C8 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1B61C673D77001436C8 /* SettingCellModel.swift */; };
+		9683D1B91C6742E0001436C8 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1B81C6742E0001436C8 /* SettingCell.swift */; };
+		9683D1BB1C6742F4001436C8 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9683D1BA1C6742F4001436C8 /* SettingCell.xib */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
@@ -211,6 +216,10 @@
 		966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTSourceToColorTransformer.m; path = Transformers/FNTSourceToColorTransformer.m; sourceTree = "<group>"; };
 		9683D1AB1C665FAE001436C8 /* DonationJar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationJar.swift; path = Controller/DonationJar.swift; sourceTree = "<group>"; };
 		9683D1AE1C666392001436C8 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Donation.swift; path = Controller/Donation.swift; sourceTree = "<group>"; };
+		9683D1B31C67300F001436C8 /* SettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsStore.swift; path = Controller/SettingsStore.swift; sourceTree = "<group>"; };
+		9683D1B61C673D77001436C8 /* SettingCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellModel.swift; path = ViewModel/SettingCellModel.swift; sourceTree = "<group>"; };
+		9683D1B81C6742E0001436C8 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = View/Cells/SettingCell.swift; sourceTree = "<group>"; };
+		9683D1BA1C6742F4001436C8 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingCell.xib; path = View/Cells/SettingCell.xib; sourceTree = "<group>"; };
 		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -350,6 +359,7 @@
 				962882B51C6068D900886F7D /* TableRowViewModel.swift */,
 				962882B31C6065E500886F7D /* NavigationCellModel.swift */,
 				962882C41C63360700886F7D /* DonateCellModel.swift */,
+				9683D1B61C673D77001436C8 /* SettingCellModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -361,6 +371,8 @@
 				962882BC1C628AF600886F7D /* NavigationCell.xib */,
 				962882C01C63332500886F7D /* DonateCell.swift */,
 				962882C21C63336500886F7D /* DonateCell.xib */,
+				9683D1B81C6742E0001436C8 /* SettingCell.swift */,
+				9683D1BA1C6742F4001436C8 /* SettingCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -368,6 +380,7 @@
 		962882C81C663C0A00886F7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9683D1B21C672FD6001436C8 /* Settings */,
 				9683D1AD1C66637A001436C8 /* Donation */,
 			);
 			name = Controller;
@@ -509,6 +522,14 @@
 				9683D1AE1C666392001436C8 /* Donation.swift */,
 			);
 			name = Donation;
+			sourceTree = "<group>";
+		};
+		9683D1B21C672FD6001436C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9683D1B31C67300F001436C8 /* SettingsStore.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		96A14FAA1BE1DAEB00CC7D4B /* Classes */ = {
@@ -923,6 +944,7 @@
 			files = (
 				9658F4C21C2A9FA7002B3595 /* FNTKeyboardItemCell.xib in Resources */,
 				96FBCCF41C56BE9B007E1C80 /* effective_tld_names.dat in Resources */,
+				9683D1BB1C6742F4001436C8 /* SettingCell.xib in Resources */,
 				962882C31C63336500886F7D /* DonateCell.xib in Resources */,
 				96F04AD01C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
 				96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */,
@@ -1140,10 +1162,13 @@
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
 				962882B91C606B3200886F7D /* NavigationCell.swift in Sources */,
+				9683D1B41C67300F001436C8 /* SettingsStore.swift in Sources */,
 				962882C11C63332500886F7D /* DonateCell.swift in Sources */,
 				96F04ACE1C32A7A0002BBE67 /* FNTGoogleItem.m in Sources */,
 				962882BF1C6296CB00886F7D /* UIViewController+LoadFromStoryboard.swift in Sources */,
 				9628829E1C56C66E00886F7D /* MHFileHandle.m in Sources */,
+				9683D1B91C6742E0001436C8 /* SettingCell.swift in Sources */,
+				9683D1B71C673D77001436C8 /* SettingCellModel.swift in Sources */,
 				962882C71C663C0200886F7D /* DonationStore.swift in Sources */,
 				962882BB1C62870800886F7D /* UIView+LoadFromNib.swift in Sources */,
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
@@ -1196,6 +1221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9683D1B51C67300F001436C8 /* SettingsStore.swift in Sources */,
 				96F04ACC1C32A4F4002BBE67 /* FNTGoogleItem.m in Sources */,
 				96F04AC61C329EE0002BBE67 /* FNTBINGItemParser.m in Sources */,
 				9628829D1C56C32300886F7D /* MHFileHandle.m in Sources */,

@@ -62,7 +62,8 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 }
 
 - (void)handleText:(NSString *)text {
-    self.contextItems = [FNTContextParser parseContext:text];
+    FNTContextParser *parser = [FNTContextParser parserWithOptions:FNTContextParserOptionsOptionalMarkup];
+    self.contextItems = [parser parseContext:text];
     self.currentContextItem = [self.contextItems firstObject];
     [self performQuery:self.currentContextItem.query];
 }

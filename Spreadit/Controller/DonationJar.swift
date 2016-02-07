@@ -9,8 +9,7 @@
 import UIKit
 import KeychainSwift
 
-
-@objc class DonationJar: NSObject {
+class DonationJar: NSObject {
 
     static let defaultJar: DonationJar = DonationJar()
     
@@ -26,17 +25,17 @@ import KeychainSwift
         let productidentifier = donation.rawValue
         
         var donationNumber = 0
-        if let keychainValue = self.keychain.get(productidentifier) {
+        if let keychainValue = keychain.get(productidentifier) {
             donationNumber = Int(keychainValue)!
         }
 
         donationNumber = donationNumber + 1
-        self.keychain.set(String(donationNumber), forKey:productidentifier)
+        keychain.set(String(donationNumber), forKey:productidentifier)
     }
     
     func hasDonations() -> Bool {
         for donation in Donation.allValues() {
-            if (self.keychain.get(donation) != nil) {
+            if (keychain.get(donation) != nil) {
                 return true
             }
         }

@@ -35,10 +35,37 @@ static NSString * const kFNTContextItemLinkSeparator = @":";
 
 @implementation FNTContextParser
 
-+ (NSArray *)parseContext:(NSString *)context {
-    NSMutableArray *items = [NSMutableArray new];
-    NSMutableString *linkString = [NSMutableString new];
++ (instancetype)parserWithOptions:(FNTContextParserOptions)options {
+    return [[self alloc] initWithParserOptions:options];
+}
+
+- (instancetype)initWithParserOptions:(FNTContextParserOptions)options {
+    self = [super init];
+    if (self) {
+        _options = options;
+        _maxOptionalWordsCount = 5;
+    }
+    return self;
+}
+
+- (NSArray *)parseContext:(NSString *)context {
+    if (context.length == 0) {
+        return @[];
+    }
     
+    NSMutableArray *items = [NSMutableArray new];
+    
+    if (self.options == FNTContextParserOptionsOptionalMarkup &&
+        [self isContextReadyForOptionalMarkup:context]) {
+        NSRange range = NSMakeRange(0, context.length);
+        FNTContextItem *item = [[FNTContextItem alloc] initWithQuery:context
+                                                               range:range];
+        [items addObject:item];
+        return items.copy;
+    }
+    
+    NSMutableString *linkString = [NSMutableString new];
+
     NSUInteger startPointer = NSNotFound;
     BOOL readLink = NO;
     for (NSUInteger pointer = 0; pointer < context.length; pointer++) {
@@ -51,8 +78,9 @@ static NSString * const kFNTContextItemLinkSeparator = @":";
                 startPointer = pointer;
             }
             else {
-                NSRange range = NSMakeRange(startPointer, pointer - startPointer);
-                FNTContextItem *item = [[FNTContextItem alloc] initWithQuery:linkString
+                NSRange range = NSMakeRange(startPointer, pointer - startPointer + 1);
+                NSString *trimmedQuery = [linkString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                FNTContextItem *item = [[FNTContextItem alloc] initWithQuery:trimmedQuery
                                                                        range:range];
                 [items addObject:item];
                 [linkString setString:@""];
@@ -67,6 +95,20 @@ static NSString * const kFNTContextItemLinkSeparator = @":";
     }
     
     return items.copy;
+}
+
+- (BOOL)isContextReadyForOptionalMarkup:(NSString *)context {
+    if ([self contextHasMarkup:context]) {
+        return NO;
+    }
+    NSArray *words = [context componentsSeparatedByString:@" "];
+    return words.count <= self.maxOptionalWordsCount;
+}
+
+- (BOOL)contextHasMarkup:(NSString *)context {
+    //:word: produces [@"", @"word", @""]
+    NSArray *words = [context componentsSeparatedByString:@":"];
+    return words.count >= 3;
 }
 
 @end
