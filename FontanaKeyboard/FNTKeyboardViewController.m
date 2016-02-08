@@ -340,14 +340,16 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 #pragma mark - FNTOpenURLProtocol
 
 - (void)sender:(id)sender wantsToOpenURL:(NSURL*)url {
-    UIResponder* responder = self;
-    while ((responder = [responder nextResponder]) != nil) {
-        if([responder respondsToSelector:@selector(openURL:)] == YES) {
-            [responder performSelector:@selector(openURL:)
-                            withObject:url];
-        }
-    }
-    [self advanceToNextInputMode];
+//    TODO: this should open a preview UIWebView instead.
+//
+//    UIResponder* responder = self;
+//    while ((responder = [responder nextResponder]) != nil) {
+//        if([responder respondsToSelector:@selector(openURL:)] == YES) {
+//            [responder performSelector:@selector(openURL:)
+//                            withObject:url];
+//        }
+//    }
+//    [self advanceToNextInputMode];
 }
 
 @end
