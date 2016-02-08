@@ -32,4 +32,5 @@ target 'FontanaKeyboard' do
     pod 'HockeySDK'
     pod 'TTTAttributedLabel'
     pod 'HTMLReader'
+    pod 'KeychainSwift', '~> 3.0'
 end

@@ -46,10 +46,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FoO-lT-GOI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tba-Go-g9d"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FoO-lT-GOI" secondAttribute="bottom" id="VPA-fk-fY0"/>
-                            <constraint firstAttribute="trailing" secondItem="FoO-lT-GOI" secondAttribute="trailing" id="eDs-sY-pr3"/>
-                            <constraint firstItem="FoO-lT-GOI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ltu-B2-4Lg"/>
+                            <constraint firstAttribute="trailing" secondItem="FoO-lT-GOI" secondAttribute="trailing" id="DL7-48-vtG"/>
+                            <constraint firstItem="FoO-lT-GOI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QVX-1M-cfy"/>
+                            <constraint firstAttribute="bottom" secondItem="FoO-lT-GOI" secondAttribute="bottom" id="XMC-yD-3Rc"/>
+                            <constraint firstItem="FoO-lT-GOI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dGb-Ib-PbE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="33z-5D-UVh"/>

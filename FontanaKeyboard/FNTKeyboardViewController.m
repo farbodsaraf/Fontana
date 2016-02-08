@@ -95,12 +95,13 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     self.viewModel = [FNTKeyboardViewModel new];
     
-    [self loadBindings:(FNTKeyboardViewModel *)self.viewModel];
-    
     [self displayResultsView];
 }
 
 - (void)loadBindings:(FNTKeyboardViewModel *)viewModel {
+    [self.donateBinding unbind];
+    [self.undoBinding unbind];
+    
     __weak typeof(self) weakSelf = self;
     self.donateBinding = [BINDO(viewModel, donateEnabled) observe:^(id observable, id value, NSDictionary *observationInfo) {
         if ([value boolValue]) {
@@ -135,6 +136,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view addSubview:self.separator];
     
     [self.view setNeedsUpdateConstraints];
+    
+    [self loadBindings:(FNTKeyboardViewModel *)self.viewModel];
 }
 
 - (void)displayDonate {
@@ -248,6 +251,11 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
                             viewModelsHandler:^(NSArray *viewModels, NSError *error) {
                                 [weakSelf handleViewModels:viewModels error:error];
                             }];
+}
+
+- (void)handleRefresh {
+    [self displayResultsView];
+    [self linkify];
 }
 
 - (void)handleViewModels:(NSArray *)viewModels error:(NSError *)error {

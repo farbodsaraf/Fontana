@@ -19,6 +19,7 @@
 		09319DC7FF28A7E69562C0CE680CEA34 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B48D2E8926FA819D958ACB3BE20CD102 /* MASCompositeConstraint.m */; };
 		0A02F4EB0DBBC92B221459C91C2E368E /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 61B908FFB63C858C5A106A716DB28643 /* es.lproj */; };
 		0A3F6A8A4E4271A7EFB49EC200C651BF /* HTMLTokenizerState.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C47906F9451D0895F45268EF2F59A80 /* HTMLTokenizerState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ADDCCD202868206A76894B6855A2458 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1875605C01030E8BC8C1B61FFCA0467B /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0BB42B52BB3CFAB9691D32A88715AF8A /* iconCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBF605161E37BCFBF444E6847DF4FB8 /* iconCamera@2x.png */; };
 		0C8D5EE721AF7507D85D8414D5293E8D /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 739FEB79AAAEEFC83DCBBE397797CE07 /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F09B9486ECFAFED088754AF63EBDA9E /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C85DC836BD546FDF48FEEA97AA6F82A1 /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +60,7 @@
 		36D3C226ED4E7FAE7935C194E7B74F6B /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = B18EFFF33D07846CB8D06201215D158C /* NotificationBackgroundMessage.png */; };
 		39A4D69DFD872679E1F574E572C10905 /* BNDCommandBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 6975C5CF183E048D21C43CB3D931473A /* BNDCommandBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39E951DC5D2E99D7E037989B9D996E18 /* BNDSpecialKeyPathHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BF22849AE9138016FAC7861CAFED5362 /* BNDSpecialKeyPathHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ADF22BBCC3C8B6BFED2C429D01AF92B /* Pods-FontanaKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8F439B88A6EFE335BDBCEFC13F9C9 /* Pods-FontanaKeyboard-dummy.m */; };
 		3DD969F19525F52C855EFC43EE75724E /* UITextField+BNDBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 98252BA47E3B72862E6C7DDA2D8CBDE0 /* UITextField+BNDBinding.m */; };
 		3DEAA7DBD6FA97EE8201AC5840EC306A /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = A977A5C4E9BFCCFABBE5032F0C3D4DD7 /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F983D6F659860896D622105060338CC /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8594F62356E56F1A4BC33EE008626374 /* HTMLElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -79,7 +81,9 @@
 		4D18D16655CEC3AD5964A0F8D69D56B6 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9AB63471E3A68A72C4FA181E35773F /* NSMethodSignature+EXT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		4DE5FCC41D100B113B6645EA64410F16 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E2B7776ADC1F6F776404179984ADD /* ParameterEncoding.swift */; };
 		4E0F297541B9E61CBFC6A75BCA08F356 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9CE70DBE4A4BB6C2A3F9CBCFF2CE56 /* EXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FDCAE4DAB15C8F43BE35F93025EA07E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A193F71E8D38E0D92BB623FA1B95DA69 /* CoreText.framework */; };
 		5066B9E303EFED755792A4B3C88C00A1 /* EXTSafeCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = DBEF318ABE7BE035F515BAC3D093A502 /* EXTSafeCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		514F960D6AAA71653582CC9CA33618C3 /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 34D55375525411E1D57CB793538E42E9 /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		525C1EB1DF453A0E070E60844577C8DF /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E72D89458E1674F4E5DE7F4CBF7C01 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53DFB8EB6068A80EEF88F606F52E7EE9 /* UIButton+BNDBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE85242020829E0AECA717A4661EFC /* UIButton+BNDBinding.m */; };
 		557CC43E8C1A884E7199EF4C77858B2D /* NSObject+NODE.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5993AAD3F8289881F33760DA035078 /* NSObject+NODE.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -103,6 +107,7 @@
 		6C2690DD18F6B1E7399692954D25A7E4 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A748808414332A210FC72027916ECC /* EXTADT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6C873C78B4D9CDD247F9E0D155D93B46 /* BIND-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D112C9EFA7C49A2E448D03C6C1612DDB /* BIND-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DACC5FEEF66D927D6A6BB5119258496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
+		6DB826FBE28300C2550413FADA8F844C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		6E2D2E8AC5C085C2CE777A28CB5661C7 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF10E2CDBCDBACFB175196B533361AD1 /* NotificationBackgroundWarningIcon.png */; };
 		6F17E89B8BBC7D1290534E82A81E5212 /* Rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1628020B348F186185CB7E722510F4D /* Rectangle@3x.png */; };
 		6F729A954613399DD26A3CE4097C7D26 /* NSInvocation+EXT.h in Headers */ = {isa = PBXBuildFile; fileRef = 8624CB62DCBF5F499C8366713BCDE47E /* NSInvocation+EXT.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -130,8 +135,6 @@
 		83FA429634DF5ACFE4355FA4132BCC05 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5457EF6991F65C58F4C538DAECD6A87F /* ViewController+MASAdditions.m */; };
 		85FF21BD92EEA12FABF49B5FB6166994 /* Blur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A529B6C21E09F1B3DD0174893FA425B2 /* Blur@2x.png */; };
 		881AD53505FA0B197E7E1A17795C67B3 /* HTMLTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7158253F982D31FF24684E1B4B5FAFF3 /* HTMLTextNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		891C2AC98D1D13454695B51A929C5F18 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A193F71E8D38E0D92BB623FA1B95DA69 /* CoreText.framework */; };
-		8987624B86A0D142106D61E42C0343F9 /* Pods-FontanaKeyboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA299F67130790A53CBC5AE25484859D /* Pods-FontanaKeyboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AE6C60F51AF9DEDFD73B95200C94D4B /* buttonRoundedRegular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C99541162BAB354D7942BB3B75DBC46F /* buttonRoundedRegular@2x.png */; };
 		8B9AD6031432D7C54E28B5A1CD358176 /* EXTConcreteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 511AC62A369E280C2945261C67CD4832 /* EXTConcreteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C91BF53C3EF19AD26723EA56AD4B184 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECEF638835CBEF0D51D0DFB4BB0F17 /* HexColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -140,9 +143,7 @@
 		91B611F8E5BB709FBE11A2D05598665C /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0648D80EB72127F1E377B551097C7364 /* Rectangle.png */; };
 		922245FCCC88BBD12EEFB0FFC6046D64 /* Pods-SpreaditSharer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE43FF4F35E014696B2D9B4EBCEDA121 /* Pods-SpreaditSharer-dummy.m */; };
 		9310F4B12ED0840040DD866F9247BB2F /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A497EA6819C93585151920082373D21B /* KeychainSwift-dummy.m */; };
-		93223DEFAB3F1F99F63E335B4BFD71C2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEE5E08714990297625F7AEE17CF5C6 /* QuartzCore.framework */; };
 		9505ED881D01C65760766288DF6B7CAD /* BNDTableViewCell+BNDBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D9613C563FA5185314D25F595E722 /* BNDTableViewCell+BNDBinding.m */; };
-		95BEB652A2E6E5CE46EFDA8D9C3E3BE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B928009C154FFC6259D60AD9654CB5B /* UIKit.framework */; };
 		95F38B253E62525CC55EFFA47BDD079D /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A606FA0E1EF50996CB2D526B4BEF8 /* MASConstraintMaker.m */; };
 		96D99D0C2472535A169DED65CB231CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		973DF1FA49EFB95998EACA85E0A17237 /* HTMLString.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAD0752EA1166C47EFCDDA2C5066AF1 /* HTMLString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -182,6 +183,7 @@
 		AD2C18BC124EB4C508462ECE929ECD11 /* Pods-Spreadit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DBB6BACC51EF7C4F9D58E28F83F663 /* Pods-Spreadit-dummy.m */; };
 		AD48CE47A6023CFDD8418D29AAB186D8 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D132FE28C8014FFE5A6C4D6ED911923 /* View+MASAdditions.m */; };
 		AE8D66F02A3958F8E8F2C6BAD097DA41 /* Cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BD7B28E1ADFC318D1A186561A7E89E3 /* Cancel@3x.png */; };
+		AF0A25689B4D7CC3A6E2C00F8812DC20 /* Pods-FontanaKeyboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA299F67130790A53CBC5AE25484859D /* Pods-FontanaKeyboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF51CE6F828399B4CAA32666182086D3 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 530400FD59371B72FCF2912AC8231F49 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0FB4B01682814B9E3D32F9DC4A5E762 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080CBAD09685E4F5CEDC2794FDA95204 /* Alamofire.swift */; };
 		B11A3EF8B86A14354FC2D0E0025485DE /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 41533864FB6D201884614B9613D0344A /* EXTScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,14 +205,13 @@
 		C329BC3188FEFD70EF87D8EE5CF7E54B /* NODE_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F337BA22AD50D0B4B2F0CF91B023DA /* NODE_.framework */; };
 		C364204EF1BB28D02A13666E0594B0F9 /* BNDParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 224762270F2203E5133B852FBA58121E /* BNDParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3B213DD9F45BE22DA67EA0329CDDAA7 /* BNDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6529A8394EA097427306D6CD8758D0 /* BNDParser.m */; };
-		C480356540C9B2D423C83D38B1C527F6 /* TTTAttributedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 34D55375525411E1D57CB793538E42E9 /* TTTAttributedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C601F0BC7B7EBE1D7626C9D0FD571C02 /* HTMLComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD2930C0039D47C9B55A8DB66BBDB27 /* HTMLComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C66CFBC49AA8885C99B3383D88ACAC67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3D76ACF67FA9719AC23FF5D8D7F9B9 /* CoreGraphics.framework */; };
 		C75519F0450166A6F28126ECC7664E9C /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167FD907AAF7EDB491E22D2A82F25378 /* Validation.swift */; };
 		C9780E22FF4EF71556FD64C22CF74C4E /* BNDURLToImageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3339578A06D74AEA8354ACCA47AE3DB9 /* BNDURLToImageTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C98FBB9087743D0065DCBAEA91EFF685 /* BNDViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 42CE6C6121DE69ABC52A8C9F6261D664 /* BNDViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA1C026A4579D68CB0511FDAA88CB32D /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EA09119677CD2590DA621D8E86BC6F /* EXTSafeCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CAB2FA2D4556D7DFD5EB415C9123737E /* NSString+BNDKeyPathHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D447F4B752C476437CC6E0FE5A1BBB1 /* NSString+BNDKeyPathHandling.m */; };
+		CCC3937B550D2068553D9DB0C31896CE /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 689C1D6C13F19DE151DC5C2257DC0F7D /* TTTAttributedLabel-dummy.m */; };
 		CCF108410EA4858B4E766E78A3848610 /* HTMLOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DA36647B631C23143E1B15B6B066C0 /* HTMLOrderedDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CDFB5DCD839207D189F3A8406A28D58E /* HTMLQuirksMode.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE4972CC7AA329CFB3AAE59CBA39A7B /* HTMLQuirksMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE1F550301BC25B511C5D9D8C6F68D92 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 90409DC4733D4D83655279F619C65DE3 /* zh-Hans.lproj */; };
@@ -218,12 +219,12 @@
 		CEE0D9C66F764231BEB04D2F314C6131 /* EXTADT.h in Headers */ = {isa = PBXBuildFile; fileRef = BC35144A85B4FAE4A9AE16C103F3A90E /* EXTADT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0010780A5CB45E5A5F7F37248ED97D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		D00212A2142350D22692D6EDECEFB48A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBF0F01763D76CC26F9F6FC00CB13CE /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		D0291C85F45EA2CFB2EFCF3F5D79491C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		D11F2C1C9F89043AE6690329039CF10D /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = E8321563E381D4B498725383C4E31E1C /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D150B487AF49A40B7C779C1F5110AC5C /* authorize_denied.png in Resources */ = {isa = PBXBuildFile; fileRef = 1991D95FB1F591E9B07CE2E8D53AE3DE /* authorize_denied.png */; };
 		D155867CD9E8E1E502C90E19A1D99D08 /* BNDConcreteViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5415AE6A3E522828CF325D723408FFDD /* BNDConcreteViewModel.m */; };
 		D1DC26FF243F0F2E08D47655A5A1FA40 /* BNDURLToImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B040904E61CC3063F97518B26E2F1E /* BNDURLToImageTransformer.m */; };
 		D21B7325B3642887BFBE977E021F2D26 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F5DE0FD375D36DF9AABE6DA8D41DB2 /* ResponseSerialization.swift */; };
-		D2536EE8CEE5B5F2599B8C9A32415D4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		D2EF9180E63BFA25E19C4B8B0CF3FB94 /* BNDAsyncValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C90A13C1A91DC169F82E3E034B12ED /* BNDAsyncValueTransformer.m */; };
 		D351ECC92DA95640C702D246A313D438 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B70AACE728D055FF8C3B4813CD5AF23E /* HTMLParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		D63483DAB534BA50FE73654DC8470CAD /* HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 945CBE6AE66C88B1F9A2803685BD30EB /* HTMLEntities.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -233,9 +234,10 @@
 		DB28BBD5CFB7C1454E5D3147F5B3EFD9 /* feedbackActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E4465163DC84E226B773FBD2E1C636B2 /* feedbackActivity@2x~ipad.png */; };
 		DB36FC80DE11F48660370C569572B35B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		DC25BFCCCAA1B18291A5AC319E58B557 /* BNDTableViewCell+BNDBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = E4D2BCDB3EF97346AA5275D0564314DA /* BNDTableViewCell+BNDBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC2AC715C3D483B6171D3FAF51C20847 /* TTTAttributedLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 689C1D6C13F19DE151DC5C2257DC0F7D /* TTTAttributedLabel-dummy.m */; };
+		DCBF2723ABED688B990AC32A7EAA4190 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEE5E08714990297625F7AEE17CF5C6 /* QuartzCore.framework */; };
 		DCD8737D8DF3A14F3442F1C3CA835D5C /* feedbackActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B1AD4753DF78CC62019350D38EB88713 /* feedbackActivity~ipad.png */; };
 		DCD8D73BCE673D670BAB2672D57D2F70 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A6B609083465B61B3C5D529ADA5365D5 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD63D16807B009B197F70F436C9EC967 /* TTTAttributedLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A9C89B2F36F144C87A00D5EACEEBFC /* TTTAttributedLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD89DF835681D08EABA793D61E60D284 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F25DC75D74F0740B8ED0400DC498627 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED869C0A0A7D489A7909245E91B3DB9 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2F2910D386F00A1093F08E09C8EB1 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		DFD7B05E837DF411A4D110C764C63D2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
@@ -244,21 +246,20 @@
 		E0BBEA076160D71EC938B733F5348AC1 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 846311595BB8079084FF2426C1589993 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0C0FB3FF317B9A48DD1EDC06218F9EF /* buttonRoundedDeleteHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8A6C163EA05E92600AFC8386B6EBA1 /* buttonRoundedDeleteHighlighted@2x.png */; };
 		E2044667EF42BBA89D3B8948B8FB80C3 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D27FED91E4494FEBDD6A053695422 /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E2A91EE7C4496802F670BFBA5B500AC0 /* Pods-FontanaKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8F439B88A6EFE335BDBCEFC13F9C9 /* Pods-FontanaKeyboard-dummy.m */; };
 		E3DA2E98AC23A39537824B16BE240F35 /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4308C9D939EEDBF2CB207ED2F41EFBAD /* TSBlurView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E40D0E1872826ECA47158665CB7829F0 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = B19D3584A681D9F532718FE1DD74857F /* NotificationBackgroundSuccess.png */; };
-		E44584760372FCEA55E1A4D0E512D953 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1875605C01030E8BC8C1B61FFCA0467B /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E641EBCA8FC60CDC04C4C12A25D5B887 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 97CF85C6AC7EE718707532CC89E72720 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E734D38194FF7C32820D03E55C4C4FE7 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B6D133320D42921763F154046C6D4AC2 /* nl.lproj */; };
-		E96417C2D3604799B9C74337D6D54121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A484D78AE2D6634B83624B01BF2AB769 /* Foundation.framework */; };
 		EA58A8196858A98FEDA3962297C1856F /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1031408D5B260FDFCDDB88D01F721338 /* HexColors.framework */; };
 		EB65667DE627699198D6E5E4BBFA595D /* HTMLTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = B0BD361D0D831F58C3EA7075C9113F9B /* HTMLTokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECBB78D060B86BB1ABFE9E338D720018 /* libextobjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 509E00263B2317D37782A8D3082FC53B /* libextobjc-dummy.m */; };
 		F022B631ED4BC6EFF9D96213EFA28244 /* HTMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 978BCEED56FA2D8C21BA58EAF94927FB /* HTMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F04D34835F3E38FCB28113D020869411 /* HTMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 622672354733CDC62EE5A798186093E3 /* HTMLSerialization.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F0BD7E3E05BEAC58B29B2326E9751FE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3D76ACF67FA9719AC23FF5D8D7F9B9 /* CoreGraphics.framework */; };
 		F1CCFC3A910BF32F57096B20F408EFEC /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D592E159515ED7BF0D119C44C6AB3 /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F325E00FBB1A411C834EDB85C3C8F9FC /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4CEC1D74319267A00547C807E16551 /* HTMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F46372D08527C9E5B2D9829144388777 /* buttonRoundedRegularHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 233716902B17DD9D165E638F7DCC05F6 /* buttonRoundedRegularHighlighted.png */; };
+		F4A3DE6EDF230FF4F506D532DDDA27FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B928009C154FFC6259D60AD9654CB5B /* UIKit.framework */; };
 		F640777A57A5A43F6B052F3CB2D1227F /* buttonRoundedDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93309A243F0939F3C947EAFE7B0FCB15 /* buttonRoundedDelete@2x.png */; };
 		F679E99C99A0142F9C18487EE4957661 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 955A61C9DA850E0ADCE9F7FCADD11410 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F72DD12B9FD770BD5C61B247C9BB35E6 /* buttonRoundedDeleteHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EDD5C55A05A13E981E5459F9CD656FB /* buttonRoundedDeleteHighlighted.png */; };
@@ -268,7 +269,6 @@
 		FBDCA85F7CFBC3DFA5134DB59A680242 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 446CB4D2371C871D1A58F281EA683E76 /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC14480CECE872865A9C6E584F886DA3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A371CFF279E7CACCEA20AEF55F8D84 /* Request.swift */; };
 		FCC78E79FEC6E05F42BA09BA7E41F69A /* libextobjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC109F34662D40B6216396E7F96F461 /* libextobjc.framework */; };
-		FCE62371119D8A798900DCC90D2550E8 /* TTTAttributedLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A9C89B2F36F144C87A00D5EACEEBFC /* TTTAttributedLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDB3A9D29603047D2F26DA0DE5285AF1 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD3E169D3DEB2702E76A70FDF39795 /* ru.lproj */; };
 		FE26528BED4373A6079BE5F19D9DD41B /* EXTSelectorChecking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5388E22675F2F8CE951D42018538B99D /* EXTSelectorChecking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE94087A5A9527D93B42DF89CE841B11 /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B0D260F4031CD2BE170F4C6C8166C6 /* NSString+HTMLEntities.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -277,6 +277,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		042A353900975DC4CC044740B2F5D433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C70E8E29277B1F8EE98CB82867314B;
+			remoteInfo = TTTAttributedLabel;
+		};
 		23583EA7F94635CAC34362150D4310A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -284,26 +291,19 @@
 			remoteGlobalIDString = 0CFDC3A84FC06F7F0D421E9AAEC1E950;
 			remoteInfo = BIND;
 		};
-		26FE2ADA5FEC5DD44FD027FADB9BD6DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9A83F63385AA43314397B8DD375464B;
-			remoteInfo = Masonry;
-		};
-		2DB1FB978EB954035E21DFDFA49856DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E34A0F60C15834043417DBEFCECC6687;
-			remoteInfo = NODE_;
-		};
 		4EB3EFF994F4F895A61F0AB69E8E7364 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2FEF260CB37CBD37A175FAF3EAE45537;
 			remoteInfo = SwiftyJSON;
+		};
+		5236D674371CC8606719223C49002490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CFDC3A84FC06F7F0D421E9AAEC1E950;
+			remoteInfo = BIND;
 		};
 		6022E044633C24EC97BC86E51945A4A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -318,6 +318,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 432ECC54282C84882B482CCB4CF227FC;
 			remoteInfo = Alamofire;
+		};
+		74BCEB93D1AF762A8CA79C2F36A3E615 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9A83F63385AA43314397B8DD375464B;
+			remoteInfo = Masonry;
 		};
 		85F6A4ED069624371BDE41A17BD693AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -337,8 +344,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF5847611C1AE25F56727255FDEFECFB;
+			remoteGlobalIDString = C5C70E8E29277B1F8EE98CB82867314B;
 			remoteInfo = TTTAttributedLabel;
+		};
+		9C700F207D180706F35C6ED524BAF9FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E34A0F60C15834043417DBEFCECC6687;
+			remoteInfo = NODE_;
 		};
 		9D4D7DBEF088443B482250EB09D3D68A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -347,19 +361,12 @@
 			remoteGlobalIDString = E34A0F60C15834043417DBEFCECC6687;
 			remoteInfo = NODE_;
 		};
-		AAF5657B60093DB12E4AFA22D5485643 /* PBXContainerItemProxy */ = {
+		A548073B4AB5D8C2E73EBEB085108659 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 35AB4E645558A256E1C06F38C71F4836;
-			remoteInfo = HTMLReader;
-		};
-		AC855F292CC5F660E9ECBF0622EEC482 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0CFDC3A84FC06F7F0D421E9AAEC1E950;
-			remoteInfo = BIND;
+			remoteGlobalIDString = 0DF57C2565AA73506F661B00B828AF7E;
+			remoteInfo = libextobjc;
 		};
 		B6195150C78041335242D3203FDE347E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -368,6 +375,27 @@
 			remoteGlobalIDString = 42E77C9F9348619E788AA9F3E84961A2;
 			remoteInfo = TSMessages;
 		};
+		BA54BDF15B07B013EB91ACABCD1D18A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35AB4E645558A256E1C06F38C71F4836;
+			remoteInfo = HTMLReader;
+		};
+		BAD5F80B73FED6C60865D0410239A6C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C014F737BF0E4D82F49D1E8DBB98C79;
+			remoteInfo = "HockeySDK-HockeySDKResources";
+		};
+		BC6822FFB05AF0C01EA424A10CDC0974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C698C648EE4D43C6B8BE0BE1FE91737;
+			remoteInfo = KeychainSwift;
+		};
 		C892106E7259C85ED30700EA1CEBD77E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -375,33 +403,12 @@
 			remoteGlobalIDString = 0DF57C2565AA73506F661B00B828AF7E;
 			remoteInfo = libextobjc;
 		};
-		CA72DAC8C27C986D40A2937369BBBBE3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0DF57C2565AA73506F661B00B828AF7E;
-			remoteInfo = libextobjc;
-		};
-		CD555229F2D430E6427B9411B3AEA941 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF5847611C1AE25F56727255FDEFECFB;
-			remoteInfo = TTTAttributedLabel;
-		};
 		CFFC7FE9ED561BCE839585EF31E1402F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4C698C648EE4D43C6B8BE0BE1FE91737;
 			remoteInfo = KeychainSwift;
-		};
-		EB25A7F18C67A6A6BF63FEE157E88D3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C014F737BF0E4D82F49D1E8DBB98C79;
-			remoteInfo = "HockeySDK-HockeySDKResources";
 		};
 		F3EAE0902BE1EC3356546E136A08355C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -835,26 +842,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90B4DA5ED3DBD64C30F7630B5EE95850 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C66CFBC49AA8885C99B3383D88ACAC67 /* CoreGraphics.framework in Frameworks */,
-				891C2AC98D1D13454695B51A929C5F18 /* CoreText.framework in Frameworks */,
-				E96417C2D3604799B9C74337D6D54121 /* Foundation.framework in Frameworks */,
-				93223DEFAB3F1F99F63E335B4BFD71C2 /* QuartzCore.framework in Frameworks */,
-				95BEB652A2E6E5CE46EFDA8D9C3E3BE2 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		913489CD501ACFC37D68BC853690878D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2536EE8CEE5B5F2599B8C9A32415D4D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		94D81D36BFD6B9DEE92D5A60AF290DB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -878,6 +865,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A54E6053DB6135CC5C833B88B8C292FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BD7E3E05BEAC58B29B2326E9751FE7 /* CoreGraphics.framework in Frameworks */,
+				4FDCAE4DAB15C8F43BE35F93025EA07E /* CoreText.framework in Frameworks */,
+				D0291C85F45EA2CFB2EFCF3F5D79491C /* Foundation.framework in Frameworks */,
+				DCBF2723ABED688B990AC32A7EAA4190 /* QuartzCore.framework in Frameworks */,
+				F4A3DE6EDF230FF4F506D532DDDA27FD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5AE1D340C4A0691EC28EEA8241C9FCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -891,6 +890,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB36FC80DE11F48660370C569572B35B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF060BB56E87734353CE7CA9D274403E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB826FBE28300C2550413FADA8F844C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,6 +1682,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1B0B8DDFEB81B5F2CBC02EEBE3885BAF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD63D16807B009B197F70F436C9EC967 /* TTTAttributedLabel-umbrella.h in Headers */,
+				514F960D6AAA71653582CC9CA33618C3 /* TTTAttributedLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D38805FF0B71871A4830F2A2AA8E6FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1733,15 +1749,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A0D1EAA8A0915900ECCE0D4456E4AAF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCE62371119D8A798900DCC90D2550E8 /* TTTAttributedLabel-umbrella.h in Headers */,
-				C480356540C9B2D423C83D38B1C527F6 /* TTTAttributedLabel.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7A876394F78349AAEC035142B17F37DD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1760,14 +1767,6 @@
 				741F7EF25C4158ED02754317FA217E06 /* metamacros.h in Headers */,
 				6F729A954613399DD26A3CE4097C7D26 /* NSInvocation+EXT.h in Headers */,
 				F770F56AD314C3C92DFEAE55A576081D /* NSMethodSignature+EXT.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94BF5BFDB4D593060A03724A97C6E976 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8987624B86A0D142106D61E42C0343F9 /* Pods-FontanaKeyboard-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1797,6 +1796,14 @@
 				63989F9DE345AAC13C7BA81ED1017BB4 /* UIBarButtonItem+BNDBinding.h in Headers */,
 				779E3BD391A82B42A2C151682CDAF343 /* UIButton+BNDBinding.h in Headers */,
 				E07DBA0B65A4D313944C227C7E5F2E10 /* UITextField+BNDBinding.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5511A91DE061D3B3FFD1DF9E7B0A144 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0A25689B4D7CC3A6E2C00F8812DC20 /* Pods-FontanaKeyboard-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1869,30 +1876,6 @@
 			name = libextobjc;
 			productName = libextobjc;
 			productReference = 8B447D2EB01FF61B1DAD4D217E21613D /* libextobjc.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		1395B498D40F3C52CFC408A6F85C6328 /* Pods-FontanaKeyboard */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A82943B0ACEB05B0F9F5A15BC4C0D453 /* Build configuration list for PBXNativeTarget "Pods-FontanaKeyboard" */;
-			buildPhases = (
-				02562D027913BEEF0E1AE26BC53DDABF /* Sources */,
-				913489CD501ACFC37D68BC853690878D /* Frameworks */,
-				94BF5BFDB4D593060A03724A97C6E976 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				08C51FFD678DC44B962A74B8BA8256EC /* PBXTargetDependency */,
-				29B1877A3EFFF67C249DD6482D09B132 /* PBXTargetDependency */,
-				E7E7F290E04443245961EE7916936B53 /* PBXTargetDependency */,
-				F93812E450564C9F43A0BD44F7E307B8 /* PBXTargetDependency */,
-				9F75FD08C0AFDB64C4F77F593F1F41D2 /* PBXTargetDependency */,
-				0A2570C1D7527F3343C1FDCAA68D7AD7 /* PBXTargetDependency */,
-				823D6F168235EAAF2416EBA1134B92BC /* PBXTargetDependency */,
-			);
-			name = "Pods-FontanaKeyboard";
-			productName = "Pods-FontanaKeyboard";
-			productReference = C569B5EF3EB9FF084380283CF0C86182 /* Pods_FontanaKeyboard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2FEF260CB37CBD37A175FAF3EAE45537 /* SwiftyJSON */ = {
@@ -1982,6 +1965,31 @@
 			productReference = 8767A4128574BEE762AC10DFB24A8640 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		444007E5529A13DA63D4D8B95B9F3931 /* Pods-FontanaKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08D78EBF2019A5BC21D951CBBF114928 /* Build configuration list for PBXNativeTarget "Pods-FontanaKeyboard" */;
+			buildPhases = (
+				DF3C67D1278FB085C7C3FD63C9E57314 /* Sources */,
+				CF060BB56E87734353CE7CA9D274403E /* Frameworks */,
+				B5511A91DE061D3B3FFD1DF9E7B0A144 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AB54A168C805EDAF1C2A5FC850D68A1 /* PBXTargetDependency */,
+				9F62D7251180D2293BAFC123462E4CFC /* PBXTargetDependency */,
+				D91A90AC438452BC1023DB7E075C543F /* PBXTargetDependency */,
+				6FB2B6C9888748DAF8D6A23A2128E491 /* PBXTargetDependency */,
+				375A4931D7018EB40667CDDD3DE6D3E1 /* PBXTargetDependency */,
+				2CD0C0DF884FAB0CFF14A07BF3D9A0F4 /* PBXTargetDependency */,
+				6F2CA5B218AD2A3428600799FF638165 /* PBXTargetDependency */,
+				9D03E448E82C313559E112E7BB6F0F40 /* PBXTargetDependency */,
+			);
+			name = "Pods-FontanaKeyboard";
+			productName = "Pods-FontanaKeyboard";
+			productReference = C569B5EF3EB9FF084380283CF0C86182 /* Pods_FontanaKeyboard.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4C698C648EE4D43C6B8BE0BE1FE91737 /* KeychainSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6500F09FFD33E2D8329FED17B6822F0 /* Build configuration list for PBXNativeTarget "KeychainSwift" */;
@@ -2052,13 +2060,13 @@
 			productReference = E3081CA0FF61D480EC9FD3FAEFB1DD60 /* HexColors.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CF5847611C1AE25F56727255FDEFECFB /* TTTAttributedLabel */ = {
+		C5C70E8E29277B1F8EE98CB82867314B /* TTTAttributedLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC20ECC778FBD5F0452CCCE0491F2EF /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */;
+			buildConfigurationList = F13F2C34E5B6962E8F57B7AD8B2766B5 /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */;
 			buildPhases = (
-				FC39436236B4933D545F58321BC4DB92 /* Sources */,
-				90B4DA5ED3DBD64C30F7630B5EE95850 /* Frameworks */,
-				7A0D1EAA8A0915900ECCE0D4456E4AAF /* Headers */,
+				29FE98B4881DED692DEC1D029BC53005 /* Sources */,
+				A54E6053DB6135CC5C833B88B8C292FB /* Frameworks */,
+				1B0B8DDFEB81B5F2CBC02EEBE3885BAF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -2143,12 +2151,12 @@
 				0DF57C2565AA73506F661B00B828AF7E /* libextobjc */,
 				A9A83F63385AA43314397B8DD375464B /* Masonry */,
 				E34A0F60C15834043417DBEFCECC6687 /* NODE_ */,
-				1395B498D40F3C52CFC408A6F85C6328 /* Pods-FontanaKeyboard */,
+				444007E5529A13DA63D4D8B95B9F3931 /* Pods-FontanaKeyboard */,
 				FD3CC0A0C6CB40D159AF3DF6C205A6D3 /* Pods-Spreadit */,
 				78D7C16860EDE00694EF44EE034439A5 /* Pods-SpreaditSharer */,
 				2FEF260CB37CBD37A175FAF3EAE45537 /* SwiftyJSON */,
 				42E77C9F9348619E788AA9F3E84961A2 /* TSMessages */,
-				CF5847611C1AE25F56727255FDEFECFB /* TTTAttributedLabel */,
+				C5C70E8E29277B1F8EE98CB82867314B /* TTTAttributedLabel */,
 			);
 		};
 /* End PBXProject section */
@@ -2237,14 +2245,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		02562D027913BEEF0E1AE26BC53DDABF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2A91EE7C4496802F670BFBA5B500AC0 /* Pods-FontanaKeyboard-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0A9BC10F62EDEB60A9384F88391189CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2275,6 +2275,15 @@
 			files = (
 				55E782156F5EBD6C0C1DB95874481937 /* SwiftyJSON-dummy.m in Sources */,
 				E09A8DD67D368915AE035C28E9934B2B /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29FE98B4881DED692DEC1D029BC53005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC3937B550D2068553D9DB0C31896CE /* TTTAttributedLabel-dummy.m in Sources */,
+				0ADDCCD202868206A76894B6855A2458 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2345,6 +2354,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF3C67D1278FB085C7C3FD63C9E57314 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ADF22BBCC3C8B6BFED2C429D01AF92B /* Pods-FontanaKeyboard-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDE0F6C3AFE15D7E1E882EE3F0199984 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2409,15 +2426,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC39436236B4933D545F58321BC4DB92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC2AC715C3D483B6171D3FAF51C20847 /* TTTAttributedLabel-dummy.m in Sources */,
-				E44584760372FCEA55E1A4D0E512D953 /* TTTAttributedLabel.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FFEB44C9159E3FC74F18517CDEE49808 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2432,23 +2440,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		08C51FFD678DC44B962A74B8BA8256EC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BIND;
-			target = 0CFDC3A84FC06F7F0D421E9AAEC1E950 /* BIND */;
-			targetProxy = AC855F292CC5F660E9ECBF0622EEC482 /* PBXContainerItemProxy */;
-		};
 		0903B2EA00FF5414964B30E6D121A769 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeychainSwift;
 			target = 4C698C648EE4D43C6B8BE0BE1FE91737 /* KeychainSwift */;
 			targetProxy = CFFC7FE9ED561BCE839585EF31E1402F /* PBXContainerItemProxy */;
 		};
-		0A2570C1D7527F3343C1FDCAA68D7AD7 /* PBXTargetDependency */ = {
+		0AB54A168C805EDAF1C2A5FC850D68A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TTTAttributedLabel;
-			target = CF5847611C1AE25F56727255FDEFECFB /* TTTAttributedLabel */;
-			targetProxy = CD555229F2D430E6427B9411B3AEA941 /* PBXContainerItemProxy */;
+			name = BIND;
+			target = 0CFDC3A84FC06F7F0D421E9AAEC1E950 /* BIND */;
+			targetProxy = 5236D674371CC8606719223C49002490 /* PBXContainerItemProxy */;
 		};
 		185F994C3890966D63EF003704CE498E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2468,11 +2470,11 @@
 			target = 0CFDC3A84FC06F7F0D421E9AAEC1E950 /* BIND */;
 			targetProxy = 23583EA7F94635CAC34362150D4310A7 /* PBXContainerItemProxy */;
 		};
-		29B1877A3EFFF67C249DD6482D09B132 /* PBXTargetDependency */ = {
+		2CD0C0DF884FAB0CFF14A07BF3D9A0F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = HTMLReader;
-			target = 35AB4E645558A256E1C06F38C71F4836 /* HTMLReader */;
-			targetProxy = AAF5657B60093DB12E4AFA22D5485643 /* PBXContainerItemProxy */;
+			name = NODE_;
+			target = E34A0F60C15834043417DBEFCECC6687 /* NODE_ */;
+			targetProxy = 9C700F207D180706F35C6ED524BAF9FF /* PBXContainerItemProxy */;
 		};
 		2FBA3ACEB4FE3F5D185FA34F00D0DCA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2492,6 +2494,12 @@
 			target = 0DF57C2565AA73506F661B00B828AF7E /* libextobjc */;
 			targetProxy = F90DE69DD7AE9325584922D07D8EE2A2 /* PBXContainerItemProxy */;
 		};
+		375A4931D7018EB40667CDDD3DE6D3E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = A9A83F63385AA43314397B8DD375464B /* Masonry */;
+			targetProxy = 74BCEB93D1AF762A8CA79C2F36A3E615 /* PBXContainerItemProxy */;
+		};
 		558A9EB6A2997F2E529FEF4E349D46C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TSMessages;
@@ -2510,23 +2518,35 @@
 			target = C408D4E183A88B763793C217A66A1950 /* HexColors */;
 			targetProxy = FA5CA2DD490B5D47F7E45191C2CB632E /* PBXContainerItemProxy */;
 		};
+		6F2CA5B218AD2A3428600799FF638165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTTAttributedLabel;
+			target = C5C70E8E29277B1F8EE98CB82867314B /* TTTAttributedLabel */;
+			targetProxy = 042A353900975DC4CC044740B2F5D433 /* PBXContainerItemProxy */;
+		};
+		6FB2B6C9888748DAF8D6A23A2128E491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainSwift;
+			target = 4C698C648EE4D43C6B8BE0BE1FE91737 /* KeychainSwift */;
+			targetProxy = BC6822FFB05AF0C01EA424A10CDC0974 /* PBXContainerItemProxy */;
+		};
 		748375D0CD68E109A6608026BAC6C133 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TTTAttributedLabel;
-			target = CF5847611C1AE25F56727255FDEFECFB /* TTTAttributedLabel */;
+			target = C5C70E8E29277B1F8EE98CB82867314B /* TTTAttributedLabel */;
 			targetProxy = 940D0F2DAC7248A6B0260D9E0EFCBC59 /* PBXContainerItemProxy */;
 		};
-		823D6F168235EAAF2416EBA1134B92BC /* PBXTargetDependency */ = {
+		9D03E448E82C313559E112E7BB6F0F40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libextobjc;
 			target = 0DF57C2565AA73506F661B00B828AF7E /* libextobjc */;
-			targetProxy = CA72DAC8C27C986D40A2937369BBBBE3 /* PBXContainerItemProxy */;
+			targetProxy = A548073B4AB5D8C2E73EBEB085108659 /* PBXContainerItemProxy */;
 		};
-		9F75FD08C0AFDB64C4F77F593F1F41D2 /* PBXTargetDependency */ = {
+		9F62D7251180D2293BAFC123462E4CFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = NODE_;
-			target = E34A0F60C15834043417DBEFCECC6687 /* NODE_ */;
-			targetProxy = 2DB1FB978EB954035E21DFDFA49856DE /* PBXContainerItemProxy */;
+			name = HTMLReader;
+			target = 35AB4E645558A256E1C06F38C71F4836 /* HTMLReader */;
+			targetProxy = BA54BDF15B07B013EB91ACABCD1D18A6 /* PBXContainerItemProxy */;
 		};
 		B25AEC925B40F2880A7FE91A32A9E58B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2546,23 +2566,17 @@
 			target = 0DF57C2565AA73506F661B00B828AF7E /* libextobjc */;
 			targetProxy = C892106E7259C85ED30700EA1CEBD77E /* PBXContainerItemProxy */;
 		};
+		D91A90AC438452BC1023DB7E075C543F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HockeySDK-HockeySDKResources";
+			target = 3C014F737BF0E4D82F49D1E8DBB98C79 /* HockeySDK-HockeySDKResources */;
+			targetProxy = BAD5F80B73FED6C60865D0410239A6C7 /* PBXContainerItemProxy */;
+		};
 		D97935F0109A1C19F7A3C56615B0E8FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = 2FEF260CB37CBD37A175FAF3EAE45537 /* SwiftyJSON */;
 			targetProxy = 85F6A4ED069624371BDE41A17BD693AF /* PBXContainerItemProxy */;
-		};
-		E7E7F290E04443245961EE7916936B53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "HockeySDK-HockeySDKResources";
-			target = 3C014F737BF0E4D82F49D1E8DBB98C79 /* HockeySDK-HockeySDKResources */;
-			targetProxy = EB25A7F18C67A6A6BF63FEE157E88D3E /* PBXContainerItemProxy */;
-		};
-		F93812E450564C9F43A0BD44F7E307B8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = A9A83F63385AA43314397B8DD375464B /* Masonry */;
-			targetProxy = 26FE2ADA5FEC5DD44FD027FADB9BD6DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2590,37 +2604,6 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_SpreaditSharer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		02C546804EDEF49A734C5EF9E63FD0CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACBE371F88455A277EE728AC4C430071 /* Pods-FontanaKeyboard.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FontanaKeyboard/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_FontanaKeyboard;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2710,6 +2693,34 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		19FDFE2F5AF686A01A07F251D2DC0B3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD4C953535C42C12C7974FC9AEF091D /* TTTAttributedLabel.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTTAttributedLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TTTAttributedLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2806,34 +2817,6 @@
 			};
 			name = Release;
 		};
-		2646D29C2E380D55F6D55F7EAED99D02 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBD4C953535C42C12C7974FC9AEF091D /* TTTAttributedLabel.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TTTAttributedLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TTTAttributedLabel/TTTAttributedLabel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TTTAttributedLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		2A4D4E366442FA3CDF0265A4F9737960 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20CE2853EDF3A37F22F316C9F00C742D /* SwiftyJSON.xcconfig */;
@@ -2854,6 +2837,34 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2FA426F443F5AD7B8D055C12EFF4FDD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1AC1B645D7D32760753165874FCF31D /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KeychainSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2884,6 +2895,35 @@
 				PRODUCT_NAME = libextobjc;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		34C7F2BDCE25CCB5475B6B955ADB4FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1AC1B645D7D32760753165874FCF31D /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2986,33 +3026,6 @@
 			};
 			name = Debug;
 		};
-		661A1D261E8D04422384803F8F93B924 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1AC1B645D7D32760753165874FCF31D /* KeychainSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = KeychainSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		6E9F7C8AE9AA6945BA1B80109D481E89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4129239F29FE204649799C9A410B660A /* HTMLReader.xcconfig */;
@@ -3040,6 +3053,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		78363435961CBED5C35153AD5553224B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBE371F88455A277EE728AC4C430071 /* Pods-FontanaKeyboard.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FontanaKeyboard/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FontanaKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		790864A7AC6FC7F8C30198372C737320 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3107,7 +3151,7 @@
 			};
 			name = Debug;
 		};
-		8EBAF9C8EFD6ED957B9D50B20B606663 /* Release */ = {
+		9D7114A868149FD761BD5840B2AC9546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CBD4C953535C42C12C7974FC9AEF091D /* TTTAttributedLabel.xcconfig */;
 			buildSettings = {
@@ -3202,7 +3246,7 @@
 			};
 			name = Release;
 		};
-		B2735DACA6F63B53946D4BF919261544 /* Debug */ = {
+		B5B24A5BB2886F141473C6ECA5654BF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B10CF5274FA0E3DE9292A812738D138C /* Pods-FontanaKeyboard.debug.xcconfig */;
 			buildSettings = {
@@ -3227,6 +3271,7 @@
 				PRODUCT_NAME = Pods_FontanaKeyboard;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3433,37 +3478,18 @@
 			};
 			name = Release;
 		};
-		FEEDAAB6E4DFDC24A4994AE19F02276E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1AC1B645D7D32760753165874FCF31D /* KeychainSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = KeychainSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08D78EBF2019A5BC21D951CBBF114928 /* Build configuration list for PBXNativeTarget "Pods-FontanaKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5B24A5BB2886F141473C6ECA5654BF6 /* Debug */,
+				78363435961CBED5C35153AD5553224B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		120D0B17EB9DEF64F2E1BC979F24A556 /* Build configuration list for PBXNativeTarget "HexColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3563,20 +3589,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A82943B0ACEB05B0F9F5A15BC4C0D453 /* Build configuration list for PBXNativeTarget "Pods-FontanaKeyboard" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B2735DACA6F63B53946D4BF919261544 /* Debug */,
-				02C546804EDEF49A734C5EF9E63FD0CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B6500F09FFD33E2D8329FED17B6822F0 /* Build configuration list for PBXNativeTarget "KeychainSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEEDAAB6E4DFDC24A4994AE19F02276E /* Debug */,
-				661A1D261E8D04422384803F8F93B924 /* Release */,
+				34C7F2BDCE25CCB5475B6B955ADB4FD0 /* Debug */,
+				2FA426F443F5AD7B8D055C12EFF4FDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3590,20 +3607,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC20ECC778FBD5F0452CCCE0491F2EF /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2646D29C2E380D55F6D55F7EAED99D02 /* Debug */,
-				8EBAF9C8EFD6ED957B9D50B20B606663 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E179B7B117AB3A83AEB04C24D12826BB /* Build configuration list for PBXNativeTarget "NODE_" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDF80465D44301133ED49E18CB7BDD04 /* Debug */,
 				F3DB846132E290250A4654E838489154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13F2C34E5B6962E8F57B7AD8B2766B5 /* Build configuration list for PBXNativeTarget "TTTAttributedLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FDFE2F5AF686A01A07F251D2DC0B3F /* Debug */,
+				9D7114A868149FD761BD5840B2AC9546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '84CE8FBD11C718D0306806B3'
+               BlueprintIdentifier = 'BA9236B36BE84596D1B6B1E7'
                BlueprintName = 'Pods-SpreaditSharer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_SpreaditSharer.framework'>
