@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,8 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="324" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":imdb:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThW-T5-nan" userLabel="Source Label">
-                        <rect key="frame" x="277.5" y="81" width="30.5" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text=":imdb:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThW-T5-nan" userLabel="Source Label">
+                        <rect key="frame" x="277" y="81" width="30.5" height="12"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="PC9-xn-2uh"/>
@@ -24,8 +24,8 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQc-lu-i2w" userLabel="Story Label" customClass="TTTAttributedLabel">
-                        <rect key="frame" x="16" y="8" width="268" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQc-lu-i2w" userLabel="Story Label" customClass="TTTAttributedLabel">
+                        <rect key="frame" x="16" y="8" width="253.5" height="15"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,11 +51,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="bFV-Oc-fjq" firstAttribute="leading" secondItem="dQc-lu-i2w" secondAttribute="leading" id="7Fb-cz-cp8"/>
+                <constraint firstItem="ThW-T5-nan" firstAttribute="leading" secondItem="dQc-lu-i2w" secondAttribute="trailing" constant="8" id="7fn-qZ-Qp7"/>
                 <constraint firstAttribute="trailing" secondItem="FJt-cg-Elg" secondAttribute="trailing" constant="16" id="Bj6-Jz-UXr"/>
                 <constraint firstAttribute="bottom" secondItem="bFV-Oc-fjq" secondAttribute="bottom" id="DOJ-WB-BBS"/>
                 <constraint firstItem="FJt-cg-Elg" firstAttribute="top" secondItem="d0j-yz-kVN" secondAttribute="top" constant="8" id="b4e-Uh-wY8"/>
                 <constraint firstItem="dQc-lu-i2w" firstAttribute="top" secondItem="d0j-yz-kVN" secondAttribute="top" constant="8" id="gOi-Hw-Qxa"/>
-                <constraint firstAttribute="trailing" secondItem="dQc-lu-i2w" secondAttribute="trailing" constant="40" id="gbm-RL-fPd"/>
                 <constraint firstAttribute="trailing" secondItem="bFV-Oc-fjq" secondAttribute="trailing" id="iW6-Hh-rFJ"/>
                 <constraint firstAttribute="trailing" secondItem="ThW-T5-nan" secondAttribute="trailing" constant="16" id="lUo-kB-kCC"/>
                 <constraint firstItem="dQc-lu-i2w" firstAttribute="leading" secondItem="d0j-yz-kVN" secondAttribute="leading" constant="16" id="qzD-LA-8OW"/>
