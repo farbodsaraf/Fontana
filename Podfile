@@ -4,7 +4,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Spreadit' do
-	pod 'Alamofire', '~> 3.0'
     pod 'SwiftyJSON'
     pod 'BIND'
     pod 'TSMessages'

@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-SpreaditSharer/Alamofire.framework"
   install_framework "Pods-SpreaditSharer/SwiftyJSON.framework"
+  install_framework "Pods-SpreaditSharer/Alamofire.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-SpreaditSharer/Alamofire.framework"
   install_framework "Pods-SpreaditSharer/SwiftyJSON.framework"
+  install_framework "Pods-SpreaditSharer/Alamofire.framework"
 fi
