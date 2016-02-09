@@ -15,7 +15,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     var historyStack : FNTHistoryStack;
-    var items : [FNTItem]? {
+    var viewModels : [FNTKeyboardItemCellModel]? {
         didSet {
             reloadData()
         }
@@ -50,7 +50,18 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     }
     
     func reloadItems() {
-        self.items = self.historyStack.allItems as? [FNTItem]
+        let items = self.historyStack.allItems as? [FNTItem]
+        
+        guard items != nil else {
+            return
+        }
+        
+        viewModels = [FNTKeyboardItemCellModel]()
+        
+        for item in items! {
+            let viewModel = FNTKeyboardItemCellModel(model: item)
+            viewModels?.append(viewModel)
+        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -73,7 +84,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func clear() {
         self.historyStack.clear()
-        self.items = nil
+        self.viewModels = nil
     }
     
     func reloadData() {
@@ -91,13 +102,13 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         
         let cell : FNTKeyboardItemCell = collectionView.dequeueReusableCellWithReuseIdentifier(nibName, forIndexPath: indexPath) as! FNTKeyboardItemCell
 
-        cell.viewModel = viewModels().objectAtIndex(indexPath.item) as! FNTKeyboardItemCellModel
+        cell.viewModel = viewModels![indexPath.item] 
         cell.delegate = self
         return cell;
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let viewModel = self.viewModels().objectAtIndex(indexPath.item) as! FNTKeyboardItemCellModel;
+        let viewModel = viewModels![indexPath.item]
         copyURLToPasteboard(viewModel.url)
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)
     }
@@ -123,7 +134,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModels().count
+        return (viewModels?.count)!
     }
     
     func textViewDidChange(textView: UITextView) {
@@ -133,23 +144,6 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     func isPortrait() -> Bool {
         let boundsSize : CGSize = UIScreen.mainScreen().bounds.size
         return Float(self.view.frame.size.width) == fminf(Float(boundsSize.width), Float(boundsSize.height))
-    }
-    
-    func viewModels() -> NSArray {
-        let items = self.items
-        
-        guard items != nil else {
-            return NSArray()
-        }
-        
-        let viewModels = NSMutableArray()
-        
-        for item in items! {
-            let viewModel = FNTKeyboardItemCellModel(model: item)
-            viewModels.addObject(viewModel)
-        }
-        
-        return viewModels.copy() as! NSArray
     }
     
     func sender(sender: AnyObject!, wantsToOpenURL url: NSURL!) {
