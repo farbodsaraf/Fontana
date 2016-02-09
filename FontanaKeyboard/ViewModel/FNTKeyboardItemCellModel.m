@@ -64,7 +64,9 @@ BINDINGS(FNTItem,
 }
 
 - (void)downloadImageWithURL:(NSURL *)url imageBlock:(FNTImageBlock)imageBlock {
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                             cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                         timeoutInterval:5];
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
