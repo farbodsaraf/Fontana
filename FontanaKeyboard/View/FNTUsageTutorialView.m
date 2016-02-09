@@ -83,7 +83,7 @@
 
 - (NSString *)usageString {
     if (!_usageString) {
-        NSString *localizedUsageFormat = NSLocalizedString(@"type\n:%@:\n\nthen press 🌐\nand select Fontana Keyboard...", @"Usage String");
+        NSString *localizedUsageFormat = NSLocalizedString(@"type\n:%@:\n\nthen press 🌐\nand select Search - Fontana", @"Usage String");
         NSArray *randomTerms = self.randomTerms;
         NSString *randomTerm = randomTerms[arc4random()%randomTerms.count ];
         _usageString = [NSString stringWithFormat:localizedUsageFormat, randomTerm];
