@@ -84,7 +84,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func clear() {
         self.historyStack.clear()
-        self.viewModels = nil
+        self.viewModels = []
     }
     
     func reloadData() {
