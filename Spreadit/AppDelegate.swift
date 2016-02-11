@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSSetUncaughtExceptionHandler { (exception : NSException) -> Void in
             print(exception.callStackSymbols)
         }
-            
+        
         UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.whiteColor()]
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().barTintColor = UIColor.fnt_teal()
