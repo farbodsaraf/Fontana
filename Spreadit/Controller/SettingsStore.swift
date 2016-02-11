@@ -64,11 +64,8 @@ class SettingsStore: NSObject {
     }
     
     private func boolToString(value: Bool?) -> String {
-        guard let value = value
-            else
-        {
+        guard let value = value else {
             return "<None>"
-            // or you may return nil here. The return type would have to be String? in that case.
         }
         
         return "\(value)"

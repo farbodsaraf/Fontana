@@ -23,8 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSSetUncaughtExceptionHandler { (exception : NSException) -> Void in
             print(exception.callStackSymbols)
         }
-        
-        UINavigationBar.appearance().tintColor = UIColor.fnt_teal()
+            
+        UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = UIColor.fnt_teal()
+
         UITabBar.appearance().tintColor = UIColor.fnt_teal()
         
         BITHockeyManager.sharedHockeyManager().configureWithIdentifier("9bc7ee209ec3404dba1ec07b94cca99e");
