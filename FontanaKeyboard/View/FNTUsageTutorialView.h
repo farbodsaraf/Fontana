@@ -11,12 +11,15 @@
 @class FNTUsageTutorialView;
 @protocol FNTUsageTutorialViewDelegate <NSObject>
 
+@optional
 - (void)tutorialViewDidFinish:(FNTUsageTutorialView *)tutorialView;
+- (void)tutorial:(FNTUsageTutorialView *)tutorialView willOpenURL:(NSURL *)url;
 
 @end
 
 @interface FNTUsageTutorialView : UIView
 @property (nonatomic, weak) id <FNTUsageTutorialViewDelegate> delegate;
+@property (nonatomic, strong) id text;
 
 - (void)start;
 - (void)stop;

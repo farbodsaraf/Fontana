@@ -48,6 +48,7 @@ BINDINGS(FNTKeyboardItemCellModel,
                                        NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
                                        };
     self.storyLabel.delegate = self;
+    self.storyLabel.extendsLinkTouchArea = NO;
 
     self.sourceLabel.textColor = [UIColor fnt_tealLowerAlpha];
 }

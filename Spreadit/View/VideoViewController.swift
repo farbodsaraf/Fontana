@@ -49,8 +49,18 @@ class VideoViewController: BNDViewController {
         return ["enabling_keyboard_720", "using_keyboard_720"]
     }()
     
+    var selectedIndex: Int? {
+        didSet {
+            if selectedIndex != NSNotFound {
+                self.segmentedControl.selectedSegmentIndex = selectedIndex!
+            }
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        self.selectedIndex = NSNotFound
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "moviePlayerStateDidChange:",
@@ -65,7 +75,10 @@ class VideoViewController: BNDViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.titleView = self.segmentedControl
-        self.segmentedControl.selectedSegmentIndex = 0
+        
+        if self.selectedIndex == NSNotFound {
+            self.selectedIndex = 0
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

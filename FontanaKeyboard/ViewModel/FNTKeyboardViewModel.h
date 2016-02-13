@@ -17,6 +17,7 @@
 @property (nonatomic, strong) Class queryClass;
 @property (nonatomic, getter=isUndoEnabled) BOOL undoEnabled;
 @property (nonatomic, getter=isDonateEnabled) BOOL donateEnabled;
+@property (nonatomic, readonly) NSString *usageTutorialText;
 
 - (void)apply:(FNTKeyboardItemCellModel *)model;
 - (void)undo;

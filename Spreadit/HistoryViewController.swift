@@ -10,7 +10,7 @@ import UIKit
 import BIND
 import TSMessages
 
-class HistoryViewController: BNDViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate {
+class HistoryViewController: BNDViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate, FNTUsageTutorialViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,8 +18,24 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     var viewModels : [FNTKeyboardItemCellModel]? {
         didSet {
             reloadData()
+            
+            if viewModels!.count == 0 {
+                showNoDataMessage()
+            }
+            else {
+                removeNoDataMessageIfNeeded()
+            }
         }
     }
+    
+    lazy var noDataView: FNTUsageTutorialView? = {
+        let view = FNTUsageTutorialView()
+        view.text = self.historyViewModel().welcomeString
+        view.frame = self.view.frame
+        view.delegate = self;
+        view.start()
+        return view
+    }()
     
     lazy var clearButtonItem : UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "showClearDialog")
@@ -30,7 +46,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
 
         super.init(coder: aDecoder)!
     
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadItems", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name: UIApplicationWillEnterForegroundNotification, object: nil)
         
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .History, tag: 0)
     }
@@ -45,8 +61,13 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         
         self.navigationItem.title = "History"
         
-        self.viewModels = reloadItems()
-        self.navigationItem.rightBarButtonItem = viewModels!.count > 0 ? self.clearButtonItem : nil
+        self.viewModel = HistoryViewModel()
+        
+        refresh()
+    }
+    
+    func historyViewModel() -> HistoryViewModel {
+        return self.viewModel as! HistoryViewModel
     }
     
     func reloadItems() -> [FNTKeyboardItemCellModel] {
@@ -66,6 +87,11 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         return viewModels
     }
     
+    func refresh() {
+        self.viewModels = reloadItems()
+        self.navigationItem.rightBarButtonItem = viewModels!.count > 0 ? self.clearButtonItem : nil
+    }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
@@ -77,11 +103,6 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         flowLayout.itemSize = itemSize
         
         flowLayout.invalidateLayout()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func showClearDialog() {
@@ -108,6 +129,16 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func reloadData() {
         self.collectionView.reloadData()
+    }
+    
+    func showNoDataMessage() {
+        self.view.addSubview(self.noDataView!)
+    }
+    
+    func removeNoDataMessageIfNeeded() {
+        if noDataView != nil {
+            self.noDataView!.removeFromSuperview()
+        }
     }
     
     func showTutorial() {
@@ -167,6 +198,12 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func sender(sender: AnyObject!, wantsToOpenURL url: NSURL!) {
         UIApplication.sharedApplication().openURL(url)
+    }
+    
+    func tutorial(tutorialView: FNTUsageTutorialView!, willOpenURL url: NSURL!) {
+        let videoViewController = UIViewController.loadFromStoryboard("VideoViewController") as! VideoViewController
+        videoViewController.selectedIndex = url.absoluteString.isEqual("fontanakey://usage") ? 1 : 0
+        self.navigationController?.pushViewController(videoViewController, animated: true)
     }
 }
 

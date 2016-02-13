@@ -28,6 +28,7 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 @property (nonatomic, strong) FNTHistoryStack *historyStack;
 @property (nonatomic, strong) NSMutableArray *undoStack;
 @property (nonatomic, strong) FNTPleaseDonateReminder *donateReminder;
+@property (nonatomic, strong) NSString *usageTutorialText;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -143,6 +144,28 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 - (void)raiseUndoStackDidChange {
     [self willChangeValueForKey:@"undoEnabled"];
     [self didChangeValueForKey:@"undoEnabled"];
+}
+
+#pragma mark - Usage tutorial text
+
+- (NSString *)usageTutorialText {
+    if (!_usageTutorialText) {
+        NSString *localizedUsageFormat = NSLocalizedString(@"type\n:%@:\n\nthen press 🌐\nand select Search - Fontana", @"Usage String");
+        NSArray *randomTerms = self.randomTerms;
+        NSString *randomTerm = randomTerms[arc4random()%randomTerms.count ];
+        _usageTutorialText = [NSString stringWithFormat:localizedUsageFormat, randomTerm];
+    }
+    return _usageTutorialText;
+}
+
+- (NSArray *)randomTerms {
+    return @[
+             @"Michael Jackson",
+             @"Godzilla",
+             @"Godfather",
+             @"Madonna",
+             @"Cry me a river"
+             ];
 }
 
 #pragma mark - FNTPleaseDonateReminderDelegate

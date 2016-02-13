@@ -7,13 +7,34 @@
 //
 
 #import "FNTUsageTutorialView.h"
-#import <Masonry/Masonry.h>
+#import "TTTAttributedLabel.h"
+#import "UIColor+FNTGenerator.h"
 
-@interface FNTUsageTutorialView ()
+@interface NSString (Substring)
+- (NSString *)fnt_substringToIndex:(NSUInteger)index;
+@end
+
+@implementation NSString (Substring)
+- (NSString *)fnt_substringToIndex:(NSUInteger)index {
+    return [self substringToIndex:index];
+}
+@end
+
+@interface NSAttributedString (Substring)
+- (NSAttributedString *)fnt_substringToIndex:(NSUInteger)index;
+@end
+
+@implementation NSAttributedString (Substring)
+- (NSAttributedString *)fnt_substringToIndex:(NSUInteger)index {
+    return [self attributedSubstringFromRange:NSMakeRange(0, index)];
+}
+@end
+
+@interface FNTUsageTutorialView () <TTTAttributedLabelDelegate>
 @property (nonatomic) NSUInteger currentIndex;
 @property (nonatomic, strong) NSTimer *renderTimer;
-@property (nonatomic, strong) NSString *usageString;
-@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) TTTAttributedLabel *label;
+@property (nonatomic, strong) UIGestureRecognizer *tapGestureRecognizer;
 @end
 
 @implementation FNTUsageTutorialView
@@ -23,14 +44,20 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self addSubview:self.label];
-        [self addStopGestureRecognizer];
     }
     return self;
 }
 
 - (void)addStopGestureRecognizer {
+    [self removeStopGestureRecognizer];
+    
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stopAndRenderText)];
     [self addGestureRecognizer:recognizer];
+    self.tapGestureRecognizer = recognizer;
+}
+
+- (void)removeStopGestureRecognizer {
+    [self removeGestureRecognizer:self.tapGestureRecognizer];
 }
 
 - (void)layoutSubviews {
@@ -40,17 +67,25 @@
 
 - (UILabel *)label {
     if (!_label) {
-        _label = [UILabel new];
+        _label = [TTTAttributedLabel new];
         _label.textAlignment = NSTextAlignmentCenter;
         _label.numberOfLines = 0;
+        _label.delegate = self;
         [_label setTranslatesAutoresizingMaskIntoConstraints:YES];
+        _label.linkAttributes = @{
+                                  NSForegroundColorAttributeName: [UIColor fnt_teal],
+                                  NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
+                                  };
     }
     return _label;
 }
 
 - (void)start {
     [self stop];
-    self.renderTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+    [self addStopGestureRecognizer];
+    
+    float randomTime = [self randomFloatBetween:0.02 and:0.08];
+    self.renderTimer = [NSTimer scheduledTimerWithTimeInterval:randomTime
                                                         target:self
                                                       selector:@selector(renderNext)
                                                       userInfo:nil
@@ -58,47 +93,43 @@
 }
 
 - (void)stop {
+    [self removeStopGestureRecognizer];
+    
     [self.renderTimer invalidate];
     self.renderTimer = nil;
     
-    [self.delegate tutorialViewDidFinish:self];
+    if ([self.delegate respondsToSelector:@selector(tutorialViewDidFinish:)]) {
+        [self.delegate tutorialViewDidFinish:self];
+    }
 }
 
 - (void)stopAndRenderText {
     [self stop];
-    self.label.text = self.usageString;
+    self.label.text = self.text;
 }
 
 - (void)renderNext {
-    NSString *usageString = self.usageString;
+    NSString *text = self.text;
     self.currentIndex = ++_currentIndex;
     
-    if (self.currentIndex > usageString.length) {
+    if (self.currentIndex > text.length) {
         [self stop];
         return;
     }
     
-    self.label.text = [usageString substringToIndex:self.currentIndex];
+    self.label.text = [text fnt_substringToIndex:self.currentIndex];
 }
 
-- (NSString *)usageString {
-    if (!_usageString) {
-        NSString *localizedUsageFormat = NSLocalizedString(@"type\n:%@:\n\nthen press 🌐\nand select Search - Fontana", @"Usage String");
-        NSArray *randomTerms = self.randomTerms;
-        NSString *randomTerm = randomTerms[arc4random()%randomTerms.count ];
-        _usageString = [NSString stringWithFormat:localizedUsageFormat, randomTerm];
+- (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber {
+    float diff = bigNumber - smallNumber;
+    return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + smallNumber;
+}
+
+- (void)attributedLabel:(TTTAttributedLabel *)label
+   didSelectLinkWithURL:(NSURL *)url {
+    if ([self.delegate respondsToSelector:@selector(tutorial:willOpenURL:)]) {
+        [self.delegate tutorial:self willOpenURL:url];
     }
-    return _usageString;
-}
-
-- (NSArray *)randomTerms {
-    return @[
-             @"Michael Jackson",
-             @"Godzilla",
-             @"Godfather",
-             @"Madonna",
-             @"Cry me a river"
-             ];
 }
 
 @end

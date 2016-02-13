@@ -85,6 +85,8 @@
 		96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */; };
 		96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
+		96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */; };
+		96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */; };
 		96F04AC31C329D77002BBE67 /* FNTBINGSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AC21C329D77002BBE67 /* FNTBINGSearchQuery.m */; };
 		96F04AC61C329EE0002BBE67 /* FNTBINGItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AC51C329EE0002BBE67 /* FNTBINGItemParser.m */; };
@@ -249,6 +251,7 @@
 		96C446981C1335F100051149 /* tux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tux.jpg; path = Test/tux.jpg; sourceTree = "<group>"; };
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
+		96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewModel.swift; path = ViewModel/HistoryViewModel.swift; sourceTree = "<group>"; };
 		96F04ABA1C31DC03002BBE67 /* FNTSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSearchQuery.h; path = Controller/FNTSearchQuery.h; sourceTree = "<group>"; };
 		96F04ABB1C31DC85002BBE67 /* FNTItemSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTItemSearchQuery.h; path = Controller/FNTItemSearchQuery.h; sourceTree = "<group>"; };
 		96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemSearchQuery.m; path = Controller/FNTItemSearchQuery.m; sourceTree = "<group>"; };
@@ -360,6 +363,7 @@
 				962882B31C6065E500886F7D /* NavigationCellModel.swift */,
 				962882C41C63360700886F7D /* DonateCellModel.swift */,
 				9683D1B61C673D77001436C8 /* SettingCellModel.swift */,
+				96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -1151,6 +1155,7 @@
 				9658F4C91C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				9683D1AC1C665FAE001436C8 /* DonationJar.swift in Sources */,
 				96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */,
+				96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */,
 				962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
 				96F04AD41C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
@@ -1162,6 +1167,7 @@
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
 				962882B91C606B3200886F7D /* NavigationCell.swift in Sources */,
+				96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */,
 				9683D1B41C67300F001436C8 /* SettingsStore.swift in Sources */,
 				962882C11C63332500886F7D /* DonateCell.swift in Sources */,
 				96F04ACE1C32A7A0002BBE67 /* FNTGoogleItem.m in Sources */,
@@ -1423,7 +1429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36fe772c-4c04-4bd2-9d95-1422c84bc25a";
+				PROVISIONING_PROFILE = "ed462b5f-f301-4277-8c24-a7876fc08579";
 				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
 			};
 			name = Release;
@@ -1556,7 +1562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eed184b3-a06d-4cc4-9750-22515abec709";
+				PROVISIONING_PROFILE = "becc0b6e-0876-4915-b64a-f4d28fcdb01b";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -192,6 +192,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     if (!_tutorialView) {
         _tutorialView = [FNTUsageTutorialView new];
         _tutorialView.delegate = self;
+        _tutorialView.text = self.keyboardViewModel.usageTutorialText;
         [_tutorialView start];
     }
     return _tutorialView;
