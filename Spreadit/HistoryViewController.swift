@@ -22,7 +22,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     }
     
     lazy var clearButtonItem : UIBarButtonItem = {
-        return UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "clear")
+        return UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "showClearDialog")
     }()
     
     required init(coder aDecoder: NSCoder) {
@@ -44,24 +44,26 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationItem.title = "History"
-        self.navigationItem.rightBarButtonItem = self.clearButtonItem
         
-        reloadItems()
+        self.viewModels = reloadItems()
+        self.navigationItem.rightBarButtonItem = viewModels!.count > 0 ? self.clearButtonItem : nil
     }
     
-    func reloadItems() {
+    func reloadItems() -> [FNTKeyboardItemCellModel] {
         let items = self.historyStack.allItems as? [FNTItem]
         
+        var viewModels = [FNTKeyboardItemCellModel]()
+
         guard items != nil else {
-            return
+            return viewModels
         }
-        
-        viewModels = [FNTKeyboardItemCellModel]()
         
         for item in items! {
             let viewModel = FNTKeyboardItemCellModel(model: item)
-            viewModels?.append(viewModel)
+            viewModels.append(viewModel)
         }
+        
+        return viewModels
     }
     
     override func viewWillLayoutSubviews() {
@@ -80,6 +82,23 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func showClearDialog() {
+        let alertController = UIAlertController(title: "Delete History",
+            message: "Are you sure you want to delete history?",
+            preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        }
+        alertController.addAction(cancelAction)
+        
+        let okAction = UIAlertAction(title: "Delete", style: .Destructive) { (action) in
+            self.clear()
+        }
+        alertController.addAction(okAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     func clear() {
