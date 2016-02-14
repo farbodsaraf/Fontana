@@ -16,12 +16,21 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.tabBarItem = UITabBarItem(tabBarSystemItem:.More, tag: 1)
-        self.navigationItem.title = "Settings"
+        self.navigationItem.title = "More"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action,
+            target: self, action: "presentShareViewController")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        
+        self.viewModel = SettingsViewModel()
+    }
+    
+    func settingsViewModel() -> SettingsViewModel {
+        return self.viewModel as! SettingsViewModel
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,6 +64,20 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
                     animated: true)
             }
         }
+    }
+    
+    func presentShareViewController() {
+        let activityViewController = UIActivityViewController(activityItems: [self.settingsViewModel()],
+            applicationActivities: nil)
+        
+        activityViewController.excludedActivityTypes = [
+            UIActivityTypePrint,
+            UIActivityTypeAssignToContact,
+            UIActivityTypeSaveToCameraRoll,
+            UIActivityTypeAddToReadingList,
+        ]
+        
+        navigationController?.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

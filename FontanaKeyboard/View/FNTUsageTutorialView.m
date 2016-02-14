@@ -110,7 +110,7 @@
 
 - (void)renderNext {
     NSString *text = self.text;
-    self.currentIndex = ++_currentIndex;
+    self.currentIndex = self.currentIndex + 1;
     
     if (self.currentIndex > text.length) {
         [self stop];

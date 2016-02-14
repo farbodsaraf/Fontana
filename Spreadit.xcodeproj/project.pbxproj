@@ -87,6 +87,7 @@
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */; };
 		96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
+		96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */; };
 		96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */; };
 		96F04AC31C329D77002BBE67 /* FNTBINGSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AC21C329D77002BBE67 /* FNTBINGSearchQuery.m */; };
 		96F04AC61C329EE0002BBE67 /* FNTBINGItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AC51C329EE0002BBE67 /* FNTBINGItemParser.m */; };
@@ -252,6 +253,7 @@
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
 		96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewModel.swift; path = ViewModel/HistoryViewModel.swift; sourceTree = "<group>"; };
+		96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ViewModel/SettingsViewModel.swift; sourceTree = "<group>"; };
 		96F04ABA1C31DC03002BBE67 /* FNTSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSearchQuery.h; path = Controller/FNTSearchQuery.h; sourceTree = "<group>"; };
 		96F04ABB1C31DC85002BBE67 /* FNTItemSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTItemSearchQuery.h; path = Controller/FNTItemSearchQuery.h; sourceTree = "<group>"; };
 		96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemSearchQuery.m; path = Controller/FNTItemSearchQuery.m; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				962882C41C63360700886F7D /* DonateCellModel.swift */,
 				9683D1B61C673D77001436C8 /* SettingCellModel.swift */,
 				96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */,
+				96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -468,9 +471,9 @@
 		9658F4E51C31774C002B3595 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				962882B71C606A6F00886F7D /* Cells */,
 				96B1C4901BE159CA00114C26 /* Main.storyboard */,
 				96B1C4951BE159CA00114C26 /* LaunchScreen.storyboard */,
+				962882B71C606A6F00886F7D /* Cells */,
 				964C9D0B1C552A20003907E2 /* Root */,
 				964C9D0A1C54E461003907E2 /* History */,
 				9658F4E81C317864002B3595 /* Tutorial */,
@@ -1180,6 +1183,7 @@
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F04ACD1C32A79D002BBE67 /* FNTBINGItem.m in Sources */,
+				96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
