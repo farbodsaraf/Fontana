@@ -9,7 +9,6 @@
 #import "FNTUsageTutorialView.h"
 #import "TTTAttributedLabel.h"
 #import "UIColor+FNTGenerator.h"
-#import "NSString+FNTIsEmoji.h"
 
 @interface NSString (Substring)
 @end
