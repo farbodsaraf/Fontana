@@ -9,24 +9,50 @@
 #import "FNTUsageTutorialView.h"
 #import "TTTAttributedLabel.h"
 #import "UIColor+FNTGenerator.h"
+#import "NSString+FNTIsEmoji.h"
 
 @interface NSString (Substring)
-- (NSString *)fnt_substringToIndex:(NSUInteger)index;
 @end
 
 @implementation NSString (Substring)
 - (NSString *)fnt_substringToIndex:(NSUInteger)index {
     return [self substringToIndex:index];
 }
+
+- (NSString *)fnt_substringWithRange:(NSRange)range {
+    return [self substringWithRange:range];
+}
+
+- (NSString *)fnt_Value {
+    return self;
+}
+
+- (NSString *)fnt_stringByAppendingString:(NSString *)string {
+    return [self stringByAppendingString:string];
+}
+
 @end
 
 @interface NSAttributedString (Substring)
-- (NSAttributedString *)fnt_substringToIndex:(NSUInteger)index;
 @end
 
 @implementation NSAttributedString (Substring)
 - (NSAttributedString *)fnt_substringToIndex:(NSUInteger)index {
     return [self attributedSubstringFromRange:NSMakeRange(0, index)];
+}
+
+- (NSAttributedString *)fnt_substringWithRange:(NSRange)range {
+    return [self attributedSubstringFromRange:range];
+}
+
+- (NSString *)fnt_Value {
+    return self.string;
+}
+
+- (NSAttributedString *)fnt_stringByAppendingString:(NSAttributedString *)string {
+    NSMutableAttributedString *mutableAttributedString = self.mutableCopy;
+    [mutableAttributedString appendAttributedString:string];
+    return mutableAttributedString.copy;
 }
 @end
 
@@ -35,6 +61,8 @@
 @property (nonatomic, strong) NSTimer *renderTimer;
 @property (nonatomic, strong) TTTAttributedLabel *label;
 @property (nonatomic, strong) UIGestureRecognizer *tapGestureRecognizer;
+@property (nonatomic, strong) NSArray *stringRanges;
+@property (nonatomic, strong) id currentString;
 @end
 
 @implementation FNTUsageTutorialView
@@ -103,6 +131,19 @@
     }
 }
 
+- (void)setText:(id)text {
+    _text = [text copy];
+    
+    NSMutableArray *ranges = [NSMutableArray new];
+    [[text fnt_Value] enumerateSubstringsInRange:NSMakeRange(0, [text length])
+                                       options:NSStringEnumerationByComposedCharacterSequences
+                                    usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+                                        NSValue *value = [NSValue valueWithRange:substringRange];
+                                        [ranges addObject:value];
+                                    }];
+    self.stringRanges = ranges.copy;
+}
+
 - (void)stopAndRenderText {
     [self stop];
     self.label.text = self.text;
@@ -110,14 +151,18 @@
 
 - (void)renderNext {
     NSString *text = self.text;
-    self.currentIndex = self.currentIndex + 1;
     
-    if (self.currentIndex > text.length) {
+    if (self.currentIndex >= self.stringRanges.count) {
         [self stop];
         return;
     }
     
-    self.label.text = [text fnt_substringToIndex:self.currentIndex];
+    NSRange nextRange = [self.stringRanges[self.currentIndex] rangeValue];
+    id substring = [text fnt_substringWithRange:nextRange];
+    self.currentString = self.currentString ? [self.currentString fnt_stringByAppendingString:substring] : substring;
+    self.label.text = self.currentString;
+    
+    self.currentIndex++;
 }
 
 - (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber {

@@ -19,7 +19,7 @@
 
 @interface FNTUsageTutorialView : UIView
 @property (nonatomic, weak) id <FNTUsageTutorialViewDelegate> delegate;
-@property (nonatomic, strong) id text;
+@property (nonatomic, copy) id text;
 
 - (void)start;
 - (void)stop;

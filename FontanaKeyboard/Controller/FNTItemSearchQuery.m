@@ -69,9 +69,17 @@
 }
 
 - (void)handleData:(NSData *)data {
-    NSError *error = nil;
-    NSArray *items = [self.parserClass parseData:data error:&error];
-    self.itemsBlock(items, error);
+    [self handleData:data error:nil];
+}
+
+- (void)handleData:(NSData *)data error:(NSError *) error{
+    if (error) {
+        self.itemsBlock(nil, error);
+        return;
+    }
+    NSError *parseError = nil;
+    NSArray *items = [self.parserClass parseData:data error:&parseError];
+    self.itemsBlock(items, parseError);
 }
 
 - (NSString *)searchURLFormat {

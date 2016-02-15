@@ -150,12 +150,14 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view setNeedsUpdateConstraints];
 }
 
-- (void)displayNoResults {
+- (void)displayNoResultsForError:(NSError *)error {
     [self removeAllSubviews];
     
     [self.view addSubview:self.tutorialView];
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.separator];
+    
+    self.tutorialView.text = [self.keyboardViewModel messageForQueryError:error];
     
     [self.view setNeedsUpdateConstraints];
 }
@@ -192,7 +194,6 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     if (!_tutorialView) {
         _tutorialView = [FNTUsageTutorialView new];
         _tutorialView.delegate = self;
-        _tutorialView.text = self.keyboardViewModel.usageTutorialText;
         [_tutorialView start];
     }
     return _tutorialView;
@@ -265,7 +266,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
         [self.activityIndicator stopAnimating];
     }
     else {
-        [self displayNoResults];
+        [self displayNoResultsForError:error];
     }
 }
 

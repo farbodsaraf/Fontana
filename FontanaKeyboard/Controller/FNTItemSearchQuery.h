@@ -15,5 +15,6 @@
 
 - (instancetype)initWithSearchTerm:(NSString *)searchTerm
                         itemsBlock:(FNTItemResultBlock)itemsBlock;
-- (void)handleData:(NSData *)data;
+//- (void)handleData:(NSData *)data;
+- (void)handleData:(NSData *)data error:(NSError *)error;
 @end

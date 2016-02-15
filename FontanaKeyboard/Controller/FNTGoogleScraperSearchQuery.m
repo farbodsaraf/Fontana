@@ -44,12 +44,13 @@
 
 - (void)startTaskWithURL:(NSURL *)url {
     __weak typeof(self) weakSelf = self;
-    NSURLSessionDataTask *task = [self.session dataTaskWithURL:url
-                                             completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                 if (data) {
-                                                     [weakSelf handleData:data];
-                                                 }
-                                             }];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                             cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                         timeoutInterval:10];
+    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request
+                                                 completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                                                        [weakSelf handleData:data error:error];
+                                                 }];
     [task resume];
 }
 
