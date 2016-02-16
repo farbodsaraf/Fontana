@@ -32,7 +32,7 @@ class SettingsStore: NSObject {
         write(value, key: setting.rawValue)
     }
     
-    private func read(key: String) -> Bool {
+    func read(key: String) -> Bool {
         if let value = settingsDictionary[key] {
             return NSString(string: value).boolValue
         } else {

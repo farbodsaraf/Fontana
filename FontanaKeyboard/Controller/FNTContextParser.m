@@ -39,6 +39,10 @@ static NSString * const kFNTContextItemLinkSeparator = @":";
     return [[self alloc] initWithParserOptions:options];
 }
 
+- (instancetype)init {
+    return [self initWithParserOptions:FNTContextParserOptionsMarkup];
+}
+
 - (instancetype)initWithParserOptions:(FNTContextParserOptions)options {
     self = [super init];
     if (self) {
@@ -54,16 +58,6 @@ static NSString * const kFNTContextItemLinkSeparator = @":";
     }
     
     NSMutableArray *items = [NSMutableArray new];
-    
-    if (self.options == FNTContextParserOptionsOptionalMarkup &&
-        [self isContextReadyForOptionalMarkup:context]) {
-        NSRange range = NSMakeRange(0, context.length);
-        FNTContextItem *item = [[FNTContextItem alloc] initWithQuery:context
-                                                               range:range];
-        [items addObject:item];
-        return items.copy;
-    }
-    
     NSMutableString *linkString = [NSMutableString new];
 
     NSUInteger startPointer = NSNotFound;

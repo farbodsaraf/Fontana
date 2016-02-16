@@ -16,6 +16,7 @@
 #import "FNTGoogleScraperSearchQuery.h"
 #import "FNTHistoryStack.h"
 #import "FNTPleaseDonateReminder.h"
+#import "FNTStringMarkupTransformer.h"
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 
@@ -62,10 +63,30 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 }
 
 - (void)handleText:(NSString *)text {
-    FNTContextParser *parser = [FNTContextParser parserWithOptions:FNTContextParserOptionsOptionalMarkup];
-    self.contextItems = [parser parseContext:text];
+    NSString *transformedText = [self replaceTextWithMarkupText:text];
+    FNTContextParser *parser = [FNTContextParser new];
+    self.contextItems = [parser parseContext:transformedText];
     self.currentContextItem = [self.contextItems firstObject];
     [self performQuery:self.currentContextItem.query];
+}
+
+- (NSString *)replaceTextWithMarkupText:(NSString *)text {
+    FNTStringMarkupTransformer *transformer = (FNTStringMarkupTransformer *)[NSValueTransformer valueTransformerForName:@"FNTStringMarkupTransformer"];
+    
+    NSString *transformedText = [transformer transformedValue:text];
+    
+    if ([transformedText isEqualToString:text]) {
+        return transformedText;
+    }
+    
+    [text enumerateSubstringsInRange:NSMakeRange(0, text.length)
+                             options:NSStringEnumerationByComposedCharacterSequences
+                          usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+                              [self.documentProxy deleteBackward];
+                          }];
+ 
+    [self.documentProxy insertText:transformedText];
+    return transformedText;
 }
 
 - (void)performQuery:(NSString *)queryString {

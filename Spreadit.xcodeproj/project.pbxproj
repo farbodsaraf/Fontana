@@ -88,6 +88,11 @@
 		96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */; };
 		96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */; };
+		96ECA1391C72E2B2006B15A1 /* FNTStringMarkupTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ECA1381C72E2B2006B15A1 /* FNTStringMarkupTransformer.m */; };
+		96ECA13B1C72E3A4006B15A1 /* FNTStringMarkupTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ECA13A1C72E3A4006B15A1 /* FNTStringMarkupTransformerTests.m */; };
+		96ECA13E1C72EBA8006B15A1 /* NSString+FNTAccessors.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ECA13D1C72EBA8006B15A1 /* NSString+FNTAccessors.m */; };
+		96ECA13F1C72EF66006B15A1 /* FNTStringMarkupTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ECA1381C72E2B2006B15A1 /* FNTStringMarkupTransformer.m */; };
+		96ECA1401C72F9ED006B15A1 /* NSString+FNTAccessors.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ECA13D1C72EBA8006B15A1 /* NSString+FNTAccessors.m */; };
 		96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */; };
 		96F04AC31C329D77002BBE67 /* FNTBINGSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AC21C329D77002BBE67 /* FNTBINGSearchQuery.m */; };
 		96F04AC61C329EE0002BBE67 /* FNTBINGItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F04AC51C329EE0002BBE67 /* FNTBINGItemParser.m */; };
@@ -249,11 +254,15 @@
 		96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FNTKeyboardItemCell.xib; path = View/FNTKeyboardItemCell.xib; sourceTree = "<group>"; };
 		96C446941C0EBA4700051149 /* FNTKeyboardItemCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTKeyboardItemCellModel.h; path = ViewModel/FNTKeyboardItemCellModel.h; sourceTree = "<group>"; };
 		96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardItemCellModel.m; path = ViewModel/FNTKeyboardItemCellModel.m; sourceTree = "<group>"; };
-		96C446981C1335F100051149 /* tux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tux.jpg; path = Test/tux.jpg; sourceTree = "<group>"; };
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
 		96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewModel.swift; path = ViewModel/HistoryViewModel.swift; sourceTree = "<group>"; };
 		96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ViewModel/SettingsViewModel.swift; sourceTree = "<group>"; };
+		96ECA1371C72E2B2006B15A1 /* FNTStringMarkupTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTStringMarkupTransformer.h; path = Transformers/FNTStringMarkupTransformer.h; sourceTree = "<group>"; };
+		96ECA1381C72E2B2006B15A1 /* FNTStringMarkupTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTStringMarkupTransformer.m; path = Transformers/FNTStringMarkupTransformer.m; sourceTree = "<group>"; };
+		96ECA13A1C72E3A4006B15A1 /* FNTStringMarkupTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTStringMarkupTransformerTests.m; path = Transformers/FNTStringMarkupTransformerTests.m; sourceTree = "<group>"; };
+		96ECA13C1C72EBA8006B15A1 /* NSString+FNTAccessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FNTAccessors.h"; path = "Categories/NSString+FNTAccessors.h"; sourceTree = "<group>"; };
+		96ECA13D1C72EBA8006B15A1 /* NSString+FNTAccessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FNTAccessors.m"; path = "Categories/NSString+FNTAccessors.m"; sourceTree = "<group>"; };
 		96F04ABA1C31DC03002BBE67 /* FNTSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSearchQuery.h; path = Controller/FNTSearchQuery.h; sourceTree = "<group>"; };
 		96F04ABB1C31DC85002BBE67 /* FNTItemSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTItemSearchQuery.h; path = Controller/FNTItemSearchQuery.h; sourceTree = "<group>"; };
 		96F04ABC1C31DC85002BBE67 /* FNTItemSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTItemSearchQuery.m; path = Controller/FNTItemSearchQuery.m; sourceTree = "<group>"; };
@@ -445,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				965310FA1C1355B8005CB906 /* FNTContextParserTest.m */,
+				96ECA13A1C72E3A4006B15A1 /* FNTStringMarkupTransformerTests.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -515,6 +525,8 @@
 		966D57AF1C2400A200F14B5F /* Transformers */ = {
 			isa = PBXGroup;
 			children = (
+				96ECA1371C72E2B2006B15A1 /* FNTStringMarkupTransformer.h */,
+				96ECA1381C72E2B2006B15A1 /* FNTStringMarkupTransformer.m */,
 				966D57B01C2400EF00F14B5F /* FNTSourceToColorTransformer.h */,
 				966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */,
 			);
@@ -624,6 +636,8 @@
 		96C446881C0E182B00051149 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				96ECA13C1C72EBA8006B15A1 /* NSString+FNTAccessors.h */,
+				96ECA13D1C72EBA8006B15A1 /* NSString+FNTAccessors.m */,
 				96C446891C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.h */,
 				96C4468A1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m */,
 				96F04AD21C32C450002BBE67 /* UIColor+FNTGenerator.h */,
@@ -637,7 +651,6 @@
 		96C446971C1335C800051149 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				96C446981C1335F100051149 /* tux.jpg */,
 				9658F4C71C2AA38E002B3595 /* FNTMockFactory.h */,
 				9658F4C81C2AA38E002B3595 /* FNTMockFactory.m */,
 			);
@@ -1194,12 +1207,15 @@
 				96F04AF61C35520A002BBE67 /* FNTGoogleScraperItemParser.m in Sources */,
 				965311051C13699D005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				965310FB1C1355B8005CB906 /* FNTContextParserTest.m in Sources */,
+				96ECA13B1C72E3A4006B15A1 /* FNTStringMarkupTransformerTests.m in Sources */,
 				9658F4C41C2AA1EC002B3595 /* FNTItem.m in Sources */,
 				965310FC1C1355CA005CB906 /* FNTContextParser.m in Sources */,
 				96F04AF01C354F23002BBE67 /* FNTGoogleItemParser.m in Sources */,
 				965311021C1368DB005CB906 /* FNTKeyboardItemCellModel.m in Sources */,
+				96ECA13F1C72EF66006B15A1 /* FNTStringMarkupTransformer.m in Sources */,
 				96F04AF41C354FB1002BBE67 /* FNTFakeKeyboardProxy.m in Sources */,
 				96F04AF51C3551ED002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */,
+				96ECA1401C72F9ED006B15A1 /* NSString+FNTAccessors.m in Sources */,
 				96F04AF11C354F2E002BBE67 /* FNTMockFactory.m in Sources */,
 				96F04AEF1C354E7E002BBE67 /* FNTMockItemSearchQuery.m in Sources */,
 				96F04AF71C35527F002BBE67 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
@@ -1250,6 +1266,7 @@
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
 				96C4468E1C0E279600051149 /* FNTKeyboardViewModel.m in Sources */,
 				96F04AE41C3459EC002BBE67 /* FNTGoogleScraperItemParser.m in Sources */,
+				96ECA13E1C72EBA8006B15A1 /* NSString+FNTAccessors.m in Sources */,
 				9658F4CA1C2AA38E002B3595 /* FNTMockFactory.m in Sources */,
 				9683D1B01C66733A001436C8 /* DonationJar.swift in Sources */,
 				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
@@ -1260,6 +1277,7 @@
 				9658F4D01C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
 				96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */,
 				96F04ADB1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
+				96ECA1391C72E2B2006B15A1 /* FNTStringMarkupTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1445,6 +1463,8 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SpreaditTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squid.SpreaditTests;
@@ -1460,6 +1480,8 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SpreaditTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.squid.SpreaditTests;

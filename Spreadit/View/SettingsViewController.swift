@@ -51,7 +51,6 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         return [
             DonateCellModel(model: "Donate"),
             NavigationCellModel(model: "How do I use this app?"),
-            SettingCellModel(title: "Optional Markup", setting: Settings.OptionalMarkup),
         ]
     }
     

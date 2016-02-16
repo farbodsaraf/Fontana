@@ -20,7 +20,7 @@
 }
 
 - (void)searchForLinks:(NSString *)linkString {
-    [self handleData:[FNTMockFactory mockItems]];
+    [self handleData:[FNTMockFactory mockItems] error:nil];
 }
 
 @end

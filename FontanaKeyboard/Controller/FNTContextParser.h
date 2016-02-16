@@ -26,6 +26,5 @@ typedef NS_ENUM(NSUInteger, FNTContextParserOptions) {
  */
 @property (nonatomic) NSUInteger maxOptionalWordsCount;
 @property (nonatomic, readonly) FNTContextParserOptions options;
-+ (instancetype)parserWithOptions:(FNTContextParserOptions)options;
 - (NSArray *)parseContext:(NSString *)context;
 @end
