@@ -29,6 +29,10 @@ static NSUInteger kMaxWordCount = 5;
 }
 
 - (BOOL)isSentence:(NSString *)string {
+    if (string.length == 0) {
+        return NO;
+    }
+    
     NSString *trimmedString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     //If sentence starts and ends with : it's not a sentence
