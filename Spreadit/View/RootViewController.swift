@@ -30,8 +30,8 @@ class RootViewController: UITabBarController, UITabBarControllerDelegate {
     
     private func viewController(identifier :String) -> UIViewController? {
         if let viewController = UIViewController.loadFromStoryboard(identifier) {
-            var navigationController : UINavigationController
-            navigationController = UINavigationController(rootViewController: viewController)
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.navigationBar.translucent = true;
             return navigationController
         }
         return nil

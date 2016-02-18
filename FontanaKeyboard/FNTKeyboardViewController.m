@@ -15,6 +15,7 @@
 #import "FNTKeyboardToolbar.h"
 #import "FNTKeyboardItemCell.h"
 #import "BIND.h"
+#import "UIColor+FNTGenerator.h"
 
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
@@ -183,10 +184,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (UIView *)separator {
     if (!_separator) {
         _separator = [UIView new];
-        _separator.backgroundColor = [UIColor colorWithRed:47./255
-                                                     green:143./255
-                                                      blue:140./255
-                                                     alpha:1.0];
+        _separator.backgroundColor = UIColor.fnt_teal;
     }
     return _separator;
 }
