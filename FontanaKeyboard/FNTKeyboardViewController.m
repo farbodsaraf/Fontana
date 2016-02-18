@@ -15,18 +15,17 @@
 #import "FNTKeyboardToolbar.h"
 #import "FNTKeyboardItemCell.h"
 #import "BIND.h"
-#import "FNTPleaseDonateView.h"
 
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
 BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
-@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate, FNTKeyboardItemCellDelegate, FNTPleaseDonateViewDelegate>
+@interface FNTKeyboardViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FNTUsageTutorialViewDelegate, FNTKeyboardToolbarDelegate, FNTKeyboardItemCellDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) FNTUsageTutorialView *tutorialView;
 @property (nonatomic, strong) FNTKeyboardToolbar *toolbar;
-@property (nonatomic, strong) FNTPleaseDonateView *donateView;
+@property (nonatomic, strong) FNTUsageTutorialView *donateView;
 @property (nonatomic, strong) UIView *separator;
 @property (nonatomic, strong) BNDBinding *donateBinding;
 @property (nonatomic, strong) BNDBinding *undoBinding;
@@ -147,6 +146,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.separator];
     
+    self.donateView.text = self.keyboardViewModel.donateText;
+    
     [self.view setNeedsUpdateConstraints];
 }
 
@@ -199,10 +200,11 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     return _tutorialView;
 }
 
-- (FNTPleaseDonateView *)donateView {
+- (FNTUsageTutorialView *)donateView {
     if (!_donateView) {
-        _donateView = [[[NSBundle mainBundle] loadNibNamed:@"FNTPleaseDonateView" owner:self options:nil] objectAtIndex:0];
+        _donateView = [FNTUsageTutorialView new];
         _donateView.delegate = self;
+        [_donateView start];
     }
     return _donateView;
 }
@@ -341,17 +343,22 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 #pragma mark - FNTOpenURLProtocol
 
+- (void)tutorial:(FNTUsageTutorialView *)tutorialView willOpenURL:(NSURL *)url {
+    [self sender:tutorialView wantsToOpenURL:url];
+}
+
 - (void)sender:(id)sender wantsToOpenURL:(NSURL*)url {
-//    TODO: this should open a preview UIWebView instead.
-//
-//    UIResponder* responder = self;
-//    while ((responder = [responder nextResponder]) != nil) {
-//        if([responder respondsToSelector:@selector(openURL:)] == YES) {
-//            [responder performSelector:@selector(openURL:)
-//                            withObject:url];
-//        }
-//    }
-//    [self advanceToNextInputMode];
+    //    TODO: this should open a preview UIWebView instead.
+    if([url.scheme isEqualToString:@"fontanakey"]) {
+        UIResponder* responder = self;
+        while ((responder = [responder nextResponder]) != nil) {
+            if([responder respondsToSelector:@selector(openURL:)] == YES) {
+                [responder performSelector:@selector(openURL:)
+                                withObject:url];
+            }
+        }
+    }
+    //    [self advanceToNextInputMode];
 }
 
 @end

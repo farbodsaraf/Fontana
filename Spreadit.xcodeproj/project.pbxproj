@@ -10,8 +10,6 @@
 		718F76DE8CE24838EF621974 /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2047749ACCED461D72BAB70 /* Pods_Spreadit.framework */; };
 		9628829D1C56C32300886F7D /* MHFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628829C1C56C32300886F7D /* MHFileHandle.m */; };
 		9628829E1C56C66E00886F7D /* MHFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628829C1C56C32300886F7D /* MHFileHandle.m */; };
-		962882A41C5741CC00886F7D /* FNTPleaseDonateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A31C5741CC00886F7D /* FNTPleaseDonateView.m */; };
-		962882A61C5742BE00886F7D /* FNTPleaseDonateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */; };
 		962882AA1C574AD600886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
 		962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
 		962882AE1C5E76E400886F7D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962882AD1C5E76E400886F7D /* SettingsViewController.swift */; };
@@ -171,9 +169,6 @@
 		81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
 		9628829B1C56C32300886F7D /* MHFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFileHandle.h; sourceTree = "<group>"; };
 		9628829C1C56C32300886F7D /* MHFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFileHandle.m; sourceTree = "<group>"; };
-		962882A21C5741CC00886F7D /* FNTPleaseDonateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTPleaseDonateView.h; path = View/FNTPleaseDonateView.h; sourceTree = "<group>"; };
-		962882A31C5741CC00886F7D /* FNTPleaseDonateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTPleaseDonateView.m; path = View/FNTPleaseDonateView.m; sourceTree = "<group>"; };
-		962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FNTPleaseDonateView.xib; path = View/FNTPleaseDonateView.xib; sourceTree = "<group>"; };
 		962882A71C57492100886F7D /* FNTOpenURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FNTOpenURLProtocol.h; path = Protocols/FNTOpenURLProtocol.h; sourceTree = "<group>"; };
 		962882A81C574AD600886F7D /* FNTPleaseDonateReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTPleaseDonateReminder.h; path = Controller/FNTPleaseDonateReminder.h; sourceTree = "<group>"; };
 		962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTPleaseDonateReminder.m; path = Controller/FNTPleaseDonateReminder.m; sourceTree = "<group>"; };
@@ -684,9 +679,6 @@
 				9658F4E91C31A56F002B3595 /* FNTKeyboardToolbar.h */,
 				9658F4EA1C31A56F002B3595 /* FNTKeyboardToolbar.m */,
 				9658F4EC1C31A5A8002B3595 /* FNTKeyboardToolbar.xib */,
-				962882A21C5741CC00886F7D /* FNTPleaseDonateView.h */,
-				962882A31C5741CC00886F7D /* FNTPleaseDonateView.m */,
-				962882A51C5742BE00886F7D /* FNTPleaseDonateView.xib */,
 				962882A71C57492100886F7D /* FNTOpenURLProtocol.h */,
 			);
 			name = View;
@@ -1008,7 +1000,6 @@
 				96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */,
 				9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */,
 				96F04AD11C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
-				962882A61C5742BE00886F7D /* FNTPleaseDonateView.xib in Resources */,
 				9658F4DE1C3152F8002B3595 /* icon_iphone@3x.png in Resources */,
 				96FBCCF51C56C01F007E1C80 /* effective_tld_names.dat in Resources */,
 				9658F4ED1C31A5A8002B3595 /* FNTKeyboardToolbar.xib in Resources */,
@@ -1255,7 +1246,6 @@
 				965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */,
 				96F04AD51C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
-				962882A41C5741CC00886F7D /* FNTPleaseDonateView.m in Sources */,
 				96F04AC31C329D77002BBE67 /* FNTBINGSearchQuery.m in Sources */,
 				96F04AC91C32A484002BBE67 /* FNTBINGItem.m in Sources */,
 				9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,

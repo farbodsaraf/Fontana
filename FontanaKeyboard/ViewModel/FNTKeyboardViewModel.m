@@ -18,6 +18,7 @@
 #import "FNTPleaseDonateReminder.h"
 #import "FNTStringMarkupTransformer.h"
 
+static NSString *const kFNTDonateDeepLink = @"fontanakey://donate";
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 
 @interface FNTKeyboardViewModel () <FNTPleaseDonateReminderDelegate>
@@ -183,6 +184,35 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
         _usageTutorialText = [NSString stringWithFormat:localizedUsageFormat, randomTerm];
     }
     return _usageTutorialText;
+}
+
+#pragma mark - Donate text
+
+- (NSAttributedString *)donateText {
+    NSString *link = @"Please donate to remove this message.";
+    NSString *format = [self donateFormat];
+    NSString *string = [NSString stringWithFormat:format, link];
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    [attrString beginEditing];
+    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14]
+                       range:NSMakeRange(0, string.length)];
+    
+    NSRange linkRange = [string rangeOfString:link];
+    [attrString addAttribute:NSLinkAttributeName
+                       value:kFNTDonateDeepLink
+                       range:linkRange];
+    
+    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16]
+                       range:linkRange];
+    
+    [attrString endEditing];
+    
+    return attrString.copy;
+}
+
+- (NSString *)donateFormat {
+    return @"😴 We wake up early to save your time 😴\n\n%@\n\nFontana -> More\nor tap the link above.";
 }
 
 - (NSArray *)randomTerms {
