@@ -17,5 +17,6 @@
 #import "FNTKeyboardItemCell.h"
 #import "UIColor+FNTGenerator.h"
 #import "FNTUsageTutorialView.h"
+#import "FNTAppTracker.h"
 
 #endif /* Spreadit_Bridging_Header_h */

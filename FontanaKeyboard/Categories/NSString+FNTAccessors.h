@@ -10,4 +10,5 @@
 
 @interface NSString (FNTAccessors)
 - (NSUInteger)fnt_wordCount;
+- (BOOL)fnt_isEmpty;
 @end

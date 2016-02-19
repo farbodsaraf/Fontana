@@ -14,4 +14,6 @@
 + (UIColor *)fnt_tealLowerAlpha;
 
 + (UIColor *)fnt_lightTeal;
+
++ (UIColor *)fnt_yellow;
 @end

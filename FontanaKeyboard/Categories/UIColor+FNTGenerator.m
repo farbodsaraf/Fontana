@@ -56,6 +56,17 @@ static uint64_t FNV1aHash(NSString *stringToHash) {
     return _fnt_tealLowerAlpha;
 }
 
++ (UIColor *)fnt_yellow {
+    static UIColor *_fnt_yellow = nil;
+    if (!_fnt_yellow) {
+        _fnt_yellow = [UIColor colorWithRed:237./255
+                                      green:197./255
+                                       blue:31./255
+                                      alpha:0.8];
+    }
+    return _fnt_yellow;
+}
+
 + (UIColor *)fnt_lightTeal {
     static UIColor *_fnt_lightTeal = nil;
     if (!_fnt_lightTeal) {

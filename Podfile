@@ -10,6 +10,7 @@ target 'Spreadit' do
     pod 'HockeySDK'
     pod 'TTTAttributedLabel'
     pod 'KeychainSwift', '~> 3.0'
+    pod 'GoogleTagManager'
 end
 
 target 'SpreaditTests' do
@@ -32,4 +33,5 @@ target 'FontanaKeyboard' do
     pod 'TTTAttributedLabel'
     pod 'HTMLReader'
     pod 'KeychainSwift', '~> 3.0'
+    pod 'GoogleTagManager'
 end

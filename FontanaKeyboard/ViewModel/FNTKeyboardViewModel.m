@@ -17,6 +17,8 @@
 #import "FNTHistoryStack.h"
 #import "FNTPleaseDonateReminder.h"
 #import "FNTStringMarkupTransformer.h"
+#import "FNTError.h"
+#import "NSString+FNTAccessors.h"
 
 static NSString *const kFNTDonateDeepLink = @"fontanakey://donate";
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
@@ -64,6 +66,13 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 }
 
 - (void)handleText:(NSString *)text {
+    if (!text || text.fnt_isEmpty) {
+        NSError *error = [FNTError errorWithCode:FNTErrorCodeInvalidQuery
+                                         message:@"The query string is empty."];
+        [self handleError:error];
+        return;
+    }
+    
     NSString *transformedText = [self replaceTextWithMarkupText:text];
     FNTContextParser *parser = [FNTContextParser new];
     self.contextItems = [parser parseContext:transformedText];
@@ -91,14 +100,6 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 }
 
 - (void)performQuery:(NSString *)queryString {
-    if (!queryString) {
-        NSError *error = [NSError errorWithDomain:@"com.fontana.keyboard"
-                                             code:404
-                                         userInfo:nil];
-        [self handleError:error];
-        return;
-    }
-    
     __weak typeof(self) weakSelf = self;
     self.currentQuery = [self.queryClass queryWithSearchTerm:queryString
                                                   itemsBlock:^(NSArray *items, NSError *error) {

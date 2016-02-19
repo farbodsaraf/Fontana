@@ -3,6 +3,9 @@ PODS:
   - BIND (1.4.7):
     - libextobjc
     - NODE_
+  - GoogleAnalytics (3.14.0)
+  - GoogleTagManager (3.15.0):
+    - GoogleAnalytics (= 3.14.0)
   - HexColors (2.2.1)
   - HockeySDK (3.8.5):
     - HockeySDK/AllFeaturesLib (= 3.8.5)
@@ -54,6 +57,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - BIND
+  - GoogleTagManager
   - HockeySDK
   - HTMLReader
   - KeychainSwift (~> 3.0)
@@ -65,6 +69,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   BIND: 7bd263ab59374ac3217c5eff4b74c97ddc6fb999
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
+  GoogleTagManager: 39e4af1e9250e7817d328f690768e26afe560da0
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   HTMLReader: 03e9da607f2f9924f9cf4b5e5c4143932004257f

@@ -11,8 +11,16 @@
 @implementation NSString (FNTAccessors)
 
 - (NSUInteger)fnt_wordCount {
-    NSArray *words = [self componentsSeparatedByString:@" "];
-    return words.count;
+    __block int words = 0;
+    [self enumerateSubstringsInRange:NSMakeRange(0,self.length)
+                             options:NSStringEnumerationByWords
+                          usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {words++;}];
+    return words;
+}
+
+- (BOOL)fnt_isEmpty {
+    NSString *string = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return string.length == 0;
 }
 
 @end

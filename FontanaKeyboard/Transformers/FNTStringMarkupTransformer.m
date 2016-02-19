@@ -16,6 +16,10 @@ static NSUInteger kMaxWordCount = 5;
 @implementation FNTStringMarkupTransformer
 
 - (id)transformedValue:(NSString *)string {
+    if (string.fnt_isEmpty) {
+        return string;
+    }
+    
     if (![self isTransformable:string]) {
         return string;
     }
@@ -29,10 +33,6 @@ static NSUInteger kMaxWordCount = 5;
 }
 
 - (BOOL)isSentence:(NSString *)string {
-    if (string.length == 0) {
-        return NO;
-    }
-    
     NSString *trimmedString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     //If sentence starts and ends with : it's not a sentence
@@ -50,7 +50,8 @@ static NSUInteger kMaxWordCount = 5;
 }
 
 - (BOOL)isTransformable:(NSString *)string {
-    return ![self isSentence:string] && string.fnt_wordCount <= kMaxWordCount;
+    return ![self isSentence:string] &&
+           string.fnt_wordCount <= kMaxWordCount;
 }
 
 - (BOOL)contextHasMarkup:(NSString *)context {

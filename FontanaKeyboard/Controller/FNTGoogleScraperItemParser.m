@@ -9,6 +9,7 @@
 #import "FNTGoogleScraperItemParser.h"
 #import "FNTGoogleItem.h"
 #import <HTMLReader/HTMLReader.h>
+#import "FNTError.h"
 
 @interface FNTGoogleScraperItemParser ()
 @end
@@ -23,6 +24,12 @@
                 usedLossyConversion:NULL];
     HTMLDocument *document = [HTMLDocument documentWithString:string];
     NSArray *nodes = [document nodesMatchingSelector:@"h3"];
+    
+    if (!nodes || nodes.count == 0) {
+        *error = [FNTError errorWithCode:FNTErrorCodeNoData
+                                 message:@"No data received from Google.com"];
+        return nil;
+    }
 
     NSMutableArray *items = [NSMutableArray new];
     for (HTMLElement *element in nodes) {

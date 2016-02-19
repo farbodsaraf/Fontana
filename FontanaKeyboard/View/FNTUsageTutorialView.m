@@ -9,6 +9,7 @@
 #import "FNTUsageTutorialView.h"
 #import "TTTAttributedLabel.h"
 #import "UIColor+FNTGenerator.h"
+#import "FNTAttributedLabel.h"
 
 @interface NSString (Substring)
 @end
@@ -94,7 +95,7 @@
 
 - (UILabel *)label {
     if (!_label) {
-        _label = [TTTAttributedLabel new];
+        _label = [FNTAttributedLabel new];
         _label.textAlignment = NSTextAlignmentCenter;
         _label.numberOfLines = 0;
         _label.delegate = self;
