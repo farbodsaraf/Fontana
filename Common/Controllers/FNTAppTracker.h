@@ -21,5 +21,5 @@ extern FNTTag FNTAppTrackerEventActionTag;
 + (instancetype _Nonnull)sharedInstance;
 - (void)startWithPreviewURL:(NSURL * _Nullable)previewUrl;
 + (void)trackEvent:(FNTEvent)event withTags:(NSDictionary * _Nonnull)tags;
-
++ (id _Nullable)variableForKey:(NSString * _Nonnull)key;
 @end

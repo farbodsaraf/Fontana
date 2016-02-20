@@ -19,9 +19,15 @@
 #import "FNTStringMarkupTransformer.h"
 #import "FNTError.h"
 #import "NSString+FNTAccessors.h"
+#import "FNTBINGScraperSearchQuery.h"
+#import "FNTAppTracker.h"
 
 static NSString *const kFNTDonateDeepLink = @"fontanakey://donate";
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
+
+static NSString *const kFNTSearchEngineKey = @"searchEngine";
+static NSString *const kFNTGoogleSearch = @"google";
+static NSString *const kFNTBINGSearch = @"bing";
 
 @interface FNTKeyboardViewModel () <FNTPleaseDonateReminderDelegate>
 @property (nonatomic, strong) NSArray *items;
@@ -40,13 +46,23 @@ static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _queryClass = FNTGoogleScraperSearchQuery.class;
         _historyStack = [FNTHistoryStack stackForGroup:kFNTAppGroup];
         _donateReminder = [FNTPleaseDonateReminder reminderForGroup:kFNTAppGroup];
         _donateReminder.delegate = self;
         _donateEnabled = NO;
     }
     return self;
+}
+
+- (Class)queryClass {
+    NSString *searchEngine = [FNTAppTracker variableForKey:kFNTSearchEngineKey];
+    if ([searchEngine isEqualToString:kFNTBINGSearch]) {
+        return FNTBINGScraperSearchQuery.class;
+    }
+    else if ([searchEngine isEqualToString:kFNTGoogleSearch]) {
+        return FNTGoogleScraperSearchQuery.class;
+    }
+    return FNTGoogleScraperSearchQuery.class;
 }
 
 - (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy

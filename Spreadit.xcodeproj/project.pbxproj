@@ -85,6 +85,9 @@
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		96DCFE4B1C78D56E007D0821 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE4A1C78D56E007D0821 /* WebViewController.swift */; };
 		96DCFE4D1C78D67C007D0821 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE4C1C78D67C007D0821 /* WebViewModel.swift */; };
+		96DCFE501C78E5F5007D0821 /* FNTBINGScraperSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE4F1C78E5F5007D0821 /* FNTBINGScraperSearchQuery.m */; };
+		96DCFE531C78E630007D0821 /* FNTScraperSearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE521C78E630007D0821 /* FNTScraperSearchQuery.m */; };
+		96DCFE561C78E6EF007D0821 /* FNTBINGScraperItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE551C78E6EF007D0821 /* FNTBINGScraperItemParser.m */; };
 		96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */; };
 		96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */; };
@@ -262,6 +265,12 @@
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
 		96DCFE4A1C78D56E007D0821 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = View/WebViewController.swift; sourceTree = "<group>"; };
 		96DCFE4C1C78D67C007D0821 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewModel.swift; path = ViewModel/WebViewModel.swift; sourceTree = "<group>"; };
+		96DCFE4E1C78E5F5007D0821 /* FNTBINGScraperSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTBINGScraperSearchQuery.h; path = Controller/FNTBINGScraperSearchQuery.h; sourceTree = "<group>"; };
+		96DCFE4F1C78E5F5007D0821 /* FNTBINGScraperSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTBINGScraperSearchQuery.m; path = Controller/FNTBINGScraperSearchQuery.m; sourceTree = "<group>"; };
+		96DCFE511C78E630007D0821 /* FNTScraperSearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTScraperSearchQuery.h; path = Controller/FNTScraperSearchQuery.h; sourceTree = "<group>"; };
+		96DCFE521C78E630007D0821 /* FNTScraperSearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTScraperSearchQuery.m; path = Controller/FNTScraperSearchQuery.m; sourceTree = "<group>"; };
+		96DCFE541C78E6EF007D0821 /* FNTBINGScraperItemParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTBINGScraperItemParser.h; path = Controller/FNTBINGScraperItemParser.h; sourceTree = "<group>"; };
+		96DCFE551C78E6EF007D0821 /* FNTBINGScraperItemParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTBINGScraperItemParser.m; path = Controller/FNTBINGScraperItemParser.m; sourceTree = "<group>"; };
 		96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewModel.swift; path = ViewModel/HistoryViewModel.swift; sourceTree = "<group>"; };
 		96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ViewModel/SettingsViewModel.swift; sourceTree = "<group>"; };
 		96ECA1371C72E2B2006B15A1 /* FNTStringMarkupTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTStringMarkupTransformer.h; path = Transformers/FNTStringMarkupTransformer.h; sourceTree = "<group>"; };
@@ -765,8 +774,12 @@
 				96F04AC21C329D77002BBE67 /* FNTBINGSearchQuery.m */,
 				965310F01C134F0B005CB906 /* FNTGoogleSearchQuery.h */,
 				965310F11C134F0B005CB906 /* FNTGoogleSearchQuery.m */,
+				96DCFE511C78E630007D0821 /* FNTScraperSearchQuery.h */,
+				96DCFE521C78E630007D0821 /* FNTScraperSearchQuery.m */,
 				96F04ADC1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.h */,
 				96F04ADD1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m */,
+				96DCFE4E1C78E5F5007D0821 /* FNTBINGScraperSearchQuery.h */,
+				96DCFE4F1C78E5F5007D0821 /* FNTBINGScraperSearchQuery.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -781,6 +794,8 @@
 				96F04AC51C329EE0002BBE67 /* FNTBINGItemParser.m */,
 				96F04AE21C3459EC002BBE67 /* FNTGoogleScraperItemParser.h */,
 				96F04AE31C3459EC002BBE67 /* FNTGoogleScraperItemParser.m */,
+				96DCFE541C78E6EF007D0821 /* FNTBINGScraperItemParser.h */,
+				96DCFE551C78E6EF007D0821 /* FNTBINGScraperItemParser.m */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -1313,11 +1328,13 @@
 				965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */,
 				96F04AD51C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,
+				96DCFE561C78E6EF007D0821 /* FNTBINGScraperItemParser.m in Sources */,
 				96F04AC31C329D77002BBE67 /* FNTBINGSearchQuery.m in Sources */,
 				96F04AC91C32A484002BBE67 /* FNTBINGItem.m in Sources */,
 				9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				962882AA1C574AD600886F7D /* FNTPleaseDonateReminder.m in Sources */,
 				96F99F661C0AEEA7005D6364 /* FNTKeyboardViewController.m in Sources */,
+				96DCFE531C78E630007D0821 /* FNTScraperSearchQuery.m in Sources */,
 				9658F4EB1C31A56F002B3595 /* FNTKeyboardToolbar.m in Sources */,
 				966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */,
 				96C446911C0EB63C00051149 /* FNTKeyboardItemCell.m in Sources */,
@@ -1330,6 +1347,7 @@
 				966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */,
 				96ECA14F1C779E30006B15A1 /* FNTError.m in Sources */,
 				9683D1B11C667348001436C8 /* Donation.swift in Sources */,
+				96DCFE501C78E5F5007D0821 /* FNTBINGScraperSearchQuery.m in Sources */,
 				96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */,
 				96F04ADE1C3416E7002BBE67 /* FNTGoogleScraperSearchQuery.m in Sources */,
 				96F04ABD1C31DC85002BBE67 /* FNTItemSearchQuery.m in Sources */,

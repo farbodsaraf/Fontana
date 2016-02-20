@@ -84,6 +84,14 @@ FNTTag FNTAppTrackerEventActionTag = @"eventAction";
     [self.tagQueue addOperation:operation];
 }
 
++ (id _Nullable)variableForKey:(NSString * _Nonnull)key {
+    return [self.sharedInstance variableForKey:key];
+}
+
+- (NSString *)variableForKey:(NSString *)key {
+    return (NSString *)[self.container stringForKey:key];
+}
+
 - (TAGDataLayer *)dataLayer {
     return self.tagManager.dataLayer;
 }

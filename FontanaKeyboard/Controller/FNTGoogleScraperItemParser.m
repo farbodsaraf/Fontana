@@ -27,7 +27,7 @@
     
     if (!nodes || nodes.count == 0) {
         *error = [FNTError errorWithCode:FNTErrorCodeNoData
-                                 message:@"No data received from Google.com"];
+                                 message:@"No data received from google.com"];
         return nil;
     }
 
@@ -71,19 +71,6 @@
     
     NSRange urlRange = NSMakeRange(hrefRange.length, ampRange.location - hrefRange.length);
     return [[rawElement substringWithRange:urlRange] stringByRemovingPercentEncoding];
-}
-
-+ (NSString *)removeHTLMTagsFromString:(NSString *)string {
-    static NSRegularExpression *regexp;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        regexp = [NSRegularExpression regularExpressionWithPattern:@"<[^>]+>" options:kNilOptions error:nil];
-    });
-    
-    return [regexp stringByReplacingMatchesInString:string
-                                            options:kNilOptions
-                                              range:NSMakeRange(0, string.length)
-                                       withTemplate:@""];
 }
 
 @end

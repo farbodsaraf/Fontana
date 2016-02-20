@@ -6,8 +6,8 @@
 //  Copyright © 2015 Marko Hlebar. All rights reserved.
 //
 
-#import "FNTItemSearchQuery.h"
+#import "FNTScraperSearchQuery.h"
 
-@interface FNTGoogleScraperSearchQuery : FNTItemSearchQuery
+@interface FNTGoogleScraperSearchQuery : FNTScraperSearchQuery
 
 @end
