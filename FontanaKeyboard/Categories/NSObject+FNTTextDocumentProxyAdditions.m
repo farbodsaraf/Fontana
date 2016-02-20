@@ -39,7 +39,7 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
     static dispatch_queue_t inputQueue = NULL;
     
     if (!inputQueue) {
-        inputQueue = dispatch_queue_create("com.squid.fontana.documentproxyreadingqueue", NULL);
+        inputQueue = dispatch_queue_create("com.fontanakey.documentproxyreadingqueue", NULL);
     }
     
     dispatch_async(inputQueue, ^{
@@ -58,6 +58,7 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
 -(void)readStringsBeforeCursor:(NSString **)beforeString afterCursor:(NSString **) afterString{
     *beforeString = [self fnt_findStringInDirection:FNTSearchDirectionBefore];
     [self fnt_adjustCursor:(*beforeString).length];
+    
     *afterString = [self fnt_findStringInDirection:FNTSearchDirectionAfter];
     [self fnt_adjustCursor:-(*afterString).length];
 }
