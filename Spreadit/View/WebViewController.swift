@@ -9,28 +9,38 @@
 import UIKit
 import BIND
 
-class WebViewController: BNDViewController {
+class WebViewController: BNDViewController, UIWebViewDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet var webView: UIWebView!
+    var activityIndicator: UIActivityIndicatorView?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        self.webView.addSubview(activityIndicator!)
+        activityIndicator!.center = self.webView.center
     }
-    */
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.webView.loadRequest(webViewModel().request())
+    }
 
+    func webViewModel() -> WebViewModel {
+        return self.viewModel as! WebViewModel
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        activityIndicator!.stopAnimating()
+    }
+    
+    func webViewDidStartLoad(webView: UIWebView) {
+        activityIndicator!.startAnimating()
+    }
 }

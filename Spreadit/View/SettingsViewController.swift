@@ -57,6 +57,7 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         return [
             DonateCellModel(model: "Donate"),
             NavigationCellModel(model: "How do I use this app?"),
+            NavigationCellModel(model: "Future development board"),
         ]
     }
     
@@ -65,6 +66,14 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         
         if indexPath.row == 1 {
             if let viewController = UIViewController.loadFromStoryboard("VideoViewController") {
+                self.navigationController?.pushViewController(viewController,
+                    animated: true)
+            }
+        }
+        else if indexPath.row == 2 {
+            if let viewController  = UIViewController.loadFromStoryboard("WebViewController") as? BNDViewController {
+                viewController.viewModel = WebViewModel.viewModelWithModel("https://trello.com/b/ebULNqww/fontana-future")
+                viewController.navigationItem.title = "Future Development"
                 self.navigationController?.pushViewController(viewController,
                     animated: true)
             }

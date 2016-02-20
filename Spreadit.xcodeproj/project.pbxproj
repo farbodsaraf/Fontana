@@ -84,6 +84,7 @@
 		96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
 		96DCFE4B1C78D56E007D0821 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE4A1C78D56E007D0821 /* WebViewController.swift */; };
+		96DCFE4D1C78D67C007D0821 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE4C1C78D67C007D0821 /* WebViewModel.swift */; };
 		96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */; };
 		96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */; };
@@ -260,6 +261,7 @@
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
 		96DCFE4A1C78D56E007D0821 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = View/WebViewController.swift; sourceTree = "<group>"; };
+		96DCFE4C1C78D67C007D0821 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewModel.swift; path = ViewModel/WebViewModel.swift; sourceTree = "<group>"; };
 		96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewModel.swift; path = ViewModel/HistoryViewModel.swift; sourceTree = "<group>"; };
 		96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ViewModel/SettingsViewModel.swift; sourceTree = "<group>"; };
 		96ECA1371C72E2B2006B15A1 /* FNTStringMarkupTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTStringMarkupTransformer.h; path = Transformers/FNTStringMarkupTransformer.h; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				9683D1B61C673D77001436C8 /* SettingCellModel.swift */,
 				96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */,
 				96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */,
+				96DCFE4C1C78D67C007D0821 /* WebViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -1234,6 +1237,7 @@
 				96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
+				96DCFE4D1C78D67C007D0821 /* WebViewModel.swift in Sources */,
 				962882B91C606B3200886F7D /* NavigationCell.swift in Sources */,
 				96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */,
 				9683D1B41C67300F001436C8 /* SettingsStore.swift in Sources */,
