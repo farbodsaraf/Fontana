@@ -29,6 +29,12 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         self.viewModel = SettingsViewModel()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerScreenViewEvent, withTags: [FNTAppTrackerScreenNameTag : "More"])
+    }
+    
     func settingsViewModel() -> SettingsViewModel {
         return self.viewModel as! SettingsViewModel
     }

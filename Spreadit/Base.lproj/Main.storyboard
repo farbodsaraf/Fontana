@@ -61,6 +61,20 @@
             </objects>
             <point key="canvasLocation" x="56" y="1116"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="PHC-Zw-9ed">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n6d-y8-pqh" customClass="WebViewController" customModule="Spreadit" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="ghx-Gj-J4r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    </webView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmz-6k-xmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56" y="1779"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="b7N-rs-sQY">
             <objects>

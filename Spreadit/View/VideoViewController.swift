@@ -90,7 +90,11 @@ class VideoViewController: BNDViewController {
     }
     
     func onSegmentedControl(control : UISegmentedControl) {
-        self.playVideoNamed(self.videoNames[control.selectedSegmentIndex])
+        let videoName = self.videoNames[control.selectedSegmentIndex]
+        self.playVideoNamed(videoName)
+        
+        let screenName = "Video \(videoName)"
+        FNTAppTracker.trackEvent(FNTAppTrackerScreenViewEvent, withTags: [FNTAppTrackerScreenNameTag : screenName])
     }
     
     func playVideoNamed(name: String) {

@@ -83,6 +83,7 @@
 		96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96C446921C0EB66E00051149 /* FNTKeyboardItemCell.xib */; };
 		96C446961C0EBA4700051149 /* FNTKeyboardItemCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */; };
 		96DB7FED1C0E12110073C330 /* FNTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7FEC1C0E12110073C330 /* FNTItem.m */; };
+		96DCFE4B1C78D56E007D0821 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DCFE4A1C78D56E007D0821 /* WebViewController.swift */; };
 		96DFA60F1C6FB00100C0BD23 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */; };
 		96DFA6101C6FBA1300C0BD23 /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */; };
@@ -258,6 +259,7 @@
 		96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTKeyboardItemCellModel.m; path = ViewModel/FNTKeyboardItemCellModel.m; sourceTree = "<group>"; };
 		96DB7FEB1C0E12110073C330 /* FNTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNTItem.h; sourceTree = "<group>"; };
 		96DB7FEC1C0E12110073C330 /* FNTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNTItem.m; sourceTree = "<group>"; };
+		96DCFE4A1C78D56E007D0821 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = View/WebViewController.swift; sourceTree = "<group>"; };
 		96DFA60E1C6FB00100C0BD23 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewModel.swift; path = ViewModel/HistoryViewModel.swift; sourceTree = "<group>"; };
 		96DFA6111C70F5E200C0BD23 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewModel.swift; path = ViewModel/SettingsViewModel.swift; sourceTree = "<group>"; };
 		96ECA1371C72E2B2006B15A1 /* FNTStringMarkupTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTStringMarkupTransformer.h; path = Transformers/FNTStringMarkupTransformer.h; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 				964C9D0A1C54E461003907E2 /* History */,
 				9658F4E81C317864002B3595 /* Tutorial */,
 				962882AC1C5E76AB00886F7D /* More */,
+				96DCFE491C78D545007D0821 /* Web */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -574,12 +577,12 @@
 			children = (
 				96ECA1441C76D233006B15A1 /* GTM-5D242X.plist */,
 				9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */,
+				96ECA1471C76D450006B15A1 /* Common */,
 				96B1C48B1BE159CA00114C26 /* Spreadit */,
 				96B1C4A01BE159CA00114C26 /* SpreaditTests */,
 				96B1C4AB1BE159CA00114C26 /* SpreaditUITests */,
 				96B1C4D21BE167F700114C26 /* SpreaditSharer */,
 				96F99F631C0AEEA7005D6364 /* FontanaKeyboard */,
-				96ECA1471C76D450006B15A1 /* Common */,
 				96B1C48A1BE159CA00114C26 /* Products */,
 				FA1BBE4DE6C42546920CF29F /* Pods */,
 				DC7A00F6B8328E510BA334D1 /* Frameworks */,
@@ -709,6 +712,14 @@
 				96C446951C0EBA4700051149 /* FNTKeyboardItemCellModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		96DCFE491C78D545007D0821 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				96DCFE4A1C78D56E007D0821 /* WebViewController.swift */,
+			);
+			name = Web;
 			sourceTree = "<group>";
 		};
 		96ECA1471C76D450006B15A1 /* Common */ = {
@@ -1237,6 +1248,7 @@
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F04ACD1C32A79D002BBE67 /* FNTBINGItem.m in Sources */,
+				96DCFE4B1C78D56E007D0821 /* WebViewController.swift in Sources */,
 				96DFA6121C70F5E200C0BD23 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

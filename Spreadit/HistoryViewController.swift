@@ -61,8 +61,10 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         
         self.navigationItem.title = "History"
         
-        self.viewModel = HistoryViewModel()
-        
+        self.viewModel = HistoryViewModel()        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         refresh()
     }
     
@@ -133,12 +135,16 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func showNoDataMessage() {
         self.view.addSubview(self.noDataView!)
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerScreenViewEvent, withTags: [FNTAppTrackerScreenNameTag : "History - Tutorial"])
     }
     
     func removeNoDataMessageIfNeeded() {
         if noDataView != nil {
             self.noDataView!.removeFromSuperview()
         }
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerScreenViewEvent, withTags: [FNTAppTrackerScreenNameTag : "History"])
     }
     
     func showTutorial() {

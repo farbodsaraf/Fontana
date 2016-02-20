@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NSString* _Nonnull const FNTEvent;
+extern FNTEvent FNTAppTrackerScreenViewEvent;
+extern FNTEvent FNTAppTrackerActionEvent;
+
+typedef NSString* _Nonnull const FNTTag;
+extern FNTTag FNTAppTrackerScreenNameTag;
+extern FNTTag FNTAppTrackerEventActionTag;
+
 @interface FNTAppTracker : NSObject
 
-+ (instancetype)sharedInstance;
-- (void)startWithPreviewURL:(NSURL *)previewUrl;
++ (instancetype _Nonnull)sharedInstance;
+- (void)startWithPreviewURL:(NSURL * _Nullable)previewUrl;
++ (void)trackEvent:(FNTEvent)event withTags:(NSDictionary * _Nonnull)tags;
 
 @end

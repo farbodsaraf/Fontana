@@ -19,9 +19,15 @@ class DonateCellModel: TableRowViewModel {
     }
     
     func donate(donation: Donation) {
+        let action = "donate - \(donation.rawValue)"
+        FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
+        
         DonationStore.defaultStore.buy(donation, completion: {
             (donation: Donation) in
             DonationJar.defaultJar.addDonation(donation)
+            
+            let action = "did donate - \(donation.rawValue)"
+            FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
         })
     }
 }

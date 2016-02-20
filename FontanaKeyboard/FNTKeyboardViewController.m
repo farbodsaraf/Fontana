@@ -16,6 +16,7 @@
 #import "FNTKeyboardItemCell.h"
 #import "BIND.h"
 #import "UIColor+FNTGenerator.h"
+#import "FNTAppTracker.h"
 
 static NSString *const FNTKeyboardViewFooter = @"FNTKeyboardViewFooter";
 
@@ -38,6 +39,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     self = [super init];
     if (self) {
         [self runHockeyApp];
+        [self runTagManager];
     }
     return self;
 }
@@ -45,6 +47,10 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 - (void)runHockeyApp {
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"c2b76f87dd7f42b3b774ede94ce73636"];
     [[BITHockeyManager sharedHockeyManager] startManager];
+}
+
+- (void)runTagManager {
+    [[FNTAppTracker sharedInstance] startWithPreviewURL:nil];
 }
 
 - (void)updateViewConstraints {
@@ -137,7 +143,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     
     [self.view setNeedsUpdateConstraints];
     
-    [self loadBindings:(FNTKeyboardViewModel *)self.viewModel];
+    [self loadBindings:(FNTKeyboardViewModel *)self.viewModel];    
 }
 
 - (void)displayDonate {
@@ -150,6 +156,8 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     self.donateView.text = self.keyboardViewModel.donateText;
     
     [self.view setNeedsUpdateConstraints];
+    
+    [self trackScreen:@"Keyboard - Donate"];
 }
 
 - (void)displayNoResultsForError:(NSError *)error {
@@ -162,6 +170,13 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     self.tutorialView.text = [self.keyboardViewModel messageForQueryError:error];
     
     [self.view setNeedsUpdateConstraints];
+}
+
+- (void)trackScreen:(NSString *)screenName {
+    [FNTAppTracker trackEvent:FNTAppTrackerScreenViewEvent
+                     withTags:@{
+                                FNTAppTrackerScreenNameTag : screenName
+                                }];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -255,18 +270,15 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
                             }];
 }
 
-- (void)handleRefresh {
-    [self displayResultsView];
-    [self linkify];
-}
-
 - (void)handleViewModels:(NSArray *)viewModels error:(NSError *)error {
     if (!error) {
         [self.collectionView reloadData];
         [self.activityIndicator stopAnimating];
+        [self trackScreen:@"Keyboard - Results"];
     }
     else {
         [self displayNoResultsForError:error];
+        [self trackScreen:@"Keyboard - Tutorial"];
     }
 }
 

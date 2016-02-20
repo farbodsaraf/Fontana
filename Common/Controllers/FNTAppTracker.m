@@ -16,14 +16,21 @@
 
 NSString * const kGTMContainerID = @"GTM-5D242X";
 
+FNTEvent FNTAppTrackerScreenViewEvent = @"screenView";
+FNTEvent FNTAppTrackerActionEvent = @"onAction";
+
+FNTTag FNTAppTrackerScreenNameTag = @"screenName";
+FNTTag FNTAppTrackerEventActionTag = @"eventAction";
+
 @interface FNTAppTracker () <TAGContainerOpenerNotifier>
 @property (nonatomic, strong) TAGManager *tagManager;
 @property (nonatomic, strong) TAGContainer *container;
+@property (nonatomic, strong) NSOperationQueue *tagQueue;
 @end
 
 @implementation FNTAppTracker
 
-+ (instancetype)sharedInstance {
++ (instancetype _Nonnull)sharedInstance {
     static FNTAppTracker *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -32,7 +39,16 @@ NSString * const kGTMContainerID = @"GTM-5D242X";
     return _sharedInstance;
 }
 
-- (void)startWithPreviewURL:(NSURL *)previewUrl {
+- (NSOperationQueue *)tagQueue {
+    if (!_tagQueue) {
+        _tagQueue = [NSOperationQueue new];
+        _tagQueue.maxConcurrentOperationCount = 1;
+        _tagQueue.suspended = YES;
+    }
+    return _tagQueue;
+}
+
+- (void)startWithPreviewURL:(NSURL * _Nullable)previewUrl {
     self.tagManager = [TAGManager instance];
     
     if (previewUrl != nil) {
@@ -52,9 +68,34 @@ NSString * const kGTMContainerID = @"GTM-5D242X";
                                    notifier:self];
 }
 
++ (void)trackEvent:(FNTEvent)event withTags:(NSDictionary * _Nonnull)tags {
+    [self.sharedInstance trackEvent:event withTags:tags];
+}
+
+- (void)trackEvent:(FNTEvent)event withTags:(NSDictionary * _Nonnull)tags {
+    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+        NSMutableDictionary *mutableTags = tags.mutableCopy;
+        [mutableTags addEntriesFromDictionary:@{
+                                                @"event": event
+                                                }];
+        [self.dataLayer push:mutableTags.copy];
+    }];
+    
+    [self.tagQueue addOperation:operation];
+}
+
+- (TAGDataLayer *)dataLayer {
+    return self.tagManager.dataLayer;
+}
+
 - (void)containerAvailable:(TAGContainer *)container {
     dispatch_async(dispatch_get_main_queue(), ^{
         self.container = container;
+        [self.container refresh];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.tagQueue.suspended = NO;
+        });
     });
 }
 
