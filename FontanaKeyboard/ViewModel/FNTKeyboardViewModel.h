@@ -23,6 +23,8 @@
 - (void)apply:(FNTKeyboardItemCellModel *)model;
 - (void)undo;
 - (void)clear;
+- (void)restoreOriginalTextIfNeeded;
+
 - (NSString *)messageForQueryError:(NSError *)error;
 
 @end

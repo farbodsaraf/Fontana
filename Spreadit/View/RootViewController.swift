@@ -11,10 +11,18 @@ import UIKit
 class RootViewController: UITabBarController, UITabBarControllerDelegate {
     
     lazy var pageViewControllers: [UIViewController] = {
-        return [
-            self.viewController("HistoryViewController")!,
-            self.viewController("SettingsViewController")!,
-        ]
+        #if DEBUG
+            return [
+                self.viewController("HistoryViewController")!,
+                self.viewController("SettingsViewController")!,
+                self.viewController("TextViewController")!
+            ]
+        #else
+            return [
+                self.viewController("HistoryViewController")!,
+                self.viewController("SettingsViewController")!,
+            ]
+        #endif
     }()
     
     override func viewDidLoad() {

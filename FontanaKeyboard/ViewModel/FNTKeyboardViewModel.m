@@ -39,6 +39,9 @@ static NSString *const kFNTBINGSearch = @"bing";
 @property (nonatomic, strong) NSMutableArray *undoStack;
 @property (nonatomic, strong) FNTPleaseDonateReminder *donateReminder;
 @property (nonatomic, strong) NSString *usageTutorialText;
+
+@property (nonatomic, copy) NSString *originalText;
+@property (nonatomic, copy) NSString *currentText;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -89,30 +92,36 @@ static NSString *const kFNTBINGSearch = @"bing";
         return;
     }
     
-    NSString *transformedText = [self replaceTextWithMarkupText:text];
+    self.originalText = text;
+    self.currentText = [self textWithMarkupText:text];
+    
+    if (![self.currentText isEqualToString:self.originalText]) {
+        [self replaceTextWithText:self.currentText];
+    }
+    
     FNTContextParser *parser = [FNTContextParser new];
-    self.contextItems = [parser parseContext:transformedText];
+    self.contextItems = [parser parseContext:self.currentText];
+    
+    if (self.contextItems.count == 0) {
+        NSError *error = [FNTError errorWithCode:FNTErrorCodeInvalidQuery
+                                         message:@"No valid markup found."];
+        [self handleError:error];
+        return;
+    }
+    
     self.currentContextItem = [self.contextItems firstObject];
     [self performQuery:self.currentContextItem.query];
 }
 
-- (NSString *)replaceTextWithMarkupText:(NSString *)text {
+- (NSString *)textWithMarkupText:(NSString *)text {
     FNTStringMarkupTransformer *transformer = (FNTStringMarkupTransformer *)[NSValueTransformer valueTransformerForName:@"FNTStringMarkupTransformer"];
-    
     NSString *transformedText = [transformer transformedValue:text];
-    
-    if ([transformedText isEqualToString:text]) {
-        return transformedText;
-    }
-    
-    [text enumerateSubstringsInRange:NSMakeRange(0, text.length)
-                             options:NSStringEnumerationByComposedCharacterSequences
-                          usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
-                              [self.documentProxy deleteBackward];
-                          }];
- 
-    [self.documentProxy insertText:transformedText];
     return transformedText;
+}
+
+- (void)replaceTextWithText:(NSString *)text {
+    [self.documentProxy fnt_deleteText:self.currentText];
+    [self.documentProxy insertText:text];
 }
 
 - (void)performQuery:(NSString *)queryString {
@@ -184,6 +193,12 @@ static NSString *const kFNTBINGSearch = @"bing";
 
 - (void)clear {
     [self.historyStack clear];
+}
+
+- (void)restoreOriginalTextIfNeeded {
+    if (!self.isUndoEnabled && ![self.originalText isEqualToString:self.currentText]) {
+        [self replaceTextWithText:self.originalText];
+    }
 }
 
 - (void)raiseUndoStackDidChange {

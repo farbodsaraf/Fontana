@@ -11,6 +11,7 @@ PODS:
     - HockeySDK/AllFeaturesLib (= 3.8.5)
   - HockeySDK/AllFeaturesLib (3.8.5)
   - HTMLReader (0.9.4)
+  - iRate (1.11.4)
   - KeychainSwift (3.0.11)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - GoogleTagManager
   - HockeySDK
   - HTMLReader
+  - iRate
   - KeychainSwift (~> 3.0)
   - Masonry
   - SwiftyJSON
@@ -74,6 +76,7 @@ SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   HTMLReader: 03e9da607f2f9924f9cf4b5e5c4143932004257f
+  iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   KeychainSwift: 0a4214c910423543a42b0f30f25987d46178b6a5
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2

@@ -74,6 +74,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>iRate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,17 +87,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00E74CED770597EF76DEE6FE824D1B7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C0DE3E4B43413E52A53D897794033E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0CFDC3A84FC06F7F0D421E9AAEC1E950</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>0DF57C2565AA73506F661B00B828AF7E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2D0CB19B0D80042D86EC1D2F95DAE9EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,11 +127,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7793A0BD5002BD8D6BCD7945DAEBC4BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>78D7C16860EDE00694EF44EE034439A5</key>
 		<dict>
 			<key>primary</key>
@@ -137,11 +142,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B12E594D811966E608CEB1786B574E26</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C408D4E183A88B763793C217A66A1950</key>
 		<dict>
 			<key>primary</key>
@@ -153,6 +153,16 @@
 			<true/>
 		</dict>
 		<key>E34A0F60C15834043417DBEFCECC6687</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F41D8A899FBD4EF5FC81C05F29CA75D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD0B63B020556B42D12F9D8605DBA197</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9D410D3DCAE0B92D1A12D1C6'
+               BlueprintIdentifier = '9CBEDC4FDADE66AD7DB27FBD'
                BlueprintName = 'Pods-FontanaKeyboard'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_FontanaKeyboard.framework'>

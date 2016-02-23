@@ -8,12 +8,20 @@
 
 import UIKit
 import HockeySDK
+import iRate
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, iRateDelegate {
 
     var window: UIWindow?
 
+    override class func initialize(){
+        let rate = iRate.sharedInstance()
+        rate.eventsUntilPrompt = 10;
+        rate.daysUntilPrompt = 0;
+        rate.remindPeriod = 0;
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let url = launchOptions?[UIApplicationLaunchOptionsURLKey] as? NSURL
@@ -37,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation();
         
         DonationStore.defaultStore.loadProducts()
-        
+                
         return true
     }
     

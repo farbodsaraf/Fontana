@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		718F76DE8CE24838EF621974 /* Pods_Spreadit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2047749ACCED461D72BAB70 /* Pods_Spreadit.framework */; };
+		9608AD431C7A0FB90018F4A8 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9608AD421C7A0FB90018F4A8 /* TextViewController.swift */; };
 		9628829D1C56C32300886F7D /* MHFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628829C1C56C32300886F7D /* MHFileHandle.m */; };
 		9628829E1C56C66E00886F7D /* MHFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628829C1C56C32300886F7D /* MHFileHandle.m */; };
 		962882AA1C574AD600886F7D /* FNTPleaseDonateReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 962882A91C574AD600886F7D /* FNTPleaseDonateReminder.m */; };
@@ -179,6 +180,7 @@
 		39C65D45C0A236BCF8F30A28 /* Pods-SpreaditSharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.debug.xcconfig"; sourceTree = "<group>"; };
 		4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
 		81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
+		9608AD421C7A0FB90018F4A8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = View/TextViewController.swift; sourceTree = "<group>"; };
 		9628829B1C56C32300886F7D /* MHFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFileHandle.h; sourceTree = "<group>"; };
 		9628829C1C56C32300886F7D /* MHFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFileHandle.m; sourceTree = "<group>"; };
 		962882A71C57492100886F7D /* FNTOpenURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FNTOpenURLProtocol.h; path = Protocols/FNTOpenURLProtocol.h; sourceTree = "<group>"; };
@@ -364,6 +366,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9608AD411C7A0F9B0018F4A8 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				9608AD421C7A0FB90018F4A8 /* TextViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
 		962882991C56C32300886F7D /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +522,7 @@
 				9658F4E81C317864002B3595 /* Tutorial */,
 				962882AC1C5E76AB00886F7D /* More */,
 				96DCFE491C78D545007D0821 /* Web */,
+				9608AD411C7A0F9B0018F4A8 /* Debug */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1263,6 +1274,7 @@
 				9683D1B91C6742E0001436C8 /* SettingCell.swift in Sources */,
 				9683D1B71C673D77001436C8 /* SettingCellModel.swift in Sources */,
 				962882C71C663C0200886F7D /* DonationStore.swift in Sources */,
+				9608AD431C7A0FB90018F4A8 /* TextViewController.swift in Sources */,
 				962882BB1C62870800886F7D /* UIView+LoadFromNib.swift in Sources */,
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
@@ -1502,6 +1514,7 @@
 				INFOPLIST_FILE = Spreadit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -13,7 +13,7 @@
 
 - (NSURL *)fnt_urlByAddingPath:(NSString *)path {
     NSString *urlString = [self.fnt_root.absoluteString stringByAppendingPathComponent:path];
-    return [[NSURL URLWithString:urlString] fnt_secureURL];
+    return [[NSURL URLWithString:urlString] fnt_insecureURL];
 }
 
 - (NSURL *)fnt_root {
@@ -26,6 +26,16 @@
     if (colon != NSNotFound) {
         str = [str substringFromIndex:colon];
         str = [@"https" stringByAppendingString:str];
+    }
+    return [NSURL URLWithString:str];
+}
+
+- (NSURL *)fnt_insecureURL {
+    NSString *str = [self absoluteString];
+    NSInteger colon = [str rangeOfString:@":"].location;
+    if (colon != NSNotFound) {
+        str = [str substringFromIndex:colon];
+        str = [@"http" stringByAppendingString:str];
     }
     return [NSURL URLWithString:str];
 }

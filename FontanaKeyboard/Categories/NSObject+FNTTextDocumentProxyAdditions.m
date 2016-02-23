@@ -70,9 +70,9 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
     
     int direction = searchDirection == FNTSearchDirectionBefore ? -1 : 1;
     
-    NSMutableArray* beforeArray = [NSMutableArray arrayWithCapacity:10];
-    
     [self fnt_sleep];
+    
+    NSMutableArray* beforeArray = [NSMutableArray arrayWithCapacity:10];
     NSString* before = [proxy performSelector:proxySelector];
     
     //Sometimes, when the string is \n then the length evaluates as 0 which breaks the loop
@@ -87,7 +87,10 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
                 break;
             }
         }
-        [beforeArray addObject:before];
+        
+        if (beforeLength > 0) {
+            [beforeArray addObject:before];
+        }
         [self fnt_adjustCursor:direction * beforeLength];
         before = [proxy performSelector:proxySelector];
     }

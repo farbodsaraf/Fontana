@@ -11,6 +11,7 @@ target 'Spreadit' do
     pod 'TTTAttributedLabel'
     pod 'KeychainSwift', '~> 3.0'
     pod 'GoogleTagManager'
+    pod 'iRate'
 end
 
 target 'SpreaditTests' do

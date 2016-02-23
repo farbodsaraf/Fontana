@@ -9,6 +9,7 @@
 import UIKit
 import BIND
 import TSMessages
+import iRate
 
 class HistoryViewController: BNDViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate, FNTUsageTutorialViewDelegate {
     
@@ -43,16 +44,27 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     required init(coder aDecoder: NSCoder) {
         self.historyStack = FNTHistoryStack(forGroup: "group.com.fontanakey.app")
-
+        
         super.init(coder: aDecoder)!
     
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rateMyApp", name: UIApplicationDidBecomeActiveNotification, object: nil)
         
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .History, tag: 0)
     }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func showRateMyAppIfNecessary(eventCount: UInt) {
+        guard eventCount > 0 else {
+            return
+        }
+        
+        iRate.sharedInstance().eventCount = eventCount - 1
+        iRate.sharedInstance().logEvent(false)
     }
     
     override func viewDidLoad() {
@@ -92,6 +104,10 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     func refresh() {
         self.viewModels = reloadItems()
         self.navigationItem.rightBarButtonItem = viewModels!.count > 0 ? self.clearButtonItem : nil
+    }
+    
+    func rateMyApp() {
+        showRateMyAppIfNecessary(UInt(self.historyStack.allItems.count))
     }
     
     override func viewWillLayoutSubviews() {

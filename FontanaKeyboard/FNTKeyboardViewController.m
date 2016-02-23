@@ -344,6 +344,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 #pragma mark - FNTKeyboardToolbarDelegate
 
 - (void)toolbarDidSelectNextKeyboard:(id)toolbar {
+    [self.keyboardViewModel restoreOriginalTextIfNeeded];
     [self advanceToNextInputMode];
 }
 
