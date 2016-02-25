@@ -31,7 +31,13 @@ class RootViewController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self;
     }
     
-    internal func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+    func pushViewController(viewController: UIViewController) {
+        if let navigationController = self.selectedViewController as? UINavigationController {
+            navigationController.pushViewController(viewController, animated: false)
+        }
+    }
+    
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         let navigationController = viewController as! UINavigationController
         navigationController.popToRootViewControllerAnimated(false)
     }

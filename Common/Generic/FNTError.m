@@ -13,7 +13,7 @@ NSString *const FNTErrorDomain = @"com.fontana.error";
 @implementation FNTError
 
 + (instancetype)errorWithCode:(FNTErrorCode)code
-                      message:(NSString *)message {
+                      message:(id)message {
     return [FNTError errorWithDomain:FNTErrorDomain
                                 code:code
                             userInfo:@{

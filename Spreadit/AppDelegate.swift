@@ -56,23 +56,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, iRateDelegate {
     }
     
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        openUrl(url)
-        return true
+        return openUrl(url)
     }
     
-    func openUrl(url: NSURL) {
-        let rootViewController = window!.rootViewController! as! RootViewController;
+    func openUrl(url: NSURL) -> Bool {
+        guard url.scheme == "fontanakey" else {
+            return false
+        }
+        
         if (url.absoluteString == "fontanakey://donate") {
-            rootViewController.selectedIndex = 1
+            rootViewController().selectedIndex = 1
         }
         else if (url.absoluteString == "fontanakey://usage") {
             let viewController = UIViewController.loadFromStoryboard("VideoViewController") as! VideoViewController
             viewController.selectedIndex = 1
-            rootViewController.selectedIndex = 1
+            rootViewController().selectedIndex = 1
+            rootViewController().pushViewController(viewController)
             
-            if let navigationController = rootViewController.selectedViewController as? UINavigationController {
-                navigationController.pushViewController(viewController, animated: false)
-            }
         }
+        else if (url.absoluteString == "fontanakey://installation") {
+            let viewController = UIViewController.loadFromStoryboard("VideoViewController") as! VideoViewController
+            viewController.selectedIndex = 0
+            rootViewController().selectedIndex = 1
+            rootViewController().pushViewController(viewController)
+        }
+        
+        return true
+    }
+    
+    func pushOnCurrentNavigationController(viewController: UIViewController) {
+        if let navigationController = rootViewController().selectedViewController as? UINavigationController {
+            navigationController.pushViewController(viewController, animated: false)
+        }
+    }
+    
+    func rootViewController() -> RootViewController {
+        return window!.rootViewController! as! RootViewController
     }
 }

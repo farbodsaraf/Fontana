@@ -24,6 +24,7 @@
 
 static NSString *const kFNTDonateDeepLink = @"fontanakey://donate";
 static NSString *const kFNTHelpUsageDeepLink = @"fontanakey://usage";
+static NSString *const kFNTHelpInstallationDeepLink = @"fontanakey://installation";
 
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 
@@ -71,10 +72,15 @@ static NSString *const kFNTBINGSearch = @"bing";
 
 - (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler {
-    _documentProxy = documentProxy;
-    
-    [self findLinksInDocument:_documentProxy];
     self.viewModelsHandler = viewModelsHandler;
+    
+    if (![self hasFullAccess]) {
+        [self handleError:[self noFullAccessError]];
+        return;
+    }
+    
+    _documentProxy = documentProxy;
+    [self findLinksInDocument:_documentProxy];
 }
 
 - (void)findLinksInDocument:(NSObject <UITextDocumentProxy> *)documentProxy {
@@ -139,12 +145,16 @@ static NSString *const kFNTBINGSearch = @"bing";
     [self.donateReminder bump];
 }
 
-- (NSString *)messageForQueryError:(NSError *)error {
+- (id)messageForQueryError:(NSError *)error {
     if ([error.domain isEqualToString:NSURLErrorDomain]) {
-        return NSLocalizedString(@"😢 Something is wrong 😢\n\nPlease check your internet connection.", @"Keyboard URL error string");
+        return [self networkError];
+    }
+    else if(error.code == FNTErrorCodeNoFullAccess) {
+        return [self fullAccessErrorText];
     }
     return self.usageTutorialText;
 }
+
 
 - (void)handleItems:(NSArray *)items{
     self.items = items;
@@ -207,6 +217,33 @@ static NSString *const kFNTBINGSearch = @"bing";
     [self didChangeValueForKey:@"undoEnabled"];
 }
 
+#pragma mark - Full Access
+
+- (BOOL)hasFullAccess {
+    return !![UIPasteboard generalPasteboard];
+}
+
+- (NSError *)noFullAccessError {
+    return [FNTError errorWithCode:FNTErrorCodeNoFullAccess
+                           message:@"Full access not allowed"];
+}
+
+- (NSAttributedString *)fullAccessErrorText {
+    return [self attributedStringWithFormat:[self fullAccessErrorFormat]
+                                       link:@"Please enable Full Access to perform search."
+                                    linkURL:kFNTHelpInstallationDeepLink];
+}
+
+#pragma mark - Network issues
+
+- (NSString *)networkError {
+    return @"😢 No Internet connection 😢\n\nThis keyboard requires internet connection to work.";
+}
+
+- (NSString *)fullAccessErrorFormat {
+    return @"☝️ This keyboard requires full access ☝️\n\n%@\n\nFontana > More > How do I use this app?\nor tap the link above.";
+}
+
 #pragma mark - Usage tutorial text
 
 - (NSAttributedString *)usageTutorialText {
@@ -216,7 +253,7 @@ static NSString *const kFNTBINGSearch = @"bing";
 }
 
 - (NSString *)usageFormat {
-    return @"😭 We couldn't find any results 😭\n\n%@\n\nFontana -> More -> How do I use this app?\nor tap the link above.";
+    return @"😭 We couldn't find any results 😭\n\n%@\n\nFontana > More > How do I use this app?\nor tap the link above.";
 }
 
 #pragma mark - Donate text
@@ -251,7 +288,7 @@ static NSString *const kFNTBINGSearch = @"bing";
 }
 
 - (NSString *)donateFormat {
-    return @"😴 We wake up early to save your time 😴\n\n%@\n\nFontana -> More\nor tap the link above.";
+    return @"😴 We wake up early to save your time 😴\n\n%@\n\nFontana > More\nor tap the link above.";
 }
 
 - (NSArray *)randomTerms {

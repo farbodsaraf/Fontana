@@ -17,7 +17,6 @@
 @property (nonatomic, strong) Class queryClass;
 @property (nonatomic, getter=isUndoEnabled) BOOL undoEnabled;
 @property (nonatomic, getter=isDonateEnabled) BOOL donateEnabled;
-@property (nonatomic, readonly) NSAttributedString *usageTutorialText;
 @property (nonatomic, readonly) NSAttributedString *donateText;
 
 - (void)apply:(FNTKeyboardItemCellModel *)model;
@@ -25,6 +24,6 @@
 - (void)clear;
 - (void)restoreOriginalTextIfNeeded;
 
-- (NSString *)messageForQueryError:(NSError *)error;
+- (id)messageForQueryError:(NSError *)error;
 
 @end

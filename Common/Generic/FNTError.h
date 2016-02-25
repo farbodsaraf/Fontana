@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSUInteger, FNTErrorCode) {
     FNTErrorCodeGeneric = 1000,
     FNTErrorCodeNoData,
-    FNTErrorCodeInvalidQuery
+    FNTErrorCodeInvalidQuery,
+    FNTErrorCodeNoFullAccess
 };
 
 extern NSString *const FNTErrorDomain;
@@ -19,6 +20,6 @@ extern NSString *const FNTErrorDomain;
 @interface FNTError : NSError
 
 + (instancetype)errorWithCode:(FNTErrorCode)code
-                      message:(NSString *)message;
+                      message:(id)message;
 
 @end

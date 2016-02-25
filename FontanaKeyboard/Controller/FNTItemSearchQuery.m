@@ -55,11 +55,7 @@
                                    [weakSelf handleData:data];
                                }
                                else {
-#ifdef DEBUG
-                                   [weakSelf handleData:FNTMockFactory.mockItems];
-#else
                                    weakSelf.itemsBlock(nil, connectionError);
-#endif
                                }
                            }];
 }
