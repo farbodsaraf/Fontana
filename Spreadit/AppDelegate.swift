@@ -61,9 +61,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, iRateDelegate {
     }
     
     func openUrl(url: NSURL) {
+        let rootViewController = window!.rootViewController! as! RootViewController;
         if (url.absoluteString == "fontanakey://donate") {
-            let rootViewController = window!.rootViewController! as! RootViewController;
             rootViewController.selectedIndex = 1
+        }
+        else if (url.absoluteString == "fontanakey://usage") {
+            let viewController = UIViewController.loadFromStoryboard("VideoViewController") as! VideoViewController
+            viewController.selectedIndex = 1
+            rootViewController.selectedIndex = 1
+            
+            if let navigationController = rootViewController.selectedViewController as? UINavigationController {
+                navigationController.pushViewController(viewController, animated: false)
+            }
         }
     }
 }

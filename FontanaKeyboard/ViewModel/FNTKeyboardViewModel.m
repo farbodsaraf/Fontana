@@ -23,6 +23,8 @@
 #import "FNTAppTracker.h"
 
 static NSString *const kFNTDonateDeepLink = @"fontanakey://donate";
+static NSString *const kFNTHelpUsageDeepLink = @"fontanakey://usage";
+
 static NSString *const kFNTAppGroup = @"group.com.fontanakey.app";
 
 static NSString *const kFNTSearchEngineKey = @"searchEngine";
@@ -38,7 +40,6 @@ static NSString *const kFNTBINGSearch = @"bing";
 @property (nonatomic, strong) FNTHistoryStack *historyStack;
 @property (nonatomic, strong) NSMutableArray *undoStack;
 @property (nonatomic, strong) FNTPleaseDonateReminder *donateReminder;
-@property (nonatomic, strong) NSString *usageTutorialText;
 
 @property (nonatomic, copy) NSString *originalText;
 @property (nonatomic, copy) NSString *currentText;
@@ -208,21 +209,27 @@ static NSString *const kFNTBINGSearch = @"bing";
 
 #pragma mark - Usage tutorial text
 
-- (NSString *)usageTutorialText {
-    if (!_usageTutorialText) {
-        NSString *localizedUsageFormat = NSLocalizedString(@"type\n:%@:\n\nthen press 🌐\nand select Search - Fontana", @"Keyboard Usage String");
-        NSArray *randomTerms = self.randomTerms;
-        NSString *randomTerm = randomTerms[arc4random()%randomTerms.count ];
-        _usageTutorialText = [NSString stringWithFormat:localizedUsageFormat, randomTerm];
-    }
-    return _usageTutorialText;
+- (NSAttributedString *)usageTutorialText {
+    return [self attributedStringWithFormat:[self usageFormat]
+                                       link:@"How do I use this keyboard?"
+                                    linkURL:kFNTHelpUsageDeepLink];
+}
+
+- (NSString *)usageFormat {
+    return @"😭 We couldn't find any results 😭\n\n%@\n\nFontana -> More -> How do I use this app?\nor tap the link above.";
 }
 
 #pragma mark - Donate text
 
 - (NSAttributedString *)donateText {
-    NSString *link = @"Please donate to remove this message.";
-    NSString *format = [self donateFormat];
+    return [self attributedStringWithFormat:[self donateFormat]
+                                       link:@"Please donate to remove this message."
+                                    linkURL:kFNTDonateDeepLink];
+}
+
+- (NSAttributedString *)attributedStringWithFormat:(NSString *)format
+                                              link:(NSString *)link
+                                           linkURL:(NSString *)linkURL {
     NSString *string = [NSString stringWithFormat:format, link];
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
     
@@ -232,7 +239,7 @@ static NSString *const kFNTBINGSearch = @"bing";
     
     NSRange linkRange = [string rangeOfString:link];
     [attrString addAttribute:NSLinkAttributeName
-                       value:kFNTDonateDeepLink
+                       value:linkURL
                        range:linkRange];
     
     [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16]
