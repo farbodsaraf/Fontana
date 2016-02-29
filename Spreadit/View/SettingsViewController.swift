@@ -69,6 +69,9 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
                 self.navigationController?.pushViewController(viewController,
                     animated: true)
             }
+            
+            FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+                withTags: [FNTAppTrackerEventActionTag: "More - onViewTutorial"])
         }
         else if indexPath.row == 2 {
             if let viewController  = UIViewController.loadFromStoryboard("WebViewController") as? BNDViewController {
@@ -77,6 +80,9 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
                 self.navigationController?.pushViewController(viewController,
                     animated: true)
             }
+            
+            FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+                withTags: [FNTAppTrackerEventActionTag: "More - onViewFutureBoard"])
         }
     }
     

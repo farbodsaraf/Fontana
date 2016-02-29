@@ -138,11 +138,17 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         alertController.addAction(okAction)
         
         presentViewController(alertController, animated: true, completion: nil)
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+            withTags: [FNTAppTrackerScreenViewEvent: "History - Delete"])
     }
     
     func clear() {
         self.historyStack.clear()
         self.viewModels = []
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+            withTags: [FNTAppTrackerEventActionTag : "History - didDeleteAll"])
     }
     
     func reloadData() {
@@ -198,6 +204,9 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
             buttonCallback: nil,
             atPosition: .NavBarOverlay,
             canBeDismissedByUser: false)
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+            withTags: [FNTAppTrackerEventActionTag : "History - copyToPasteboard"])
     }
     
     func registerNib(cellName : String) {
@@ -226,6 +235,9 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
         let videoViewController = UIViewController.loadFromStoryboard("VideoViewController") as! VideoViewController
         videoViewController.selectedIndex = url.absoluteString.isEqual("fontanakey://usage") ? 1 : 0
         self.navigationController?.pushViewController(videoViewController, animated: true)
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+            withTags: [FNTAppTrackerEventActionTag : "History - openInternalUrl - " + url.absoluteString])
     }
 }
 

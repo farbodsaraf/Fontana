@@ -333,6 +333,11 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
     FNTKeyboardItemCellModel *itemModel = self.keyboardViewModel.children[indexPath.row];
     [self.keyboardViewModel apply:itemModel];
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    [FNTAppTracker trackEvent:FNTAppTrackerActionEvent
+                     withTags:@{
+                                FNTAppTrackerEventActionTag : @"Keyboard - didTapToAddURL"
+                                }];
 }
 
 #pragma mark - FNTUsageTutorialViewDelegate
@@ -368,6 +373,18 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
                                 withObject:url];
             }
         }
+        
+        NSString *action = [NSString stringWithFormat:@"Keyboard - openInternalUrl - %@", url.absoluteString];
+        [FNTAppTracker trackEvent:FNTAppTrackerActionEvent
+                         withTags:@{
+                                    FNTAppTrackerEventActionTag : action
+                                    }];
+    }
+    else {
+        [FNTAppTracker trackEvent:FNTAppTrackerActionEvent
+                         withTags:@{
+                                    FNTAppTrackerEventActionTag : @"Keyboard - openUrl"
+                                    }];
     }
     //    [self advanceToNextInputMode];
 }
