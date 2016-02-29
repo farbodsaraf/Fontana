@@ -14,13 +14,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="175.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-DJ-5tL">
-                        <rect key="frame" x="8" y="8" width="304" height="95"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <string key="text">We have decided to make this app free because we find it useful and would like to make everyone happy using it. We're investing a lot of our free time and money developing it, so be fair and buy us ☕🍪🍱 in return if you like the app.</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-DJ-5tL" customClass="FNTAttributedLabel">
+                        <rect key="frame" x="8" y="8" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Any donation will remove the popup from the keyboard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3w-Yo-1yi">
                         <rect key="frame" x="8" y="149" width="304" height="21"/>
                         <constraints>
@@ -31,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-cO-Lqq" userLabel="Small Donation Button">
-                        <rect key="frame" x="8" y="111" width="100" height="30"/>
+                        <rect key="frame" x="8" y="37" width="100" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="E69-ay-4w5"/>
                         </constraints>
@@ -41,7 +40,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-cs-BtE" userLabel="Medium Donation Button">
-                        <rect key="frame" x="110" y="111" width="100" height="30"/>
+                        <rect key="frame" x="110" y="37" width="100" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="18t-0G-G0o"/>
                         </constraints>
@@ -51,7 +50,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-Ig-BHI" userLabel="Huge Donation Button">
-                        <rect key="frame" x="212" y="111" width="100" height="30"/>
+                        <rect key="frame" x="212" y="37" width="100" height="104"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="SMq-Fh-27O"/>
                         </constraints>
@@ -85,6 +84,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="hugeDonationButton" destination="CHV-Ig-BHI" id="UQt-qP-M1x"/>
+                <outlet property="label" destination="R3t-DJ-5tL" id="o8Q-ef-KqW"/>
                 <outlet property="mediumDonationButton" destination="FQu-cs-BtE" id="OAJ-AJ-66m"/>
                 <outlet property="smallDonationButton" destination="cv8-cO-Lqq" id="IFO-LK-kXH"/>
             </connections>

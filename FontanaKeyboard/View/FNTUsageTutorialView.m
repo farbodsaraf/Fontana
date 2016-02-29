@@ -101,10 +101,6 @@
         _label.delegate = self;
         _label.font = [UIFont systemFontOfSize:14];
         [_label setTranslatesAutoresizingMaskIntoConstraints:YES];
-        _label.linkAttributes = @{
-                                  NSForegroundColorAttributeName: [UIColor fnt_teal],
-                                  NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
-                                  };
     }
     return _label;
 }

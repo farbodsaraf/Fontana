@@ -18,4 +18,11 @@
              };
 }
 
+- (NSDictionary *)linkAttributes {
+    return @{
+             NSForegroundColorAttributeName: [UIColor fnt_teal],
+             NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
+             };
+}
+
 @end

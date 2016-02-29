@@ -99,8 +99,8 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         
         navigationController?.presentViewController(activityViewController, animated: true, completion: nil)
     }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let viewModel = viewModels()[indexPath.row]
         return viewModel.cellHeight()
     }
