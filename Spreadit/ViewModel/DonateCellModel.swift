@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import TTTAttributedLabel
+import BIND
 
-class DonateCellModel: TableRowViewModel {
+class DonateCellModel: TableRowViewModel, TTTAttributedLabelDelegate {
 
+    let navigationController: UINavigationController
+    
+    init!(model: AnyObject!, navigationController: UINavigationController) {
+        self.navigationController = navigationController
+        super.init(model: model)
+    }
+    
     lazy var donateText : NSAttributedString = {
 
         let futureDevelopmentString = "future development board"
@@ -62,5 +71,14 @@ class DonateCellModel: TableRowViewModel {
             let action = "did donate - \(donation.rawValue)"
             FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
         })
+    }
+    
+    func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
+        if let viewController  = UIViewController.loadFromStoryboard("WebViewController") as? BNDViewController {
+            viewController.viewModel = WebViewModel.viewModelWithModel("https://trello.com/b/ebULNqww/fontana-future")
+            viewController.navigationItem.title = "Future Development"
+            navigationController.pushViewController(viewController,
+                animated: true)
+        }
     }
 }

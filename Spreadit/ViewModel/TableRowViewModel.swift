@@ -18,4 +18,8 @@ class TableRowViewModel: BNDViewModel, BNDTableRowViewModel {
     override func identifier() -> String! {
         return "Generic"
     }
+    
+    func select() {
+        
+    }
 }

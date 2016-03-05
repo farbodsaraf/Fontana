@@ -10,7 +10,7 @@ import UIKit
 import BIND
 import TTTAttributedLabel
 
-class DonateCell: BNDTableViewCell, TTTAttributedLabelDelegate {
+class DonateCell: BNDTableViewCell {
     
     @IBOutlet weak var smallDonationButton: UIButton!
     @IBOutlet weak var mediumDonationButton: UIButton!
@@ -22,7 +22,6 @@ class DonateCell: BNDTableViewCell, TTTAttributedLabelDelegate {
         smallDonationButton.setTitleColor(color, forState: .Normal)
         mediumDonationButton.setTitleColor(color, forState: .Normal)
         hugeDonationButton.setTitleColor(color, forState: .Normal)
-        label.delegate = self;
     }
 
     @IBAction func onSmallDonation(sender: UIButton) {
@@ -43,9 +42,6 @@ class DonateCell: BNDTableViewCell, TTTAttributedLabelDelegate {
     
     override func viewDidUpdateViewModel(viewModel: BNDViewModelProtocol!) {
         label.setText(donateCellModel().donateText)
-    }
-    
-    func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {
-        //TODO: make a global deep linking thing!!!
+        label.delegate = self.donateCellModel();
     }
 }

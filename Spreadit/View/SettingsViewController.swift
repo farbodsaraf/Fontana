@@ -55,7 +55,7 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
     
     func viewModels() -> [TableRowViewModel] {
         return [
-            DonateCellModel(model: "Donate"),
+            DonateCellModel(model: "Donate", navigationController:navigationController!),
             NavigationCellModel(model: "How do I use this app?"),
             NavigationCellModel(model: "Future development board"),
         ]
