@@ -109,7 +109,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ruv-HT-t66" secondAttribute="height" multiplier="9:16" id="CR4-Eb-qyq"/>
-                                    <constraint firstAttribute="width" constant="270" id="n3A-55-vbZ"/>
+                                    <constraint firstAttribute="width" priority="250" constant="270" id="n3A-55-vbZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -117,6 +117,7 @@
                         <constraints>
                             <constraint firstItem="ruv-HT-t66" firstAttribute="centerX" secondItem="RvD-eG-Seo" secondAttribute="centerX" id="74D-4p-XAB"/>
                             <constraint firstItem="ruv-HT-t66" firstAttribute="top" secondItem="gN0-Yh-M0B" secondAttribute="bottom" constant="24" id="Us2-Xe-eWp"/>
+                            <constraint firstItem="X7k-LG-gNv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ruv-HT-t66" secondAttribute="bottom" constant="24" id="cAo-fa-3SV"/>
                         </constraints>
                     </view>
                     <connections>
