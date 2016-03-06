@@ -1410,6 +1410,139 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9608A3AD1C8C7C9B004410FF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = Spreadit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		9608A3AE1C8C7C9B004410FF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FontanaKeyboard\"/**",
+				);
+				INFOPLIST_FILE = Spreadit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed462b5f-f301-4277-8c24-a7876fc08579";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = AppStore;
+		};
+		9608A3AF1C8C7C9B004410FF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = SpreaditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squid.SpreaditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpreaditTests/SpreaditTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spreadit.app/Spreadit";
+			};
+			name = AppStore;
+		};
+		9608A3B01C8C7C9B004410FF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SpreaditUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squid.SpreaditUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Spreadit;
+				USES_XCTRUNNER = YES;
+			};
+			name = AppStore;
+		};
+		9608A3B11C8C7C9B004410FF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SpreaditSharer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.squid.Spreadit.SpreaditSharer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = AppStore;
+		};
+		9608A3B21C8C7C9B004410FF /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAD438EE54D8DD0C4B67BF0 /* Pods-FontanaKeyboard.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HockeySDK\"",
+				);
+				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "becc0b6e-0876-4915-b64a-f4d28fcdb01b";
+				SKIP_INSTALL = YES;
+			};
+			name = AppStore;
+		};
 		96B1C4AF1BE159CA00114C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1512,7 +1645,7 @@
 					"\"$(SRCROOT)/FontanaKeyboard\"/**",
 				);
 				INFOPLIST_FILE = Spreadit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
@@ -1538,7 +1671,7 @@
 					"\"$(SRCROOT)/FontanaKeyboard\"/**",
 				);
 				INFOPLIST_FILE = Spreadit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1652,7 +1785,7 @@
 					"\"${PODS_ROOT}/Headers/Public/HockeySDK\"",
 				);
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1676,7 +1809,7 @@
 					"\"${PODS_ROOT}/Headers/Public/HockeySDK\"",
 				);
 				INFOPLIST_FILE = FontanaKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1693,6 +1826,7 @@
 			buildConfigurations = (
 				96B1C4AF1BE159CA00114C26 /* Debug */,
 				96B1C4B01BE159CA00114C26 /* Release */,
+				9608A3AD1C8C7C9B004410FF /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1702,6 +1836,7 @@
 			buildConfigurations = (
 				96B1C4B21BE159CA00114C26 /* Debug */,
 				96B1C4B31BE159CA00114C26 /* Release */,
+				9608A3AE1C8C7C9B004410FF /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1711,6 +1846,7 @@
 			buildConfigurations = (
 				96B1C4B51BE159CA00114C26 /* Debug */,
 				96B1C4B61BE159CA00114C26 /* Release */,
+				9608A3AF1C8C7C9B004410FF /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1720,6 +1856,7 @@
 			buildConfigurations = (
 				96B1C4B81BE159CA00114C26 /* Debug */,
 				96B1C4B91BE159CA00114C26 /* Release */,
+				9608A3B01C8C7C9B004410FF /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1729,6 +1866,7 @@
 			buildConfigurations = (
 				96B1C4DD1BE167F700114C26 /* Debug */,
 				96B1C4DE1BE167F700114C26 /* Release */,
+				9608A3B11C8C7C9B004410FF /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1738,6 +1876,7 @@
 			buildConfigurations = (
 				96F99F6B1C0AEEA7005D6364 /* Debug */,
 				96F99F6C1C0AEEA7005D6364 /* Release */,
+				9608A3B21C8C7C9B004410FF /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
