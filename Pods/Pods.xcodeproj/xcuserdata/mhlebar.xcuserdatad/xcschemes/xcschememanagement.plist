@@ -8,108 +8,75 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>BIND.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>HTMLReader.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>HockeySDK-HockeySDKResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>KeychainSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>11</integer>
 		</dict>
 		<key>NODE_.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>12</integer>
 		</dict>
 		<key>Pods-FontanaKeyboard.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>13</integer>
 		</dict>
 		<key>Pods-Spreadit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>14</integer>
 		</dict>
 		<key>Pods-SpreaditSharer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>15</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>16</integer>
 		</dict>
 		<key>TTTAttributedLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>17</integer>
 		</dict>
 		<key>iRate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0BA6E5A0596C51C319C7011CEB3B8714</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>10FFCB1FFED5386EFBC5FFA17A040C0E</key>
 		<dict>
 			<key>primary</key>
@@ -135,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FC91D7BE073BC242D0F185E3B1D6B15</key>
+		<key>71ACC1DF257DA8F3099EF3EA86820C61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -146,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>CB035DBE68D00EE499A83005FCFF9F2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE086EE8055177242B6D05EC2487815D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

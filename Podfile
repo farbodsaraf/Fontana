@@ -4,13 +4,14 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Spreadit' do
-    pod 'SwiftyJSON'
     pod 'BIND'
-    pod 'HockeySDK'
-    pod 'TTTAttributedLabel'
-    pod 'KeychainSwift', '~> 3.0'
     pod 'GoogleTagManager'
+    pod 'HockeySDK'
+    pod 'HTMLReader'
     pod 'iRate'
+    pod 'KeychainSwift', '~> 3.0'
+    pod 'Masonry'
+    pod 'TTTAttributedLabel'
 end
 
 target 'SpreaditTests' do
@@ -28,10 +29,10 @@ end
 
 target 'FontanaKeyboard' do
     pod 'BIND'
-    pod 'Masonry'
+    pod 'GoogleTagManager'
     pod 'HockeySDK'
-    pod 'TTTAttributedLabel'
     pod 'HTMLReader'
     pod 'KeychainSwift', '~> 3.0'
-    pod 'GoogleTagManager'
+    pod 'Masonry'
+    pod 'TTTAttributedLabel'
 end

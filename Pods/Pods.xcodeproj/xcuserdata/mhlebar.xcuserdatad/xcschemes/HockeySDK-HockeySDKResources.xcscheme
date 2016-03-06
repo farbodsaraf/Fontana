@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5E9BF0A53F203175C9C17376'
+               BlueprintIdentifier = '361B307A1D88834814B86D34'
                BlueprintName = 'HockeySDK-HockeySDKResources'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'HockeySDKResources.bundle'>

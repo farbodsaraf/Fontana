@@ -996,7 +996,6 @@
 				96F99F5E1C0AEEA7005D6364 /* Sources */,
 				96F99F5F1C0AEEA7005D6364 /* Frameworks */,
 				96F99F601C0AEEA7005D6364 /* Resources */,
-				B622F98E91688BEADA05B235 /* Embed Pods Frameworks */,
 				F55CB3D354E8DBEF18FF5691 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1229,21 +1228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B622F98E91688BEADA05B235 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F55CB3D354E8DBEF18FF5691 /* Copy Pods Resources */ = {
@@ -1574,7 +1558,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1825,7 +1809,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1849,7 +1833,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
