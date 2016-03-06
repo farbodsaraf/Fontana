@@ -52,6 +52,16 @@ class DonateCellModel: TableRowViewModel, TTTAttributedLabelDelegate {
         return donateString.copy() as! NSAttributedString
     }()
     
+    func donationButtonText(donation: Donation) -> String? {
+        do {
+            let text = try DonationStore.defaultStore.formattedPrice(donation)
+            return text
+        }
+        catch {
+            return nil
+        }
+    }
+    
     override func cellHeight() -> CGFloat {
         return 176
     }
@@ -63,14 +73,27 @@ class DonateCellModel: TableRowViewModel, TTTAttributedLabelDelegate {
     func donate(donation: Donation) {
         let action = "donate - \(donation.rawValue)"
         FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
-        
-        DonationStore.defaultStore.buy(donation, completion: {
-            (donation: Donation) in
-            DonationJar.defaultJar.addDonation(donation)
-            
-            let action = "did donate - \(donation.rawValue)"
-            FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
-        })
+        do {
+            try DonationStore.defaultStore.buy(donation, completion: {
+                (donation: Donation) in
+                DonationJar.defaultJar.addDonation(donation)
+                
+                let action = "did donate - \(donation.rawValue)"
+                FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
+            })
+        }
+        catch {
+            presentErrorDonating()
+        }
+    }
+    
+    func presentErrorDonating() {
+        let alertController = UIAlertController(title: "Error donating.",
+            message: "Sorry, we are not able to process this donation.",
+            preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+        }
+        alertController.addAction(okAction)
     }
     
     func attributedLabel(label: TTTAttributedLabel!, didSelectLinkWithURL url: NSURL!) {

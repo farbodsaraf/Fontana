@@ -29,34 +29,34 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-cO-Lqq" userLabel="Small Donation Button">
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-cO-Lqq" userLabel="Small Donation Button">
                         <rect key="frame" x="8" y="37" width="100" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="E69-ay-4w5"/>
                         </constraints>
-                        <state key="normal" title="Coffee $1"/>
+                        <state key="normal" title="Coffee €0.99"/>
                         <connections>
-                            <action selector="onSmallDonation:" destination="IqW-js-sJf" eventType="touchUpInside" id="Vs2-rw-Llw"/>
+                            <action selector="onDonation:" destination="IqW-js-sJf" eventType="touchUpInside" id="fKn-DL-MjS"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-cs-BtE" userLabel="Medium Donation Button">
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-cs-BtE" userLabel="Medium Donation Button">
                         <rect key="frame" x="110" y="37" width="100" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="18t-0G-G0o"/>
                         </constraints>
-                        <state key="normal" title="Snack $3"/>
+                        <state key="normal" title="Snack €2.99"/>
                         <connections>
-                            <action selector="onMediumDonation:" destination="IqW-js-sJf" eventType="touchUpInside" id="gjX-py-Clk"/>
+                            <action selector="onDonation:" destination="IqW-js-sJf" eventType="touchUpInside" id="Hcu-r2-pJM"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-Ig-BHI" userLabel="Huge Donation Button">
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-Ig-BHI" userLabel="Huge Donation Button">
                         <rect key="frame" x="212" y="37" width="100" height="104"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="SMq-Fh-27O"/>
                         </constraints>
-                        <state key="normal" title="Lunch $10"/>
+                        <state key="normal" title="Lunch €9.99"/>
                         <connections>
-                            <action selector="onHugeDonation:" destination="IqW-js-sJf" eventType="touchUpInside" id="eaJ-mg-Zpr"/>
+                            <action selector="onDonation:" destination="IqW-js-sJf" eventType="touchUpInside" id="nYi-j4-wmD"/>
                         </connections>
                     </button>
                 </subviews>

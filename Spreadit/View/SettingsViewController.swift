@@ -11,7 +11,15 @@ import BIND
 
 class SettingsViewController: BNDViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableView: UITableView?
+    
+    lazy var viewModels: [TableRowViewModel] = {
+        return [
+            DonateCellModel(model: "Donate", navigationController:self.navigationController!),
+            NavigationCellModel(model: "How do I use this app?"),
+            NavigationCellModel(model: "Future development board"),
+        ]
+    }()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -20,11 +28,32 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action,
             target: self, action: "presentShareViewController")
+        
+        subscribeToNotifications()
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func subscribeToNotifications() {
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        
+        notificationCenter.addObserver(self, selector: "updateDonationCell", name: DonationStoreDidUpdateProductsNotification, object: nil)
+    }
+    
+    func updateDonationCell() {
+        guard let tableView = self.tableView where tableView.numberOfRowsInSection(0) > 0 else {
+            return
+        }
+        
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView?.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.tableFooterView = UIView()
+        self.tableView?.tableFooterView = UIView()
         
         self.viewModel = SettingsViewModel()
     }
@@ -40,7 +69,7 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let viewModel = viewModels()[indexPath.row] as TableRowViewModel
+        let viewModel = viewModels[indexPath.row] as TableRowViewModel
         var cell = tableView.dequeueReusableCellWithIdentifier(viewModel.identifier()) as? BNDTableViewCell
         if (cell == nil) {
             cell = UIView.loadFromNib(viewModel.identifier()) as? BNDTableViewCell
@@ -50,15 +79,7 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels().count
-    }
-    
-    func viewModels() -> [TableRowViewModel] {
-        return [
-            DonateCellModel(model: "Donate", navigationController:navigationController!),
-            NavigationCellModel(model: "How do I use this app?"),
-            NavigationCellModel(model: "Future development board"),
-        ]
+        return viewModels.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -101,7 +122,7 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
     }
 
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let viewModel = viewModels()[indexPath.row]
+        let viewModel = viewModels[indexPath.row]
         return viewModel.cellHeight()
     }
 }
