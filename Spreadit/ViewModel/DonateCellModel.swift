@@ -71,14 +71,14 @@ class DonateCellModel: TableRowViewModel, TTTAttributedLabelDelegate {
     }
     
     func donate(donation: Donation) {
-        let action = "donate - \(donation.rawValue)"
+        let action = "More - donate - \(donation.rawValue)"
         FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
         do {
             try DonationStore.defaultStore.buy(donation, completion: {
                 (donation: Donation) in
                 DonationJar.defaultJar.addDonation(donation)
                 
-                let action = "did donate - \(donation.rawValue)"
+                let action = "More - didDonate - \(donation.rawValue)"
                 FNTAppTracker.trackEvent(FNTAppTrackerActionEvent, withTags: [FNTAppTrackerEventActionTag: action])
             })
         }
