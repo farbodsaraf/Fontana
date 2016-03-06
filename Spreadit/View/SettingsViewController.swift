@@ -119,6 +119,9 @@ class SettingsViewController: BNDViewController, UITableViewDataSource, UITableV
         ]
         
         navigationController?.presentViewController(activityViewController, animated: true, completion: nil)
+        
+        FNTAppTracker.trackEvent(FNTAppTrackerActionEvent,
+            withTags: [FNTAppTrackerEventActionTag: "More - onShare"])
     }
 
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
