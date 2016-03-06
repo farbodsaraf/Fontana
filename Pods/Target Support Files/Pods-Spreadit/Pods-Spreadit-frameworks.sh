@@ -85,22 +85,27 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Spreadit/BIND.framework"
-  install_framework "Pods-Spreadit/HexColors.framework"
   install_framework "Pods-Spreadit/KeychainSwift.framework"
   install_framework "Pods-Spreadit/NODE_.framework"
   install_framework "Pods-Spreadit/SwiftyJSON.framework"
-  install_framework "Pods-Spreadit/TSMessages.framework"
   install_framework "Pods-Spreadit/TTTAttributedLabel.framework"
   install_framework "Pods-Spreadit/iRate.framework"
   install_framework "Pods-Spreadit/libextobjc.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Spreadit/BIND.framework"
-  install_framework "Pods-Spreadit/HexColors.framework"
   install_framework "Pods-Spreadit/KeychainSwift.framework"
   install_framework "Pods-Spreadit/NODE_.framework"
   install_framework "Pods-Spreadit/SwiftyJSON.framework"
-  install_framework "Pods-Spreadit/TSMessages.framework"
+  install_framework "Pods-Spreadit/TTTAttributedLabel.framework"
+  install_framework "Pods-Spreadit/iRate.framework"
+  install_framework "Pods-Spreadit/libextobjc.framework"
+fi
+if [[ "$CONFIGURATION" == "AppStore" ]]; then
+  install_framework "Pods-Spreadit/BIND.framework"
+  install_framework "Pods-Spreadit/KeychainSwift.framework"
+  install_framework "Pods-Spreadit/NODE_.framework"
+  install_framework "Pods-Spreadit/SwiftyJSON.framework"
   install_framework "Pods-Spreadit/TTTAttributedLabel.framework"
   install_framework "Pods-Spreadit/iRate.framework"
   install_framework "Pods-Spreadit/libextobjc.framework"

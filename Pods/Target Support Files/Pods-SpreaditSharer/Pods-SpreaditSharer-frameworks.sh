@@ -91,3 +91,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SpreaditSharer/SwiftyJSON.framework"
   install_framework "Pods-SpreaditSharer/Alamofire.framework"
 fi
+if [[ "$CONFIGURATION" == "AppStore" ]]; then
+  install_framework "Pods-SpreaditSharer/SwiftyJSON.framework"
+  install_framework "Pods-SpreaditSharer/Alamofire.framework"
+fi

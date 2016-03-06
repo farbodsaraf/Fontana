@@ -1,12 +1,11 @@
 PODS:
-  - Alamofire (3.2.0)
+  - Alamofire (3.2.1)
   - BIND (1.4.7):
     - libextobjc
     - NODE_
   - GoogleAnalytics (3.14.0)
   - GoogleTagManager (3.15.0):
     - GoogleAnalytics (= 3.14.0)
-  - HexColors (2.2.1)
   - HockeySDK (3.8.5):
     - HockeySDK/AllFeaturesLib (= 3.8.5)
   - HockeySDK/AllFeaturesLib (3.8.5)
@@ -51,8 +50,6 @@ PODS:
   - Masonry (0.6.4)
   - NODE_ (0.1.1)
   - SwiftyJSON (2.3.2)
-  - TSMessages (0.9.12):
-    - HexColors (~> 2.2.0)
   - TTTAttributedLabel (1.13.4)
 
 DEPENDENCIES:
@@ -65,15 +62,13 @@ DEPENDENCIES:
   - KeychainSwift (~> 3.0)
   - Masonry
   - SwiftyJSON
-  - TSMessages
   - TTTAttributedLabel
 
 SPEC CHECKSUMS:
-  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   BIND: 7bd263ab59374ac3217c5eff4b74c97ddc6fb999
   GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
   GoogleTagManager: 39e4af1e9250e7817d328f690768e26afe560da0
-  HexColors: abfd172e329dab59888614ccba6f216cec59289d
   HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   HTMLReader: 03e9da607f2f9924f9cf4b5e5c4143932004257f
   iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
@@ -82,7 +77,6 @@ SPEC CHECKSUMS:
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   NODE_: 4595c1cfadbf1f1d06566c32c1c7deb387a0822f
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
 
 COCOAPODS: 0.39.0

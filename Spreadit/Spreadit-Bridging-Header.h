@@ -18,5 +18,6 @@
 #import "UIColor+FNTGenerator.h"
 #import "FNTUsageTutorialView.h"
 #import "FNTAppTracker.h"
+#import "TSMessage.h"
 
 #endif /* Spreadit_Bridging_Header_h */

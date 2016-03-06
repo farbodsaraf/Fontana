@@ -6,7 +6,6 @@ use_frameworks!
 target 'Spreadit' do
     pod 'SwiftyJSON'
     pod 'BIND'
-    pod 'TSMessages'
     pod 'HockeySDK'
     pod 'TTTAttributedLabel'
     pod 'KeychainSwift', '~> 3.0'

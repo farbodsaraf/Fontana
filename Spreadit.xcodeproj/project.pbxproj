@@ -48,7 +48,6 @@
 		9658F4D01C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4CE1C2AB1F1002B3595 /* FNTGoogleItemParser.m */; };
 		9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
 		9658F4D41C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */; };
-		9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */; };
 		9658F4DD1C3152F8002B3595 /* icon_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4DB1C3152F8002B3595 /* icon_iphone@2x.png */; };
 		9658F4DE1C3152F8002B3595 /* icon_iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */; };
 		9658F4DF1C315328002B3595 /* icon_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4DB1C3152F8002B3595 /* icon_iphone@2x.png */; };
@@ -60,6 +59,11 @@
 		9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9658F4EE1C31B6FF002B3595 /* globe@3x.png */; };
 		966D57AE1C22D5EC00F14B5F /* FNTUsageTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */; };
 		966D57B21C2400EF00F14B5F /* FNTSourceToColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */; };
+		96789E221C8C958A00017F5F /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 96789E1A1C8C958A00017F5F /* HexColors.m */; };
+		96789E231C8C958A00017F5F /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96789E1C1C8C958A00017F5F /* TSBlurView.m */; };
+		96789E241C8C958A00017F5F /* TSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96789E1E1C8C958A00017F5F /* TSMessage.m */; };
+		96789E251C8C958A00017F5F /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 96789E1F1C8C958A00017F5F /* TSMessagesDefaultDesign.json */; };
+		96789E261C8C958A00017F5F /* TSMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96789E211C8C958A00017F5F /* TSMessageView.m */; };
 		9683D1AC1C665FAE001436C8 /* DonationJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AB1C665FAE001436C8 /* DonationJar.swift */; };
 		9683D1AF1C666392001436C8 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AE1C666392001436C8 /* Donation.swift */; };
 		9683D1B01C66733A001436C8 /* DonationJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1AB1C665FAE001436C8 /* DonationJar.swift */; };
@@ -177,9 +181,11 @@
 /* Begin PBXFileReference section */
 		078AFCAA9FBA77A474C5CAC9 /* Pods_SpreaditSharer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpreaditSharer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		143649767BA83A6C249CFDAF /* Pods-FontanaKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		1BB024863A073C04114A4360 /* Pods-Spreadit.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.appstore.xcconfig"; sourceTree = "<group>"; };
 		39C65D45C0A236BCF8F30A28 /* Pods-SpreaditSharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.debug.xcconfig"; sourceTree = "<group>"; };
 		4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.release.xcconfig"; sourceTree = "<group>"; };
 		81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.release.xcconfig"; sourceTree = "<group>"; };
+		95AA792D431AD3A403F8FB93 /* Pods-SpreaditSharer.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpreaditSharer.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-SpreaditSharer/Pods-SpreaditSharer.appstore.xcconfig"; sourceTree = "<group>"; };
 		9608AD421C7A0FB90018F4A8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = View/TextViewController.swift; sourceTree = "<group>"; };
 		9628829B1C56C32300886F7D /* MHFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFileHandle.h; sourceTree = "<group>"; };
 		9628829C1C56C32300886F7D /* MHFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFileHandle.m; sourceTree = "<group>"; };
@@ -218,7 +224,6 @@
 		9658F4D21C2AD6FF002B3595 /* FNTHistoryStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTHistoryStack.m; path = Controller/FNTHistoryStack.m; sourceTree = "<group>"; };
 		9658F4D51C2AD9C7002B3595 /* Spreadit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Spreadit.entitlements; sourceTree = "<group>"; };
 		9658F4D61C2ADABB002B3595 /* FontanaKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FontanaKeyboard.entitlements; sourceTree = "<group>"; };
-		9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TSMessagesDefaultDesign.json; path = Pods/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		9658F4DB1C3152F8002B3595 /* icon_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_iphone@2x.png"; path = "Resources/icon_iphone@2x.png"; sourceTree = SOURCE_ROOT; };
 		9658F4DC1C3152F8002B3595 /* icon_iphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_iphone@3x.png"; path = "Resources/icon_iphone@3x.png"; sourceTree = SOURCE_ROOT; };
 		9658F4E11C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSUserDefaults+CustomKeyboard.swift"; path = "Extensions/NSUserDefaults+CustomKeyboard.swift"; sourceTree = "<group>"; };
@@ -231,6 +236,15 @@
 		966D57AD1C22D5EC00F14B5F /* FNTUsageTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTUsageTutorialView.m; path = View/FNTUsageTutorialView.m; sourceTree = "<group>"; };
 		966D57B01C2400EF00F14B5F /* FNTSourceToColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTSourceToColorTransformer.h; path = Transformers/FNTSourceToColorTransformer.h; sourceTree = "<group>"; };
 		966D57B11C2400EF00F14B5F /* FNTSourceToColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTSourceToColorTransformer.m; path = Transformers/FNTSourceToColorTransformer.m; sourceTree = "<group>"; };
+		96789E191C8C958A00017F5F /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		96789E1A1C8C958A00017F5F /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
+		96789E1B1C8C958A00017F5F /* TSBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBlurView.h; sourceTree = "<group>"; };
+		96789E1C1C8C958A00017F5F /* TSBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBlurView.m; sourceTree = "<group>"; };
+		96789E1D1C8C958A00017F5F /* TSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessage.h; sourceTree = "<group>"; };
+		96789E1E1C8C958A00017F5F /* TSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessage.m; sourceTree = "<group>"; };
+		96789E1F1C8C958A00017F5F /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
+		96789E201C8C958A00017F5F /* TSMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMessageView.h; sourceTree = "<group>"; };
+		96789E211C8C958A00017F5F /* TSMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMessageView.m; sourceTree = "<group>"; };
 		9683D1AB1C665FAE001436C8 /* DonationJar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonationJar.swift; path = Controller/DonationJar.swift; sourceTree = "<group>"; };
 		9683D1AE1C666392001436C8 /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Donation.swift; path = Controller/Donation.swift; sourceTree = "<group>"; };
 		9683D1B31C67300F001436C8 /* SettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsStore.swift; path = Controller/SettingsStore.swift; sourceTree = "<group>"; };
@@ -322,6 +336,7 @@
 		A8BD0E31C31C11172814516E /* Pods-Spreadit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spreadit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spreadit/Pods-Spreadit.debug.xcconfig"; sourceTree = "<group>"; };
 		C6FA73C437C53C1575D25F86 /* Pods_FontanaKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FontanaKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAD438EE54D8DD0C4B67BF0 /* Pods-FontanaKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		EB76AE9A9536960AA7B92832 /* Pods-FontanaKeyboard.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FontanaKeyboard.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-FontanaKeyboard/Pods-FontanaKeyboard.appstore.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -568,6 +583,31 @@
 			name = Transformers;
 			sourceTree = "<group>";
 		};
+		96789E171C8C957500017F5F /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				96789E181C8C958A00017F5F /* TSMessage */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		96789E181C8C958A00017F5F /* TSMessage */ = {
+			isa = PBXGroup;
+			children = (
+				96789E191C8C958A00017F5F /* HexColors.h */,
+				96789E1A1C8C958A00017F5F /* HexColors.m */,
+				96789E1B1C8C958A00017F5F /* TSBlurView.h */,
+				96789E1C1C8C958A00017F5F /* TSBlurView.m */,
+				96789E1D1C8C958A00017F5F /* TSMessage.h */,
+				96789E1E1C8C958A00017F5F /* TSMessage.m */,
+				96789E1F1C8C958A00017F5F /* TSMessagesDefaultDesign.json */,
+				96789E201C8C958A00017F5F /* TSMessageView.h */,
+				96789E211C8C958A00017F5F /* TSMessageView.m */,
+			);
+			name = TSMessage;
+			path = "Third Party/TSMessage";
+			sourceTree = SOURCE_ROOT;
+		};
 		9683D1AD1C66637A001436C8 /* Donation */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,7 +639,6 @@
 			isa = PBXGroup;
 			children = (
 				96ECA1441C76D233006B15A1 /* GTM-5D242X.plist */,
-				9658F4D71C2C1CDB002B3595 /* TSMessagesDefaultDesign.json */,
 				96ECA1471C76D450006B15A1 /* Common */,
 				96B1C48B1BE159CA00114C26 /* Spreadit */,
 				96B1C4A01BE159CA00114C26 /* SpreaditTests */,
@@ -632,6 +671,7 @@
 				962882B21C60659700886F7D /* ViewModels */,
 				9658F4E51C31774C002B3595 /* View */,
 				9658F4E71C317774002B3595 /* Resources */,
+				96789E171C8C957500017F5F /* Third Party */,
 				96B1C48C1BE159CA00114C26 /* AppDelegate.swift */,
 				9658F4CC1C2AA5D2002B3595 /* Spreadit-Bridging-Header.h */,
 			);
@@ -860,6 +900,9 @@
 				81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */,
 				39C65D45C0A236BCF8F30A28 /* Pods-SpreaditSharer.debug.xcconfig */,
 				4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */,
+				EB76AE9A9536960AA7B92832 /* Pods-FontanaKeyboard.appstore.xcconfig */,
+				1BB024863A073C04114A4360 /* Pods-Spreadit.appstore.xcconfig */,
+				95AA792D431AD3A403F8FB93 /* Pods-SpreaditSharer.appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1047,10 +1090,10 @@
 				96F04AD01C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
 				96B1C4971BE159CA00114C26 /* LaunchScreen.storyboard in Resources */,
 				96B1C4941BE159CA00114C26 /* Assets.xcassets in Resources */,
+				96789E251C8C958A00017F5F /* TSMessagesDefaultDesign.json in Resources */,
 				96B1C4921BE159CA00114C26 /* Main.storyboard in Resources */,
 				9658F4DF1C315328002B3595 /* icon_iphone@2x.png in Resources */,
 				964C9D091C54E23D003907E2 /* using_keyboard_720.mov in Resources */,
-				9658F4D81C2C1CDB002B3595 /* TSMessagesDefaultDesign.json in Resources */,
 				9658F4E01C315328002B3595 /* icon_iphone@3x.png in Resources */,
 				964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */,
 				962882BD1C628AF600886F7D /* NavigationCell.xib in Resources */,
@@ -1255,11 +1298,13 @@
 				962882AB1C5DFCD700886F7D /* FNTPleaseDonateReminder.m in Sources */,
 				96ECA14A1C76D495006B15A1 /* FNTAppTracker.m in Sources */,
 				9658F4C61C2AA268002B3595 /* FNTSourceToColorTransformer.m in Sources */,
+				96789E221C8C958A00017F5F /* HexColors.m in Sources */,
 				96F04AD41C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				964C9D041C54DDC0003907E2 /* VideoViewController.swift in Sources */,
 				962882B61C6068D900886F7D /* TableRowViewModel.swift in Sources */,
 				9658F4CF1C2AB1F1002B3595 /* FNTGoogleItemParser.m in Sources */,
 				962882C51C63360700886F7D /* DonateCellModel.swift in Sources */,
+				96789E231C8C958A00017F5F /* TSBlurView.m in Sources */,
 				96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
@@ -1276,6 +1321,8 @@
 				962882C71C663C0200886F7D /* DonationStore.swift in Sources */,
 				9608AD431C7A0FB90018F4A8 /* TextViewController.swift in Sources */,
 				962882BB1C62870800886F7D /* UIView+LoadFromNib.swift in Sources */,
+				96789E241C8C958A00017F5F /* TSMessage.m in Sources */,
+				96789E261C8C958A00017F5F /* TSMessageView.m in Sources */,
 				9658F4E41C317748002B3595 /* RootViewController.swift in Sources */,
 				9658F4D31C2AD6FF002B3595 /* FNTHistoryStack.m in Sources */,
 				96F04ACD1C32A79D002BBE67 /* FNTBINGItem.m in Sources */,
@@ -1441,7 +1488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_MODULE_NAME = Spreadit;
 				SDKROOT = iphoneos;
@@ -1452,7 +1499,7 @@
 		};
 		9608A3AE1C8C7C9B004410FF /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81BD86670098AF504671A92B /* Pods-Spreadit.release.xcconfig */;
+			baseConfigurationReference = 1BB024863A073C04114A4360 /* Pods-Spreadit.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Spreadit/Spreadit.entitlements;
@@ -1505,7 +1552,7 @@
 		};
 		9608A3B11C8C7C9B004410FF /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B6BBEF84E03CB7CDF88A0BE /* Pods-SpreaditSharer.release.xcconfig */;
+			baseConfigurationReference = 95AA792D431AD3A403F8FB93 /* Pods-SpreaditSharer.appstore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1521,7 +1568,7 @@
 		};
 		9608A3B21C8C7C9B004410FF /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAD438EE54D8DD0C4B67BF0 /* Pods-FontanaKeyboard.release.xcconfig */;
+			baseConfigurationReference = EB76AE9A9536960AA7B92832 /* Pods-FontanaKeyboard.appstore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = FontanaKeyboard/FontanaKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1580,7 +1627,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = Spreadit;
@@ -1621,7 +1668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_MODULE_NAME = Spreadit;
 				SDKROOT = iphoneos;

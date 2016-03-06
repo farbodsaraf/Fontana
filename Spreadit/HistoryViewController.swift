@@ -8,7 +8,6 @@
 
 import UIKit
 import BIND
-import TSMessages
 import iRate
 
 class HistoryViewController: BNDViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate, FNTUsageTutorialViewDelegate {
@@ -194,7 +193,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     func copyURLToPasteboard(url : NSURL) {
         UIPasteboard.generalPasteboard().URL = url;
         TSMessage.showNotificationInViewController(self.navigationController,
-            title: "Link copied to clipboard.",
+            title: "\u{1F44D}\u{1F3FE} Link copied to pasteboard. \u{1F44D}\u{1F3FE}",
             subtitle: nil,
             image: nil,
             type: .Success,

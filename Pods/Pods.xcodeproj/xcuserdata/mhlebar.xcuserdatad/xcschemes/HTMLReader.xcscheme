@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8944DE3F1B4C4E7BA483DF9C'
+               BlueprintIdentifier = 'FA5AEBAED0BD96F186352F8D'
                BlueprintName = 'HTMLReader'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'HTMLReader.framework'>
