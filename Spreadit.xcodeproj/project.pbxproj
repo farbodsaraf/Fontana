@@ -1516,7 +1516,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ed462b5f-f301-4277-8c24-a7876fc08579";
+				PROVISIONING_PROFILE = "1702548e-7d9e-482d-90d4-b261ec93753d";
 				SWIFT_OBJC_BRIDGING_HEADER = "Spreadit/Spreadit-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1585,7 +1585,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fontanakey.app.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "becc0b6e-0876-4915-b64a-f4d28fcdb01b";
+				PROVISIONING_PROFILE = "21b98ba5-9156-4152-a6c5-c41d58d268b0";
 				SKIP_INSTALL = YES;
 			};
 			name = AppStore;
