@@ -47,6 +47,8 @@ static NSTimeInterval kFNTSleepInterval = 0.001;
         NSString *beforeString = nil;
         NSString *afterString = nil;
         [self readStringsBeforeCursor:&beforeString afterCursor:&afterString];
+        beforeString = beforeString ?: @"";
+        afterString = afterString ?: @"";
         
         dispatch_async(dispatch_get_main_queue(), ^{
             returnBlock(beforeString, afterString);
