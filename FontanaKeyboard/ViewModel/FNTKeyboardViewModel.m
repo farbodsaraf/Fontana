@@ -127,8 +127,14 @@ static NSString *const kFNTBINGSearch = @"bing";
 }
 
 - (void)replaceTextWithText:(NSString *)text {
-    [self.documentProxy fnt_deleteText:self.currentText];
-    [self.documentProxy insertText:text];
+    if (self.currentText) {
+        [self.documentProxy fnt_deleteText:self.currentText];
+    }
+    
+    if (text) {
+        [self.documentProxy insertText:text];
+    }
+    
 }
 
 - (void)performQuery:(NSString *)queryString {
@@ -207,6 +213,10 @@ static NSString *const kFNTBINGSearch = @"bing";
 }
 
 - (void)restoreOriginalTextIfNeeded {
+    if (!self.originalText) {
+        return;
+    }
+    
     if (!self.isUndoEnabled && ![self.originalText isEqualToString:self.currentText]) {
         [self replaceTextWithText:self.originalText];
     }

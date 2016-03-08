@@ -257,9 +257,7 @@ BND_VIEW_IMPLEMENTATION(FNTInputViewController)
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self linkify];
-    });
+    [self linkify];
 }
 
 - (void)linkify {
