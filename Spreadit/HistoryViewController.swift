@@ -12,7 +12,7 @@ import iRate
 
 class HistoryViewController: BNDViewController, UICollectionViewDelegate, UICollectionViewDataSource, FNTKeyboardItemCellDelegate, FNTUsageTutorialViewDelegate {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView?
     
     var historyStack : FNTHistoryStack;
     var viewModels : [FNTKeyboardItemCellModel]? {
@@ -112,14 +112,14 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        
-        var itemSize = self.view.frame.size
-        itemSize.width = self.isPortrait() ? itemSize.width : itemSize.width / 2
-        itemSize.height = 66
-        flowLayout.itemSize = itemSize
-        
-        flowLayout.invalidateLayout()
+        if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            var itemSize = self.view.frame.size
+            itemSize.width = self.isPortrait() ? itemSize.width : itemSize.width / 2
+            itemSize.height = 66
+            flowLayout.itemSize = itemSize
+            
+            flowLayout.invalidateLayout()
+        }
     }
     
     func showClearDialog() {
@@ -151,7 +151,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     }
     
     func reloadData() {
-        self.collectionView.reloadData()
+        self.collectionView?.reloadData()
     }
     
     func showNoDataMessage() {
@@ -210,7 +210,7 @@ class HistoryViewController: BNDViewController, UICollectionViewDelegate, UIColl
     
     func registerNib(cellName : String) {
         let nib = UINib(nibName: cellName, bundle: NSBundle.mainBundle())
-        self.collectionView.registerNib(nib, forCellWithReuseIdentifier: cellName)
+        self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: cellName)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
