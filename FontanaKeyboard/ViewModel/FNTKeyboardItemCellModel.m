@@ -56,11 +56,15 @@ BINDINGS(FNTItem,
 - (UIImage *)faviconImage {
     if (!_faviconImage) {
         __weak typeof(self) weakSelf = self;
-        [self downloadImageWithURL:self.faviconURL imageBlock:^(UIImage *image) {
+        [self downloadImageWithURL:self.item.faviconURL imageBlock:^(UIImage *image) {
             weakSelf.faviconImage = image ?: [UIImage imageNamed:@"icon_iphone"];
         }];
     }
     return _faviconImage;
+}
+
+- (FNTItem *)item {
+    return self.model;
 }
 
 - (void)downloadImageWithURL:(NSURL *)url imageBlock:(FNTImageBlock)imageBlock {
@@ -114,14 +118,6 @@ BINDINGS(FNTItem,
 
 - (NSString *)identifier {
     return self.thumbnailURL ? kFNTKeyboardItemCell : kFNTKeyboardItemPlainCell;
-}
-
-- (NSURL *)faviconURL {
-    if (!_faviconURL) {
-        FNTItem *item = self.model;
-        _faviconURL = [item.link fnt_urlByAddingPath:@"favicon.ico"];
-    }
-    return _faviconURL;
 }
 
 @end

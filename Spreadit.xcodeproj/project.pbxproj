@@ -73,6 +73,10 @@
 		9683D1B71C673D77001436C8 /* SettingCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1B61C673D77001436C8 /* SettingCellModel.swift */; };
 		9683D1B91C6742E0001436C8 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683D1B81C6742E0001436C8 /* SettingCell.swift */; };
 		9683D1BB1C6742F4001436C8 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9683D1BA1C6742F4001436C8 /* SettingCell.xib */; };
+		968D16DB1CB23E88009D7C3C /* FNTWikiItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 968D16DA1CB23E88009D7C3C /* FNTWikiItem.m */; };
+		968D16DC1CB23E88009D7C3C /* FNTWikiItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 968D16DA1CB23E88009D7C3C /* FNTWikiItem.m */; };
+		968D16DF1CB245ED009D7C3C /* wikipedia.ico in Resources */ = {isa = PBXBuildFile; fileRef = 968D16DE1CB245ED009D7C3C /* wikipedia.ico */; };
+		968D16E01CB245ED009D7C3C /* wikipedia.ico in Resources */ = {isa = PBXBuildFile; fileRef = 968D16DE1CB245ED009D7C3C /* wikipedia.ico */; };
 		96A14FAC1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */; };
 		96A14FAE1BE1DCD000CC7D4B /* ShareTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */; };
 		96B1C48D1BE159CA00114C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C48C1BE159CA00114C26 /* AppDelegate.swift */; };
@@ -251,6 +255,9 @@
 		9683D1B61C673D77001436C8 /* SettingCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCellModel.swift; path = ViewModel/SettingCellModel.swift; sourceTree = "<group>"; };
 		9683D1B81C6742E0001436C8 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = View/Cells/SettingCell.swift; sourceTree = "<group>"; };
 		9683D1BA1C6742F4001436C8 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingCell.xib; path = View/Cells/SettingCell.xib; sourceTree = "<group>"; };
+		968D16D91CB23E88009D7C3C /* FNTWikiItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNTWikiItem.h; path = Model/FNTWikiItem.h; sourceTree = "<group>"; };
+		968D16DA1CB23E88009D7C3C /* FNTWikiItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FNTWikiItem.m; path = Model/FNTWikiItem.m; sourceTree = "<group>"; };
+		968D16DE1CB245ED009D7C3C /* wikipedia.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = wikipedia.ico; path = Resources/wikipedia.ico; sourceTree = "<group>"; };
 		96A14FAB1BE1DB5C00CC7D4B /* ItunesPlainTextToSpotifyURLTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesPlainTextToSpotifyURLTransformer.swift; path = Classes/ItunesPlainTextToSpotifyURLTransformer.swift; sourceTree = "<group>"; };
 		96A14FAD1BE1DCD000CC7D4B /* ShareTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareTransformer.swift; path = Classes/ShareTransformer.swift; sourceTree = "<group>"; };
 		96B1C4891BE159CA00114C26 /* Spreadit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreadit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -626,6 +633,14 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		968D16DD1CB245D6009D7C3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				968D16DE1CB245ED009D7C3C /* wikipedia.ico */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		96A14FAA1BE1DAEB00CC7D4B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +758,8 @@
 				96F04AC81C32A484002BBE67 /* FNTBINGItem.m */,
 				96F04ACA1C32A4F4002BBE67 /* FNTGoogleItem.h */,
 				96F04ACB1C32A4F4002BBE67 /* FNTGoogleItem.m */,
+				968D16D91CB23E88009D7C3C /* FNTWikiItem.h */,
+				968D16DA1CB23E88009D7C3C /* FNTWikiItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -788,6 +805,7 @@
 		96ECA1471C76D450006B15A1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				968D16DD1CB245D6009D7C3C /* Resources */,
 				96ECA1501C77AACA006B15A1 /* View */,
 				96ECA14C1C779DFB006B15A1 /* Generic */,
 				96ECA1481C76D495006B15A1 /* FNTAppTracker.h */,
@@ -1095,6 +1113,7 @@
 				964C9D091C54E23D003907E2 /* using_keyboard_720.mov in Resources */,
 				9658F4E01C315328002B3595 /* icon_iphone@3x.png in Resources */,
 				964C9D081C54E23D003907E2 /* enabling_keyboard_720.mov in Resources */,
+				968D16DF1CB245ED009D7C3C /* wikipedia.ico in Resources */,
 				962882BD1C628AF600886F7D /* NavigationCell.xib in Resources */,
 				96ECA1451C76D233006B15A1 /* GTM-5D242X.plist in Resources */,
 			);
@@ -1128,6 +1147,7 @@
 				9658F4DD1C3152F8002B3595 /* icon_iphone@2x.png in Resources */,
 				96C446931C0EB66E00051149 /* FNTKeyboardItemCell.xib in Resources */,
 				9658F4EF1C31B6FF002B3595 /* globe@3x.png in Resources */,
+				968D16E01CB245ED009D7C3C /* wikipedia.ico in Resources */,
 				96F04AD11C32AD15002BBE67 /* FNTKeyboardItemPlainCell.xib in Resources */,
 				9658F4DE1C3152F8002B3595 /* icon_iphone@3x.png in Resources */,
 				96ECA1461C76D233006B15A1 /* GTM-5D242X.plist in Resources */,
@@ -1290,6 +1310,7 @@
 				962882C51C63360700886F7D /* DonateCellModel.swift in Sources */,
 				96789E231C8C958A00017F5F /* TSBlurView.m in Sources */,
 				96F04ADA1C32D9FD002BBE67 /* NSURL+FNTBaseURL.m in Sources */,
+				968D16DB1CB23E88009D7C3C /* FNTWikiItem.m in Sources */,
 				9658F4E21C316F91002B3595 /* NSUserDefaults+CustomKeyboard.swift in Sources */,
 				9658F4C31C2AA1E7002B3595 /* FNTItem.m in Sources */,
 				96DCFE4D1C78D67C007D0821 /* WebViewModel.swift in Sources */,
@@ -1368,6 +1389,7 @@
 				9628829D1C56C32300886F7D /* MHFileHandle.m in Sources */,
 				965310F21C134F0B005CB906 /* FNTGoogleSearchQuery.m in Sources */,
 				96ECA1541C77AAEC006B15A1 /* FNTAttributedLabel.m in Sources */,
+				968D16DC1CB23E88009D7C3C /* FNTWikiItem.m in Sources */,
 				965310F81C1354E2005CB906 /* FNTContextParser.m in Sources */,
 				96F04AD51C32C450002BBE67 /* UIColor+FNTGenerator.m in Sources */,
 				96C4468B1C0E186F00051149 /* NSObject+FNTTextDocumentProxyAdditions.m in Sources */,

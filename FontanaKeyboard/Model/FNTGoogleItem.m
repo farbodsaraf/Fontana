@@ -9,11 +9,11 @@
 #import "FNTGoogleItem.h"
 
 @interface FNTItem (Protected)
-@property (nonatomic, strong) NSURL *link;
+@property (nonatomic, copy) NSURL *link;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) NSURL *thumbnailURL;
-@property (nonatomic, strong) NSString *source;
-@property (nonatomic, strong) NSString *snippet;
+@property (nonatomic, copy) NSURL *thumbnailURL;
+@property (nonatomic, copy) NSString *source;
+@property (nonatomic, copy) NSString *snippet;
 
 - (NSString *)sourceFromDisplayLink:(NSString *)displayLink;
 @end

@@ -21,6 +21,7 @@
 #import "NSString+FNTAccessors.h"
 #import "FNTBINGScraperSearchQuery.h"
 #import "FNTAppTracker.h"
+#import "FNTWikiItem.h"
 
 static NSString *const kFNTDonateDeepLink = @"fontanakey://donate";
 static NSString *const kFNTHelpUsageDeepLink = @"fontanakey://usage";
@@ -44,6 +45,8 @@ static NSString *const kFNTBINGSearch = @"bing";
 
 @property (nonatomic, copy) NSString *originalText;
 @property (nonatomic, copy) NSString *currentText;
+
+@property (nonatomic, copy) NSString *currentQueryString;
 @end
 
 @implementation FNTKeyboardViewModel
@@ -73,12 +76,6 @@ static NSString *const kFNTBINGSearch = @"bing";
 - (void)updateWithContext:(NSObject <UITextDocumentProxy> *)documentProxy
         viewModelsHandler:(BNDViewModelsBlock)viewModelsHandler {
     self.viewModelsHandler = viewModelsHandler;
-    
-    if (![self hasFullAccess]) {
-        [self handleError:[self noFullAccessError]];
-        return;
-    }
-    
     _documentProxy = documentProxy;
     [self findLinksInDocument:_documentProxy];
 }
@@ -138,6 +135,13 @@ static NSString *const kFNTBINGSearch = @"bing";
 }
 
 - (void)performQuery:(NSString *)queryString {
+    self.currentQueryString = queryString;
+    
+    if (![self hasFullAccess]) {
+        [self handleError:[self noFullAccessError]];
+        return;
+    }
+    
     __weak typeof(self) weakSelf = self;
     self.currentQuery = [self.queryClass queryWithSearchTerm:queryString
                                                   itemsBlock:^(NSArray *items, NSError *error) {
@@ -161,7 +165,6 @@ static NSString *const kFNTBINGSearch = @"bing";
     return self.usageTutorialText;
 }
 
-
 - (void)handleItems:(NSArray *)items{
     self.items = items;
     for (FNTItem *item in items) {
@@ -173,7 +176,16 @@ static NSString *const kFNTBINGSearch = @"bing";
 }
 
 - (void)handleError:(NSError *)error {
-    self.viewModelsHandler(nil, error);
+    if (self.currentQueryString) {
+        NSDictionary *itemDictionary = @{
+                                         @"searchTerm" : self.currentQueryString
+                                         };
+        FNTItem *wikiItem = [[FNTWikiItem alloc] initWithDictionary:itemDictionary];
+        [self handleItems:@[wikiItem]];
+    }
+    else {
+        self.viewModelsHandler(nil, error);
+    }
 }
 
 - (void)apply:(FNTKeyboardItemCellModel *)model {

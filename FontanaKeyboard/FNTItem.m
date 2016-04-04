@@ -11,11 +11,12 @@
 
 @interface FNTItem ()
 @property (nonatomic, copy) NSDictionary *dictionary;
-@property (nonatomic, strong) NSURL *link;
+@property (nonatomic, copy) NSURL *link;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) NSURL *thumbnailURL;
-@property (nonatomic, strong) NSString *source;
-@property (nonatomic, strong) NSString *snippet;
+@property (nonatomic, copy) NSURL *thumbnailURL;
+@property (nonatomic, copy) NSString *source;
+@property (nonatomic, copy) NSString *snippet;
+@property (nonatomic, copy) NSURL *faviconURL;
 @end
 
 NSString *const kFNTItemDictionary = @"kFNTItemDictionary";
@@ -46,6 +47,13 @@ NSString *const kFNTItemDictionary = @"kFNTItemDictionary";
 - (NSString *)sourceFromDisplayLink:(NSString *)displayLink {
     NSURL *link = [NSURL URLWithString:displayLink];
     return [NSString stringWithFormat:@":%@:", link.fnt_domainName];
+}
+
+- (NSURL *)faviconURL {
+    if (!_faviconURL) {
+        _faviconURL = [self.link fnt_urlByAddingPath:@"favicon.ico"];
+    }
+    return _faviconURL;
 }
 
 @end

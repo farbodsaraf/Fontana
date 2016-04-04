@@ -23,4 +23,14 @@
     return string.length == 0;
 }
 
+- (NSString *)fnt_underscoredCapitalizedString {
+    NSString *original = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    original = [original capitalizedString];
+    NSString *underscored = [original stringByReplacingOccurrencesOfString:@"[ ]+"
+                                                                withString:@"_"
+                                                                   options:NSRegularExpressionSearch
+                                                                     range:NSMakeRange(0, original.length)];
+    return underscored;
+}
+
 @end
