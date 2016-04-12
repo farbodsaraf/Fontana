@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="202" id="IqW-js-sJf" customClass="DonateCell" customModule="Spreadit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="IqW-js-sJf" customClass="DonateCell" customModule="Spreadit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IqW-js-sJf" id="3ZE-X8-FFL">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="175.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-DJ-5tL" customClass="FNTAttributedLabel">
                         <rect key="frame" x="8" y="8" width="304" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Any donation will remove the popup from the keyboard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3w-Yo-1yi">
-                        <rect key="frame" x="8" y="149" width="304" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Znk-x8-1Q8"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -50,7 +41,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-Ig-BHI" userLabel="Huge Donation Button">
-                        <rect key="frame" x="212" y="37" width="100" height="104"/>
+                        <rect key="frame" x="212" y="37" width="100" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="SMq-Fh-27O"/>
                         </constraints>
@@ -64,23 +55,16 @@
                     <constraint firstItem="FQu-cs-BtE" firstAttribute="top" secondItem="R3t-DJ-5tL" secondAttribute="bottom" constant="8" id="8HE-Kg-egx"/>
                     <constraint firstAttribute="trailing" secondItem="CHV-Ig-BHI" secondAttribute="trailing" constant="8" id="8ib-n3-7H2"/>
                     <constraint firstItem="R3t-DJ-5tL" firstAttribute="top" secondItem="3ZE-X8-FFL" secondAttribute="top" constant="8" id="DCt-FK-QvF"/>
-                    <constraint firstItem="l3w-Yo-1yi" firstAttribute="top" secondItem="CHV-Ig-BHI" secondAttribute="bottom" constant="8" id="GUs-QY-sNk"/>
                     <constraint firstItem="CHV-Ig-BHI" firstAttribute="top" secondItem="R3t-DJ-5tL" secondAttribute="bottom" constant="8" id="KHK-z2-q3e"/>
                     <constraint firstItem="R3t-DJ-5tL" firstAttribute="leading" secondItem="3ZE-X8-FFL" secondAttribute="leading" constant="8" id="L4M-RX-irJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CHV-Ig-BHI" secondAttribute="bottom" constant="4" id="PmV-Hm-BSY"/>
                     <constraint firstItem="FQu-cs-BtE" firstAttribute="centerX" secondItem="3ZE-X8-FFL" secondAttribute="centerX" id="Reh-yY-Jnw"/>
                     <constraint firstItem="cv8-cO-Lqq" firstAttribute="top" secondItem="R3t-DJ-5tL" secondAttribute="bottom" constant="8" id="WDk-tZ-jh4"/>
-                    <constraint firstItem="l3w-Yo-1yi" firstAttribute="leading" secondItem="3ZE-X8-FFL" secondAttribute="leading" constant="8" id="da9-NL-orJ"/>
-                    <constraint firstAttribute="bottom" secondItem="l3w-Yo-1yi" secondAttribute="bottom" constant="5.5" id="hiQ-0V-FQb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="FQu-cs-BtE" secondAttribute="bottom" constant="4" id="X58-mB-WE5"/>
                     <constraint firstItem="cv8-cO-Lqq" firstAttribute="leading" secondItem="3ZE-X8-FFL" secondAttribute="leading" constant="8" id="iGq-H1-a2f"/>
-                    <constraint firstItem="l3w-Yo-1yi" firstAttribute="leading" secondItem="3ZE-X8-FFL" secondAttribute="leading" constant="5" id="m2H-pO-j99"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cv8-cO-Lqq" secondAttribute="bottom" constant="4" id="koc-yx-9J2"/>
                     <constraint firstAttribute="trailing" secondItem="R3t-DJ-5tL" secondAttribute="trailing" constant="8" id="opl-hO-fCh"/>
-                    <constraint firstAttribute="trailing" secondItem="l3w-Yo-1yi" secondAttribute="trailing" constant="8" id="zIb-ZB-9Ge"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="m2H-pO-j99"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="hugeDonationButton" destination="CHV-Ig-BHI" id="UQt-qP-M1x"/>
@@ -88,7 +72,7 @@
                 <outlet property="mediumDonationButton" destination="FQu-cs-BtE" id="OAJ-AJ-66m"/>
                 <outlet property="smallDonationButton" destination="cv8-cO-Lqq" id="IFO-LK-kXH"/>
             </connections>
-            <point key="canvasLocation" x="117" y="-137"/>
+            <point key="canvasLocation" x="-141" y="-160"/>
         </tableViewCell>
     </objects>
 </document>
