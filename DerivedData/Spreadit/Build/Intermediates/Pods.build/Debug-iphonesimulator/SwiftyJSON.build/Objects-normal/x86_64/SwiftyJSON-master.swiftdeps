@@ -1,5 +1,0 @@
-version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
-options: "4878441f12965ac977ac8525367a4e05"
-build_time: [502104273, 218698000]
-inputs:
-  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [499416642, 0]

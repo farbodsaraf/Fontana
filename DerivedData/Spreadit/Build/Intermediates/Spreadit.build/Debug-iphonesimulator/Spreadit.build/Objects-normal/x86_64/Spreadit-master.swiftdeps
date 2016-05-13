@@ -1,6 +1,0 @@
-version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
-options: "a7e85284e011b3b94b5f21225148f6d2"
-build_time: [502104283, 104677000]
-inputs:
-  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Spreadit/AppDelegate.swift": [499375818, 0]
-  "/Users/mhlebar/Documents/GitHub/Fontana/Spreadit/Spreadit/ViewController.swift": [499375818, 0]
